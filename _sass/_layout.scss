@@ -275,6 +275,9 @@ h4{
 .padd-20{
 	padding: 20px;
 }
+.padd-top50{
+	 padding: 50px 0px;
+}
 .padd-btm{
 	  padding-bottom: 80px;
 }
@@ -651,8 +654,7 @@ h4{
 }
 .bg-lightblue{background:$background-color;}
 .wrapper-rText { 
-    width: 100%;
-    position:relative;
+    width: 100%; 
     min-height: 300px; 
     .block-title {
 		    display:block;
