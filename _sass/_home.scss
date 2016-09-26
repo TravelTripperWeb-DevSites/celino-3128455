@@ -139,6 +139,9 @@
 	   }
 	    .padd-20{
 	    	 padding: 0px 20px; 
+	    	 @media(min-width: $medium){
+	    	 	 padding: 0px 20px 20px 50px; 
+	    	 }
 	    }
 	   .btn-border {
 				    border-color: $white !important;

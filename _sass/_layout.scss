@@ -274,6 +274,9 @@ h4{
 }
 .padd-20{
 	padding: 20px;
+	@media( min-width:$large ){
+    padding: 20px 20px 20px 50px;
+	}
 }
 .padd-top50{
 	 padding: 50px 0px;
