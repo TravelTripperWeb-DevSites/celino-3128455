@@ -291,14 +291,18 @@ h4{
 	font-family: gotham-bold;
 	font-size: 20px;
 	letter-spacing: 0.2em;
+	min-width: 360px;
+	text-align: center;
 	@media(max-width: $large){
 	 		font-size: 14px;
 	 		padding: 10px 20px;
+	 		min-width: 270px;
 	 	}
 	 	 @media(max-width: $medium){
 	 	 	padding: 13px; 
 	 	 	padding: 10px 20px;
 	 	 	letter-spacing: 0.1em;
+	 	 	min-width: 260px;
 	 	 }
 	&:hover{
      text-decoration: none;
@@ -515,9 +519,13 @@ h4{
 			 }
 }
 
+.newsletter{
+	 padding: 10px 0px 50px 0px;
+}
 .form-inline{
-	padding-top: 40px;
+	padding: 40px 0px;
 	  .form-control{
+	  	font-family: gotham-bold;
 	  	 border:3px solid #95989a;
 	  	 width: 98%; 
 	  	 margin: 0px;
@@ -525,19 +533,26 @@ h4{
 	  	 margin-right: 10px;
 	  	 line-height: 30px;
 	  	 padding: 6px;
+	  	 letter-spacing: 0.2em;
 	    height: 56px;
 	    font-size: 16px;
 	    font-weight: bold;
 	    @media(max-width: $phone-max){
 	       height: 40px;
 	       font-size: 12px;
+	       letter-spacing: 0.1em;
 	       border:2px solid #95989a;
 	       margin-bottom: 10px;
 	    }
 	  }
-	  select{
+	  select {
 	  	 border-color: #0f1237 !important;
 	  	 color: #0f1237 !important;
+	  }
+	  .button{
+	  	 border-color: #0f1237 !important;
+	  	 color: #0f1237 !important;
+	  	 margin-top: 20px;
 	  }
 }
 .content-right{
