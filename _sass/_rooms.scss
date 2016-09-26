@@ -21,7 +21,7 @@
 		}
 		@media(max-width: $medium){
 			 padding-top: 15px !important;
-			 
+
 		}
 		@media(max-width: $on-laptop){
 			 padding-top: 15px !important;
@@ -137,3 +137,20 @@
           letter-spacing: 0.2em;
 	 }
 }
+
+.top-right-bg{
+	padding-top: 30px;
+	margin-top: 60px;
+	 
+}
+.tiles{
+	 	 background: url('/images/rooms/bg-1.jpg') top right no-repeat;
+	 	 padding-right: 30px;
+	 }
+.bottom-right-bg{ 
+	padding-bottom: 60px;
+	 
+}
+.wood{
+	 	 background: url('/images/rooms/wood.jpg') bottom right no-repeat; 
+	 }
