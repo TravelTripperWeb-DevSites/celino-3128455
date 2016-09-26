@@ -20,7 +20,7 @@
 		   padding-top: 55px !important;
 		}
 		@media(max-width: $medium){
-			 padding-top: 50px !important;
+			 padding-top: 15px !important;
 		}
 		@media(max-width: $on-laptop){
 			 padding-top: 15px !important;
@@ -113,4 +113,26 @@
 	 	 	 }
 	 	 }
 	 
+}
+.top-40{
+	margin-top: 40px;
+}
+.devider-inner{
+	width: 100%;
+	 background: url('/images/bg-leaf.jpg') top right no-repeat;
+	 height: 50px;
+	 position: relative;
+
+
+	 .d-title{
+          background: $white;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          width: 386px;
+          font-family: gotham-medium;
+          font-size: 15px;
+          display: block;
+          letter-spacing: 0.2em;
+	 }
 }
