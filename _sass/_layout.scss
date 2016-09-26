@@ -505,6 +505,40 @@ h4{
 
 			 	}
 	  	}
+	  	hr{
+			 	background: $sec-color;
+			 	border-color: $sec-color;
+			 	width: 70px;
+			 	border-width: 2px;
+			 	margin: 20px 0px;
+
+			 }
+}
+
+.form-inline{
+	padding-top: 40px;
+	  .form-control{
+	  	 border:3px solid #95989a;
+	  	 width: 98%; 
+	  	 margin: 0px;
+	  	 border-radius: 0px;
+	  	 margin-right: 10px;
+	  	 line-height: 30px;
+	  	 padding: 6px;
+	    height: 56px;
+	    font-size: 16px;
+	    font-weight: bold;
+	    @media(max-width: $phone-max){
+	       height: 40px;
+	       font-size: 12px;
+	       border:2px solid #95989a;
+	       margin-bottom: 10px;
+	    }
+	  }
+	  select{
+	  	 border-color: #0f1237 !important;
+	  	 color: #0f1237 !important;
+	  }
 }
 .content-right{
 	   padding: 85px 80px 35px 20px;
