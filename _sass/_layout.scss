@@ -535,8 +535,14 @@ h4{
 			 	margin: 20px 0px;
 
 			 }
-}
 
+}
+.content-left2.inner{
+			 	padding-right: 80px;
+			 	@media(max-width: $medium){
+			 		padding-right: 0px;
+			 	}
+			 }
 .newsletter{
 	 padding: 10px 0px 50px 0px;
 }
