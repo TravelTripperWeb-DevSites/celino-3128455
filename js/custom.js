@@ -1,6 +1,6 @@
 $(document).ready(function() { 
-  
- $("#owl-deals").owlCarousel({
+  $("#roomslide").carousel();
+ $("#owl-deals, #owl-rooms").owlCarousel({
             items : 3,
             loop: true,
             nav:true,

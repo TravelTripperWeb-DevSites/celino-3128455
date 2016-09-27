@@ -34,31 +34,71 @@ bg: bg-rooms
     </div>
 
 </section>
+ 
 
-<div class="devider-inner" style="background: url('/images/rooms/bg-sea.jpg');"><span class="d-title">OCEANFRONT VIEW</span></div>
-
-<section>
+ <section>
     <div class="container">
-       <div class="col-md-6">
-       <div class="blue-texture">
-         <img src="/images/rooms/3.jpg" class="margin-top  img-responsive">
-       </div>
-       </div>
-       <div class="col-md-6">
-	          <div class="content-right">
-	            <h2>PART. OCEAN  <br>VIEW KING</h2>
-	            <h3 class="gold_gotham">TONIGHT’S RATE</h3>
-	            <h4 class="right-pd light_grey"> <span class="price">$179</span> / night</h4>
-	            <p class="right-pd">
-	             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
-	            </p>
-	            <p class="text-left">
-	            <a href="#" class="btn-booknow hvr-fade">BOOK NOW</a> <a href="#" class="btn-border hvr-border-fade">EXPLORE IT</a>
-	            </p>
-	           </div>
-       </div>
-    </div> 
-</section>
+    	<div id="roomslide" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#roomslide" data-slide-to="0" class="active"></li>
+				    <li data-target="#roomslide" data-slide-to="1"></li>
+				    <li data-target="#roomslide" data-slide-to="2"></li>
+				    <li data-target="#roomslide" data-slide-to="3"></li>
+				  </ol>
 
-{% include blue-bg-deals.html%}
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				      <img src="/images/rooms/classic-slide1.jpg" alt="Chania"> 
+				    </div>
+
+				    <div class="item">
+				      <img src="/images/rooms/classic-slide1.jpg"  alt="Chania"> 
+				    </div>
+
+				    <div class="item">
+				      <img src="/images/rooms/classic-slide1.jpg"  alt="Flower"> 
+				    </div>
+
+				    <div class="item">
+				      <img src="/images/rooms/classic-slide1.jpg"  alt="Flower"> 
+				    </div>
+				  </div>
+
+				  <!-- Left and right controls -->
+				  <a class="left carousel-control" href="#roomslide" role="button" data-slide="prev">
+				     <span class="left-arrow"><img src="/images/arrow-gold-left.png"></span>
+				  </a>
+				  <a class="right carousel-control" href="#roomslide" role="button" data-slide="next">
+				   <span class="right-arrow"> <img src="/images/arrow-gold-right.png"></span>
+				  </a>
+	      </div> 
+    </div>
+ </section>
+<section>
+	<div class="container">
+	   <div class="content-room">
+		<div class="col-sm-7">
+			<h4>Views</h4>
+			<p>Looking North and South with view of neighboring building or courtyard.</p>
+			<h4>Ammenities</h4>
+			<p>Fully Stocked Minibar, XXX Coffee Maker, 50” Flat Screen HDTV, Bluetooth. Fully Stocked Minibar, XXX Coffee Maker, 50” Flat Screen HDTV, Bluetooth XXX Linens, Custom Hemp-Blend Mattress by Keetsa.</p>
+		</div>
+		<div class="col-sm-5">
+			<ul class="amentities">
+			<li>2 PEOPLE ROOM</li>
+			<li>30 ROOMS LIKE THIS ONE</li>
+			<li>00 CONNECTING ROOMS</li>
+			<li>225 - 275 SQ FT</li>
+			</ul>
+			<p class="text-left">
+	            <a href="#" class="btn-booknow hvr-fade">BOOK NOW</a> 
+	       </p>
+		</div>	
+	  </div>
+	</div>
+
+</section>
+{% include owl-rooms.html%}
   
