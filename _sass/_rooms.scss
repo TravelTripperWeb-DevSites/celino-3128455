@@ -1,0 +1,156 @@
+.padd-fixedtop{ 
+	padding-top: 140px;
+	@media(max-width: $larger){
+		padding-top: 120px;
+	}
+	@media(max-width: $medium){
+		padding-top: 100px;
+	}
+	@media(max-width: $on-laptop){
+		padding-top: 70px;
+	}
+	@media(max-width: $tablet){
+		padding-top: 40px;
+	}
+
+}
+.top-15{
+	    padding-top: 15px !important;
+	    @media(max-width: $larger){
+		   padding-top: 55px !important;
+		}
+		@media(max-width: $medium){
+			 padding-top: 15px !important;
+
+		}
+		@media(max-width: $on-laptop){
+			 padding-top: 15px !important;
+		}
+		@media(max-width: $tablet){
+			 padding-top: 15px !important;
+		}
+}
+.inner-pages{
+	min-height: auto;
+}
+.banner-top{
+	 position: relative;
+	 @media(max-width: $phone-max){
+               margin-left: 7%;
+	 	 	 }
+     img{ width: 100%; }
+	  
+
+	 	 h2{
+	 	 	 position: absolute;
+	 	 	 top: 38%;
+	 	 	  text-align: center;
+	 	 	  width: 100%;
+	 	 	  margin: 0 auto;
+	 	 	  font-family: Americana-ExtraBold;
+	 	 	  font-size: 119px;
+	 	 	  letter-spacing: 0em;
+	 	 	  @media(max-width: $tablet){
+              	font-size: 50px;
+              }
+              @media(max-width: $phone-max){
+              	font-size: 30px;
+              }
+
+	 	 }
+	 	 .white{
+	 	 	 color: $white;
+	 	    text-shadow: 2px 0px 5px #CCC;
+	 	 }
+	 	 .booking-hour{
+	 	 	 position: absolute;
+	 	 	 bottom: -28px;
+	 	 	 height: 50px;
+	 	 	 left: 50%;
+	 	 	 background: $link-color;
+	 	 	 color: $white;
+	 	 	 font-family: gotham-bold;
+	 	 	 font-size: 20px;  
+	 	 	 @media(max-width: $medium){
+               font-size: 12px;  
+	 	 	 }
+	 	 	 @media(max-width: $on-laptop){
+               font-size: 11px;  
+               left: 20%;
+	 	 	 }
+	 	 	 @media(max-width: $phone-max){
+               font-size: 11px;  
+               left: 0%;
+               letter-spacing: 0.06em;
+               height: auto;
+	 	 	 }
+             span.detail{
+             	    padding: 0px 20px;
+				    line-height: 53px;
+				    float: left;
+				    letter-spacing: 0.2em;
+				    @media(max-width: $phone-max){
+				    	line-height: 36px;
+				    	padding: 0px 15px;
+				    	letter-spacing: 0.02em;
+				    }
+             }
+	 	 	 span.gold{
+	 	 	 	 background: url('/images/btn-goldenbg.jpg') center center no-repeat;
+	 	 	 	 padding: 10px 20px;
+	 	 	 	 font-family: Americana-ExtraBold;
+	 	 	 	 float: left;
+	 	 	 	 font-size: 30px;
+	 	 	 	 line-height: 30px;
+	 	 	 	 @media(max-width: $medium){
+		               font-size: 16px;  
+			 	 	 }
+			 	 	 @media(max-width: $phone-max){
+				    	line-height: 36px;
+				    	padding: 0px 15px;
+				    	letter-spacing: 0.02em;
+				    }
+
+	 	 	 }
+	 	 }
+	 
+}
+.top-40{
+	margin-top: 40px;
+}
+.devider-inner{
+	width: 100%;
+	 background: url('/images/bg-leaf.jpg') top right no-repeat;
+	 height: 50px;
+	 position: relative;
+
+
+	 .d-title{
+          background: $white;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          width: 386px;
+          font-family: gotham-medium;
+          font-size: 15px;
+          display: block;
+          letter-spacing: 0.2em;
+	 }
+}
+
+.top-right-bg{
+	padding-top: 30px;
+	margin-top: 60px;
+	 
+}
+.tiles{
+	 	 background: url('/images/rooms/bg-1.jpg') top right no-repeat;
+	 	 padding-right: 30px;
+	 }
+.bottom-right-bg{ 
+	padding-bottom: 60px;
+	 
+}
+.wood{
+	 	 background: url('/images/rooms/wood.jpg') bottom right no-repeat; 
+	 }
