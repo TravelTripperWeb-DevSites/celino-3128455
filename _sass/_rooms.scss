@@ -1,3 +1,7 @@
+.bg-rooms{
+	 background-image: url('/images/bg-rooms-left.jpg');
+	 background-repeat: repeat-y;
+}
 .padd-fixedtop{ 
 	padding-top: 140px;
 	@media(max-width: $larger){
@@ -102,6 +106,7 @@
 	 	 	 	 float: left;
 	 	 	 	 font-size: 30px;
 	 	 	 	 line-height: 30px;
+	 	 	 	 border-right: 2px solid $white;
 	 	 	 	 @media(max-width: $medium){
 		               font-size: 16px;  
 			 	 	 }
@@ -120,7 +125,7 @@
 }
 .devider-inner{
 	width: 100%;
-	 background: url('/images/bg-leaf.jpg') top right no-repeat;
+	 
 	 height: 50px;
 	 position: relative;
 
@@ -135,13 +140,30 @@
           font-size: 15px;
           display: block;
           letter-spacing: 0.2em;
+          @media(max-width: $phone-max){
+          	width: 60%;
+          	letter-spacing: 0.1em;
+          	font-size: 13px;
+          }
 	 }
 }
 
 .top-right-bg{
 	padding-top: 30px;
 	margin-top: 60px;
+
 	 
+}
+.blue-texture{
+	     background: url('/images/blue-texture.jpg') center left no-repeat;
+	 	 padding-left: 60px;
+	 	 margin-left:  50px;
+	 	 @media(max-width: $medium){
+	 	 	margin-left:  20px;
+	 	 }
+	 	 img{
+	 	 	 padding-top: 20px 0px;
+	 	 }
 }
 .tiles{
 	 	 background: url('/images/rooms/bg-1.jpg') top right no-repeat;
@@ -149,8 +171,54 @@
 	 }
 .bottom-right-bg{ 
 	padding-bottom: 60px;
+	text-align: right;
 	 
 }
 .wood{
 	 	 background: url('/images/rooms/wood.jpg') bottom right no-repeat; 
+	 	 @media(max-width: $phone-max){
+	 	 	 margin-bottom: 40px;
+	 	 }
 	 }
+.gold_gotham{
+	font-family: gotham-bold;
+	color: $sec-color;
+	letter-spacing: 0.2em;
+	font-size: 20px;
+}
+.light_grey{
+	color: $light-grey;
+	.price{
+		  font-family: Americana-ExtraBold;
+	}
+}
+.btn-booknow{ 
+	padding: 18px 35px;
+	color: $white !important;
+	background: url('/images/btn-goldenbg.jpg') center center no-repeat;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: Americana-ExtraBold;
+	font-size: 24px;
+	letter-spacing: 0.2em; 
+	text-align: center;
+	margin-right: 40px;
+	@media(max-width: $large){
+	 		font-size: 20px;
+	 		padding: 10px 20px; 
+	 	}
+	 	 @media(max-width: $medium){
+	 	 	padding: 16px; 
+	 	 	padding: 10px 20px;
+	 	 	letter-spacing: 0.1em; 
+	 	 }
+	 	 @media(max-width: $phone-max){
+	 	 	padding: 16px; 
+	 	 	padding: 10px 20px;
+	 	 	display: block;
+	 	 	margin-bottom: 10px;
+	 	 	width: 100%;
+	 	 	letter-spacing: 0.1em; 
+	 	 }
+	 
+}
