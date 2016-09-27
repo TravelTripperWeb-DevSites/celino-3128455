@@ -1,3 +1,7 @@
+.bg-rooms{
+	 background-image: url('/images/bg-rooms-left.jpg');
+	 background-repeat: repeat-y;
+}
 .padd-fixedtop{ 
 	padding-top: 140px;
 	@media(max-width: $larger){
@@ -102,6 +106,7 @@
 	 	 	 	 float: left;
 	 	 	 	 font-size: 30px;
 	 	 	 	 line-height: 30px;
+	 	 	 	 border-right: 2px solid $white;
 	 	 	 	 @media(max-width: $medium){
 		               font-size: 16px;  
 			 	 	 }
@@ -120,7 +125,7 @@
 }
 .devider-inner{
 	width: 100%;
-	 background: url('/images/bg-leaf.jpg') top right no-repeat;
+	 
 	 height: 50px;
 	 position: relative;
 
@@ -135,13 +140,30 @@
           font-size: 15px;
           display: block;
           letter-spacing: 0.2em;
+          @media(max-width: $phone-max){
+          	width: 60%;
+          	letter-spacing: 0.1em;
+          	font-size: 13px;
+          }
 	 }
 }
 
 .top-right-bg{
 	padding-top: 30px;
 	margin-top: 60px;
+
 	 
+}
+.blue-texture{
+	     background: url('/images/blue-texture.jpg') center left no-repeat;
+	 	 padding-left: 60px;
+	 	 margin-left:  50px;
+	 	 @media(max-width: $medium){
+	 	 	margin-left:  20px;
+	 	 }
+	 	 img{
+	 	 	 padding-top: 20px 0px;
+	 	 }
 }
 .tiles{
 	 	 background: url('/images/rooms/bg-1.jpg') top right no-repeat;
@@ -149,8 +171,262 @@
 	 }
 .bottom-right-bg{ 
 	padding-bottom: 60px;
+	text-align: right;
 	 
 }
+.bottom-right-bg2{ 
+	margin-bottom: 60px;
+	text-align: right;
+	 
+}
+.tiles2{
+	 	 background: url('/images/rooms/bg-2.jpg') top right no-repeat;
+	 	 padding-top: 50px;  
+	 }
 .wood{
 	 	 background: url('/images/rooms/wood.jpg') bottom right no-repeat; 
+	 	 @media(max-width: $phone-max){
+	 	 	 margin-bottom: 40px;
+	 	 }
 	 }
+.gold_gotham{
+	font-family: gotham-bold;
+	color: $sec-color;
+	letter-spacing: 0.2em;
+	font-size: 20px;
+}
+.light_grey{
+	color: $light-grey;
+	.price{
+		  font-family: Americana-ExtraBold;
+	}
+}
+.btn-booknow{ 
+	padding: 18px 35px;
+	color: $white !important;
+	background: url('/images/btn-goldenbg.jpg') center center no-repeat;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: Americana-ExtraBold;
+	font-size: 24px;
+	letter-spacing: 0.2em; 
+	text-align: center;
+	margin-right: 40px;
+	@media(max-width: $large){
+	 		font-size: 20px;
+	 		padding: 10px 20px; 
+	 	}
+	 	 @media(max-width: $medium){
+	 	 	padding: 16px; 
+	 	 	padding: 10px 20px;
+	 	 	letter-spacing: 0.1em; 
+	 	 }
+	 	 @media(max-width: $phone-max){
+	 	 	padding: 16px; 
+	 	 	padding: 10px 20px;
+	 	 	display: block;
+	 	 	margin-bottom: 10px;
+	 	 	width: 100%;
+	 	 	letter-spacing: 0.1em; 
+	 	 }
+	 
+}
+
+#roomslide{
+	width: 85%;
+	padding-bottom: 60px;
+	max-width: 1525px; 
+	margin: 0 auto;
+    position: relative;
+    @media(max-width: $medium){
+    	width: 85%;
+    } 
+    .carousel-inner{
+     
+
+    }
+    .carousel-indicators {
+    width: 300px;
+    transform: translate(-50%,-50%);
+    margin: 0 auto; 
+    	bottom:-10px;
+	    li{
+	       border-color: #dbbf97; 
+	       width: 14px;
+	       height: 14px;
+	       margin-top: 2px;
+
+		}
+		.active{
+	    	    background-color: #dbbf97 !important;
+	    	    width: 16px;
+	            height: 16px;
+		    }
+	}
+    .carousel-control.left,  .carousel-control.right{
+    	background-image: none;
+    }
+	.left-arrow{
+		  position: absolute;
+		  top: 50%;
+		  left: -90px;
+		  transform: translateY(-50%); 
+		   @media(max-width: $large){
+		   		left: -60px;
+		   }
+		  @media(max-width: $medium){
+		   
+		  	img{
+		  		max-height: 50px;
+		  	}
+		  	
+		  }
+		  @media(max-width: $tablet){
+		   		left: -40px;
+		   }
+		  @media(max-width: $phone-max){
+		  	left: -30px;
+		  	img{
+		  		max-height: 30px;
+		  	}
+		  	
+		  }
+	}
+	.right-arrow{
+		  position: absolute;
+		  top: 50%;
+		  right: -90px;
+		  transform: translateY(-50%); 
+		   @media(max-width: $large){
+		   		right: -60px;
+		   }
+		  @media(max-width: $medium){
+		  	 
+		  	img{
+		  		max-height: 50px;
+		  	}
+		  }
+		   @media(max-width: $tablet){
+		   		right: -40px;
+		   }
+		  @media(max-width: $phone-max){
+		  	 right: -30px;
+		  	img{
+		  		max-height: 30px;
+		  	}
+		  }
+	}
+}
+.content-room{
+	 width: 86%;
+	 margin: 0 auto;
+	 h4{
+	 	line-height: 100px;
+	 	 @media(max-width: $tablet){
+	 	 	line-height: 70px;
+	 	 	font-size: 30px;
+	 	 }
+	 }
+	 p{
+	 	max-width: 740px;
+	 }
+	 .amentities{
+	 	margin-top: 30px;
+	 	color: $sec-color;
+	 	list-style-type: none;
+	 	@media(max-width: $on-laptop){ 
+	 		margin: 0px;
+	 		padding: 0px;
+	 	}
+	 	li{
+	 		 padding: 10px 0px;
+	 		 font-family: gotham-bold;
+	 		 letter-spacing: 0.2em;
+	 	}
+	 }
+	 .btn-booknow{
+	 	margin: 40px;
+	 	@media(max-width: $on-laptop){
+	 		font-size: 16px;
+	 		margin: 20px 0px;
+	 	}
+	 }
+}
+.roomowl-bg{
+	background: #fafaef;
+}
+
+#owl-rooms{
+	 margin: 0px auto;
+	 width: 95%;
+	 .owl-item{
+	 	padding: 60px 40px;
+	 	@media(max-width: $medium){
+	 		padding: 10px;
+	 	}
+	 	@media(max-width: $optional){
+	 		padding: 10px;
+	 	}
+	 	 @media(max-width: $tablet){
+	 	 padding: 0px;
+	 	}
+	 }
+	 .item{
+	 	background-color: #fafaef;
+	 }
+	 h4{
+	 	font-family: gotham-bold;
+	 	font-size: 20px;
+	 	padding: 10px 0px;
+	 	line-height: auto;
+	 	letter-spacing: 0.1em;
+	 	color: $link-color;
+	 	@media(max-width: $large){
+	 		font-size: 18px;
+	 		padding: 10px 0px;
+	 		line-height: 20px;
+	 		letter-spacing: 0.04em;
+	 	}
+	 	@media(max-width: $medium){
+	 		font-size: 16px;
+	 		padding: 10px 0px;
+	 		line-height: 20px;
+	 		letter-spacing: 0.04em;
+	 	}
+	 	@media(max-width: $optional){
+	 		font-size: 14px;
+	 		line-height: 16px;
+	 		letter-spacing: 0.04em;
+	 	}
+	 	@media(max-width: $tablet){
+	 		font-size: 12px;
+	 		line-height: 16px;
+	 		letter-spacing: 0.04em;
+	 	}
+	 	@media(max-width: $phone-max){
+	 		font-size: 11px;
+	 		line-height: 15px;
+	 	}
+	 }
+	 .btn-border-gold{
+	 	 @media(max-width: $phone-max){
+	 	 	font-size: 11px;
+	 	 	letter-spacing: 0.04em;
+	 	 }
+	 }
+    .owl-prev,.owl-next {
+    	 img{
+    	 	@media(max-width: $tablet){
+    	 		width: 30px;
+    	 	}
+    	 	 @media(max-width: $phone-max){
+    	 	 	width: 14px;
+    	 	 }
+    	 }
+    }
+    .owl-controls {
+    	@media(max-width: $low-point){
+            margin: 0px;
+    	}
+    }
+}

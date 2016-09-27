@@ -99,6 +99,12 @@
 		  	}
 		  	
 		  }
+		  @media(max-width: $phone-max){
+		  	img{
+		  		max-height: 30px;
+		  	}
+		  	
+		  }
 	}
 	.right-arrow{
 		  position: absolute;
@@ -109,11 +115,21 @@
 		  		max-height: 50px;
 		  	}
 		  }
+		  @media(max-width: $phone-max){
+		  	img{
+		  		max-height: 30px;
+		  	}
+		  }
 	}
 }
 #owl-deals{
 	 margin: 0px auto;
 	 width: 95%;
+	 .owl-item{
+	 	 @media(max-width: $phone-max){
+	 	 padding: 10px;
+	 	}
+	 }
     .owl-prev,.owl-next {
     	 img{
     	 	@media(max-width: $tablet){
@@ -123,6 +139,11 @@
     	 	 	width: 14px;
     	 	 }
     	 }
+    }
+    .owl-controls {
+    	@media(max-width: $low-point){
+            margin: 0px;
+    	}
     }
 }
 .owl-left-heading{

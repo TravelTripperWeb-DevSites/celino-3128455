@@ -399,8 +399,8 @@ function initMap() {
       }
 
 $(document).ready(function() { 
-  
- $("#owl-deals").owlCarousel({
+  $("#roomslide").carousel();
+ $("#owl-deals, #owl-rooms").owlCarousel({
             items : 3,
             loop: true,
             nav:true,
@@ -411,6 +411,9 @@ $(document).ready(function() {
 		        0:{
 		            items:1
 		        },
+            400:{
+                items:1
+            },
 		        600:{
 		            items:2
 		        },

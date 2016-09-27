@@ -310,6 +310,12 @@ h4{
 	 	 	letter-spacing: 0.1em;
 	 	 	min-width: 260px;
 	 	 }
+	 	 @media(max-width: $low-point){
+	 	 	padding: 13px; 
+	 	 	padding: 10px 20px;
+	 	 	letter-spacing: 0.1em;
+	 	 	min-width: 100%;
+	 	 }
 	&:hover{
      text-decoration: none;
      box-shadow: inset 0 0 0 4px $grey-color, 0 0 1px transparent;
@@ -405,6 +411,9 @@ h4{
 	  	}
 	   .right-pd{ 
             padding-right: 47px; 
+            @media(max-width: $phone-max){
+            	padding-right: 0px;
+            }
 	  	}
 	  	p{ 
 	  		font-family: gotham-light;
@@ -487,6 +496,9 @@ h4{
 	  	}
 	   .right-pd{ 
             padding-right: 47px; 
+            @media(max-width: $phone-max){
+            	padding-right: 0px;
+            }
 	  	}
 	  	p{ 
 	  		font-family: gotham-light;
@@ -523,8 +535,14 @@ h4{
 			 	margin: 20px 0px;
 
 			 }
-}
 
+}
+.content-left2.inner{
+			 	padding-right: 80px;
+			 	@media(max-width: $medium){
+			 		padding-right: 0px;
+			 	}
+			 }
 .newsletter{
 	 padding: 10px 0px 50px 0px;
 }
@@ -625,6 +643,9 @@ h4{
 	  	}
 	   .right-pd{ 
             padding-right: 47px; 
+            @media(max-width: $phone-max){
+            	padding-right: 0px;
+            }
 	  	}
 	  	p{ 
 	  		font-family: gotham-light;
@@ -780,6 +801,9 @@ h4{
 	padding: 55px 0px;
 	@media(max-width: $phone-max){
 		padding: 55px 20px;
+		img{
+			 max-width: 150px;
+		}
 	}
 	 p{
 	 	 color: $white;    
@@ -794,13 +818,20 @@ h4{
 	 	 list-style-type: none;
 	    -moz-column-count: 2;
 	    -moz-column-gap: 20px;
-	    -webkit-column-count: 4;
+	    -webkit-column-count: 2;
 	    -webkit-column-gap: 20px;
 	    column-count: 2;
 	    column-gap: 20px;
 	    padding: 0px;
 	    margin: 24px 0px 0px 0px;
-
+       @media(max-width: $phone-max){
+       	-moz-column-count: 1;
+	    -moz-column-gap: 20px;
+	    -webkit-column-count: 1;
+	    -webkit-column-gap: 20px;
+	    column-count: 1;
+	    column-gap: 20px;
+       }
 	    li{
 
 	    	 a{
@@ -808,6 +839,11 @@ h4{
 	    	 	font-size:15px; 
 	    	 	font-weight: bold;
 	    	 	line-height: 60px;
+	    	 	@media(max-width: $phone-max){
+	    	 		font-size:12px;
+	    	 		line-height: 18px; 
+	    	 		letter-spacing: 0.2em;
+	    	 	}
 	    	 }
 	    }
 	 }
@@ -835,6 +871,9 @@ h4{
 	 	  }
 	 	  strong{
                 margin-right: 30px;
+                 @media(max-width: $phone-max){
+                 	margin-right: 10px;
+                 }
 	 	  }
 	 	  span{
 	 	  	  a{
