@@ -60,10 +60,15 @@
 	margin-left: 100px;
 	background: url('/images/slideshow/bg-Bedslide-floral.jpg') left bottom no-repeat;
     position: relative;
+    @media(max-width: $tablet){
+    	margin-top: 0px;
+    	margin-bottom: 30px;
+    }
     @media(max-width: $phone-max){
     	    margin-left: 60px;
     	    padding: 20px 0px;
     	    margin-top: 10px;
+    	    margin-bottom: 30px;
     }
     .carousel-inner{
      
@@ -132,7 +137,7 @@
 	 }
     .owl-prev,.owl-next {
     	 img{
-    	 	@media(max-width: $tablet){
+    	 	@media(min-width: $screen-sm-min){
     	 		width: 30px;
     	 	}
     	 	 @media(max-width: $phone-max){
@@ -149,6 +154,13 @@
 .owl-left-heading{
 	float: left;
 }
+#map-home{
+	 height: 647px;
+	 border: solid 4px #0f1237;
+	 @media(max-width: $phone-max){
+      height: 300px;
+	 }
+	}
 
 .blue-bgStrip{
 	   background: url('/images/blue-stripe.jpg') left repeat-y ;
@@ -162,6 +174,9 @@
 	    	 padding: 0px 20px; 
 	    	 @media(min-width: $medium){
 	    	 	 padding: 0px 20px 20px 50px; 
+	    	 }
+	    	 @media(max-width: $tablet){
+	    	 	 padding: 0px; 
 	    	 }
 	    }
 	   .btn-border {

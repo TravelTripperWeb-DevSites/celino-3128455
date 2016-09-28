@@ -31,13 +31,17 @@ h2{
 	  		font-size: 50px;
 	  	    line-height: 65px;  
 	  	}
+	  	@media(min-width: $screen-sm-min){
+	  		font-size: 30px;
+	  	    line-height: 45px;  
+	  	}
 	  	@media(max-width: $tablet){
 	  		font-size: 30px;
 	  	    line-height: 45px;  
 	  	}
 	  	@media(max-width: $phone-max){
 	  		font-size: 20px;
-	  	    line-height: 35px;  
+	  	    line-height: 24px;  
 	  	}
 	  	 
 	  }
@@ -47,6 +51,26 @@ h4{
 		font-size: 40px;
 		line-height: 50px;
 		letter-spacing: 0.025em;
+		@media(max-width: $large){
+	  		font-size: 40px;
+	  	    line-height: 75px; 
+	  	}
+	  	@media(max-width: $medium){
+	  		font-size: 30px;
+	  	    line-height: 65px;  
+	  	}
+	  	@media(min-width: $screen-sm-min){
+	  		font-size: 20px;
+	  	    line-height: 45px;  
+	  	}
+	  	@media(max-width: $tablet){
+	  		font-size: 20px;
+	  	    line-height: 45px;  
+	  	}
+	  	@media(max-width: $phone-max){
+	  		font-size: 18px;
+	  	    line-height: 35px;  
+	  	}
 	}
 .navbar-inverse{
 	 background-color: transparent;
@@ -268,14 +292,29 @@ h4{
 }
 .margin-top{
 	 margin-top: 60px;
+	 @media(min-width: $screen-sm-min){
+	 	margin-top: 20px;
+	 }
 	 @media(max-width: $tablet){
 	 	margin-top: 20px;
 	 }
 }
 .padd-20{
-	padding: 20px;
-	@media( min-width:$large ){
-    padding: 20px 20px 20px 50px;
+	padding: 20px 20px 20px 50px;
+	@media(max-width: $larger){
+     padding: 20px 20px 20px 50px;
+	}
+	@media(min-width: $tablet-rotate) and (max-width: $medium){
+     padding: 0px 20px;
+	}
+	@media(min-width: $screen-sm-min) and (max-width: $tablet-rotate){
+		 padding: 10px;
+	}
+	@media( max-width:$tablet ){
+    padding: 0px;
+	}
+	@media( max-width:$phone-max ){
+    padding: 0px;
 	}
 }
 .padd-top50{
@@ -283,9 +322,18 @@ h4{
 }
 .padd-btm{
 	  padding-bottom: 80px;
+	  @media(max-width: $phone-max){
+	  	 padding-bottom: 30px;
+	  }
 }
 .margin-top-btn{
 	 margin-top: 40px;
+	 @media(min-width: $screen-sm-min){
+	 	margin-top: 20px;
+	 }
+	 @media(max-width: $phone-max){
+	 	margin-top: 10px;
+	 }
 }
 .btn-border{
 	border-color: $link-color !important;
@@ -315,6 +363,13 @@ h4{
 	 	 	padding: 10px 20px;
 	 	 	letter-spacing: 0.1em;
 	 	 	min-width: 100%;
+	 	 }
+	 	 @media(max-width: $phone-max){
+	 	 	padding: 13px; 
+	 	 	padding: 10px 20px;
+	 	 	letter-spacing: 0.1em;
+	 	 	min-width: 100%;
+	 	 	display: block;
 	 	 }
 	&:hover{
      text-decoration: none;
@@ -353,7 +408,7 @@ h4{
 	   	padding: 35px 0px 35px 40px;
 	   }
 	   @media(max-width: $tablet){
-	   	padding: 15px 20px 35px 20px;
+	   	padding: 15px 30px 35px 30px;
 	   }
 	   @media(max-width: $phone-max){
 	   	padding: 10px 20px 10px 20px;
@@ -376,13 +431,19 @@ h4{
 	  	    line-height: 65px; 
 	  	    margin-bottom: 75px;
 	  	}
+	  	@media(min-width: $screen-sm-min){
+	  		font-size: 36px;
+	  	    line-height: 37px; 
+	  	    margin-bottom: 40px; 
+	  	}
 	  	@media(max-width: $tablet){
 	  		font-size: 36px;
-	  	    line-height: 45px;  
+	  	    line-height: 37px; 
+	  	    margin-bottom: 40px; 
 	  	}
 	  	@media(max-width: $phone-max){
 	  		font-size: 18px;
-	  	    line-height: 35px;  
+	  	    line-height: 24px;  
 	  	    margin-bottom: 30px;
 	  	}
 	  	&:before{
@@ -392,7 +453,13 @@ h4{
 	  		     bottom: -52px;
 			    padding-bottom: 50px;
 			    width: 70px;
-             @media(max-width: $phone-max){
+			    @media(min-width: $screen-sm-min){
+			    	bottom: -24px; 
+			    }
+			    @media(max-width: $tablet){
+			  		bottom: -24px; 
+			  	}
+                @media(max-width: $phone-max){
 			  		bottom: -18px; 
 			  	}
 	  	} 
@@ -403,6 +470,14 @@ h4{
 	  		font-size: 40px;
 	  		line-height: 50px;
 	  		letter-spacing: 0.025em;
+	  		@media(min-width: $screen-sm-min){
+	  			font-size: 24px;
+			    line-height: 34px;  
+	  		}
+	  		@media(max-width: $tablet){
+		  		font-size: 24px;
+			    line-height: 34px;  
+		  	}
 	  		@media(max-width: $phone-max){
 			  		font-size: 18px;
 			  	    line-height: 25px;  
@@ -410,7 +485,10 @@ h4{
 			  	}
 	  	}
 	   .right-pd{ 
-            padding-right: 47px; 
+            padding-right: 47px;
+            @media(min-width: $screen-sm-min){
+            	padding-right: 0px;
+            } 
             @media(max-width: $phone-max){
             	padding-right: 0px;
             }
@@ -418,6 +496,15 @@ h4{
 	  	p{ 
 	  		font-family: gotham-light;
 	  		margin: 50px 0px;
+	  		@media(min-width: $screen-sm-min){
+	  			margin: 30px 0px;
+	  		}
+	  		@media(max-width: $tablet){
+	  			margin: 20px 0px;
+	  		}
+	  		@media(max-width: $phone-max){
+	  			margin: 30px 0px;
+	  		}
 	  	}
 }
 .content-left2{
@@ -426,10 +513,10 @@ h4{
 	   	padding: 35px 0px 35px 15px;
 	   }
 	   @media(max-width: $tablet){
-	   	padding: 15px 20px 35px 20px;
+	   	    padding: 0px;
 	   }
 	   @media(max-width: $phone-max){
-	   	padding: 10px 20px 10px 20px;
+	   	padding: 0px;
 	   }
 	  h2{
 	  	font-family: gotham-ultra;
@@ -449,13 +536,14 @@ h4{
 	  	    line-height: 65px; 
 	  	    margin-bottom: 75px;
 	  	}
-	  	@media(max-width: $tablet){
+	  	@media(min-width: $screen-sm-min){
 	  		font-size: 36px;
-	  	    line-height: 45px;  
+	  	    line-height: 37px; 
+	  	    margin-bottom: 40px; 
 	  	}
 	  	@media(max-width: $phone-max){
 	  		font-size: 18px;
-	  	    line-height: 35px;  
+	  	    line-height: 24px;  
 	  	    margin-bottom: 30px;
 	  	}
 	  	span{
@@ -477,6 +565,9 @@ h4{
 	  		     bottom: -52px;
 			    padding-bottom: 50px;
 			    width: 70px;
+			   @media(min-width: $screen-sm-min){
+			  		bottom: -24px; 
+			  	}
              @media(max-width: $phone-max){
 			  		bottom: -18px; 
 			  	}
@@ -488,6 +579,14 @@ h4{
 	  		font-size: 40px;
 	  		line-height: 50px;
 	  		letter-spacing: 0.025em;
+	  		@media(min-width: $screen-sm-min){
+	  			font-size: 24px;
+			    line-height: 34px;  
+	  		}
+	  		@media(max-width: $tablet){
+		  		font-size: 24px;
+			    line-height: 34px;  
+		  	}
 	  		@media(max-width: $phone-max){
 			  		font-size: 18px;
 			  	    line-height: 25px;  
@@ -503,6 +602,15 @@ h4{
 	  	p{ 
 	  		font-family: gotham-light;
 	  		margin: 50px 0px;
+	  		@media(min-width: $screen-sm-min){
+	  			margin: 30px 0px;
+	  		}
+	  		@media(max-width: $tablet){
+	  			margin: 20px 0px;
+	  		}
+	  		@media(max-width: $phone-max){
+	  			margin: 20px 0px;
+	  		}
 	  	}
 	  	.social-links{
               padding-left: 20px;
@@ -516,7 +624,7 @@ h4{
 			 	  line-height: 60px;
 			 	  text-decoration: none;
 			 	  padding-left: 20px;
-			 	  @media(max-width: $tablet){
+			 	 @media(min-width: $screen-sm-min){
 	  		 		 font-size: 20px;
 	  		 		 padding-left: 10px;
 		  		 	}
@@ -545,9 +653,21 @@ h4{
 			 }
 .newsletter{
 	 padding: 10px 0px 50px 0px;
+
+	 img{
+	 	@media(max-width: $tablet){ 
+	 	 padding-top: 20px;
+	 	  }
+	 	  @media(max-width: $phone-max){ 
+	 	 padding-top: 0px;
+	 	  } 
+	   } 
 }
 .form-inline{
 	padding: 40px 0px;
+	@media(max-width: $tablet){
+		padding: 40px 0px;
+	}
 	  .form-control{
 	  	font-family: gotham-bold;
 	  	 border:3px solid #95989a;
@@ -585,10 +705,10 @@ h4{
 	   	padding: 35px 0px 35px 40px;
 	   }
 	   @media(max-width: $tablet){
-	   	padding: 15px 20px 35px 20px;
+	    padding: 0px;
 	   }
 	   @media(max-width: $phone-max){
-	   	padding: 10px 20px 10px 20px;
+	   	padding: 0px;
 	   }
 	  h2{
 	  	font-family: gotham-ultra;
@@ -608,13 +728,14 @@ h4{
 	  	    line-height: 65px; 
 	  	    margin-bottom: 75px;
 	  	}
-	  	@media(max-width: $tablet){
+	  	@media(min-width: $screen-sm-min){
 	  		font-size: 36px;
-	  	    line-height: 45px;  
+	  	    line-height: 37px; 
+	  	    margin-bottom: 40px; 
 	  	}
 	  	@media(max-width: $phone-max){
 	  		font-size: 18px;
-	  	    line-height: 35px;  
+	  	    line-height: 24px;  
 	  	    margin-bottom: 30px;
 	  	}
 	  	&:before{
@@ -624,6 +745,9 @@ h4{
 	  		     bottom: -52px;
 			    padding-bottom: 50px;
 			    width: 70px;
+			  @media(min-width: $screen-sm-min){
+			  		bottom: -24px; 
+			  	}
              @media(max-width: $phone-max){
 			  		bottom: -18px; 
 			  	}
@@ -635,6 +759,14 @@ h4{
 	  		font-size: 40px;
 	  		line-height: 50px;
 	  		letter-spacing: 0.025em;
+	  		@media(min-width: $screen-sm-min){
+	  			font-size: 24px;
+			    line-height: 34px;  
+	  		}
+	  		@media(max-width: $tablet){
+		  		font-size: 24px;
+			    line-height: 34px;  
+		  	}
 	  		@media(max-width: $phone-max){
 			  		font-size: 18px;
 			  	    line-height: 25px;  
@@ -650,6 +782,15 @@ h4{
 	  	p{ 
 	  		font-family: gotham-light;
 	  		margin: 50px 0px;
+	  		@media(min-width: $screen-sm-min){
+	  			margin: 30px 0px;
+	  		}
+	  		@media(max-width: $tablet){
+	  			margin: 20px 0px;
+	  		}
+	  		@media(max-width: $phone-max){
+	  			margin: 20px 0px; 
+	  		}
 	  	}
 }
 .rotate {
@@ -676,7 +817,13 @@ h4{
 	height: 50px;
 	width: 100%;
 }
-.bg-lightblue{background:$background-color;}
+.bg-lightblue{
+	background:$background-color;
+	.container.mapsec{
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+}
 .wrapper-rText { 
     width: 100%; 
     min-height: 300px; 
@@ -727,8 +874,31 @@ h4{
 
 		    
 		}
-
+    .rightBx.marg-27{
+    	margin-left: 20%;
+    	@media(max-width: $large){
+			  		margin-left: 20%;
+			  	}
+			  	@media(max-width: $medium){
+			  		margin-left: 20%;
+			  	}
+			  	@media(max-width: $optional){
+			  		margin-left: 25%;
+			  	}
+			  	
+			  	@media(max-width: $tablet){
+			  		margin-left: 20%;
+			  	}
+			  	 @media(max-width: $phone-max){
+			  	 	margin-left: 20%;
+			  	 }
+    }
 	.rightBx { 
+		#owl-deals{
+			 @media(max-width: $phone-max){
+			 	padding-bottom: 30px;
+			 }
+		   }
             h4{
 			    padding-right: 40px;
 				font-family: Americana-Bold;
@@ -743,8 +913,16 @@ h4{
 					   font-size: 24px;
                        line-height: 40px;
 				}
+				@media(min-width: $screen-sm-min){
+                    font-size: 18px;
+                    line-height: 24px;
+				}
 				@media(max-width: $tablet){
                     font-size: 18px;
+				}
+				@media(max-width: $phone-max){
+                    font-size: 14px;
+                    line-height: 24px;
 				}
 			}
 		   margin-left: 20em;
@@ -778,17 +956,24 @@ h4{
 				    position: absolute;
 				    width: 100%;
 				    left: 0px;
+				    @media(min-width: $screen-sm-min){
+				    	top: 20%;
+				    }
+				    @media(max-width: $phone-max){
+				    	top: 20%;
+				    }
 				    .owl-prev{
 				    	  left: -30px;
                           position: absolute;
                           @media(max-width: $phone-max){
+                          	 
                           	 left: -10px;
                           }
 				    }
 				    .owl-next{
 				    	  right: -30px;
                           position: absolute;
-                          @media(max-width: $phone-max){
+                          @media(max-width: $phone-max){ 
                           	 right: -10px;
                           }
 				    }
@@ -839,6 +1024,14 @@ h4{
 	    	 	font-size:15px; 
 	    	 	font-weight: bold;
 	    	 	line-height: 60px;
+	    	 	@media(min-width: $screen-sm-min){
+	    	 		font-size:12px;
+	    	 		line-height:43px;
+	    	 	}
+	    	 	@media(max-width: $tablet){
+	    	 		font-size:12px;
+	    	 		line-height:33px;
+	    	 	}
 	    	 	@media(max-width: $phone-max){
 	    	 		font-size:12px;
 	    	 		line-height: 18px; 
@@ -864,7 +1057,14 @@ h4{
 	 	  font-family: Americana-ExtraBold;
 	 	  font-size: 40px;
 	 	  line-height: 60px;
-
+	 	 @media(min-width: $screen-sm-min){
+	 	 	font-size: 18px;
+	 	    line-height: 24px;
+	 	 }
+         @media(max-width: $tablet){
+	 	  	font-size: 18px;
+	 	    line-height: 24px;
+	 	  }
 	 	  @media(max-width: $phone-max){
 	 	  	font-size: 18px;
 	 	    line-height: 24px;
