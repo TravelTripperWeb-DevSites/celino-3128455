@@ -11,11 +11,8 @@ $(document).ready(function() {
              responsive:{
 		        0:{
 		            items:1
-		        },
-            400:{
-                items:1
-            },
-		        600:{
+		        }, 
+		        668:{
 		            items:2
 		        },
 		        1000:{

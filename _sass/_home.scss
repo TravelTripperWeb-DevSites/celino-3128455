@@ -21,7 +21,7 @@
 			@media(max-width: $medium){
 				font-size: 26px;
 			}
-			@media(max-width: $on-laptop){
+			@media(max-width: $tablet-rotate){
 				font-size: 22px;
 			}
 			@media(max-width: $tablet){
@@ -42,7 +42,7 @@
 			@media(max-width: $medium){
 				font-size: 80px;
 			}
-			@media(max-width: $on-laptop){
+			@media(max-width: $tablet-rotate){
 				font-size: 60px;
 			}
 			@media(max-width: $tablet){
@@ -175,6 +175,9 @@
 	    	 @media(min-width: $medium){
 	    	 	 padding: 0px 20px 20px 50px; 
 	    	 }
+	    	 @media(max-width: $tablet-rotate){
+	    	 	padding: 0px;
+	    	 }
 	    	 @media(max-width: $tablet){
 	    	 	 padding: 0px; 
 	    	 }
@@ -182,6 +185,12 @@
 	   .btn-border {
 				    border-color: $white !important;
 				    box-shadow: inset 0 0 0 4px $white, 0 0 1px transparent;
-				    color: $white !important;
+				    background: transparent;
+	                transition: all 1s;
+	                color: $white !important;
+	                &:hover{
+	                	color:  $link-color !important;
+				        background: $white;
+	                }
 				}
 }
