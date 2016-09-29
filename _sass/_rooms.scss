@@ -221,6 +221,9 @@
 	 	 	padding: 10px 20px;
 	 	 	letter-spacing: 0.1em; 
 	 	 }
+	 	 @media (min-width: $screen-md-min) and (max-width: $medium){
+	 	 	margin-right: 10px;
+	 	 }
 	 	 @media(max-width: $phone-max){
 	 	 	padding: 16px; 
 	 	 	padding: 10px 20px;
@@ -346,6 +349,7 @@
 	 }
 	 .btn-booknow{
 	 	margin: 40px;
+
 	 	@media(max-width: $on-laptop){
 	 		font-size: 16px;
 	 		margin: 20px 0px;
@@ -416,6 +420,9 @@
 	 }
     .owl-prev,.owl-next {
     	 img{
+    	 	@media(max-width: $tablet-rotate){
+    	 		width: 30px;
+    	 	}
     	 	@media(max-width: $tablet){
     	 		width: 30px;
     	 	}
