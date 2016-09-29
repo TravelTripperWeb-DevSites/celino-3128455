@@ -1,0 +1,221 @@
+.bg-location{
+    background-image: url(/images/bg-leaf1.jpg);
+    background-position:left top;
+}
+
+.location{
+	&.padd-top50{
+		    padding: 80px 0px;
+		    @media(max-width: $medium){
+		    	padding: 20px 0px;
+		    }
+		    @media(max-width: $on-laptop){
+		    	padding: 60px 0px;
+		    }
+	}
+	margin-top: 10px;
+	.gps{
+		 padding-top: 0px;
+	}
+	.events-left-item {
+		padding-top: 40px;
+		font-family: gotham-bold;
+		color: #63657d;
+		padding-bottom: 40px;
+		position: relative;
+		
+		
+		@media(min-width: $medium){
+				padding-bottom: 40px;
+				margin-bottom: 14px;    
+			}
+		@media(min-width: $optional){
+				padding-bottom: 30px;
+				margin-bottom: 7px; 
+			}	
+			
+			a{
+				color: #63657d;
+				text-decoration: none;
+					&:focus, &:hover {
+						color: #63657d;
+						text-decoration: none;
+					}
+			}
+		h3{
+			font-family: gotham-bold;
+			font-size: 15px;
+			text-transform: uppercase;
+			position: relative;
+			color: #dbbf97;
+			letter-spacing: 4px;
+			margin: 0;
+			padding-bottom: 14px;
+				@media(min-width: 1200px){
+					padding-bottom: 14px;
+				}
+				@media(min-width: 1400px){
+					font-size: 20px;
+					padding-bottom: 23px;
+				}
+			&:after {
+					position: absolute;
+					content: "";
+					height: 1px;
+					background-color: #dbbf97;
+					top: -40px;
+					width: 28px;
+					left:0; 
+						 
+				}
+				 	
+		}
+		.events-left-list {
+			font-family: gotham-medium;
+			margin: 0;
+			padding: 0;
+			color: #63657d;
+				li {
+					list-style-type: none;
+					font-size: 13px;
+					letter-spacing: normal;
+					line-height: 26px;
+						@media(min-width: $screen-sm-min){
+							font-size: 15px;
+						}
+						@media(min-width: 1200px){
+							font-size: 15px;
+						}
+						@media(min-width: 1400px){
+							font-size: 20px;
+						}
+						.diff-style {
+							
+								font-family: gotham-ultra;
+							
+							a{
+								text-decoration: none;
+								color: #63657d;
+							}
+						}
+						
+						&.item-spacing {
+							padding-top: 22px;
+						}
+				}
+		}
+	}
+
+	.directions{
+		h4{
+			margin: 0px;
+			@media(min-width: $larger){
+				font-size: 40px;
+			} 
+            line-height: 34px;
+		}
+		 strong{
+		 	 font-family: gotham-bold; 
+		 }
+		 a{
+		 	text-decoration: none;
+		 }
+	}
+	.loc-link{
+		 width: 80%;
+		 margin: 20px 0px;
+		 text-align: left;
+		 position: relative;
+		 letter-spacing: 0.1em;
+		 span{
+		 	float: right;
+		 	position: absolute;
+		 	right: 10px;
+		 	font-size: 55px;
+		 	font-family: gotham-medium;
+		 	line-height: 28px;
+
+		 	@media(max-width: $large){
+		 		font-size: 35px;
+		 		top: 4px;
+		 	}
+		 }
+		 &:active, &:visited{
+		 	box-shadow: inset 0 0 0 4px $link-color, 0 0 1px transparent;
+		 }
+	}
+	#map-location {
+        height: 500px;
+        width: 55%;
+        @media(max-width: $on-palm){
+        	display: none;
+        }
+      }
+      #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+      #right-panel {
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+        overflow: scroll;
+        background: $white;
+      }
+
+      #right-panel select, #right-panel input {
+        font-size: 15px;
+      }
+
+      #right-panel select {
+        width: 100%;
+      }
+
+      #right-panel i {
+        font-size: 12px;
+      }
+      #right-panel { 
+        float: right;
+        width: 390px;
+        overflow:scroll;
+        max-height: 500px;
+        @media(max-width: $phone-max){
+        	width: 100%;
+        }
+      }
+      #map-location {
+        margin-right: 400px;
+      }
+      #floating-panel {
+        background: #fff;
+        padding: 5px;
+        font-size: 14px;
+        font-family: Arial;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+        display: none;
+      }
+      @media print {
+        #map-location {
+          height: 500px;
+          margin: 0;
+        }
+        #right-panel {
+          float: none;
+          width: auto;
+        }
+      } 
+
+      jstcache:nth-child(2){
+      	 display: none;
+      }
+}

@@ -458,7 +458,42 @@ function initializehome() {
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 google.maps.event.addDomListener(window, 'load', initializehome);
-/// eof map ////
+/// eof map //// 
+ 
+    $('.loc-link').click(function(){ 
+      var mapPanel = $('#right-panel');
+      mapPanel.html('');
+      var directionsDisplay = new google.maps.DirectionsRenderer;
+      var directionsService = new google.maps.DirectionsService;
+      var start = $(this).attr('data-start');
+      var end =   $(this).attr('data-end'); 
+      directionsService.route({
+          origin: start,
+          destination: end,
+          travelMode: 'DRIVING'
+        }, function(response, status) {
+          if (status === 'OK') {
+            directionsDisplay.setDirections(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+       setTimeout(function(){
+              var map = new google.maps.Map(document.getElementById('map-location'), {
+                zoom: 12,
+                center: {lat: 25.814141, lng: -80.122839}
+              });
+
+              directionsDisplay.setMap(map);
+              
+              directionsDisplay.setPanel(document.getElementById('right-panel'));
+             
+              var control = document.getElementById('floating-panel');
+              control.style.display = 'block';
+              map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
+         }, 1000);
+    }) ; 
+//end direction
 
  smoothScroll.init({
             offset:100,
@@ -524,4 +559,5 @@ $(function(){
   });
 });
 
+ 
  

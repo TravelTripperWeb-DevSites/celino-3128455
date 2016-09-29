@@ -18,6 +18,22 @@
 	}
 
 }
+.padd-fixedtopinner{ 
+	padding-top: 140px;
+	@media(max-width: $larger){
+		padding-top: 120px;
+	}
+	@media(max-width: $medium){
+		padding-top: 20px;
+	}
+	@media(max-width: $on-laptop){
+		padding-top: 70px;
+	}
+	@media(max-width: $tablet){
+		padding-top: 40px;
+	}
+
+}
 .top-15{
 	    padding-top: 15px !important;
 	    @media(max-width: $larger){
