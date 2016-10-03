@@ -673,7 +673,7 @@ function initialize1() {
       },
       {
         'id':6,
-        'content':'<strong>DESIGN DISTRICT</strong>  ',
+        'content':'<strong>MIAMI DESIGN DISTRICT</strong>  ',
         'position': {
           'lat': 25.8134218,
           'lng': -80.19342849999998
