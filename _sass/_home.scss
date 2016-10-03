@@ -164,6 +164,7 @@
 
 .blue-bgStrip{
 	   background: url('/images/blue-stripe.jpg') left repeat-y ;
+	   background-size: contain;
        @media(max-width: $on-laptop){
        	 background: url('/images/blue-stripe.jpg') right repeat-y ;
        }
