@@ -630,8 +630,8 @@ function initialize1() {
         'id':1,
         'content':'<strong>EL TUCÁN</strong>',
         'position': {
-          'lat':25.816827,
-          'lng':-80.125684
+          'lat':25.7536953,
+          'lng':-80.20520239999996
          },
          'pointmrkr': '/images/icons/marker1.png'
       },
@@ -639,8 +639,8 @@ function initialize1() {
         'id':2,
         'content':'<strong>WYNWOOD</strong> ',
         'position': {
-          'lat':25.804244,
-          'lng':-80.198919
+          'lat':25.8042441,
+          'lng':-80.19891860000001
          },
          'pointmrkr': '/images/icons/marker2.png'
       },
@@ -648,8 +648,8 @@ function initialize1() {
         'id':3,
         'content':'<strong>JOE’S STONE CRAB</strong> ',
         'position': {
-          'lat':25.768854,
-          'lng':-80.135039
+          'lat':25.7820438,
+          'lng':-80.13261990000001
          },
          'pointmrkr': '/images/icons/marker3.png'
       },
@@ -657,8 +657,8 @@ function initialize1() {
         'id':4,
         'content':'<strong>BAYFRONT PARK</strong>',
         'position': {
-          'lat':25.776262,
-          'lng':-80.186098
+          'lat':25.773099,
+          'lng':-80.18732299999999
          },
          'pointmrkr': '/images/icons/marker4.png'
       },
@@ -666,8 +666,8 @@ function initialize1() {
         'id':5,
         'content':'<strong>LITTLE HAVANA</strong>',
         'position': {
-          'lat': 25.777644,
-          'lng': -80.237708
+          'lat': 25.7776438,
+          'lng': -80.23770780000001
          },
          'pointmrkr': '/images/icons/marker5.png'
       },
@@ -675,12 +675,20 @@ function initialize1() {
         'id':6,
         'content':'<strong>DESIGN DISTRICT</strong>  ',
         'position': {
-          'lat':25.813422,
-          'lng': -80.193428
+          'lat': 25.8134218,
+          'lng': -80.19342849999998
          },
          'pointmrkr': '/images/icons/marker6.png'
       },
-       
+       {
+        'id':7,
+        'content':'<strong>Celino South Beach</strong>  ',
+        'position': {
+          'lat': 25.814141,
+          'lng': -80.122839
+         },
+         'pointmrkr': '/images/loc.png'
+      },
     ]
       
     for (var i = 0; i < data.length; i++) { 
