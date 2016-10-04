@@ -5,8 +5,8 @@
       $interpolateProvider.endSymbol(']]');
     })
     .value('rt3api', new Rt3Api({
-      portalId: 'thepierreny',
-      hotelId: 'NYCTP',
+      portalId: 'thecelinohotel',
+      hotelId: 'MIACEL',
       defaultLocale: 'en',
       defaultCurrency: 'USD'
     }))

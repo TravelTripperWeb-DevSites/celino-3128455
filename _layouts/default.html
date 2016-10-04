@@ -35,8 +35,9 @@
     <div class="left-bg {{page.bg}}">
       <div class="bg-white">
         {% include header.html %}
-      
+        <div ng-app="rezTrip" rt3-hotel-info="hotelInfo" ng-cloak>
         {{ content }}
+        </div>
      </div>
     </div>  
     {% include footer.html %}
