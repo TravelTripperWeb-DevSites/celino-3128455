@@ -44,12 +44,21 @@ angular.module('rezTrip')
       }
     };
   }])
+  .directive('rt3Code', ['rt3RoomCode', function(rt3RoomCode) {
+    return {
+      restrict: 'A',
+      scope: true,
+      link: function(scope, element, attrs) {
+        scope[attrs['rt3Code']] = rt3RoomCode;
+      }
+    };
+  }])
   .directive('rt3RecentBookings', ['rt3RecentBookings', function(rt3RecentBookings) {
     return {
       restrict: 'A',
       scope: true,
       link: function(scope, element, attrs) {
-        scope[attrs['rt3RecentBookings']] = rt3RecentBookings;
+        scope[attrs['rt3RecentBookings']] = rt3RecentBookings; 
       }
     };
   }])
