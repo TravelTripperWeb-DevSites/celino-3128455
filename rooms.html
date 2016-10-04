@@ -5,7 +5,7 @@ title: Celino Hotel South Beach
 bg: bg-rooms
 ---
  
-<div class="padd-fixedtop"></div> 
+ <div class="padd-fixedtop"></div> 
 <section class="padd-top50 top-margin">
   <div class="container no-padding">
   <div class="col-md-12  no-padding">
@@ -17,7 +17,7 @@ bg: bg-rooms
 	        <div class="col-md-12  no-padding">
 	         <div class="banner-top"><img src="/images/rooms/hero-banner.jpg" alt="banner rooms" class="img-responsive center-block">
 	         <h2 class="white"> Suites</h2>
-	         <div class="booking-hour" rt3-recent-bookings="recentBookings"><span class="gold">[[ recentBookings.totalBookings ]]</span><span class="detail"> BOOKINGS IN 48 HOURS</span></div>
+	         <div class="booking-hour"><span class="gold">90</span><span class="detail"> BOOKINGS IN 48 HOURS</span></div>
 	         </div>
 
 	        </div>  
@@ -26,12 +26,10 @@ bg: bg-rooms
   </div>
   </div>
 </section>
-<section rt3-rooms-browser="browser"   rt3-search-form="search" on-search-changed="browser.tonightavailRooms()" ng-cloak>  
- 
-<div ng-if="(browser.roomsv  | filter: {category:'Classic'}).length > 0" class="devider-inner top-40" style="background: url('/images/bg-leaf.jpg') top right no-repeat;"><span class="d-title">GARDEN VIEW</span></div>
+<div class="devider-inner top-40" style="background: url('/images/bg-leaf.jpg') top right no-repeat;"><span class="d-title">GARDEN VIEW</span></div>
 
- <div ng-repeat="room in browser.roomsv | filter: {category:'Classic'}">
-    <div ng-if="$even" class="container">
+<section>
+    <div class="container">
        <div class="col-md-6">
        <div class="top-right-bg tiles">
          <img src="/images/rooms/1.jpg" class="margin-top padd-20 img-responsive">
@@ -39,11 +37,10 @@ bg: bg-rooms
        </div>
        <div class="col-md-6">
 	          <div class="content-right">
-	            <h2>[[room.name]]</h2>
+	            <h2>CLASSIC <br>KING</h2>
 	            <h3 class="gold_gotham">TONIGHT’S RATE</h3>
-	            <h4 class="right-pd light_grey" rt3-code="code"> </h4>
+	            <h4 class="right-pd light_grey">Check Availability</h4>
 	            <p class="right-pd">
-	            [[room.description]]
 	             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
 	            </p>
 	            <p class="text-left">
@@ -52,19 +49,19 @@ bg: bg-rooms
 	           </div>
        </div>
     </div> 
- 
+</section>
 
 
- 
-    <div ng-if="$odd"  class="container">
+
+<section>
+    <div class="container">
      
        <div class="col-md-6">
 	          <div class="content-left2">
-	            <h2>[[room.name]]</h2>
+	            <h2>CLASSIC 2<br> QUEEN</h2>
 	            <h3 class="gold_gotham">TONIGHT’S RATE</h3>
 	            <h4 class="right-pd light_grey"> <span class="price">$109</span> / night</h4>
 	            <p class="right-pd">
-	            [[room.description]]
 	            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
 	            </p>
 	            <p class="text-left">
@@ -79,10 +76,12 @@ bg: bg-rooms
          </div>
        </div>
     </div>
- </div>
+
+</section>
+
 <div class="devider-inner" style="background: url('/images/rooms/bg-sea.jpg');"><span class="d-title">OCEANFRONT VIEW</span></div>
 
- 
+<section>
     <div class="container">
        <div class="col-md-6">
        <div class="blue-texture">
@@ -103,6 +102,7 @@ bg: bg-rooms
 	           </div>
        </div>
     </div> 
-</section> 
+</section>
+
 {% include blue-bg-deals.html%}
   
