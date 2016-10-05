@@ -206,6 +206,13 @@
 	 	 	 margin-bottom: 40px;
 	 	 }
 	 }
+.sea2{
+	 	 background: url('/images/sea1.jpg') bottom right no-repeat; 
+	 	 @media(max-width: $phone-max){
+	 	 	 margin-bottom: 40px;
+	 	 }
+	 }
+
 .gold_gotham{
 	font-family: gotham-bold;
 	color: $sec-color;
@@ -262,7 +269,11 @@
     	width: 85%;
     } 
     .carousel-inner{
-     
+       .item{
+       	  img{
+       	  	 width: 100%;
+       	  }
+       }
 
     }
     .carousel-indicators {

@@ -8,17 +8,17 @@ bg: bg-rooms
  <div class="padd-fixedtop"></div> 
  
 
-
+<div data-room-id="cking"  rt3-rooms-browser="browser" rt3-room-details="details"  ng-cloak>
 <section class="padd-fixedtopinner">
     <div class="container no-padding">
      
        <div class="col-md-6">
 	          <div class="content-left2 inner">
-	            <h2>CLASSIC <br> KING</h2>
+	            <h2>[[details.name]]</h2>
 	            <h3 class="gold_gotham">TONIGHT’S RATE</h3>
-	            <h4 class="right-pd light_grey"> <span class="price">$109</span> / night</h4>
+	            <h4 class="right-pd light_grey" rt3-code="[[room.code]]">  checking...</h4>
 	            <p class="right-pd">
-	            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+	            [[details.description]]
 	            </p>
 	            <p class="text-right">
 	            <a href="#" class="btn-booknow hvr-fade">BOOK NOW</a> 
@@ -28,7 +28,7 @@ bg: bg-rooms
 
          <div class="col-md-6 no-padding">
           <div class="bottom-right-bg2 tiles2 pull-right">
-           <img src="/images/rooms/detail1.jpg" class="img-responsive">
+           <img ng-src="[[details.photos[0].large]]" class="img-responsive">
          </div>
        </div>
     </div>
@@ -38,32 +38,21 @@ bg: bg-rooms
 
  <section>
     <div class="container">
-    	<div id="roomslide" class="carousel slide" data-ride="carousel">
+        <div ng-if="details.photos.length == 1" class="content-room"><img  ng-src="[[details.photos[0].large]]" class="img-reponsive full" alt="hero image [[details.name]]">
+        </div>
+    	<div ng-if="details.photos.length > 1" id="roomslide" class="carousel slide" data-ride="carousel">
 				  <!-- Indicators -->
 				  <ol class="carousel-indicators">
-				    <li data-target="#roomslide" data-slide-to="0" class="active"></li>
-				    <li data-target="#roomslide" data-slide-to="1"></li>
-				    <li data-target="#roomslide" data-slide-to="2"></li>
-				    <li data-target="#roomslide" data-slide-to="3"></li>
+				    <li ng-repeat="gallery in details.photos"  data-target="#roomslide" data-slide-to="$index" ng-class="{active:!$index}"></li> 
 				  </ol>
 
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" role="listbox">
-				    <div class="item active">
-				      <img src="/images/rooms/classic-slide1.jpg" alt="Chania"> 
+				    <div ng-class="{active:!$index}" ng-repeat="gallery in details.photos" class="item">
+				      <img ng-src="[[gallery.large]]" alt="gallery [[details.name]]"> 
 				    </div>
 
-				    <div class="item">
-				      <img src="/images/rooms/classic-slide1.jpg"  alt="Chania"> 
-				    </div>
-
-				    <div class="item">
-				      <img src="/images/rooms/classic-slide1.jpg"  alt="Flower"> 
-				    </div>
-
-				    <div class="item">
-				      <img src="/images/rooms/classic-slide1.jpg"  alt="Flower"> 
-				    </div>
+				     
 				  </div>
 
 				  <!-- Left and right controls -->
@@ -100,5 +89,6 @@ bg: bg-rooms
 	</div>
 
 </section>
+</div>
 {% include owl-rooms.html%}
   

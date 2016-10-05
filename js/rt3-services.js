@@ -166,8 +166,7 @@ angular.module('rezTrip')
               
               $rootScope.$apply(function() {
 
-                 self.roomsv =  result.rooms;
-                 self.roos ='eeee';
+                 self.roomsv =  result.rooms; 
                  angular.forEach(result.rooms, function(value, key) {
                    code.push(value.code);
                 }); 
@@ -259,7 +258,8 @@ angular.module('rezTrip')
 
       else
       {
-    
+        if(myVals.length){
+
         for (i = 0; i < myVals.length; i++)
         {
           for (j = 0; j < items.length; j++)
@@ -306,6 +306,8 @@ angular.module('rezTrip')
 
              return tonightrate;
            }
+           
+        }
 }
 
     Browser.prototype.search = function(params) {
@@ -501,6 +503,5 @@ angular.module('rezTrip')
   }])
   
   .service('rt3RoomCode', ['$q', 'rt3api', 'rt3Search', function($q, rt3api, rt3Search) {
-        
-          alert(this.rt3Code);
+         
   }]);
