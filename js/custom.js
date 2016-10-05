@@ -628,7 +628,7 @@ function initialize1() {
     var data = [ // map data
       {
         'id':1,
-        'content':'<strong>EL TUCÁN</strong>',
+        'content':'<strong>EL TUCÁN</strong><p>1111 SW 1st Ave Miami, FL 33130</p>',
         'position': {
           'lat':25.7536953,
           'lng':-80.20520239999996
@@ -646,7 +646,7 @@ function initialize1() {
       },
       {
         'id':3,
-        'content':'<strong>JOE’S STONE CRAB</strong> ',
+        'content':'<strong>JOE’S STONE CRAB</strong> <p>11 Washington Ave Miami Beach, FL 33139</p>',
         'position': {
           'lat':25.7820438,
           'lng':-80.13261990000001

@@ -8,10 +8,8 @@
       "booking-link":"​https://anchorageinn.reztrip.com",
       "contact-link": "mailto:info@anchorageinn.com",
 
-       "header-links":[  
-            {"name":"OUR HOTEL","url":"/our-hotel/", "parent":"our-hotel"},
-            {"name":"ROOMS & SUITES","url":"/rooms/", "parent":"rooms"},  
-            {"name":"PACKAGES", "url":"/packages/", "parent":"packages"}, 
+       "header-links":[   
+            {"name":"ROOMS & SUITES","url":"/rooms/", "parent":"rooms"},   
             {"name":"Contact", "url":"/contact/", "parent":"contact"},
             {"name":"Location", "url":"/location/", "parent":"location"} 
          ], 

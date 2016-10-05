@@ -15,7 +15,9 @@
 	             South Beach is the epitome of all that makes Miami nightlife captivating. From the mix of culturally-inspired restaurants, to the fashionable shopping always on pulse with trends, there seems to be little time to slow down. In fact, sleeping is optional while having a good time is mandatory.
 	            </p>
 	            <p class="text-right">
-	            <a href="#" class="btn-border hvr-border-fade">EXPLORE PARADISE</a>
+              {% if page.url !='/location/' %}
+	            <a href="/location/" class="btn-border hvr-border-fade">EXPLORE PARADISE</a>
+              {% endif %}
 	            </p>
 	           </div>
        </div>
