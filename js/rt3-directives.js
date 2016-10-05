@@ -44,12 +44,27 @@ angular.module('rezTrip')
       }
     };
   }])
-  .directive('rt3Code', ['rt3RoomCode', function(rt3RoomCode) {
+  .directive('rt3Code', ['rt3RoomCode', '$rootScope', 'rt3api', function(rt3RoomCode, $rootScope, rt3api) {
     return {
       restrict: 'A',
-      scope: true,
-      link: function(scope, element, attrs) {
-        scope[attrs['rt3Code']] = rt3RoomCode;
+      scope: true, 
+      link: function(scope, element, attrs) { 
+        //scope[attrs['rt3Code']] = rt3RoomCode; 
+        rt3api.availableRoomsTonight().then(function(response) {
+            $rootScope.$apply(function() {  
+                scope.roomsTonight = response.room_details_list;
+                  var roomRates =   scope.roomsTonight.filter(function(item){ 
+                   return item.code == attrs.rt3Code; 
+                  });
+                  if(roomRates.length || roomRates.length > 0){
+                    scope.roomRate = '<span class="price">$ '+ Math.round(roomRates[0].min_average_price) +'</span> / night'; 
+                  }else{
+                      scope.roomRate ="Check Availability";
+                  }
+                  
+                 element.html(scope.roomRate); 
+             });
+        });
       }
     };
   }])
@@ -71,3 +86,4 @@ angular.module('rezTrip')
       }
     }
   }]);
+ 

@@ -527,6 +527,9 @@ h4{
 	  		}
 	  	}
 }
+.full{
+	width: 100%;
+}
 .content-left2{
 	   padding: 35px 0px 35px 50px;
 	   @media(max-width: $medium){
@@ -550,6 +553,7 @@ h4{
 	  	position: relative;
 	  	margin-bottom: 85px;
 	  	padding-right: 40px;
+	  	text-transform: uppercase;
 	  	@media(max-width: $large){
 	  		font-size: 60px;
 	  	    line-height: 75px; 
