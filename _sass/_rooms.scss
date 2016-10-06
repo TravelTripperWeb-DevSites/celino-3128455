@@ -230,6 +230,7 @@
 	color: $white !important;
 	background: url('/images/btn-goldenbg.jpg') center center no-repeat;
 	text-decoration: none;
+	background-position: cover;
 	text-transform: uppercase;
 	font-family: Americana-ExtraBold;
 	font-size: 24px;
@@ -243,11 +244,14 @@
 	 	 @media(max-width: $medium){
 	 	 	padding: 16px; 
 	 	 	padding: 10px 20px;
-	 	 	letter-spacing: 0.1em; 
+	 	 	letter-spacing: 0.1em;
+	 	 	margin-right: 10px; 
 	 	 }
-	 	 @media (min-width: $screen-md-min) and (max-width: $medium){
-	 	 	margin-right: 10px;
-	 	 }
+	 	  
+	 	  @media(max-width: $tablet-rotate){
+              font-size: 18px;
+           
+	 	  }
 	 	 @media(max-width: $phone-max){
 	 	 	padding: 16px; 
 	 	 	padding: 10px 20px;

@@ -75,6 +75,20 @@ h4{
 	  	    line-height: 35px;  
 	  	}
 	}
+.bookBtn{
+	background: #b07719 url('/images/btn-goldenbg.jpg') center center repeat-x;
+	 font-family: Americana-ExtraBold;
+	 padding: 8px 20px;
+	 margin-top: 8px;
+	 float: right;	
+	 color: $white;
+	 @media (min-width: $optional) {
+						display: none;
+	 } 
+	 @media( max-width: $low-point){ 
+	 	padding: 8px 10px;
+	 } 
+}
 .navbar-inverse{
 	 background-color: transparent;
 	 border-width:0px;
@@ -110,7 +124,7 @@ h4{
 	 background-image: url('/images/bg-home-left.jpg');
 	 background-repeat: repeat-y;
 }
-
+ 
 .navbar{
 	  font-family: gotham-medium;
 	   min-height: 90px !important; 
@@ -128,7 +142,10 @@ h4{
 	     .navbar-brand{
 	     	float: none;
 			 padding: 10px 0px!important;
-
+               @media (max-width: $optional) {
+               	 padding: 0px 10px 10px 10px !important;
+			  	 float: left;
+               }
 			  @media( max-width: $tablet){ 
 			  	 padding: 5px 10px!important;
 			  	 float: left;
@@ -137,8 +154,16 @@ h4{
 			   	   @media(max-width: $large){
 			   	   	max-width:160px;
 			   	   }
-			  	   @media( max-width: $tablet){ 
+			  	   @media( max-width: $optional){ 
+			   	  	  height: 50px;
+			   	  	  margin: 0px 0px;
+			   	  }
+			   	  @media( max-width: $tablet){ 
 			   	  	  height: 40px;
+			   	  	  margin: 0px 0px;
+			   	  }
+			   	  @media( max-width: $low-point){ 
+			   	  	  height: 30px;
 			   	  	  margin: 0px 0px;
 			   	  }
 		    }
@@ -195,16 +220,20 @@ h4{
 				    background-color: none;
     	            border-color: transparent !important;
     	            border-radius: 0px;
+    	            margin-left: 10px;
     	            color: $brand-color;
     	              .icon-bar{
     	              	 background-color: $brand-color !important;
     	              }
-    	            &:focus, &:active{
+    	            &:focus, &:hover{
                         background-color: $brand-color !important;
                         .icon-bar{
     	              	 background-color: $white !important;
     	                 }
     	            }
+    	             &:active{
+                        background-color: $white !important;
+                    }
 				  }
 				  .navbar-collapse {
 				    border-color: $grey-color-light !important;
@@ -363,18 +392,23 @@ h4{
 	 	 	letter-spacing: 0.1em;
 	 	 	min-width: 260px;
 	 	 }
-	 	 @media(max-width: $low-point){
-	 	 	padding: 13px; 
-	 	 	padding: 10px 20px;
-	 	 	letter-spacing: 0.1em;
-	 	 	min-width: 100%;
-	 	 }
+ 	  @media(max-width: $tablet-rotate){
+           padding: 10px 20px; 
+	 	 	min-width: 220px;
+ 	  }
+	 	 
 	 	 @media(max-width: $phone-max){
 	 	 	padding: 13px; 
 	 	 	padding: 10px 20px;
 	 	 	letter-spacing: 0.1em;
 	 	 	min-width: 100%;
 	 	 	display: block;
+	 	 }
+	 	 @media(max-width: $low-point){
+	 	 	padding: 13px; 
+	 	 	padding: 10px 20px;
+	 	 	letter-spacing: 0.1em;
+	 	 	min-width: 100%;
 	 	 }
 	&:hover{
      text-decoration: none;
@@ -786,6 +820,7 @@ h4{
 	  	position: relative;
 	  	margin-bottom: 85px;
 	  	padding-right: 40px;
+	  	text-transform: uppercase;
 	  	@media(max-width: $large){
 	  		font-size: 60px;
 	  	    line-height: 75px; 
