@@ -237,6 +237,9 @@
 	letter-spacing: 0.2em; 
 	text-align: center;
 	margin-right: 40px;
+	text-decoration: none;
+	transition: all 0.5s;
+	 box-shadow: inset 0 0 0 0px #c18f30, 0 0 0px transparent;
 	@media(max-width: $large){
 	 		font-size: 20px;
 	 		padding: 10px 20px; 
@@ -260,7 +263,13 @@
 	 	 	width: 100%;
 	 	 	letter-spacing: 0.1em; 
 	 	 }
-	 
+	 &:hover{
+         color: $white;
+         text-decoration: none;
+        -webkit-box-shadow: inset 10px 10px 130px -9px rgba(31,18,0,0.3);
+		-moz-box-shadow: inset 10px 10px 130px -9px rgba(31,18,0,0.3);
+		box-shadow: inset 10px 10px 130px -9px rgba(31,18,0,0.3); 
+	 }
 }
 
 #roomslide{

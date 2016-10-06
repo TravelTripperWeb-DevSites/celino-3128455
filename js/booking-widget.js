@@ -4,7 +4,30 @@ $(function() {
   var closeButton = $('.booking-widget_close');
   var showButtons = $('a[show-booking-widget]');
   var isselect=true;
-
+ 
+  //$('.-first').find('.booking-widget_accord_toggler').addClass('-show');
+  //$('.-first').find('.booking-widget_accord_content').css('display','block');
+  
+  $('.-first').click(function(){
+   $('.-second').find('.booking-widget_accord_content').slideUp('slow'); 
+   $('.-second').find('.booking-widget_accord_toggler').removeClass('-show');
+       $('.-third').find('.booking-widget_accord_content').slideUp('slow');
+       $('.-third').find('.booking-widget_accord_toggler').removeClass('-show'); 
+  });
+  
+  $('.-second').click(function(){
+       $('.-first').find('.booking-widget_accord_content').slideUp('slow'); 
+       $('.-first').find('.booking-widget_accord_toggler').removeClass('-show');
+       $('.-third').find('.booking-widget_accord_content').slideUp('slow');
+       $('.-third').find('.booking-widget_accord_toggler').removeClass('-show'); 
+  });
+  
+  $('.-third').click(function(){
+   $('.-first').find('.booking-widget_accord_content').slideUp('slow'); 
+       $('.-first').find('.booking-widget_accord_toggler').removeClass('-show');
+       $('.-second').find('.booking-widget_accord_content').slideUp('slow'); 
+       $('.-second').find('.booking-widget_accord_toggler').removeClass('-show');
+  });
 
   // Show booking sidebar events
   $.each(showButtons, function(i, item) {
@@ -39,8 +62,10 @@ $(function() {
 
   // TODO
   $(document).on('click.acord', '.booking-widget_accord_toggler', function() {
+
     var $this = $(this);
-$this.toggleClass('-show');
+$this.toggleClass('-show'); 
+ //jQuery(this).datepicker();
 
 $this.siblings('.booking-widget_accord_content').stop().slideToggle(200);
 /*

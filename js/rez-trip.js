@@ -52,8 +52,24 @@
       this.departureOptions = {
         minDate: 1
       }
+      //added hide option
+      this.chachgeMaxDate = function(target) {
+       
+       $('.-second').find('.booking-widget_accord_content').slideUp('slow'); 
+       $('.-second').find('.booking-widget_accord_toggler').removeClass('-show');
+       //$('.-second').find('.booking-widget_accord_content').css('display','none');
+        }
+        //
+
       // Todo move to service
       this.chachgeMinDate = function(target) {
+       //added hide option
+       $('.-first').find('.booking-widget_accord_content').slideUp('slow');
+       $('.-first').find('.booking-widget_accord_toggler').removeClass('-show'); 
+       $('.-second').find('.booking-widget_accord_content').slideDown('slow');
+       $('.-second').find('.booking-widget_accord_toggler').addClass('-show');
+       $('.-second').find('.booking-widget_accord_content').css('display','block');
+        //
         var today = new Date().getDate();
         var arr = new Date($scope.search.params.arrival_date).getDate();
         var arrm = new Date($scope.search.params.arrival_date).getMonth();
