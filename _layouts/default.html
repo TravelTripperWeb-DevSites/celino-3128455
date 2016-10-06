@@ -1,5 +1,5 @@
 {% assign name = obj %}{% assign obj = site.data.main %}<!DOCTYPE html>
-<html>
+<html ng-app="rezTrip" rt3-hotel-info="hotelInfo" ng-cloak>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,7 +35,7 @@
     <div class="left-bg {{page.bg}}">
       <div class="bg-white">
         {% include header.html %}
-        <div ng-app="rezTrip" rt3-hotel-info="hotelInfo" ng-cloak>
+        <div>
         {{ content }}
         </div>
      </div>
