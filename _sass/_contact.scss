@@ -2,6 +2,18 @@
 	 background-image: url('/images/bg-contact-left.jpg');
 	 background-position: 577px top;
 }
+.map-holder {
+				border: solid 4px #0f1237;
+				height: 300px;
+				margin: 0 15px 0 0;
+					@media(min-width: $screen-sm-min){
+						height: 500px;
+						margin: 0 15px 0 0;
+					}
+					@media(min-width: $screen-md-min){
+						height: 648px;
+					}
+			}
 .contact-details {
 	
 	position: relative;
@@ -458,18 +470,7 @@
 								}
 					}
 			}
-			.map-holder {
-				border: solid 4px #0f1237;
-				height: 300px;
-				margin: 0 15px 0 0;
-					@media(min-width: $screen-sm-min){
-						height: 500px;
-						margin: 0 15px 0 0;
-					}
-					@media(min-width: $screen-md-min){
-						height: 648px;
-					}
-			}
+			
 }
 
 .contact-strip-2 {
