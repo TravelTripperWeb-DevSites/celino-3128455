@@ -956,10 +956,12 @@ h4{
 	width: 100%;
 }
 .bg-lightblue{
-	background:$background-color;
-	.container.mapsec{
-		padding-top: 30px;
+	padding-bottom: 50px;
+	@media(max-width: $phone-max){
 		padding-bottom: 30px;
+	}
+	background:$background-color;
+	.container.mapsec{ 
 	}
 }
 .wrapper-rText { 
