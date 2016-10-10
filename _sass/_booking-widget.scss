@@ -3,7 +3,8 @@
   z-index: 1000000000;
   top: 0;
   right: -370px;
-  width: 370px;
+  width: 100%;
+  max-width: 370px;
   height: 100%;
   -webkit-transition: right 0.4s;
   transition: right 0.4s;
@@ -172,6 +173,10 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-family: gotham-bold; 
+  @media(max-width: '360px'){
+    letter-spacing: 0.02em;
+    font-size: 13px;
+  }
 
 }
 
@@ -519,6 +524,9 @@
   right: 50px;
   bottom: 2px;
   left: 185px;
+  @media(max-width: '360px'){
+    left: 160px;
+  }
 
   input {
     font-family: gotham-ultra;
