@@ -36,7 +36,6 @@ $(document).ready(function() {
              $(this).closest('.whiteBg').find('.box').slideToggle('fast');
         });
     });
- 
   
   
 }); //end of jquery ready state
