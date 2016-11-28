@@ -844,8 +844,7 @@ $(document).ready(function(){
                     if (!results) return null;
                     if (!results[2]) return '';
                     return decodeURIComponent(results[2].replace(/\+/g, " "));
-             }
-          alert(getParameterByName('submit'));
+             } 
            if(getParameterByName('submit')=='success'){ 
                 $('.alert').css('display','block');
              }
