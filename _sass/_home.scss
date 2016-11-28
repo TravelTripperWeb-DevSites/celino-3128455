@@ -2,6 +2,8 @@
 	padding-top: 40px;
 
 	.carousel-caption{
+		   width:auto;height:auto;
+            text-align: center;
 		    top: 40%;
 		    bottom: auto;
 		    @media(max-width: $tablet){
@@ -10,11 +12,14 @@
 		    @media(max-width: $phone-max){
 		    	top: 10%;
 		    }
+		     left: 10%;
+             right: 10%;
 
 		h2{ 
 			font-family: gotham-ultra;
 			font-size: 43px;
-			letter-spacing: 0.2em;
+			display: block;
+			letter-spacing: 0.2em; 
 			@media(max-width: $large){
 				font-size: 30px;
 			}
@@ -31,9 +36,11 @@
 				font-size: 14px;
 				padding: 0px;
 				margin: 0px;
+			    line-height: 20px;
 			}
 		}
-		h3{
+		h3{ 
+			display: block;
 			font-family: Americana-ExtraBold;
 			font-size: 119px;
 			@media(max-width: $large){
