@@ -54,6 +54,41 @@
 		}
 	}
 }
+.columns-2list{
+	list-style-type: disc;
+	 -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+
+            padding: 10px;
+            font-size: 18px; 
+	  		font-family: gotham-light;
+	  		line-height: 30px;
+	  		@media(max-width: $large){
+	  			font-size: 18px; 
+	  			line-height: 28px;
+	  		}
+	  		@media(max-width: $medium){
+	  			font-size: 14px; 
+	  			line-height: 24px;
+	  		}
+	  		@media(max-width: $phone-max){
+	  			-webkit-column-count: 1;
+                -moz-column-count: 1;
+                 column-count: 1;
+	  		}
+
+	li{
+		 display: list-item; 
+		 list-style-position: inside;
+		 text-indent: -35px;
+         margin-left: 28px;
+         @media(max-width: $medium){
+         	text-indent: -25px;
+            margin-left: 20px;
+         }
+	}
+}
 #Bedsonslide{
 	padding: 60px 0px;
 	margin-top: 50px;
@@ -71,7 +106,9 @@
     	    margin-bottom: 30px;
     }
     .carousel-inner{
-     
+       img{
+       	 width: 100%;
+       }
 
     }
     .carousel-indicators {

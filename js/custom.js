@@ -1,5 +1,13 @@
- 
+ $(window).scroll(function() {
+  if ($(document).scrollTop() > 80) {
+    $('nav').addClass('shrink');
+  } else {
+    $('nav').removeClass('shrink');
+  }
+});
 $(document).ready(function() { 
+
+
   $("#roomslide").carousel();
  $("#owl-deals, #owl-rooms").owlCarousel({
             items : 3,
@@ -826,7 +834,22 @@ $(function(){
   });
 });
 
- 
+$(document).ready(function(){
+        $('.alert').css('display','none');
+            function getParameterByName(name, url) {
+                    if (!url) url = window.location.href;
+                    name = name.replace(/[\[\]]/g, "\\$&");
+                    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                        results = regex.exec(url);
+                    if (!results) return null;
+                    if (!results[2]) return '';
+                    return decodeURIComponent(results[2].replace(/\+/g, " "));
+             } 
+           if(getParameterByName('submit')=='success'){ 
+                $('.alert').css('display','block');
+             }
+      });
+             
 $(function() { 
     var lat = 25.814141;
     var lon = -80.122839;

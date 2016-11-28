@@ -135,7 +135,29 @@ h4{
 	 background-image: url('/images/bg-home-left.jpg');
 	 background-repeat: repeat-y;
 }
- 
+.shrink{
+	  @media(min-width: $tablet-rotate){
+
+       	max-height: 40px !important;
+        .bg-white{
+        	 min-height: 40px !important; 
+        	 padding-top: 10px;
+        	.navbar-header{
+        		padding: 0px 20px;
+        		 .navbar-brand{
+		        	 	img{ 
+		        	 		max-width: 120px;
+		        	 		 
+		        	 	}
+		        	 }
+
+        		}
+        	 .nav{
+        	 	margin-top: 20px;
+        	 }
+        }
+       }  
+	  }
 .navbar{
 	  font-family: gotham-medium;
 	   min-height: 90px !important; 
@@ -149,6 +171,7 @@ h4{
 	   	min-height: 50px !important;
 	   } 
        
+
 	   
 	     .navbar-brand{
 	     	float: none;
