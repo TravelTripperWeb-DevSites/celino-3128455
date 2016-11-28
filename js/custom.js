@@ -6,14 +6,14 @@
   }
 });
 $(document).ready(function() {  
-jQuery('#slideShow h3').fitText(1.2, { minFontSize: '20px', maxFontSize: '129px' });
-jQuery('#slideShow h2').fitText(2.6, { minFontSize: '11px', maxFontSize: '70px' });
+jQuery('#slideShow h3').fitText(1.2, { maxFontSize: '129px' });
+jQuery('#slideShow h2').fitText(2.6, {   maxFontSize: '70px' });
    
     jQuery('#slideShow').on('slid.bs.carousel', function () {
-        jQuery('.carousel-caption').find('h3').fitText(1.2, { minFontSize: '20px', maxFontSize: '129px' });
-        jQuery('.carousel-caption').find('h2').fitText(2.6, { minFontSize: '11px', maxFontSize: '70px' });
+        jQuery('.carousel-caption').find('h3').fitText(1.2, {  maxFontSize: '129px' });
+        jQuery('.carousel-caption').find('h2').fitText(2.6, { maxFontSize: '70px' });
     });
-
+  
   $("#roomslide").carousel();
  $("#owl-deals, #owl-rooms").owlCarousel({
             items : 3,
