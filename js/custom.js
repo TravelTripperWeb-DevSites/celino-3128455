@@ -5,7 +5,24 @@
     $('nav').removeClass('shrink');
   }
 });
-$(document).ready(function() {  
+
+$(document).ready(function() { 
+   
+     $('.galleria-info-text').css('display','block');
+$('.close-button').click(function(){
+    $('.galleria-container').css('display','none');
+});
+$('#gallery, #gallery-footer').click(function(){
+    $('.galleria-container').css('display','block');
+});
+
+
+
+            $('.galleria').galleria({
+                transition: 'fade',
+                data_source: data,
+                _toggleInfo: false
+                }); 
 jQuery('#slideShow h3').fitText(1.2, { maxFontSize: '129px' });
 jQuery('#slideShow h2').fitText(2.6, {   maxFontSize: '70px' });
    
@@ -628,8 +645,8 @@ function initialize1() {
    
   
     var myOptions = { // map settings
-        zoom: 13,
-        center: new google.maps.LatLng(25.814141, -80.122839),
+        zoom: 15,
+        center: new google.maps.LatLng(25.776373, -80.131829),
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         sensor: 'true', 
         scaleControl: false,
@@ -641,14 +658,14 @@ function initialize1() {
     var data = [ // map data
       {
         'id':1,
-        'content':'<strong>EL TUCÁN</strong><p>1111 SW 1st Ave Miami, FL 33130</p>',
+        'content':'<strong>Celino South Beach</strong><p>640 Ocean Drive, South Beach, Florida USA</p>',
         'position': {
-          'lat':25.7536953,
-          'lng':-80.20520239999996
+          'lat':25.776373,
+          'lng':-80.131829
          },
-         'pointmrkr': '/images/icons/marker1.png'
+         'pointmrkr': '/images/loc.png'
       },
-      {
+     /* {
         'id':2,
         'content':'<strong>WYNWOOD</strong> ',
         'position': {
@@ -701,7 +718,7 @@ function initialize1() {
           'lng': -80.122839
          },
          'pointmrkr': '/images/loc.png'
-      },
+      },*/
     ]
       
     for (var i = 0; i < data.length; i++) { 
