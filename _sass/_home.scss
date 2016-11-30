@@ -1,0 +1,362 @@
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+        
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+}
+#slideShow{
+	padding-top: 40px;
+	@media(max-width: $larger){
+        padding-top: 120px;
+	}
+	@media(max-width: $large){
+        padding-top: 90px;
+	}
+	@media(max-width: $medium){
+        padding-top: 80px;
+	} 
+	@media(max-width: $tablet-rotate){
+        padding-top: 40px;
+	}
+	@media(max-width: $phone-max){
+        padding-top: 60px;
+	}
+	
+.item.next .carousel-caption {
+    opacity: 0;
+    
+}
+
+	.carousel-caption{
+		   width:auto;height:auto;
+            text-align: center;
+		    top: 40%;
+		    bottom: auto;
+		    transition: opacity .35s ease-in-out;
+			  -moz-transition: opacity .35s ease-in-out;
+			  -webkit-transition: opacity .35s ease-in-out;
+		    @media(max-width: $tablet){
+		    	top: 30%;
+		    }
+		    @media(max-width: $phone-max){
+		    	top: 10%;
+		    }
+		     left: 10%;
+             right: 10%;
+
+		h2{ 
+			font-family: gotham-ultra;
+			font-size: 43px;
+			display: block;
+			letter-spacing: 0.2em;
+			 transition-property: opacity; 
+			@media(max-width: $large){
+				font-size: 30px;
+			}
+			@media(max-width: $medium){
+				font-size: 26px;
+			}
+			@media(max-width: $tablet-rotate){
+				font-size: 22px;
+			}
+			@media(max-width: $tablet){
+				font-size: 18px;
+			}
+			@media(max-width: $phone-max){
+				font-size: 14px;
+				padding: 0px;
+				margin: 0px;
+			    line-height: 20px;
+
+			}
+		}
+		h3{ 
+			display: block;
+			font-family: Americana-ExtraBold;
+			font-size: 119px;
+			 transition-property: opacity;
+			@media(max-width: $large){
+				font-size: 90px;
+			}
+			@media(max-width: $medium){
+				font-size: 80px;
+			}
+			@media(max-width: $tablet-rotate){
+				font-size: 60px;
+			}
+			@media(max-width: $tablet){
+				font-size: 50px; 
+			}
+			@media(max-width: $phone-max){
+				font-size: 30px;
+				 
+			}
+		}
+	}
+}
+.columns-2list{
+	list-style-type: disc;
+	 -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+
+            padding: 10px;
+            font-size: 18px; 
+	  		font-family: gotham-light;
+	  		line-height: 30px;
+	  		@media(max-width: $large){
+	  			font-size: 18px; 
+	  			line-height: 28px;
+	  		}
+	  		@media(max-width: $medium){
+	  			font-size: 14px; 
+	  			line-height: 24px;
+	  		}
+	  		@media(max-width: $phone-max){
+	  			-webkit-column-count: 1;
+                -moz-column-count: 1;
+                 column-count: 1;
+	  		}
+
+	li{
+		 display: list-item; 
+		 list-style-position: inside;
+		 text-indent: -35px;
+         margin-left: 28px;
+         @media(max-width: $medium){
+         	text-indent: -25px;
+            margin-left: 20px;
+         }
+	}
+}
+#Bedsonslide{
+	padding: 60px 0px;
+	margin-top: 50px;
+	margin-left: 100px;
+	background: url('/images/slideshow/bg-Bedslide-floral.jpg') left bottom no-repeat;
+    position: relative;
+    @media(max-width: $tablet){
+    	margin-top: 0px;
+    	margin-bottom: 30px;
+    }
+    @media(max-width: $phone-max){
+    	    margin-left: 60px;
+    	    padding: 20px 0px;
+    	    margin-top: 10px;
+    	    margin-bottom: 30px;
+    }
+    .carousel-inner{
+       img{
+       	 width: 100%;
+       }
+
+    }
+    .carousel-indicators {
+        bottom: 43%;
+	    width: 10px;
+	    left: -40px;
+	    margin: 0px;
+	    li{
+	       border-color: #dbbf97; 
+	       width: 14px;
+	       height: 14px;
+	       margin-top: 2px;
+		}
+		.active{
+	    	    background-color: #dbbf97 !important;
+	    	    width: 16px;
+	            height: 16px;
+		    }
+	}
+    .carousel-control.left,  .carousel-control.right{
+    	background-image: none;
+    }
+	.left-arrow{
+		  position: absolute;
+		  top: 50%;
+		  transform: translateY(-50%); 
+		  @media(max-width: $medium){
+		  	img{
+		  		max-height: 50px;
+		  	}
+		  	
+		  }
+		  @media(max-width: $phone-max){
+		  	img{
+		  		max-height: 30px;
+		  	}
+		  	
+		  }
+	}
+	.right-arrow{
+		  position: absolute;
+		  top: 50%;
+		  transform: translateY(-50%); 
+		  @media(max-width: $medium){
+		  	img{
+		  		max-height: 50px;
+		  	}
+		  }
+		  @media(max-width: $phone-max){
+		  	img{
+		  		max-height: 30px;
+		  	}
+		  }
+	}
+}
+#owl-deals{
+	 margin: 0px auto;
+	 width: 95%;
+	 .owl-item{
+	 	 @media(max-width: $phone-max){
+	 	 padding: 10px;
+	 	}
+	 }
+    .owl-prev,.owl-next {
+    	 img{
+    	 	@media(min-width: $screen-sm-min){
+    	 		width: 30px;
+    	 	}
+    	 	 @media(max-width: $phone-max){
+    	 	 	width: 14px;
+    	 	 }
+    	 }
+    }
+    .owl-controls {
+    	@media(max-width: $low-point){
+            margin: 0px;
+    	}
+    }
+}
+.owl-left-heading{
+	float: left;
+}
+#map-home{
+	 height: 647px;
+	 border: solid 4px #0f1237;
+	 @media(max-width: $phone-max){
+      height: 300px;
+	 }
+	}
+
+.blue-bgStrip{
+	   background: url('/images/blue-stripe.jpg') left repeat-y ;
+	   background-size: contain;
+       @media(max-width: $on-laptop){
+       	 background: url('/images/blue-stripe.jpg') right repeat-y ;
+       }
+	   h4, p{
+	   	   color: $white;
+	   }
+	    .padd-20{
+	    	 padding: 0px 20px; 
+	    	 @media(min-width: $medium){
+	    	 	 padding: 0px 20px 20px 50px; 
+	    	 }
+	    	 @media(max-width: $tablet-rotate){
+	    	 	padding: 0px;
+	    	 }
+	    	 @media(max-width: $tablet){
+	    	 	 padding: 0px; 
+	    	 }
+	    }
+	   .btn-border {
+				    border-color: $white !important;
+				    box-shadow: inset 0 0 0 4px $white, 0 0 1px transparent;
+				    background: transparent;
+	                transition: all 1s;
+	                color: $white !important;
+	                &:hover{
+	                	color:  $link-color !important;
+				        background: $white;
+	                }
+				}
+}
+
+.galleria-container{
+	display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.9);
+    &.galleria-theme-classic {
+    	background: none;
+    }
+      .galleria{
+      	position: relative;
+	    left: 0;
+	    top: 0;
+	    width: 100%;
+	    height: 100%;
+	    overflow: hidden;
+	    z-index: 1;
+      }
+       .galleria-info{
+       	width: auto !important;
+       	.galleria-info-text{
+       		 background-color: rgba(0,0,0,0.2) !important;
+         }
+       }
+      .galleria-stage{
+          @media(max-width: $tablet){
+          	min-height: 90%;
+          }
+          min-height: 200px;
+      	  bottom:120px !important;
+      	 }
+      	.galleria-thumbnails-container{
+			    height: 110px !important; 
+			    padding-bottom: 30px;
+			    .galleria-thumbnails {
+		            margin: 20px auto 0; 
+			          .galleria-image { 
+			              height: 80px !important;  
+			          }
+			    }
+       
+		
+
+      }
+       
+		.close-button {
+		    position: absolute;
+		    right: 20px;
+		    top: 12px;
+		    width: 17px;
+		    height: 17px;
+		    text-indent: -9999px;
+		    overflow: hidden;
+		    background: url(/images/common.png) -200px 0 no-repeat;
+		    background-image: url(/images/common.svg), none;
+		    cursor: pointer;
+		    z-index: 2;
+		}
+}

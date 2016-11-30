@@ -1,0 +1,76 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+ 
+
+// Our variables
+$base-font-family: 'NeueHaasGroteskText W01', Helvetica, Arial, sans-serif;
+$base-font-size:   14px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$white:            #ffffff;
+$text-color:       #32333c;
+$background-color: #e8f6f7;
+$brand-color:      #04082f;
+$link-color:       #0f1237;
+$grey-color:       #828282;
+$sec-color: #dbbf97;
+$sec-color-hr: #c09d6a;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+$light-grey: #95989a;
+
+// Width of the content area
+$content-width:    718px;
+
+$tablet-rotate: 1024px;
+$tablet:          768px; 
+$mobile:          767px;
+$break-small:     479px;
+$optional:        1140px;
+$low-point:       320px;
+$phone-max:       479px;
+$low-mobile:      375px;
+$on-palm:          600px;
+$on-laptop:        930px;
+$larger :          1922px;
+$large  :          1550px;
+$medium  :          1400px;
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import 
+        "fonts",
+        "bootstrap",
+        "font-awesome",
+        "owl.carousel",
+        "lightbox.min",
+        "hover",
+        "layout",
+        "home",
+		"contact",
+        "rooms",
+        "location",
+        "jquery-ui",
+        "datepicker",
+        "booking-widget",
+        "galleria"
+;
