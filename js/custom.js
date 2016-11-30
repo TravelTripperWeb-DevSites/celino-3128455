@@ -21,6 +21,7 @@ $('#gallery, #gallery-footer').click(function(){
             $('.galleria').galleria({
                 transition: 'fade',
                 data_source: data,
+                 wait: true,
                 _toggleInfo: false
                 }); 
 jQuery('#slideShow h3').fitText(1.2, { maxFontSize: '129px' });
