@@ -16,13 +16,19 @@ $('#gallery, #gallery-footer').click(function(){
     $('.galleria-container').css('display','block');
 });
 
-
+Galleria.ready(function() {
+    this.attachKeyboard({
+        left: this.prev,
+        right: this.next
+    });
+});
 
             $('.galleria').galleria({
                 transition: 'fade',
                 data_source: data,
                  wait: true,
-                _toggleInfo: false
+                _toggleInfo: false,
+                
                 }); 
 jQuery('#slideShow h3').fitText(1.2, { maxFontSize: '129px' });
 jQuery('#slideShow h2').fitText(2.6, {   maxFontSize: '70px' });

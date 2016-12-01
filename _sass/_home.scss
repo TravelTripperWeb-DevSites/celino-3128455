@@ -46,6 +46,9 @@
 	@media(max-width: $phone-max){
         padding-top: 60px;
 	}
+	img{
+		width: 100%;
+	}
 	
 .item.next .carousel-caption {
     opacity: 0;
