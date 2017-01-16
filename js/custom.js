@@ -706,3 +706,9 @@ $(function() {
       $(".fahr").html(toFar + "°F");
     }) 
 });
+
+$("#downClick").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".margin-top").offset().top-107},
+        'slow');
+});
