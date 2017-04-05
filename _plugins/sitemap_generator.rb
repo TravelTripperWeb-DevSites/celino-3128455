@@ -20,6 +20,7 @@ class SitemapGenerator
 
     sitemap['__CONFIG__', 'default_locale'] = default_lang
     sitemap['__CONFIG__', 'page_gen'] = site.config['page_gen']
+    sitemap['__CONFIG__', 'locales'] = site.config['languages']
 
     pages.each do |page|
       url = page.url
@@ -39,6 +40,14 @@ class SitemapGenerator
 
     sitemap['__REGIONS__'] = site.data['regions']
 
+    if Dir.exists?('tmp/src')
+      Dir.chdir('tmp/src') {
+        sitemap['__SHA__'] = sha
+      }
+    else
+      sitemap['__SHA__'] = sha
+    end
+
     save sitemap
   end
 
@@ -53,5 +62,9 @@ class SitemapGenerator
       File.open('sitemap.json', 'w') do |f|
         f.write(sitemap.to_json)
       end
+    end
+
+    def sha
+      `git rev-parse HEAD`.chomp
     end
 end

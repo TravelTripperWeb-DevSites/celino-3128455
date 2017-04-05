@@ -3,7 +3,7 @@
 #   author Samuel Volin (@untra)
 #   github: https://github.com/untra/polyglot
 #   license: MIT
-include Process
+#include Process
 module Jekyll
   # Alteration to Jekyll Site class
   # provides aliased methods to direct site.write to output into seperate
@@ -23,51 +23,33 @@ module Jekyll
     alias_method :process_orig, :process
     def process
       prepare
-      
-      threads = []
       languages.each do |lang|
-        threads << Thread.new do
+        process_language lang
+      end
+=begin
+      pids = {}
+      languages.each do |lang|
+        pids[lang] = Process.fork do
           process_language lang
         end
       end
-      
-      threads.each { |thr| thr.join }
-      
       old_handler = Signal.trap('INT') do
         old_handler.call
 
-        threads.each do |thr|
+        languages.each do |lang|
           begin
-            puts "Killing #{thr}}"
-            Thread.kill(thr)
+            puts "Killing #{pids[lang]} : #{lang}"
+            Process.kill('INT', pids[lang])
           rescue Errno::ESRCH
-            puts "Thread #{thr} : not running"
+            puts "Process #{pids[lang]} : #{lang} not running"
           end
         end
       end
-      
-      # pids = {}
-      # languages.each do |lang|
-      #   pids[lang] = Process.fork do
-      #     process_language lang
-      #   end
-      # end
-      # old_handler = Signal.trap('INT') do
-      #   old_handler.call
-      #
-      #   languages.each do |lang|
-      #     begin
-      #       puts "Killing #{pids[lang]} : #{lang}"
-      #       Process.kill('INT', pids[lang])
-      #     rescue Errno::ESRCH
-      #       puts "Process #{pids[lang]} : #{lang} not running"
-      #     end
-      #   end
-      # end
-      # languages.each do |lang|
-      #   Process.waitpid pids[lang]
-      #   Process.detach pids[lang]
-      # end
+      languages.each do |lang|
+        Process.waitpid pids[lang]
+        Process.detach pids[lang]
+      end
+=end
     end
 
     alias_method :site_payload_orig, :site_payload
@@ -121,7 +103,7 @@ module Jekyll
   # certain conditions
   module Convertible
     def lang
-      data['lang'] || site.config['default_lang']
+      data['lang'] || site.config['default_lang'] || 'en'
     end
 
     def lang=(str)

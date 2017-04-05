@@ -712,3 +712,11 @@ $("#downClick").click(function() {
         scrollTop: $(".margin-top").offset().top-107},
         'slow');
 });
+
+
+ $('#celinoVideo').on('hide.bs.modal', function(e) {    
+    var $if = $(e.delegateTarget).find('iframe');
+    var src = $if.attr("src");
+    $if.attr("src", '/empty.html');
+    $if.attr("src", src);
+});
