@@ -15,6 +15,10 @@ permalink: pretty
 # Build settings
 markdown: kramdown
 
+# Reading Files
+include:
+  - _pages
+
 collections:
   collection:
     output: true
