@@ -7,24 +7,24 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{{ site.baseurl }}/"><img src="/images/logo.png" alt="Anchorage Inn"></a>
+          <a class="navbar-brand" href="{{ site.baseurl }}/" title="Home"><img src="/images/logo.png" alt="Anchorage Inn"></a>
           <!--a class="bookBtn" href="#" show-booking-widget>BOOK NOW</a-->
         </div>
         <div id="navbar" class="collapse navbar-collapse ">
-          <ul class="nav navbar-nav"> 
+          <ul class="nav navbar-nav">
              {%comment%}
              {% for items in obj.header-links %}
               {% if items.parent == page.parent %}
               <li class="active"><a href={{items.url}}>{{items.name}}</a></li>
               {% else %}
-              <li><a href="{{items.url}}">{{items.name}}</a></li>
-              {% endif %}               
+              <li><a href="{{items.url}}" title="{{items.name}}">{{items.name}}</a></li>
+              {% endif %}
             {% endfor %}
             {%endcomment%}
             <!--li><a id="gallery" href="#">Gallery</a></li-->
-            <li><a data-scroll href="/#signup">Sign Up</a></li>
-            <li><a data-scroll href="/#contact">Contact</a></li>
-            <li><a href="http://www.highgate.com/careers" target="_blank">Careers</a></li>
+            <li><a data-scroll href="/#signup" title="Sign Up">Sign Up</a></li>
+            <li><a data-scroll href="/#contact" title="Contact">Contact</a></li>
+            <li><a href="http://www.highgate.com/careers" target="_blank" title="Careers">Careers</a></li>
           </ul>
           <!--ul class="nav navbar-nav navbar-right">
              <li><a  class="blueBtn"  href="#" show-booking-widget>BOOK NOW</a>
