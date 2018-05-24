@@ -15,12 +15,12 @@
 					}
 			}
 .contact-details {
-	
+
 	position: relative;
 		&.padd-top50 {
 			padding-bottom: 0;
 		}
-		
+
 		.col-md-5 {
 				@media(min-width: $screen-md-min){
 				width: 35.66667%;
@@ -31,7 +31,7 @@
 				width: 64.33333%;
 				}
 			}
-		
+
 	.contact-details-wrap {
 		margin: 0 auto 0 80px;
 			@media(min-width: $screen-sm-min){
@@ -45,7 +45,7 @@
 		width: auto;
 		max-width: 1922px;
 		margin: 0 auto;
-		
+
 	}
 	.-left {
 		@media(min-width: $screen-md-min){
@@ -58,7 +58,7 @@
 			float: right;
 		}
 	}
-		
+
 			h1 {
 				position: absolute;
 				top: 50%;
@@ -98,7 +98,7 @@
 			}
 
 	.events-left-wrap {
-		
+
 			overflow: hidden;
 			margin: 0 auto;
 			text-align: center;
@@ -111,7 +111,7 @@
 				text-align: left;
 			}
 			@media(max-width: 599px){
-				
+
 			}
 	}
 	.events-left-item {
@@ -119,14 +119,14 @@
 		color: #63657d;
 		padding-bottom: 40px;
 		position: relative;
-		
+
 		@media(min-width: 1200px){
 				padding-bottom: 50px;
-				margin-bottom: 7px; 
+				margin-bottom: 7px;
 			}
 		@media(min-width: 1400px){
 				padding-bottom: 60px;
-				margin-bottom: 14px;    
+				margin-bottom: 14px;
 			}
 			&:after {
 					position: absolute;
@@ -149,7 +149,7 @@
 						content:normal;
 					}
 				}
-			
+
 			a{
 				color: #63657d;
 				text-decoration: none;
@@ -174,7 +174,7 @@
 					font-size: 20px;
 					padding-bottom: 23px;
 				}
-				
+
 		}
 		.events-left-list {
 			font-family: gotham-medium;
@@ -196,15 +196,15 @@
 							font-size: 20px;
 						}
 						.diff-style {
-							
+
 								font-family: gotham-ultra;
-							
+
 							a{
 								text-decoration: none;
 								color: #63657d;
 							}
 						}
-						
+
 						&.item-spacing {
 							padding-top: 22px;
 						}
@@ -227,7 +227,7 @@
 				margin: 90px 0 0 0;
 			}
 	}
-	
+
 }
 
 .contact-strip-1 {
@@ -243,7 +243,7 @@
 
 .contact-form {
 	padding: 40px 15px 0 15px;
-		
+
 	@media(min-width: $screen-md-min){
 				padding: 116px 15px 0 15px;
 			}
@@ -264,7 +264,7 @@
 		width: auto;
 		max-width: 1104px;
 		margin: 0 auto;
-		
+
 			@media(min-width: $screen-md-min){
 				margin: 0 0 0 21%;
 			}
@@ -295,7 +295,7 @@
 				letter-spacing: 2px;
 			}
 			@media(min-width: $screen-md-min){
-				
+
 				padding: 0 0 40px 0;
 			}
 			@media(min-width: 1200px){
@@ -373,7 +373,7 @@
 					@media(min-width: 1800px){
 						width: 134.463%;
 					}
-					
+
 					&:focus {
 						border-color: #0f1237;
 					}
@@ -451,7 +451,7 @@
 						font-size: 30px;
 						line-height: 30px;
 						bottom:0;
-						
+
 					}
 					@media(min-width: 1200px){
 						font-size: 50px;
@@ -470,7 +470,7 @@
 								}
 					}
 			}
-			
+
 }
 
 .contact-strip-2 {
@@ -483,3 +483,10 @@
 				margin: 0 0 0 21%;
 			}
 	}
+
+.privacy {
+  li {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
