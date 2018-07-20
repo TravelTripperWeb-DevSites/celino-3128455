@@ -6,8 +6,58 @@
   }
 });
 
-$(document).ready(function() { 
-   
+$(document).ready(function() {
+  // Restrict Form Submission by disbling Submit button untill all required fields are filled (W.r.t GDPR Guidelines)
+
+  function checkForm() {
+    // here, "this" is an input element
+    var isValidForm = true;
+    $(this.form)
+      .find(':input[required]:visible')
+      .each(function () {
+        if (!this.value.trim()) {
+          isValidForm = false;
+        }
+      });
+    $(this.form)
+      .find('input[type="checkbox"]:required')
+      .each(function () {
+        if (!$(this)
+          .is(':checked')) {
+          isValidForm = false;
+        }
+      });
+    $(this.form)
+      .find('select:required')
+      .each(function () {
+        if (!$(this)
+          .find('option:selected')
+          .val()
+          .trim()) {
+          isValidForm = false;
+        }
+      });
+
+    $(this.form)
+      .find('#signUpBtn, #contactBtn') // Button class names should be unique for every form
+      .prop('disabled', !isValidForm);
+    return isValidForm;
+  }
+
+  $('#signUpBtn, #contactBtn') // Button class names should be unique for every form
+    .closest('form')
+    // indirectly bind the handler to form
+    .submit(function () {
+      return checkForm.apply($(this)
+        .find(':input')[0]);
+    })
+    // look for input elements
+    .find(':input[required]:visible')
+    // bind the handler to input elements
+    .on('change keyup', checkForm)
+    // immediately fire it to initialize buttons state
+    .keyup();
+
      $('.galleria-info-text').css('display','block');
 $('.close-button').click(function(){
     $('.galleria-container').css('display','none');
@@ -28,28 +78,28 @@ Galleria.ready(function() {
                 data_source: data,
                  wait: true,
                 _toggleInfo: false,
-                
-                }); 
+
+                });
 jQuery('#slideShow h3').fitText(1.2, { maxFontSize: '129px' });
 jQuery('#slideShow h2').fitText(2.6, {   maxFontSize: '70px' });
-   
+
     jQuery('#slideShow').on('slid.bs.carousel', function () {
         jQuery('.carousel-caption').find('h3').fitText(1.2, {  maxFontSize: '129px' });
         jQuery('.carousel-caption').find('h2').fitText(2.6, { maxFontSize: '70px' });
     });
-  
+
   $("#roomslide").carousel();
  $("#owl-deals, #owl-rooms").owlCarousel({
             items : 3,
             loop: true,
             nav:true,
-            navText: [  "<span class='gold-arrow-left'> <img src='/images/arrow-gold-left.png'> </span> ", " <span class='gold-arrow-right'><img src='/images/arrow-gold-right.png'> </span>" ], 
-            lazyLoad : true, 
+            navText: [  "<span class='gold-arrow-left'> <img src='/images/arrow-gold-left.png'> </span> ", " <span class='gold-arrow-right'><img src='/images/arrow-gold-right.png'> </span>" ],
+            lazyLoad : true,
             autoplay:false,
              responsive:{
 		        0:{
 		            items:1
-		        }, 
+		        },
 		        668:{
 		            items:2
 		        },
@@ -59,25 +109,25 @@ jQuery('#slideShow h2').fitText(2.6, {   maxFontSize: '70px' });
 		    }
     });
 
-  
+
     // Hide all the room elements in the DOM that have a class of "box"
-    $('.box').hide(); 
+    $('.box').hide();
     // Make sure all the elements with a class of "about-building" are visible and bound
     // with a click event to toggle the "box" state
     $('.about-building').each(function() {
         $(this).show(0).on('click', function(e) {
             // This is only needed if your using an anchor to target the "box" elements
-            e.preventDefault(); 
-            // Find the next "box" element in the DOM 
+            e.preventDefault();
+            // Find the next "box" element in the DOM
             $(this).find('i').toggleClass('fa-long-arrow-down').toggleClass('fa-long-arrow-up');
-             
+
              $(this).closest('.whiteBg').find('.box').slideToggle('fast');
         });
     });
-  
-  
+
+
 }); //end of jquery ready state
- 
+
 var map;
 var mapstyle = [
     {
@@ -262,7 +312,7 @@ function initialize() {
     center: myLatlng,
     scrollwheel: false,
     disableDefaultUI: true,
-     styles: mapstyle 
+     styles: mapstyle
   };
   map = new google.maps.Map(document.getElementById('map'),
       mapOptions);
@@ -273,7 +323,7 @@ function initialize() {
     icon: '/images/loc.png',
     title: 'Celino South Beach'
   });
-  
+
 }
 function initializehome() {
   var myLatlng = new google.maps.LatLng(25.814141, -80.122839);
@@ -282,20 +332,20 @@ function initializehome() {
     center: myLatlng,
     scrollwheel: false,
     disableDefaultUI: true,
-     styles: mapstyle 
+     styles: mapstyle
   };
   map1 = new google.maps.Map(document.getElementById('map-home'),
       mapOptions);
   map.setCenter(new google.maps.LatLng(25.814141, -80.122839));
   var marker = new google.maps.Marker({
     position: myLatlng,
-    map: map1, 
+    map: map1,
     title: 'Celino South Beach'
   });
-  
+
 }
 
- 
+
 var markers = [];
 /* An InfoBox is like an info window, but it displays
  * under the marker, opens quicker, and has flexible styling.
@@ -404,7 +454,7 @@ InfoBox.prototype.panMap = function () {
     var position = this.latlng_;
     // The dimension of the infowindow
     var iwWidth = this.width_ ;
-    var iwHeight = this.height_ ; 
+    var iwHeight = this.height_ ;
     // The offset position of the infowindow
     var iwOffsetX = this.offsetHorizontal_;
     var iwOffsetY = this.offsetVertical_;
@@ -450,19 +500,19 @@ InfoBox.prototype.panMap = function () {
 };
  var markers = []; // makers array
 function initialize1() {
-   
-  
+
+
     var myOptions = { // map settings
         zoom: 15,
         center: new google.maps.LatLng(25.776373, -80.131829),
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        sensor: 'true', 
+        sensor: 'true',
         scaleControl: false,
         scrollwheel: false,
-        styles: mapstyle 
+        styles: mapstyle
     }
     var map = new google.maps.Map(document.getElementById("map-locations"), myOptions);
-  
+
     var data = [ // map data
       {
         'id':1,
@@ -528,19 +578,19 @@ function initialize1() {
          'pointmrkr': '/images/loc.png'
       },*/
     ]
-      
-    for (var i = 0; i < data.length; i++) { 
+
+    for (var i = 0; i < data.length; i++) {
       var current = data[i];
-  
+
       var marker = new google.maps.Marker({
         position: new google.maps.LatLng(current.position.lat, current.position.lng),
         map: map,
         icon: current.pointmrkr,
         content: current.content
       });
-  
+
       markers.push(marker);
-  
+
       google.maps.event.addListener(markers[i], "click", function (e) {
         var infoBox = new InfoBox({
             latlng: this.getPosition(),
@@ -549,7 +599,7 @@ function initialize1() {
         });
       });
     }
- 
+
 }
 
 jQuery(document).ready(function(){
@@ -560,20 +610,20 @@ jQuery(document).ready(function(){
 });
 
 
-/// eof map ////  
-function myMap(id){ 
+/// eof map ////
+function myMap(id){
         google.maps.event.trigger(markers[id], 'click');
     }
 
 
 
-    $('.loc-link').click(function(){ 
+    $('.loc-link').click(function(){
       var mapPanel = $('#right-panel');
       mapPanel.html('');
       var directionsDisplay = new google.maps.DirectionsRenderer;
       var directionsService = new google.maps.DirectionsService;
       var start = $(this).attr('data-start');
-      var end =   $(this).attr('data-end'); 
+      var end =   $(this).attr('data-end');
       directionsService.route({
           origin: start,
           destination: end,
@@ -592,20 +642,20 @@ function myMap(id){
               });
 
               directionsDisplay.setMap(map);
-              
+
               directionsDisplay.setPanel(document.getElementById('right-panel'));
-             
+
               var control = document.getElementById('floating-panel');
               control.style.display = 'block';
               map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
          }, 1000);
-    }) ; 
+    }) ;
 //end direction
 
  smoothScroll.init({
             offset:100,
   });
-        
+
 if ($('#back-to-top').length) {
     var scrollTrigger = 100, // px
         backToTop = function () {
@@ -632,33 +682,33 @@ if ($('#back-to-top').length) {
 
 $(window).load(function() {
 
-     
+
         function resizeImage(){
           img.css({'height': el.height(), 'width': el.width()/2});
         }
-        
+
         if (window.matchMedia('(min-width: 992px) and (max-width: 1520px)').matches) {
             $(window).resize(function() {
               resizeImage();
             });
-            
+
             var el = $(".col-2-equal");
             var img = $(".col-2-equal .img-responsive");
             resizeImage();
-        } 
+        }
 
-    var hash = location.hash.replace('#',''); 
-        if(hash != ''){  
+    var hash = location.hash.replace('#','');
+        if(hash != ''){
         // smooth scroll to the anchor id
         $('html, body').animate({
             scrollTop: $(window.location.hash).offset().top - 89 +"px"
-        },500, 'swing'); 
-       } 
-        
+        },500, 'swing');
+       }
+
 });
 
 $(function(){
-  var prev;    
+  var prev;
 
   $('.amenlist p').hover(function(){
   prev = $(this).text();
@@ -678,17 +728,17 @@ $(document).ready(function(){
                     if (!results) return null;
                     if (!results[2]) return '';
                     return decodeURIComponent(results[2].replace(/\+/g, " "));
-             } 
-           if(getParameterByName('submit')=='success'){ 
+             }
+           if(getParameterByName('submit')=='success'){
                 $('.alert').css('display','block');
              }
       });
-             
-$(function() { 
+
+$(function() {
     var lat = 25.814141;
     var lon = -80.122839;
 
-    
+
     $.getJSON("http://api.openweathermap.org/data/2.5/weather?city=Miami Beach, FL&lat=" + lat + "&lon=" + lon + "&appid=8b70e4f5b31a7365e98298fafc182121", function(data) {
 
       // Our Data
@@ -704,7 +754,7 @@ $(function() {
       //$(".weather-app_main__information--icon").attr("src", icon_replace.replace("#", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/217538/" + icon + ".png"));
       $(".cel").html(toCels + "°C");
       $(".fahr").html(toFar + "°F");
-    }) 
+    })
 });
 
 $("#downClick").click(function() {
@@ -714,7 +764,7 @@ $("#downClick").click(function() {
 });
 
 
- $('#celinoVideo').on('hide.bs.modal', function(e) {    
+ $('#celinoVideo').on('hide.bs.modal', function(e) {
     var $if = $(e.delegateTarget).find('iframe');
     var src = $if.attr("src");
     $if.attr("src", '/empty.html');
