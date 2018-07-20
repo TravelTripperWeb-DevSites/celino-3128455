@@ -1244,7 +1244,7 @@ h4{
 	 	  }
 	 }
 }
-.form-inline {
+.form-inline, .f-holder {
   .tnc {
     margin-bottom: 0;
     margin-top: 26px;
@@ -1263,8 +1263,19 @@ h4{
     }
   }
 }
+.f-holder {
+  label {
+    font-family: 'gotham-medium' !important;
+  }
+}
 
 button[disabled], html input[disabled] {
   opacity: .5 !important;
   cursor: not-allowed;
+}
+
+.zip-code {
+  @media(max-width: $tablet){
+     margin-bottom: 20px !important;
+  }
 }
