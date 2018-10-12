@@ -28,11 +28,12 @@ BOOKINGS IN 48 HOURS</span></div-->
   </div>
   </div>
 </section>
-<section rt3-rooms-browser="browser"   rt3-search-form="search" on-search-changed="browser.tonightavailRooms()" ng-cloak>
+<section rt3-rooms-browser="browser" rt3-search-form="search" on-search-changed="browser.tonightavailRooms()" ng-cloak class="listings">
 <div  class="devider-inner top-40" style="background: url('/images/bg-leaf.jpg'); background-position: top right; background-repeat:no-repeat;"><span class="d-title">GARDEN VIEW</span></div>
 
  <div>
-    <div class="container">
+	 <!-- if even count -->
+    <div class="container listing even">
        <div class="col-md-6">
 	       <div class="top-right-bg tiles">
 	         <img ng-src="/images/offer-example.jpg" class="margin-top padd-20 img-responsive">
@@ -53,7 +54,8 @@ BOOKINGS IN 48 HOURS</span></div-->
        </div>
     </div>
 
-    <div class="container">
+	<!-- if odd count -->
+    <div class="container listing odd">
 			<div class="col-md-6">
 					<div class="content-left2">
 					  <h2>Offer 2</h2>

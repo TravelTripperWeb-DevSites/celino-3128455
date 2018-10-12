@@ -23,12 +23,12 @@ bg: bg-rooms
     </div>
   </div>
 </section>
-<section rt3-rooms-browser="browser" rt3-search-form="search" on-search-changed="browser.tonightavailRooms()" ng-cloak>
+<section rt3-rooms-browser="browser" rt3-search-form="search" on-search-changed="browser.tonightavailRooms()" ng-cloak class="listings">
   <div ng-if="(browser.roomsv  | filter: {category:'Classic'}).length > 0" class="devider-inner top-40" style="background: url('/images/bg-leaf.jpg'); background-position: top right; background-repeat:no-repeat;"><span
       class="d-title">GARDEN VIEW</span></div>
 
   <div ng-repeat="room in browser.roomsv | filter: {category:'Classic'}">
-    <div ng-if="$even" class="container">
+    <div ng-if="$even" class="container listing even">
       <div class="col-md-6">
         <div class="top-right-bg tiles">
           <img ng-src="[[room.photos[0].yankee_large]]" class="margin-top padd-20 img-responsive">
@@ -51,7 +51,7 @@ bg: bg-rooms
       </div>
     </div>
 
-    <div ng-if="$odd" class="container">
+    <div ng-if="$odd" class="container listing odd">
       <div class="col-md-6">
         <div class="content-left2">
           <h2>[[room.name]]</h2>
