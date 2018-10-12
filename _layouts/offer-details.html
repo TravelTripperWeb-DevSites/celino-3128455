@@ -1,0 +1,98 @@
+---
+layout: default
+---
+
+<div class="padd-fixedtop"></div>
+
+<div data-room-id="{{page.room_code}}" rt3-rooms-browser="browser" rt3-room-details="details" ng-cloak>
+  <section class="padd-fixedtopinner">
+    <div class="container no-padding">
+      <div class="col-md-6">
+        <div class="content-left2 inner">
+          <h2>Offer 1</h2>
+          <h3 class="gold_gotham">Offer Subtitle</h3>
+          <!-- not sure if needed
+            <h4 class="right-pd light_grey">Offer Price</h4>
+          -->
+          <p class="right-pd">
+            Offer Description
+          </p>
+          <p class="text-right">
+            <a ng-href="https://thecelinohotel.reztrip.com/search?selected_room_category=[[details.category]]&selected_room=[[details.code]]"
+              class="btn-border hvr-border-fade">BOOK OFFER</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 no-padding">
+        <div class="bottom-right-bg2 tiles2 pull-right">
+          <img ng-src="/images/offer-example.jpg" class="img-responsive">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="content-room">
+        <div class="col-md-7">
+          <h4>Offer Details</h4>
+          <p>This is where we place the offer details.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="content-room padd-btm">
+  <div class="container">
+    <h4 class="text-center">More Offers</h4>
+    <div>
+      <div class="col-sm-12 col-md-4 panel">
+        <img src="/images/offer-example.jpg" alt="Room alt" class="img-responsive">
+        <h3 class="gold_gotham">Other offer 1</h3>
+        <p>Offer Description</p>
+        <a href="/" class="btn-border hvr-border-fade">BOOK OFFER</a>
+      </div>
+      <div class="col-sm-12 col-md-4 panel">
+        <img src="/images/offer-example.jpg" alt="Room alt" class="img-responsive">
+        <h3 class="gold_gotham">Other offer 2</h3>
+        <p>Offer Description</p>
+        <a href="/" class="btn-border hvr-border-fade">BOOK OFFER</a>
+      </div>
+      <div class="col-sm-12 col-md-4 panel">
+        <img src="/images/offer-example.jpg" alt="Room alt" class="img-responsive">
+        <h3 class="gold_gotham">Other offer 3</h3>
+        <p>Offer Description</p>
+        <a href="/" class="btn-border hvr-border-fade">BOOK OFFER</a>
+      </div>
+    </div>
+  </div>
+  <div class="text-center margin-top">
+    <a href="/offers" class="btn btn-lg btn-link">See All</a>
+  </div>
+</section>
+
+<section class="bg-lightblue">
+  <div class="container no-padding">
+    <div class="contact-strip-2" style="background-image:url(/images/contact/contact-strip-1.jpg)"></div>
+    <div class="container mapsec">
+      <div class="col-md-12">
+        <div class="wrapper-rText">
+          <div class="block-title">
+            <h1 class="rotate">THE WAY <br>TO PARADISE</h1>
+          </div>
+          <div class="rightBx marg-27">
+            <div class="row">
+              <div class="col-md-12 margin-top">
+                {% include location-map.html %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include newsletter.html %}

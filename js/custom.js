@@ -73,6 +73,7 @@ Galleria.ready(function() {
     });
 });
 
+if ($('.galleria').length) {
             $('.galleria').galleria({
                 transition: 'fade',
                 data_source: data,
@@ -80,6 +81,8 @@ Galleria.ready(function() {
                 _toggleInfo: false,
 
                 });
+            }
+
 jQuery('#slideShow h3').fitText(1.2, { maxFontSize: '129px' });
 jQuery('#slideShow h2').fitText(2.6, {   maxFontSize: '70px' });
 
@@ -127,7 +130,7 @@ jQuery('#slideShow h2').fitText(2.6, {   maxFontSize: '70px' });
 
 
 }); //end of jquery ready state
-  
+
 
  smoothScroll.init({
             offset:100,
