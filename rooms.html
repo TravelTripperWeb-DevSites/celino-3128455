@@ -24,11 +24,11 @@ bg: bg-rooms
     </div>
   </div>
 </section>
-<section class="listings">
-  <!-- <div class="devider-inner top-40" ng-repeat="cat in browser.roomCategories " style="background: url('/images/bg-leaf.jpg'); background-position: top right; background-repeat:no-repeat;"><span
-      class="d-title">[[ cat ]]</span></div> -->
+<section class="listings" ng-repeat="cat in browser.roomCategories">
+  <div class="devider-inner top-40"  style="background: url('/images/bg-leaf.jpg'); background-position: top right; background-repeat:no-repeat;"><span
+      class="d-title">[[ cat ]]</span></div>
 
-  <div ng-repeat="room in browser.roomsList" on-finish-render="hideLoader">
+  <div ng-repeat="room in browser.roomsList | filter : {category : cat}" on-finish-render="hideLoader">
     <div ng-if="$even" class="container listing even">
       <div class="col-md-6">
         <div class="top-right-bg tiles">
