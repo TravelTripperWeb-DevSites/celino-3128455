@@ -1,30 +1,27 @@
 ---
 layout: default
 ---
-
+<div class="loading" style="display:block">Loading&#8230;</div>
 <div class="padd-fixedtop"></div>
-
-<div data-room-id="{{page.room_code}}" rt3-rooms-browser="browser" rt3-room-details="details" ng-cloak>
+<section  ng-controller="roomDetail" rt3-room-details="room" >
+<div>
   <section class="padd-fixedtopinner">
     <div class="container no-padding">
       <div class="col-md-6">
         <div class="content-left2 inner">
-          <h2>Classic King</h2>
+          <h2 ng-bind-html="room.name | renderHTMLCorrectly"></h2>
           <h3 class="gold_gotham">TONIGHT’S RATE</h3>
-          <h4 class="right-pd light_grey">$479 / night</h4>
-          <p class="right-pd">
-            Room Description
-          </p>
+          <h4 class="right-pd"><a ng-href="{{site.reztripUrl}}[[room.todayRate == 'Check Availability' ?  '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="light_grey"><span ng-show="room.todayRate != 'Check Availability'">[[portalInfo.default_currency_symbol]]</span>[[ room.todayRate ]]</a></h4>
+          <p class="right-pd" ng-bind-html="room.description | renderHTMLCorrectly"></p>
           <p class="text-right">
-            <a ng-href="https://thecelinohotel.reztrip.com/search?selected_room_category=[[details.category]]&selected_room=[[details.code]]"
-              class="btn-border hvr-border-fade">BOOK NOW</a>
+            <a ng-href="{{site.reztripUrl}}[[room.todayRate == 'Check Availability' ?  '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="btn-border hvr-border-fade">BOOK NOW</a>
           </p>
         </div>
       </div>
 
       <div class="col-md-6 no-padding">
         <div class="bottom-right-bg2 tiles2 pull-right">
-          <img ng-src="https://d31f902anbz5po.cloudfront.net/1188/59029_1_yankee_large.jpg" class="img-responsive">
+          <img ng-src="[[ room.photos[0].large ]]" class="img-responsive" alt="[[ room.name ]]">
         </div>
       </div>
     </div>
@@ -32,19 +29,19 @@ layout: default
 
   <section>
     <div class="container">
-      <div ng-if="details.photos.length == 1" class="content-room">
-        <img ng-src="[[details.photos[0].large]]" class="img-reponsive full" alt="hero image [[details.name]]">
+      <div ng-if="room.photos.length == 1" class="content-room">
+        <img ng-src="[[ room.photos[0].large ]]" class="img-reponsive full" alt="hero image [[ room.name ]]">
       </div>
-      <div ng-if="details.photos.length > 1" id="roomslide" class="carousel slide" data-ride="carousel">
+      <div ng-if="room.photos.length > 1" id="roomslide" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
-          <li ng-repeat="gallery in details.photos" data-target="#roomslide" data-slide-to="$index" ng-class="{active:!$index}"></li>
+          <li ng-repeat="gallery in room.photos" data-target="#roomslide" data-slide-to="$index" ng-class="{active : !$index}"></li>
         </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-          <div ng-class="{active:!$index}" ng-repeat="gallery in details.photos" class="item">
-            <img ng-src="[[gallery.large]]" alt="gallery [[details.name]]">
+          <div ng-class="{ active : !$index }" ng-repeat="gallery in room.photos" class="item">
+            <img ng-src="[[ gallery.large ]]" alt="gallery [[ room.name ]]">
           </div>
         </div>
 
@@ -63,23 +60,25 @@ layout: default
     <div class="container">
       <div class="content-room">
         <div class="col-sm-7">
-          <h4>Views</h4>
-          <p>Looking North and South with view of neighboring building or courtyard.</p>
-          <h4>Ammenities</h4>
-          <p>
-            Ammenities listings
+          <!-- <h4>Views</h4>
+          <p>Looking North and South with view of neighboring building or courtyard.</p> -->
+          <h4 ng-show="room.amenities.length > 0 || hotelInfo.common_room_amenities.length > 0">Ammenities</h4>
+          <p ng-repeat="feature in hotelInfo.common_room_amenities">
+            [[ feature ]]
+          </p>
+          <p ng-repeat="feature in room.amenities">
+            [[ feature ]]
           </p>
         </div>
         <div class="col-sm-5">
           <ul class="amentities">
-            <li>[[details.max_number_of_guests]] PERSON ROOM</li>
-            <li>30 ROOMS LIKE THIS ONE</li>
-            <li>00 CONNECTING ROOMS</li>
-            <li>[[details.room_size]] [[details.room_size_units]]</li>
+            <li>[[room.max_number_of_guests]] PERSON ROOM</li>
+            <!-- <li>30 ROOMS LIKE THIS ONE</li> -->
+            <!-- <li>00 CONNECTING ROOMS</li> -->
+            <li>[[room.room_size]] <span ng-bind-html="room.room_size_units | renderHTMLCorrectly"></span></li>
           </ul>
           <p class="text-left">
-            <a ng-href="https://thecelinohotel.reztrip.com/search?selected_room_category=[[details.category]]&selected_room=[[details.code]]"
-              class="btn-border hvr-border-fade">BOOK NOW</a>
+            <a ng-href="{{site.reztripUrl}}[[room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="btn-border hvr-border-fade">BOOK NOW</a>
           </p>
         </div>
       </div>
@@ -92,56 +91,22 @@ layout: default
   <div class="container more-listings">
     <h4 class="text-center">More Rooms</h4>
     <div>
-      <div class="col-sm-12 col-md-4 panel">
-        <img src="https://d31f902anbz5po.cloudfront.net/1188/59029_1_yankee_large.jpg" alt="Room alt" class="img-responsive">
-        <h3 class="gold_gotham">Other room 1</h3>
-        <h5 class="light_grey">Tonight's Rate - $389</h5>
+      <div class="col-sm-12 col-md-4 panel" ng-repeat="r in browser.roomsList | filter: {'code' : '!' + room.code} | limitTo: 3" on-finish-render="hideLoader">
+        <img ng-src="[[ r.photos[0].large ]]" alt="[[ r.name ]]" class="img-responsive">
+        <h3 class="gold_gotham" ng-bind-html="r.name | renderHTMLCorrectly"></h3>
+        <h5 class="light_grey">Tonight's Rate - <a ng-href="{{site.reztripUrl}}[[r.todayRate == 'Check Availability' ?  '?selected_room='+r.code : 'search?selected_room='+r.code ]]" class="light_grey"><span ng-show="r.todayRate != 'Check Availability'">[[portalInfo.default_currency_symbol]]</span>[[ r.todayRate ]]</a></h5>
         <div>
           <div>
-            2 Beds
+            [[ r.bed_types[0].name ]]
           </div>
           <div>
-            2 Person Room
+            [[ room.max_number_of_guests ]] Person Room
           </div>
           <div>
-            <p>Room Details</p>
+            <p ng-bind-html="r.short_description | renderHTMLCorrectly"></p>
           </div>
         </div>
-        <a href="/" class="btn-border hvr-border-fade">View Room</a>
-      </div>
-      <div class="col-sm-12 col-md-4 panel">
-        <img src="https://d31f902anbz5po.cloudfront.net/1188/59029_1_yankee_large.jpg" alt="Room alt" class="img-responsive">
-        <h3 class="gold_gotham">Other room 2</h3>
-        <h5 class="light_grey">Tonight's Rate - $389</h5>
-        <div>
-          <div>
-            2 Beds
-          </div>
-          <div>
-            2 Person Room
-          </div>
-          <div>
-            <p>Room Details</p>
-          </div>
-        </div>
-        <a href="/" class="btn-border hvr-border-fade">View Room</a>
-      </div>
-      <div class="col-sm-12 col-md-4 panel">
-        <img src="https://d31f902anbz5po.cloudfront.net/1188/59029_1_yankee_large.jpg" alt="Room alt" class="img-responsive">
-        <h3 class="gold_gotham">Other room 3</h3>
-        <h5 class="light_grey">Tonight's Rate - $389</h5>
-        <div>
-          <div>
-            2 Beds
-          </div>
-          <div>
-            2 Person Room
-          </div>
-          <div>
-            <p>Room Details</p>
-          </div>
-        </div>
-        <a href="/" class="btn-border hvr-border-fade">View Room</a>
+        <a href="/room/#[[ r.name | formatNameForLink ]]" class="btn-border hvr-border-fade">View Room</a>
       </div>
     </div>
   </div>
@@ -171,5 +136,5 @@ layout: default
     </div>
   </div>
 </section>
-
+</section>
 {% include newsletter.html %}

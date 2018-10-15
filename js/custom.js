@@ -177,12 +177,15 @@ $(window).load(function() {
             resizeImage();
         }
 
-    var hash = location.hash.replace('#','');
+        var hash = location.hash.replace('#','');
         if(hash != ''){
         // smooth scroll to the anchor id
-        $('html, body').animate({
-            scrollTop: $(window.location.hash).offset().top - 89 +"px"
-        },500, 'swing');
+        var hashOffset = $(window.location.hash).offset();
+        if(hashOffset) {
+          $('html, body').animate({
+              scrollTop: hashOffset.top - 89 +"px"
+          },500, 'swing');
+        }
        }
 
 });

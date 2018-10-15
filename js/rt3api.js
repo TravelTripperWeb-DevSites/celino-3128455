@@ -61,12 +61,64 @@ Rt3Api.prototype.availableRooms = function(searchParams) {
         // TODO
     }
 
-    
+
 
     var params = $.extend(defaultParams, searchParams)
         //console.log(JSON.stringify(params));
     return query(path, params);
 };
+
+
+Rt3Api.prototype.getAllAvailableRooms = function(searchParams) { //console.log(sessionStorage.ip_add);
+    var path = '/hotels/rooms.json';
+    var newParams = {};
+    if(searchParams){
+         newParams.arrival_date_0 = searchParams.arrival_date;
+         newParams.departure_date_0 = searchParams.departure_date;
+         newParams.adults_0 = searchParams.adults;
+         newParams.children_0 = searchParams.children;
+         newParams.rooms = 1;
+
+         delete searchParams.arrival_date;
+         delete searchParams.departure_date;
+         delete searchParams.adults;
+         delete searchParams.children;
+
+    }
+    else {
+        var now = new Date();
+        var day = ("0" + now.getDate()).slice(-2);
+        var month = ("0" + (now.getMonth() + 1)).slice(-2);
+        var today = now.getFullYear() + "-" + (month) + "-" + (day);
+
+        var nextDay;
+        nextDay = new Date(today);
+        var tomarrow=new Date(nextDay.setDate(nextDay.getDate() + 1));
+        var depart=tomarrow.toISOString().slice(0,10);
+
+        newParams.arrival_date_0 = today;
+        newParams.departure_date_0 = depart;
+        newParams.adults_0 = 2;
+        newParams.children_0 = 0;
+        newParams.rooms = 1;
+    }
+    var defaultParams = {
+        hotel_id: this.config.hotelId,
+        portal_id: this.config.portalId,
+        locale: this.config.defaultLocale,
+        currency: this.config.defaultCurrency,
+        ip_address : sessionStorage.ip_add
+    }
+
+
+
+
+
+    var params = $.extend(defaultParams, newParams , searchParams)
+        //console.log(JSON.stringify(params));
+    return query(path, params);
+};
+
 
 Rt3Api.prototype.availableRoomsTonight = function() {
     var path = '/hotels/roomRateList.json';
@@ -79,9 +131,8 @@ Rt3Api.prototype.availableRoomsTonight = function() {
     nextDay = new Date(today);
     var tomarrow=new Date(nextDay.setDate(nextDay.getDate() + 1));
     var depart=tomarrow.toISOString().slice(0,10);
-    console.log("cuurent"+today);
-   
-   
+    //console.log("cuurent"+today);
+
     var defaultParams = {
         hotel_id: this.config.hotelId,
         portal_id: this.config.portalId,
@@ -131,8 +182,8 @@ Rt3Api.prototype.getRateShopping = function(searchParams) {
        locale: this.config.defaultLocale,
        currency: this.config.defaultCurrency,
        popular_only: false,
-       num_rates_display: 5,
-       client_ip: '64.78.249.12',
+       num_rates_display: 15,
+       client_ip: sessionStorage.ip_add,
        lowest_rate: null,
        search_lowest: true
     };
@@ -142,7 +193,7 @@ Rt3Api.prototype.getRateShopping = function(searchParams) {
     function reformatParams(searchParams) {
        var params = searchParams;
 
-       params['adults[]'] = searchParams.adults || 2;
+       params['adults[]'] = searchParams.adults || 1;
        params['children[]'] = searchParams.children || 0;
        params.rooms = searchParams.rooms || 1;
 
@@ -160,7 +211,8 @@ Rt3Api.prototype.getBrgInfo = function(searchParams) {
         hotel_id: this.config.hotelId,
         portal_id: this.config.portalId,
         locale: this.config.defaultLocale,
-        currency: this.config.defaultCurrency
+        currency: this.config.defaultCurrency,
+        ip_address : sessionStorage.ip_add
     };
 
     var params = $.extend(defaultParams, searchParams);
@@ -240,6 +292,77 @@ Rt3Api.prototype.getBrgInfo = function(searchParams) {
     return defered;
 };
 
+Rt3Api.prototype.getOTARates = function (params){
+  var searchParams ,
+      startDate,
+      endDate,
+
+      retResponse={},
+      reztripRate,
+      brg ={},
+      brgFound;
+var defered = $.Deferred();
+  //return new Promise(function(resolve, reject){
+    var now = new Date();
+    var day = ("0" + now.getDate()).slice(-2);
+    var month = ("0" + (now.getMonth() + 1)).slice(-2);
+    var startDate = now.getFullYear() + "-" + (month) + "-" + (day);
+
+    var nextDay;
+    nextDay = new Date(startDate);
+    var tomarrow=new Date(nextDay.setDate(nextDay.getDate() + 1));
+    var endDate=tomarrow.toISOString().slice(0,10);
+
+    searchParams = {
+      arrival_date    : startDate ,
+      departure_date  : endDate
+    };
+
+    if(params){
+      searchParams = $.extend(searchParams, params);
+    }
+
+    this.getRateShopping(searchParams).then(function(response) {
+        var errors = response.error_info;
+        if(errors && errors.error_details.length > 0){
+           defered.reject(errors);
+
+        }else{
+            if(response.show_brg ){
+            //  retResponse.otaRates    = response.rates;"$"+Math.round(roomRate);
+
+              reztripRate = "$"+Math.round(response.discounted_rate);
+
+              response.rates.forEach(function(ota){
+                brg[ota.provider] = ota.rate;
+              });
+
+              brgFound = response.rates.length > 0 ? true : false;
+              retResponse = {
+                'reztripRate' : reztripRate,
+                'brg' : brg,
+                'brgFound' : brgFound
+              }
+              defered.resolve(retResponse);
+            //  return defered;
+            }else{
+              retResponse = { "error_info": {"error_details" : [
+                                                        {"error_type"    : "NOT_ALLOWED",
+                                                        "error_messgae" : "BRG rates are not allowed to display."
+                                                      }]
+                                             }
+                            };
+              defered.reject(retResponse);
+            //  return defered;
+            }
+
+        }
+    });
+    return defered;
+  //});
+
+}
+
 Rt3Api.prototype.recentBookings = function(timeCutOffMinutes) {
     var path = '/ext/recentBookings';
     var params = {
@@ -249,6 +372,38 @@ Rt3Api.prototype.recentBookings = function(timeCutOffMinutes) {
 
     return query(path, params);
 };
+
+Rt3Api.prototype.rateCalendarForToday = function(searchParams) {
+    var path = '/hotels/rate_calendar.json';
+
+    var startDate = new Date().toISOString().slice(0, 10);//today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var today = new Date(startDate);
+    var endFullDate = new Date(today.setDate(today.getDate()+120));
+    var endDate = endFullDate.toISOString().slice(0, 10); //in reztrip format
+
+
+    var defaultParams = {
+       hotel_id: this.config.hotelId,//'MIAWPH',
+       portal_id: this.config.portalId, //'wphsouthbeach',
+       locale: this.config.defaultLocale,
+       currency: this.config.defaultCurrency,
+       start_date: startDate,
+       end_date: endDate,
+       adults: 1,
+       children: 0,
+       rooms: 1,
+
+       ip_address: sessionStorage.ip_add,
+       lowest_rate: null
+    };
+
+    var params = $.extend(defaultParams, searchParams);
+
+
+
+    return query(path, params);
+};
+
 
 // Private
 function query(path, params) {
