@@ -10,7 +10,8 @@ title: Celino South Beach Hotel
 email: info@celinosouthbeach.com
 description: Set to debut Fall 2017 on iconic Ocean Drive, The Celino Hotel will bring a new lifestyle of indulgence to South Beach, Florida. Subscribe to get updates here!
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://celinosouthbeach.com" # the base hostname & protocol for your site 
+url: "http://celinosouthbeach.com" # the base hostname & protocol for your site
+reztripUrl: https://thecelinohotel.reztrip.com/
 permalink: pretty
 # Build settings
 markdown: kramdown

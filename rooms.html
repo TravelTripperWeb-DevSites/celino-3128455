@@ -3,6 +3,7 @@ layout: default
 title: Celino Hotel South Beach
 bg: bg-rooms
 ---
+<div class="loading" style="display:block">Loading&#8230;</div>
 
 <div class="padd-fixedtop"></div>
 <section class="padd-top50 top-margin">
@@ -23,29 +24,26 @@ bg: bg-rooms
     </div>
   </div>
 </section>
-<section rt3-rooms-browser="browser" rt3-search-form="search" on-search-changed="browser.tonightavailRooms()" ng-cloak class="listings">
-  <div ng-if="(browser.roomsv  | filter: {category:'Classic'}).length > 0" class="devider-inner top-40" style="background: url('/images/bg-leaf.jpg'); background-position: top right; background-repeat:no-repeat;"><span
-      class="d-title">GARDEN VIEW</span></div>
+<section class="listings" ng-repeat="cat in browser.roomCategories">
+  <div class="devider-inner top-40"  style="background: url('/images/bg-leaf.jpg'); background-position: top right; background-repeat:no-repeat;"><span
+      class="d-title">[[ cat ]]</span></div>
 
-  <div ng-repeat="room in browser.roomsv | filter: {category:'Classic'}">
+  <div ng-repeat="room in browser.roomsList | filter : {category : cat}" on-finish-render="hideLoader">
     <div ng-if="$even" class="container listing even">
       <div class="col-md-6">
         <div class="top-right-bg tiles">
-          <img ng-src="[[room.photos[0].yankee_large]]" class="margin-top padd-20 img-responsive">
+          <img ng-src="[[ room.photos[0].large ]]" class="margin-top padd-20 img-responsive">
         </div>
       </div>
       <div class="col-md-6">
         <div class="content-right">
-          <h2>[[room.name]]</h2>
+          <h2 ng-bind-html="room.name | renderHTMLCorrectly"></h2>
           <h3 class="gold_gotham">TONIGHT’S RATE</h3>
-          <h4 class="right-pd light_grey" rt3-code="[[room.code]]"> <img src="/images/icons/ellipsis.svg"> </h4>
-          <p class="right-pd">
-            [[room.short_description]]
-
-          </p>
+          <h4 class="right-pd"><a ng-href="{{site.reztripUrl}}[[room.todayRate == 'Check Availability' ?  '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="light_grey"><span ng-show="room.todayRate != 'Check Availability'">[[portalInfo.default_currency_symbol]]</span>[[ room.todayRate ]]</a></h4>
+          <p class="right-pd" ng-bind-html="room.short_description | renderHTMLCorrectly"></p>
           <p class="text-left">
-            <!--a ng-href="https://thecelinohotel.reztrip.com/search?selected_room_category=[[room.category]]&selected_room=[[room.code]]" class="btn-booknow hvr-fade">BOOK NOW</a--><a ng-href="/rooms-suites/[[room.name | lowercase | nospace | spacetohyphen]]/" class="btn-border hvr-border-fade">Preview
-              Room</a>
+            <!--a ng-href="https://thecelinohotel.reztrip.com/search?selected_room_category=[[room.category]]&selected_room=[[room.code]]" class="btn-booknow hvr-fade">BOOK NOW</a-->
+            <a ng-href="/room/#[[room.name | formatNameForLink]]" class="btn-border hvr-border-fade">Preview [[ room.name | roomOrSuite ]]</a>
           </p>
         </div>
       </div>
@@ -54,23 +52,20 @@ bg: bg-rooms
     <div ng-if="$odd" class="container listing odd">
       <div class="col-md-6">
         <div class="content-left2">
-          <h2>[[room.name]]</h2>
+          <h2 ng-bind-html="room.name | renderHTMLCorrectly"></h2>
           <h3 class="gold_gotham">TONIGHT’S RATE</h3>
-          <h4 class="right-pd light_grey" rt3-code="[[room.code]]"> <img src="/images/icons/ellipsis.svg"> </h4>
-          <p class="right-pd">
-            [[room.short_description]]
-
-          </p>
+          <h4 class="right-pd "><a ng-href="{{site.reztripUrl}}[[room.todayRate == 'Check Availability' ?  '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="light_grey"><span ng-show="room.todayRate != 'Check Availability'">[[portalInfo.default_currency_symbol]]</span>[[ room.todayRate ]]</a></h4>
+          <p class="right-pd" ng-bind-html="room.short_description | renderHTMLCorrectly"></p>
           <p class="text-left">
-            <!--a ng-href="https://thecelinohotel.reztrip.com/search?selected_room_category=[[room.category]]&selected_room=[[room.code]]"  class="btn-booknow hvr-fade">BOOK NOW</a--><a ng-href="/rooms-suites/[[room.name | lowercase | nospace | spacetohyphen]]/" class="btn-border hvr-border-fade">Preview
-              Room</a>
+            <!--a ng-href="https://thecelinohotel.reztrip.com/search?selected_room_category=[[room.category]]&selected_room=[[room.code]]"  class="btn-booknow hvr-fade">BOOK NOW</a-->
+            <a ng-href="/room/#[[room.name | formatNameForLink]]" class="btn-border hvr-border-fade">Preview [[ room.name | roomOrSuite ]]</a>
           </p>
         </div>
       </div>
 
       <div class="col-md-6">
         <div class="bottom-right-bg wood pull-right">
-          <img ng-src="[[room.photos[0].yankee_large]]" class="img-responsive">
+          <img ng-src="[[ room.photos[0].large ]]" class="img-responsive">
         </div>
       </div>
     </div>

@@ -43,14 +43,14 @@ angular.module('rezTrip')
 
 
           searchParams.loaded = true;
-        
+
           resolve(searchParams);
 
 
         });
       });
     });
-  
+
     return searchParams;
   }])
 
@@ -77,7 +77,7 @@ angular.module('rezTrip')
       return {
         arrival_date: self.params.arrival_date || today(),
         departure_date: self.params.departure_date || today(1),
-        adults: self.constraints.min_number_of_adults_per_room || 2,
+        adults: self.constraints.min_number_of_adults_per_room || 1,
         children: self.params.children || self.constraints.min_number_of_children_per_room || 0,
         rooms: self.params.rooms || self.constraints.default_number_of_rooms || 1
       }
@@ -149,85 +149,88 @@ angular.module('rezTrip')
       this.roomsTonight=[];
       this.rooms = [];
       this.toNigthsRate;
-   
+
+
       this.errors = [];
       this.tonightErrors = [];
       this.searchParams = {};
-    
-    this.getdiff=false;
+
+
+	  this.getdiff=false;
     }
-    Browser.prototype.tonightavailRooms=function()
-    {
-       var reverse = true;
-      var self = this;
-      var code = [];
-      self.isRate=true;
-      rt3api.getAllRooms().then(function(result){
-              
-              $rootScope.$apply(function() {
 
-                 self.roomsv =  result.rooms; 
-                 angular.forEach(result.rooms, function(value, key) {
-                   code.push(value.code);
-                }); 
-              });
-          });
-      rt3api.availableRoomsTonight().then(function(response) {
-        $rootScope.$apply(function() {  
-
-            self.roomsTonight = response.room_details_list;
-
-            self.tonightErrors = response.error_info.error_details;
-            if(self.roomsTonight.length==0)
-            {
-              
-              self.isRate=false;
-              self.roomRates=checkRoomStatus(response.room_details_list, self.roomsTonight.length, code);
-            }
-            else
-            {
-              this.isRate=true;
-              self.toNightsRate="$"+Math.round(self.roomsTonight[0].min_average_price);
-              self.roomRates=checkRoomStatus(response.room_details_list, self.roomsTonight.length, code);
-
-               
-            }
-            //console.log(self.tonightErrors);
-            self.loaded = true;
-
-          });
-
-      });  
-    }
-  
     Browser.prototype.tonightRate=function()
     {
 
-      var self = this;
-      self.isRate=true;
 
-       rt3api.availableRoomsTonight().then(function(response) {
-        $rootScope.$apply(function() {
+       var self = this;
+       self.isRate= true;
+
+       rt3api.getAllAvailableRooms().then(function(response) {
+        $rootScope.$applyAsync(function() {
          //console.log(response);
-            self.roomsTonight = response.room_details_list;
+            self.roomsList = response.rooms;
 
             self.tonightErrors = response.error_info.error_details;
-            if(self.roomsTonight.length==0)
+
+            var roomCategories = response.rooms.map(function(obj) { return obj.category; });
+            roomCategories = roomCategories.filter(function(v,i) { return roomCategories.indexOf(v) == i; });
+            self.roomCategories = roomCategories;
+
+            if(self.roomsList.length==0)
             {
-              
               self.isRate=false;
-              self.roomRates=checkRoomStatus(response.room_details_list, self.roomsTonight.length);
             }
             else
             {
-              this.isRate=true;
-              self.toNightsRate="$"+Math.round(self.roomsTonight[0].rate_plans[0].total_price);
-              self.roomRates=checkRoomStatus(response.room_details_list, self.roomsTonight.length);
+                var roomRate;
+                var todayRate ={};
+                self.isRate = false;
+                angular.forEach(self.roomsList, function(room, key ){
+                    roomRate= room.min_discounted_average_price[0] || room.min_average_price[0];
+                    if(room.min_average_price[0] != null && !self.isRate){
 
-              
-            }
+                       self.isRate = true;
+                       self.toNightsRate = Math.round(roomRate);
+
+                    }
+                    if(roomRate == null){
+                       todayRate = {'todayRate': 'Check Availability'};
+
+                    }
+                    else{
+                      todayRate = {'todayRate': Math.round(roomRate)};
+
+                    }
+                    angular.extend(self.roomsList[key] , todayRate);
+
+                });
+
+             }
+
             //console.log(self.tonightErrors);
             self.loaded = true;
+            //var par = rt3Search.getParams();
+            angular.extend(self , {'otaRates' : {'brgFound' : false}});
+            $q.when(rt3api.getOTARates()).then(function(response){
+                if(response.brgFound ){
+                  if(Object.keys){
+
+                      var len, lastKey;
+
+                      while(Object.keys(response.brg).length > 4){
+                         len = Object.keys(response.brg).length;
+                         lastKey =  Object.keys(response.brg)[len-1];
+                         delete response.brg[lastKey];
+                      }
+
+                  }
+
+                }
+                angular.extend(self , {'otaRates' : response});
+            }, function(response){
+                angular.extend(self , {'otaRates' : {'brgFound' : false}});
+            });
 
           });
 
@@ -237,78 +240,6 @@ angular.module('rezTrip')
 
 
 
-    function checkRoomStatus(items,status, code) {
-    var myVals = code;
-    var tonightrate=[];
-      var i, j;
-      var totalmatches = 0;
-      var count=0;
-
-      if(status==0)
-      {
-
-        for (i = 0; i < myVals.length; i++) {
-
-          tonightrate[i]= "CHECK AVAILABILITY";
-      }
-
-         return tonightrate;
-
-      }
-
-      else
-      {
-        if(myVals.length){
-
-        for (i = 0; i < myVals.length; i++)
-        {
-          for (j = 0; j < items.length; j++)
-          {
-
-            if (myVals[i] == items[j].code)
-            {
-
-            // console.log("myval"+" "+"i val"+" "+i+" "+myVals[i]+":"+"j val"+" "+j+" "+items[j].code+" "+items[j].min_average_price);
-            count=0;
-            tonightrate[i]=" $"+Math.round(items[j].rate_plans[0].total_price);
-            }
-
-            else
-            {
-
-              count++;
-              
-              if(count==items.length-1)
-
-             {
-
-                if(tonightrate.length==0 || tonightrate.length==myVals.length-1)
-                {
-
-                  tonightrate[i]="CHECK AVAILABILITY";
-                  count=0;
-                }
-                else
-                {
-                  tonightrate[tonightrate.length]="CHECK AVAILABILITY";
-                  count=0;
-                }
-
-             }
-
-                //totalmatches++;
-            }
-
-            }
-            }
-
-            //console.log(tonightrate);
-
-             return tonightrate;
-           }
-           
-        }
-}
 
     Browser.prototype.search = function(params) {
 
@@ -321,62 +252,44 @@ angular.module('rezTrip')
 
       this.thisDate = date.getFullYear() +'-'+ ('0' + (date.getMonth() + 1)).slice(-2) +'-'+ ('0' + date.getDate()).slice(-2);
 
-      if(this.searchParams) {
-        rt3api.availableRooms(this.searchParams).then(function(response) {
+
+      if(this.searchParams || this.storageContainer) {//console.log(sessionStorage.ip_add);
+        rt3api.getAllAvailableRooms(this.searchParams || this.storageContainer).then(function(response) {
           $rootScope.$apply(function() {
-            self.rooms = response.room_details_list;
-           self.rateToday =[];   //added by tufail
-            //console.log("HelloBooking"+JSON.stringify(self.rooms));
+            self.rooms = response.rooms;
             if(self.rooms.length==0)
             {
-              self.getRate="Check Availability";
-              self.getRateCode="";
-              $('.-count').css("font-size", "23px");
-              $('.-count').css("line-height", "28px");
-              $('.-count').css("text-align", "center"); 
+                self.getRate="Check Availability";
+                $('.-count').css("font-size", "23px");
+                $('.-count').css("line-height", "28px");
+                $('.-count').css("text-align", "center");
             }
             else
             {
-               
-              ////added by tufail
-               angular.forEach(self.rooms, function(value) {
-                self.rateToday.push(value.min_average_price);  
-               }); 
 
-                function indexOfMax(arr) {
-                    if (arr.length === 0) {
-                        return -1;
-                    }
-
-                    var max = arr[0];
-                    var maxIndex = 0;
-
-                    for (var i = 1; i < arr.length; i++) {
-                        if (arr[i] > max) {
-                            maxIndex = i;
-                            max = arr[i];
-                        }
-                    }
-
-                    return maxIndex;
+                var showRate = self.rooms[0].min_discounted_average_price[0] || self.rooms[0].min_average_price[0];
+                if(showRate == null){
+                   showRate ='Check Availability';
+                   $('.-count').css("font-size", "23px");
+                   $('.-count').css("line-height", "28px");
+                   $('.-count').css("text-align", "center");
+                 }
+                else {
+                  $('.-count').css("font-size", "36px");
+                  $('.-count').css("line-height", "40px");
+                  $('.-count').css("text-align", "left");
+                  showRate =  Math.round(showRate);
                 }
-              var roomtodayi = self.rateToday.indexOf(Math.min.apply(null, self.rateToday)); 
-               
+                self.getRate = showRate;
 
-              //self.getRate = "$ "+Math.min.apply(null, self.rateToday);  
-              //console.log("min" + Math.min.apply(null, self.rateToday));
-               self.getRate = "$ "+ Math.round(self.rooms[roomtodayi].min_average_price);
-               self.getRateCode =  self.rooms[roomtodayi].code;
-              $('.-count').css("font-size", "43px");
-              $('.-count').css("line-height", "40px");
-              $('.-count').css("text-align", "left"); 
             }
-            
+
+
             self.errors = response.error_info.error_details;
             self.loaded = true;
             self.searchParams = self.searchParams || self.storageContainer;
 
-            
+
           });
         });
       } else {
@@ -391,48 +304,72 @@ angular.module('rezTrip')
       }
     };
 
-
-
-  
-
-
-
-
     var browser = new Browser();
-    browser.tonightavailRooms();
+
     browser.tonightRate();
 
-    browser.search();
+
+  //  browser.search();
+
 
     return browser;
   }])
 
-  .service('rt3SpecialRates', ['$rootScope', '$q', '$location','rt3api', function($rootScope, $q, $location, rt3api) {
+  .service('rt3SpecialRates', ['$rootScope', '$q', '$location','rt3api','$filter', function($rootScope, $q, $location, rt3api, $filter) {
     var specialRates = {
-      loaded: false
-      // locationHash: $location.path().substr(1) || null
+
+      loaded: false,
+    //  locationHash:  angular.element('[data-offer-code]').data('offer-code') || null ,
+      sRdetail: {},
+      locationHash: window.location.hash.substr(1)
+
     };
 
     specialRates.ready = $q(function(resolve) {
       rt3api.getAllSpecialRates().then(function(response) {
-        if (specialRates.locationHash) {
-            $rootScope.$apply(function() {
-                angular.forEach(response.special_rates, function(value, key) {
-                    if (value.rate_plan_code == specialRates.locationHash) {
-                        angular.extend(specialRates, formatRespone(value));
-                        specialRates.loaded = true;
-                        resolve(specialRates);
+
+             $rootScope.$applyAsync(function() {
+              var formatResponseValue,hashName, tmpName;
+              formatResponseValue = formatRespone(response);
+              if(specialRates.locationHash){
+                  var specialFound = false;
+
+                  angular.forEach(response.special_rates, function(value, key) {
+
+                    tmpName = $filter ('formatNameForLink')(value.rate_plan_name);
+                    hashName = $filter ('formatNameForLink')(specialRates.locationHash);
+                    if (tmpName == hashName) {
+
+                          specialFound = true;
+                          if(response.special_rates.length > 2){
+                             switch (key) {
+                                 case 0 :
+                                     value.prevOfferCode = response.special_rates[response.special_rates.length -1].rate_plan_code;
+                                     value.nextOfferCode = response.special_rates[key +1].rate_plan_code;
+                                     break;
+                                 case response.special_rates.length -1 :
+                                     value.prevOfferCode = response.special_rates[response.special_rates.length -2].rate_plan_code;
+                                     value.nextOfferCode = response.special_rates[0].rate_plan_code;
+                                     break;
+                                 default:
+                                     value.prevOfferCode = response.special_rates[key-1].rate_plan_code;
+                                     value.nextOfferCode = response.special_rates[key+1].rate_plan_code;
+                             }
+                          }
+
+                          angular.extend(specialRates.sRdetail, value);
                     }
-                });
-            });
-        } else {
-            $rootScope.$apply(function() {
-                angular.extend(specialRates, formatRespone(response));
-                //console.log(response);
-                specialRates.loaded = true;
-                resolve(specialRates);
-            });
-        }
+
+                  });
+                //   if(!specialFound){
+                //     window.location = "/";
+                //   }
+              }
+              angular.extend(specialRates, formatResponseValue);
+              specialRates.loaded = true;
+              resolve(specialRates);
+          });
+
       });
     });
 
@@ -444,7 +381,7 @@ angular.module('rezTrip')
       return response;
     }
   }])
-  .service('rt3RoomDetails', ['$rootScope', '$q', '$location', 'rt3Search', 'rt3api', '$timeout', function($rootScope, $q, $location, rt3Search, rt3api, $timeout) {
+  .service('rt3RoomDetails', ['$rootScope', '$q', '$location', 'rt3Search', 'rt3api', '$timeout','$filter', function($rootScope, $q, $location, rt3Search, rt3api, $timeout,$filter) {
     function RoomDetails() {
       loaded = false;
       params = {};
@@ -455,25 +392,72 @@ angular.module('rezTrip')
     RoomDetails.prototype.fetchRoomDetails = function() {
       var self = this;
       var searchParams = rt3Search.getParams();
-      var dataRoomId = angular.element('[data-room-id]').data('room-id');
-      var roomId = { room_id: dataRoomId || $location.path().substr(1) }; 
-      self.params = $.extend(searchParams, roomId);
+     // var dataRoomId = angular.element('[data-room-id]').data('room-id');
+      var roomName = window.location.hash.substr(1);
+      self.prevRoomName = '';
+      self.nextRoomName = '';
 
-      $q.when(rt3api.getAllRooms()).then(function(response) {
+      //self.params = $.extend(searchParams, roomId);
+
+      $q.when(rt3api.getAllAvailableRooms()).then(function(response) {
+        var roomSizeSqm;
+        var roomSizeSqft;
         $.each(response.rooms, function(key, value) {
-          if(value.code == self.params.room_id) {
+          if($filter ('formatNameForLink')(value.name) == $filter ('formatNameForLink')(roomName)) {
+
+            var showRate = value.min_discounted_average_price[0] || value.min_average_price[0];
+            if(showRate == null){
+               showRate ='Check Availability';
+            }
+            else {
+              showRate =  Math.round(showRate);
+            }
+            angular.extend(self, {'todayRate': showRate});
+
+            if(value.room_size_units == 'ft<sup>2</sup>'){
+                roomSizeSqm = value.room_size / 10.764 ;
+                value['room_size_sqm'] = Math.round(roomSizeSqm) + " m<sup>2</sup>";
+                value['room_size_sqft'] = value.room_size + " " + " ft<sup>2</sup>";
+            }else if(value.room_size_units == 'm<sup>2</sup>'){
+                roomSizeSqft = value.room_size * 10.764 ;
+                value['room_size_sqft'] = Math.round(roomSizeSqft) + " ft<sup>2</sup>";
+                value['room_size_sqm'] = value.room_size + " m<sup>2</sup>" ;
+            }
+            switch (key) {
+                case 0 :
+                    self.prevRoomCode = response.rooms[response.rooms.length -1].code;
+                    self.nextRoomCode = response.rooms[key +1].code;
+                    break;
+                case response.rooms.length -1 :
+                    self.prevRoomCode = response.rooms[response.rooms.length -2].code;
+                    self.nextRoomCode = response.rooms[0].code;
+                    break;
+                default:
+                    self.prevRoomCode = response.rooms[key-1].code;
+                    self.nextRoomCode = response.rooms[key+1].code;
+            }
+
             angular.extend(self, value);
+
+            //fetch brg rates
+            searchParams = $.extend(searchParams, { room_id: value.code });
+            self.brgLoaded = false;
+            $q.when(rt3api.getBrgInfo(searchParams)).then(function(response) {
+              self.brg = response;
+              self.brgLoaded = true;
+            });
           }
         });
-      }); 
-      $q.when(rt3api.getBrgInfo(self.params)).then(function(response) {
-        self.brg = response;
       });
+
     };
 
-    var details = new RoomDetails(); 
+    var details = new RoomDetails();
+
     $rootScope.$on('$locationChangeSuccess', function() {
       details.fetchRoomDetails();
+      $("body").scrollTop(0);
+      //window.location.reload();
     });
 
     $timeout(function() {
@@ -501,7 +485,41 @@ angular.module('rezTrip')
 
     return recentBookings;
   }])
-  
-  .service('rt3RoomCode', ['$q', 'rt3api', 'rt3Search', function($q, rt3api, rt3Search) {
-         
+
+  .service('rt3RateShopping', ['$q', 'rt3api', 'rt3Search', function($q, rt3api, rt3Search) {
+    function RateShopping() {
+      rt3Search;
+
+      this.loaded = false;
+      this.params = rt3Search.getParams();
+
+      getRateShopping(this);
+    }
+
+    function getRateShopping(self) {
+      $q.when(rt3api.getRateShopping(self.params)).then(function(response) {
+        angular.extend(self, response);
+
+        this.loaded = true;
+      });
+    }
+
+    return new RateShopping();
+  }])
+
+  .service('rt3RateCalendar', ['$rootScope', '$q', 'rt3api', function($rootScope, $q, rt3api) {
+    var rateCalendar = {
+      loaded: false
+    };
+    var defered = $.Deferred();
+
+      rt3api.rateCalendarForToday({}).then(function(response) {
+
+
+          defered.resolve(response);
+
+      });
+
+
+    return defered;
   }]);

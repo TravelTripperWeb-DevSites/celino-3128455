@@ -3,7 +3,7 @@ layout: default
 title: Celino Hotel South Beach
 bg: bg-rooms
 ---
-
+<div class="loading" style="display:block">Loading&#8230;</div>
 <div class="padd-fixedtop"></div>
 <section class="padd-top50 top-margin">
   <div class="container no-padding">
@@ -24,46 +24,46 @@ bg: bg-rooms
     </div>
   </div>
 </section>
-<section rt3-rooms-browser="browser" rt3-search-form="search" on-search-changed="browser.tonightavailRooms()" ng-cloak class="listings">
-  <div>
+<section rt3-special-rates="offers" class="listings">
+  <div ng-repeat="offer in offers.special_rates" on-finish-render="hideLoader">
     <!-- if even count -->
-    <div class="container listing even">
+    <div class="container listing even" ng-if="$even">
       <div class="col-md-6">
         <div class="top-right-bg tiles">
-          <img ng-src="/images/offer-example.jpg" class="margin-top padd-20 img-responsive">
+          <img ng-src="[[ offer.images[0].large || '/images/dummy.jpg' ]]" class="margin-top padd-20 img-responsive">
         </div>
       </div>
       <div class="col-md-6">
         <div class="content-right">
-          <h2>Offer 1</h2>
-          <h3 class="gold_gotham">Offer subtitle</h3>
-          <p class="right-pd">
-            Offer description
+          <a ng-href="/offer/#[[ offer.rate_plan_name | formatNameForLink ]]"><h2 ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></h2></a>
+          <!-- <h3 class="gold_gotham" ></h3> -->
+          <p class="right-pd" ng-bind-html="offer.short_description | renderHTMLCorrectly">
           </p>
           <p class="text-left">
-            <a ng-href="/" class="btn-border hvr-border-fade">Book Offer</a>
+            <a ng-href="[[ offer.promo_url ]]" class="btn-border hvr-border-fade">Book Offer</a>
           </p>
         </div>
       </div>
     </div>
 
     <!-- if odd count -->
-    <div class="container listing odd">
+    <div class="container listing odd" ng-if="$odd">
       <div class="col-md-6">
         <div class="content-left2">
-          <h2>Offer 2</h2>
-          <h3 class="gold_gotham">Offer Subtitle</h3>
-          <p class="right-pd">
-            Offer description.
+          <a ng-href="/offer/#[[ offer.rate_plan_name | formatNameForLink ]]">
+            <h2 ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></h2>
+          </a>
+          <!-- <h3 class="gold_gotham" ></h3> -->
+          <p class="right-pd" ng-bind-html="offer.short_description | renderHTMLCorrectly">
           </p>
           <p class="text-left">
-            <a ng-href="/" class="btn-border hvr-border-fade">Book Offer</a>
+            <a ng-href="[[ offer.promo_url ]]" class="btn-border hvr-border-fade">Book Offer</a>
           </p>
         </div>
       </div>
       <div class="col-md-6">
         <div class="top-right-bg tiles">
-          <img ng-src="/images/offer-example.jpg" class="margin-top padd-20 img-responsive">
+          <img ng-src="[[ offer.images[0].large || '/images/dummy.jpg' ]]" class="margin-top padd-20 img-responsive">
         </div>
       </div>
     </div>
