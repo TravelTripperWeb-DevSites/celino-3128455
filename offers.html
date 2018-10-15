@@ -35,8 +35,8 @@ bg: bg-rooms
       </div>
       <div class="col-md-6">
         <div class="content-right">
-          <h2>Offer [[ $index + 1 ]]</h2>
-          <h3 class="gold_gotham" ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></h3>
+          <h2 ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></h2>
+          <!-- <h3 class="gold_gotham" ></h3> -->
           <p class="right-pd" ng-bind-html="offer.short_description | renderHTMLCorrectly">
           </p>
           <p class="text-left">
@@ -50,8 +50,8 @@ bg: bg-rooms
     <div class="container listing odd" ng-if="$odd">
       <div class="col-md-6">
         <div class="content-left2">
-          <h2>Offer [[ $index + 1 ]]</h2>
-          <h3 class="gold_gotham" ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></h3>
+          <h2 ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></h2>
+          <!-- <h3 class="gold_gotham" ></h3> -->
           <p class="right-pd" ng-bind-html="offer.short_description | renderHTMLCorrectly">
           </p>
           <p class="text-left">
