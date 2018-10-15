@@ -76,7 +76,7 @@ h4{
 	  	}
 	}
 .bookBtn{
-	 background: #b07719 url('/images/btn-goldenbg.jpg') center center repeat-x;
+	 background-color: #b07719;
 	 font-family: Americana-ExtraBold;
 	 padding: 8px 20px;
 	 margin-top: 8px;
@@ -208,14 +208,14 @@ h4{
         	      @media(max-width: $medium){
         	        margin: 20px 0px !important;
         	     }
-				.blueBtn{
+				.navBookBtn{
 					@media (max-width: $optional) {
 						display: none;
 					}
 
 					 font-family: Americana-ExtraBold;
-				   background: #b07719 url('/images/btn-goldenbg.jpg') center center repeat-x;
-				   padding-left:34px;
+					background-color: #dbbf97;
+				padding-left:34px;
 				   font-size: 30px;
 				      padding: 35px 10px;
 				       width: 270px;
@@ -239,6 +239,7 @@ h4{
 				   	 color: $white !important;
 				   }
 				   &:hover{
+					   background-color: #dbbf97;
 				         color: $white;
 				         text-decoration: none;
 				        -webkit-box-shadow: inset 10px 10px 130px -9px rgba(31,18,0,0.3);

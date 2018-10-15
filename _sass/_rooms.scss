@@ -2,7 +2,7 @@
 	 background-image: url('/images/bg-rooms-left.jpg');
 	 background-repeat: repeat-y;
 }
-.padd-fixedtop{ 
+.padd-fixedtop{
 	padding-top: 140px;
 	@media(max-width: $larger){
 		padding-top: 120px;
@@ -18,7 +18,7 @@
 	}
 
 }
-.padd-fixedtopinner{ 
+.padd-fixedtopinner{
 	padding-top: 140px;
 	@media(max-width: $larger){
 		padding-top: 120px;
@@ -59,7 +59,7 @@
                margin-left: 7%;
 	 	 	 }
      img{ width: 100%; }
-	  
+
 
 	 	 h2{
 	 	 	 position: absolute;
@@ -69,7 +69,8 @@
 	 	 	  margin: 0 auto;
 	 	 	  font-family: Americana-ExtraBold;
 	 	 	  font-size: 119px;
-	 	 	  letter-spacing: 0em;
+				letter-spacing: 0em;
+				line-height: 1;
 	 	 	  @media(max-width: $tablet){
               	font-size: 50px;
               }
@@ -90,16 +91,16 @@
 	 	 	 background: $link-color;
 	 	 	 color: $white;
 	 	 	 font-family: gotham-bold;
-	 	 	 font-size: 20px;  
+	 	 	 font-size: 20px;
 	 	 	 @media(max-width: $medium){
-               font-size: 12px;  
+               font-size: 12px;
 	 	 	 }
 	 	 	 @media(max-width: $on-laptop){
-               font-size: 11px;  
+               font-size: 11px;
                left: 20%;
 	 	 	 }
 	 	 	 @media(max-width: $phone-max){
-               font-size: 11px;  
+               font-size: 11px;
                left: 0%;
                letter-spacing: 0.06em;
                height: auto;
@@ -124,7 +125,7 @@
 	 	 	 	 line-height: 30px;
 	 	 	 	 border-right: 2px solid $white;
 	 	 	 	 @media(max-width: $medium){
-		               font-size: 16px;  
+		               font-size: 16px;
 			 	 	 }
 			 	 	 @media(max-width: $phone-max){
 				    	line-height: 36px;
@@ -134,7 +135,7 @@
 
 	 	 	 }
 	 	 }
-	 
+
 }
 .top-40{
 	margin-top: 40px;
@@ -169,7 +170,7 @@
 	padding-top: 30px;
 	margin-top: 60px;
 
-	 
+
 }
 .blue-texture{
 	     background: url('/images/blue-texture.jpg') center left no-repeat;
@@ -186,28 +187,28 @@
 	 	 background: url('/images/rooms/bg-1.jpg') top right no-repeat;
 	 	 padding-right: 30px;
 	 }
-.bottom-right-bg{ 
+.bottom-right-bg{
 	padding-bottom: 60px;
 	text-align: right;
-	 
+
 }
-.bottom-right-bg2{ 
+.bottom-right-bg2{
 	margin-bottom: 60px;
 	text-align: right;
-	 
+
 }
 .tiles2{
 	 	 background: url('/images/rooms/bg-2.jpg') top right no-repeat;
-	 	 padding-top: 50px;  
+	 	 padding-top: 50px;
 	 }
 .wood{
-	 	 background: url('/images/rooms/wood.jpg') bottom right no-repeat; 
+	 	 background: url('/images/rooms/wood.jpg') bottom right no-repeat;
 	 	 @media(max-width: $phone-max){
 	 	 	 margin-bottom: 40px;
 	 	 }
 	 }
 .sea2{
-	 	 background: url('/images/sea1.jpg') bottom right no-repeat; 
+	 	 background: url('/images/sea1.jpg') bottom right no-repeat;
 	 	 @media(max-width: $phone-max){
 	 	 	 margin-bottom: 40px;
 	 	 }
@@ -224,8 +225,11 @@
 	.price{
 		  font-family: Americana-ExtraBold;
 	}
+  &:hover, &:active {
+    text-decoration: none;
+  }
 }
-.btn-booknow{ 
+.btn-booknow{
 	padding: 18px 35px;
 	color: $white !important;
 	background: url('/images/btn-goldenbg.jpg') center center no-repeat;
@@ -234,7 +238,7 @@
 	text-transform: uppercase;
 	font-family: Americana-ExtraBold;
 	font-size: 24px;
-	letter-spacing: 0.2em; 
+	letter-spacing: 0.2em;
 	text-align: center;
 	margin-right: 40px;
 	text-decoration: none;
@@ -242,45 +246,45 @@
 	 box-shadow: inset 0 0 0 0px #c18f30, 0 0 0px transparent;
 	@media(max-width: $large){
 	 		font-size: 20px;
-	 		padding: 10px 20px; 
+	 		padding: 10px 20px;
 	 	}
 	 	 @media(max-width: $medium){
-	 	 	padding: 16px; 
+	 	 	padding: 16px;
 	 	 	padding: 10px 20px;
 	 	 	letter-spacing: 0.1em;
-	 	 	margin-right: 10px; 
+	 	 	margin-right: 10px;
 	 	 }
-	 	  
+
 	 	  @media(max-width: $tablet-rotate){
               font-size: 18px;
-           
+
 	 	  }
 	 	 @media(max-width: $phone-max){
-	 	 	padding: 16px; 
+	 	 	padding: 16px;
 	 	 	padding: 10px 20px;
 	 	 	display: block;
 	 	 	margin-bottom: 10px;
 	 	 	width: 100%;
-	 	 	letter-spacing: 0.1em; 
+	 	 	letter-spacing: 0.1em;
 	 	 }
 	 &:hover{
          color: $white;
          text-decoration: none;
         -webkit-box-shadow: inset 10px 10px 130px -9px rgba(31,18,0,0.3);
 		-moz-box-shadow: inset 10px 10px 130px -9px rgba(31,18,0,0.3);
-		box-shadow: inset 10px 10px 130px -9px rgba(31,18,0,0.3); 
+		box-shadow: inset 10px 10px 130px -9px rgba(31,18,0,0.3);
 	 }
 }
 
 #roomslide{
 	width: 85%;
 	padding-bottom: 60px;
-	max-width: 1525px; 
+	max-width: 1525px;
 	margin: 0 auto;
     position: relative;
     @media(max-width: $medium){
     	width: 85%;
-    } 
+    }
     .carousel-inner{
        .item{
        	  img{
@@ -292,10 +296,10 @@
     .carousel-indicators {
     width: 300px;
     transform: translate(-50%,-50%);
-    margin: 0 auto; 
+    margin: 0 auto;
     	bottom:-10px;
 	    li{
-	       border-color: #dbbf97; 
+	       border-color: #dbbf97;
 	       width: 14px;
 	       height: 14px;
 	       margin-top: 2px;
@@ -314,16 +318,16 @@
 		  position: absolute;
 		  top: 50%;
 		  left: -90px;
-		  transform: translateY(-50%); 
+		  transform: translateY(-50%);
 		   @media(max-width: $large){
 		   		left: -60px;
 		   }
 		  @media(max-width: $medium){
-		   
+
 		  	img{
 		  		max-height: 50px;
 		  	}
-		  	
+
 		  }
 		  @media(max-width: $tablet){
 		   		left: -40px;
@@ -333,19 +337,19 @@
 		  	img{
 		  		max-height: 30px;
 		  	}
-		  	
+
 		  }
 	}
 	.right-arrow{
 		  position: absolute;
 		  top: 50%;
 		  right: -90px;
-		  transform: translateY(-50%); 
+		  transform: translateY(-50%);
 		   @media(max-width: $large){
 		   		right: -60px;
 		   }
 		  @media(max-width: $medium){
-		  	 
+
 		  	img{
 		  		max-height: 50px;
 		  	}
@@ -378,7 +382,7 @@
 	 	margin-top: 30px;
 	 	color: $sec-color;
 	 	list-style-type: none;
-	 	@media(max-width: $on-laptop){ 
+	 	@media(max-width: $on-laptop){
 	 		margin: 0px;
 	 		padding: 0px;
 	 	}
@@ -477,4 +481,147 @@
             margin: 0px;
     	}
     }
+}
+
+.listings {
+	.listing {
+		@media(max-width: $tablet-rotate){
+			display: flex;
+			flex-direction: column;
+
+			&.odd {
+				> div:first-child {
+					order: 2;
+				}
+			}
+		}
+	}
+}
+
+.more-listings {
+	.panel {
+		-webkit-box-shadow: none;
+    	box-shadow: none;
+	}
+}
+
+.offer-title:hover {
+	text-decoration: none;
+}
+
+// page loader
+
+.loading {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+/* Transparent Overlay */
+.loading:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(53,166,174,0.69);
+}
+/* :not(:required) hides these rules from IE9 and below */
+.loading:not(:required) {
+  /* hide "loading..." text */
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.loading:not(:required):after {
+  content: '';
+  display: block;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  margin-top: -0.5em;
+  -webkit-animation: spinner 1500ms infinite linear;
+  -moz-animation: spinner 1500ms infinite linear;
+  -ms-animation: spinner 1500ms infinite linear;
+  -o-animation: spinner 1500ms infinite linear;
+  animation: spinner 1500ms infinite linear;
+  border-radius: 0.5em;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.75) 1.5em 0 0 0, rgba(255, 255, 255, 0.75) 1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) 0 1.5em 0 0, rgba(255, 255, 255, 0.75) -1.1em 1.1em 0 0, rgba(255, 255, 255, 0.5) -1.5em 0 0 0, rgba(255, 255, 255, 0.5) -1.1em -1.1em 0 0, rgba(255, 255, 255, 0.75) 0 -1.5em 0 0, rgba(255, 255, 255, 0.75) 1.1em -1.1em 0 0;
+  box-shadow: rgba(255, 255, 255, 0.75) 1.5em 0 0 0, rgba(255, 255, 255, 0.75) 1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) 0 1.5em 0 0, rgba(255, 255, 255, 0.75) -1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) -1.5em 0 0 0, rgba(255, 255, 255, 0.75) -1.1em -1.1em 0 0, rgba(255, 255, 255, 0.75) 0 -1.5em 0 0, rgba(255, 255, 255, 0.75) 1.1em -1.1em 0 0;
+}
+/* Animation */
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }

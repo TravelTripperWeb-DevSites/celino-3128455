@@ -1,0 +1,85 @@
+---
+layout: default
+---
+<div class="loading" style="display:block">Loading&#8230;</div>
+<div class="padd-fixedtop"></div>
+<section rt3-special-rates="offers" ng-controller="offerDetail">
+  <div>
+    <section class="padd-fixedtopinner">
+      <div class="container no-padding">
+        <div class="col-md-6">
+          <div class="content-left2 inner">
+            <h2 ng-bind-html="offers.sRdetail.rate_plan_name | renderHTMLCorrectly"></h2>
+            <!-- <h3 class="gold_gotham">Offer Subtitle</h3> -->
+            <!-- not sure if needed
+              <h4 class="right-pd light_grey">Offer Price</h4>
+            -->
+            <p class="right-pd" ng-bind-html="offers.sRdetail.short_description | renderHTMLCorrectly"></p>
+            <p class="text-right">
+              <a ng-href="[[ offers.sRdetail.promo_url ]]" class="btn-border hvr-border-fade">BOOK OFFER</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 no-padding">
+          <div class="bottom-right-bg2 tiles2 pull-right">
+            <img ng-src="[[ offers.sRdetail.images[0].large || '/images/dummy.jpg' ]]" class="img-responsive">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="content-room">
+          <div class="col-md-7" ng-show="offers.sRdetail.long_description">
+            <h4>Offer Details</h4>
+            <p ng-bind-html="offers.sRdetail.long_description | renderHTMLCorrectly"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="content-room padd-btm">
+    <div class="container more-listings">
+      <h4 class="text-center">More Offers</h4>
+      <div>
+        <div class="col-sm-12 col-md-4 panel" ng-repeat="offer in offers.special_rates | filter : {code : '!'+offers.sRdetail.rate_plan_code} | limitTo: 3">
+          <img ng-src="[[ offer.images[0].large  || '/images/dummy.jpg' ]]" alt="[[ offer.rate_plan_name ]]" class="img-responsive">
+          <a ng-href="/offer/#[[ offer.rate_plan_name | formatNameForLink ]]">
+            <h3 class="gold_gotham" ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></h3>
+          </a>
+          <p ng-bind-html="offer.short_description | renderHTMLCorrectly"></p>
+          <a ng-href="[[ offer.promo_url ]]" class="btn-border hvr-border-fade">BOOK OFFER</a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center margin-top">
+      <a href="/offers" class="btn btn-lg btn-link">See All</a>
+    </div>
+  </section>
+
+  <section class="bg-lightblue">
+    <div class="container no-padding">
+      <div class="contact-strip-2" style="background-image:url(/images/contact/contact-strip-1.jpg)"></div>
+      <div class="container mapsec">
+        <div class="col-md-12">
+          <div class="wrapper-rText">
+            <div class="block-title">
+              <h1 class="rotate">THE WAY <br>TO PARADISE</h1>
+            </div>
+            <div class="rightBx marg-27">
+              <div class="row">
+                <div class="col-md-12 margin-top">
+                  {% include location-map.html %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+{% include newsletter.html %}
