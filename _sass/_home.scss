@@ -3,7 +3,7 @@
         .item {
             transition-property: opacity;
         }
-        
+
         .item,
         .active.left,
         .active.right {
@@ -39,7 +39,7 @@
 	}
 	@media(max-width: $medium){
         padding-top: 80px;
-	} 
+	}
 	@media(max-width: $tablet-rotate){
         padding-top: 40px;
 	}
@@ -49,10 +49,10 @@
 	img{
 		width: 100%;
 	}
-	
+
 .item.next .carousel-caption {
     opacity: 0;
-    
+
 }
 
 	.carousel-caption{
@@ -72,12 +72,12 @@
 		     left: 10%;
              right: 10%;
 
-		h2{ 
+		h2{
 			font-family: gotham-ultra;
 			font-size: 43px;
 			display: block;
 			letter-spacing: 0.2em;
-			 transition-property: opacity; 
+			 transition-property: opacity;
 			@media(max-width: $large){
 				font-size: 30px;
 			}
@@ -98,7 +98,7 @@
 
 			}
 		}
-		h3{ 
+		h3{
 			display: block;
 			font-family: Americana-ExtraBold;
 			font-size: 119px;
@@ -113,11 +113,11 @@
 				font-size: 60px;
 			}
 			@media(max-width: $tablet){
-				font-size: 50px; 
+				font-size: 50px;
 			}
 			@media(max-width: $phone-max){
 				font-size: 30px;
-				 
+
 			}
 		}
 	}
@@ -129,15 +129,15 @@
             column-count: 2;
 
             padding: 10px;
-            font-size: 18px; 
+            font-size: 18px;
 	  		font-family: gotham-light;
 	  		line-height: 30px;
 	  		@media(max-width: $large){
-	  			font-size: 18px; 
+	  			font-size: 18px;
 	  			line-height: 28px;
 	  		}
 	  		@media(max-width: $medium){
-	  			font-size: 14px; 
+	  			font-size: 14px;
 	  			line-height: 24px;
 	  		}
 	  		@media(max-width: $phone-max){
@@ -147,14 +147,10 @@
 	  		}
 
 	li{
-		 display: list-item; 
+		 display: list-item;
 		 list-style-position: inside;
-		 text-indent: -35px;
+		 text-indent: -25px;
          margin-left: 28px;
-         @media(max-width: $medium){
-         	text-indent: -25px;
-            margin-left: 20px;
-         }
 	}
 }
 #Bedsonslide{
@@ -185,7 +181,7 @@
 	    left: -40px;
 	    margin: 0px;
 	    li{
-	       border-color: #dbbf97; 
+	       border-color: #dbbf97;
 	       width: 14px;
 	       height: 14px;
 	       margin-top: 2px;
@@ -202,24 +198,24 @@
 	.left-arrow{
 		  position: absolute;
 		  top: 50%;
-		  transform: translateY(-50%); 
+		  transform: translateY(-50%);
 		  @media(max-width: $medium){
 		  	img{
 		  		max-height: 50px;
 		  	}
-		  	
+
 		  }
 		  @media(max-width: $phone-max){
 		  	img{
 		  		max-height: 30px;
 		  	}
-		  	
+
 		  }
 	}
 	.right-arrow{
 		  position: absolute;
 		  top: 50%;
-		  transform: translateY(-50%); 
+		  transform: translateY(-50%);
 		  @media(max-width: $medium){
 		  	img{
 		  		max-height: 50px;
@@ -277,15 +273,15 @@
 	   	   color: $white;
 	   }
 	    .padd-20{
-	    	 padding: 0px 20px; 
+	    	 padding: 0px 20px;
 	    	 @media(min-width: $medium){
-	    	 	 padding: 0px 20px 20px 50px; 
+	    	 	 padding: 0px 20px 20px 50px;
 	    	 }
 	    	 @media(max-width: $tablet-rotate){
 	    	 	padding: 0px;
 	    	 }
 	    	 @media(max-width: $tablet){
-	    	 	 padding: 0px; 
+	    	 	 padding: 0px;
 	    	 }
 	    }
 	   .btn-border {
@@ -336,19 +332,19 @@
       	  bottom:120px !important;
       	 }
       	.galleria-thumbnails-container{
-			    height: 110px !important; 
+			    height: 110px !important;
 			    padding-bottom: 30px;
 			    .galleria-thumbnails {
-		            margin: 20px auto 0; 
-			          .galleria-image { 
-			              height: 80px !important;  
+		            margin: 20px auto 0;
+			          .galleria-image {
+			              height: 80px !important;
 			          }
 			    }
-       
-		
+
+
 
       }
-       
+
 		.close-button {
 		    position: absolute;
 		    right: 20px;
@@ -422,7 +418,7 @@
 		width: 35px;
 		transition: all 0.4s;
 		outline: none;
-			
+
 		@media (min-width: $screen-sm-min){
 				top: 80.50%;
 				transform: translateY(-81%);
@@ -444,5 +440,5 @@
 		color:#000;
 		padding-top:15px;
 		text-transform:uppercase;
-	 }		
+	 }
 	}
