@@ -30,21 +30,22 @@
     }
 }
 #slideShow{
-	padding-top: 40px;
+	padding-top: 80px;
+
 	@media(max-width: $larger){
-        padding-top: 120px;
+        padding-top: 160px;
 	}
 	@media(max-width: $large){
-        padding-top: 90px;
+        padding-top: 130px;
 	}
 	@media(max-width: $medium){
-        padding-top: 80px;
+        padding-top: 120px;
 	}
 	@media(max-width: $tablet-rotate){
-        padding-top: 40px;
+        padding-top: 80px;
 	}
 	@media(max-width: $phone-max){
-        padding-top: 60px;
+        padding-top: 100px;
 	}
 	img{
 		width: 100%;
