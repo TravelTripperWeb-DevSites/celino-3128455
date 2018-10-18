@@ -1,0 +1,56 @@
+.offer-listings {
+  padding-bottom: 60px;
+}
+
+.offer-listing {
+  padding-top: 30px;
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+
+    .listing-image {
+      width: 50%;
+    }
+
+    .listing-content {
+      padding: 20px;
+      text-align: center;
+      width: 50%;
+    }
+  }
+
+  h2 {
+    font-family: gotham-ultra;
+    font-size: 40px;
+    line-height: 55px;
+    margin-bottom: 75px;
+    padding-right: 0;
+    color: $sec-color;
+    letter-spacing: 0.2em;
+
+    &:after {
+      bottom: -30px;
+      left: 0px;
+      content: "";
+      position: absolute;
+      border-bottom: 2px solid $sec-color;
+      padding-bottom: 50px;
+      width: 70px;
+
+      @media (min-width: $tablet) {
+        left: 50%;
+        margin-left: -35px;
+      }
+    }
+  }
+}
+
+.offer-button {
+  text-align: left;
+  padding-top: 20px;
+
+  @media (min-width: $tablet) {
+    text-align: center;
+  }
+}
