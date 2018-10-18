@@ -2,7 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
- 
+
 
 // Our variables
 $base-font-family: 'NeueHaasGroteskText W01', Helvetica, Arial, sans-serif;
@@ -29,7 +29,7 @@ $light-grey: #95989a;
 $content-width:    718px;
 
 $tablet-rotate: 1024px;
-$tablet:          768px; 
+$tablet:          768px;
 $mobile:          767px;
 $break-small:     479px;
 $optional:        1140px;
@@ -57,7 +57,7 @@ $medium  :          1400px;
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import 
+@import
         "fonts",
         "bootstrap",
         "font-awesome",
@@ -72,5 +72,6 @@ $medium  :          1400px;
         "jquery-ui",
         "datepicker",
         "booking-widget",
-        "galleria"
+        "galleria",
+        "navfilter"
 ;

@@ -161,7 +161,12 @@ if ($('#back-to-top').length) {
 
 
 $(window).load(function() {
-
+  var filter = [].slice.call(document.getElementsByClassName('nav--filter'))
+  if (filter.length > 0) {
+    filter.forEach( function(filterElement) {
+      filterSetup(filterElement);
+    });
+  }
 
         function resizeImage(){
           img.css({'height': el.height(), 'width': el.width()/2});

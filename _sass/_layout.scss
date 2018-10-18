@@ -108,19 +108,19 @@ h4 {
 .navbar-inverse {
   background-color: transparent;
   border-width: 0px;
-  .bg-white {
-    // min-height: 198px;
-    padding: 25px 37px 20px 60px;
-    @media (max-width: 1827px) {
-      padding: 20px;
-    }
-    @media (max-width: $large) {
-      min-height: auto;
-    }
-    @media (max-width: $medium) {
-      padding: 10px;
-    }
-  }
+  // .bg-white {
+  //   // min-height: 198px;
+  //   // padding: 25px 37px 20px 60px;
+  //   @media (max-width: 1827px) {
+  //     padding: 20px;
+  //   }
+  //   @media (max-width: $large) {
+  //     min-height: auto;
+  //   }
+  //   @media (max-width: $medium) {
+  //     padding: 10px;
+  //   }
+  // }
 }
 .left-bg,
 .navbar-fixed-top {
@@ -1300,7 +1300,7 @@ html input[disabled] {
 .opening-soon {
   background-color: #dbbf97;
   padding: 10px;
-  margin: 0 -20px;
+  // margin: 0 -20px;
   text-align: center;
   font-size: 30px;
 
