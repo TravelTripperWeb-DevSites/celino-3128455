@@ -1300,12 +1300,14 @@ html input[disabled] {
 .opening-soon {
   background-color: #dbbf97;
   padding: 10px;
-  // margin: 0 -20px;
   text-align: center;
   font-size: 30px;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $tablet-rotate) {
     font-size: 15px;
-    margin: 0 -10px;
+  }
+
+  @media (max-width: $large) {
+    margin: 0 -15px;
   }
 }
