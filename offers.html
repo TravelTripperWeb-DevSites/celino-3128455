@@ -5,55 +5,43 @@ bg: bg-rooms
 ---
 <div class="loading" style="display:block">Loading&#8230;</div>
 <div class="padd-fixedtop"></div>
-<section class="padd-top50 top-margin">
-  <div class="container no-padding">
-    <div class="col-md-12  no-padding">
-      <div class="wrapper-rText inner-pages">
-        <div class="block-title">
-          <h1 class="rotate top-15">MODERN <br> INDULGENCE</h1>
+<section class="top-margin">
+  <div class="container">
+    <div class="wrapper-rText inner-pages">
+        <div class="banner-top"><img src="/images/slideshow/Final-Aerial-The-Celino.jpg" alt="banner offers" class="img-responsive center-block">
+          <h2 class="white"> Offers</h2>
         </div>
-        <div class="rightBx">
-          <div class="col-md-12  no-padding">
-            <div class="banner-top"><img src="/images/slideshow/Final-Aerial-The-Celino.jpg" alt="banner offers" class="img-responsive center-block">
-              <h2 class="white"> Offers</h2>
-            </div>
-
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
-<section rt3-special-rates="offers" class="listings">
+
+<section rt3-special-rates="offers" class="offer-listings container">
   <div ng-repeat="offer in offers.special_rates" on-finish-render="hideLoader">
     <!-- if even count -->
-    <div class="container listing even" ng-if="$even">
-      <div class="col-md-6">
-        <div class="top-right-bg tiles">
-          <img ng-src="[[ offer.images[0].large || '/images/dummy.jpg' ]]" class="margin-top padd-20 img-responsive">
-        </div>
+    <div class="offer-listing">
+      <div class="listing-image">
+          <img ng-src="[[ offer.images[0].large || '/images/dummy.jpg' ]]" class="img-responsive">
       </div>
-      <div class="col-md-6">
-        <div class="content-right">
+      <div class="listing-content">
+        <div>
           <a ng-href="/offer/#[[ offer.rate_plan_name | formatNameForLink ]]" class="offer-title"><h2 ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></h2></a>
-          <!-- <h3 class="gold_gotham" ></h3> -->
-          <p class="right-pd" ng-bind-html="offer.short_description | renderHTMLCorrectly">
+
+          <p ng-bind-html="offer.short_description | renderHTMLCorrectly">
           </p>
-          <p class="text-left">
+          <p class="offer-button">
             <a ng-href="[[ offer.promo_url ]]" class="btn-border hvr-border-fade">Book Offer</a>
           </p>
         </div>
       </div>
     </div>
 
-    <!-- if odd count -->
+    <!-- if odd count
     <div class="container listing odd" ng-if="$odd">
       <div class="col-md-6">
         <div class="content-left2">
           <a ng-href="/offer/#[[ offer.rate_plan_name | formatNameForLink ]]" class="offer-title">
             <h2 ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></h2>
           </a>
-          <!-- <h3 class="gold_gotham" ></h3> -->
           <p class="right-pd" ng-bind-html="offer.short_description | renderHTMLCorrectly">
           </p>
           <p class="text-left">
@@ -66,6 +54,6 @@ bg: bg-rooms
           <img ng-src="[[ offer.images[0].large || '/images/dummy.jpg' ]]" class="margin-top padd-20 img-responsive">
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
