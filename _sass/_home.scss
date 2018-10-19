@@ -477,6 +477,7 @@
 
     .home-content {
       width: 58.3333333333%;
+      padding-right: 30px;
     }
 
     .home-image {
@@ -510,10 +511,23 @@
   }
 
   &.image-left {
+    .home-content {
+      padding-right: 0px;
+      padding-left: 30px;
+    }
     @media (max-width: $tablet) {
+      .home-content {
+        padding: 0px;
+      }
       .home-image {
         order: 2;
       }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    .home-content {
+      padding-bottom: 30px;
     }
   }
 }
