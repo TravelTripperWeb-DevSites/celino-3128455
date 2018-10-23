@@ -10,8 +10,8 @@ layout: default
         <div class="col-md-6">
           <div class="content-left2 inner">
             <h2 ng-bind-html="room.name | renderHTMLCorrectly"></h2>
-            <h3 class="gold_gotham">TONIGHT’S RATE</h3>
-            <h4 class="right-pd"><a ng-href="{{site.reztripUrl}}[[room.todayRate == 'Check Availability' ?  '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="light_grey"><span ng-show="room.todayRate != 'Check Availability'">[[portalInfo.default_currency_symbol]]</span>[[ room.todayRate ]]</a></h4>
+            <!-- <h3 class="gold_gotham">TONIGHT’S RATE</h3>
+            <h4 class="right-pd"><a ng-href="{{site.reztripUrl}}[[room.todayRate == 'Check Availability' ?  '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="light_grey"><span ng-show="room.todayRate != 'Check Availability'">[[portalInfo.default_currency_symbol]]</span>[[ room.todayRate ]]</a></h4> -->
             <p class="right-pd" ng-bind-html="room.description | renderHTMLCorrectly"></p>
             <p class="text-right">
               <a ng-href="{{site.reztripUrl}}[[room.todayRate == 'Check Availability' ?  '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="btn-border hvr-border-fade">BOOK NOW</a>
