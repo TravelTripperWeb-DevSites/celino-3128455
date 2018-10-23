@@ -36,8 +36,8 @@ bg: bg-rooms
         <div>
           <div>
             <h3 ng-bind-html="room.name | renderHTMLCorrectly"></h2>
-            <h3 class="gold_gotham">TONIGHT’S RATE</h3>
-            <h5><a ng-href="{{site.reztripUrl}}[[room.todayRate == 'Check Availability' ?  '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="light_grey"><span ng-show="room.todayRate != 'Check Availability'">[[portalInfo.default_currency_symbol]]</span>[[ room.todayRate ]]</a></h4>
+            <!-- <h3 class="gold_gotham">TONIGHT’S RATE</h3>
+            <h5><a ng-href="{{site.reztripUrl}}[[room.todayRate == 'Check Availability' ?  '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="light_grey"><span ng-show="room.todayRate != 'Check Availability'">[[portalInfo.default_currency_symbol]]</span>[[ room.todayRate ]]</a></h4> -->
             <p ng-bind-html="room.short_description | renderHTMLCorrectly"></p>
             <p class="text-left">
               <!--a ng-href="https://thecelinohotel.reztrip.com/search?selected_room_category=[[room.category]]&selected_room=[[room.code]]" class="btn-booknow hvr-fade">BOOK NOW</a-->
