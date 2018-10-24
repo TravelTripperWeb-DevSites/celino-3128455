@@ -193,6 +193,7 @@ $(window).load(function() {
         }
        }
 
+       $(".ttweb-booking-widget form").attr("target",null);
 });
 
 $(function(){
@@ -258,3 +259,4 @@ $("#downClick").click(function() {
     $if.attr("src", '/empty.html');
     $if.attr("src", src);
 });
+
