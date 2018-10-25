@@ -635,12 +635,42 @@
   }
 
   .listing {
+
+
     h5 {
       font-size: 18px;
       margin-bottom: 10px;
     }
+
     p {
       font-size: 14px;
     }
+
+    img {
+      height: 250px;
+    }
+
+    @media (min-width: $tablet) {
+      h3 {
+        height: 80px;
+      }
+
+      .room-desc {
+        height: 150px;
+      }
+    }
+
+    @media (min-width: $tablet-rotate) {
+      .room-desc {
+        height: 100px;
+      }
+    }
   }
+}
+
+.objectfit {
+	object-fit: cover;
+  font-family: 'object-fit: cover;';
+  height: 100%;
+  width: 100%;
 }
