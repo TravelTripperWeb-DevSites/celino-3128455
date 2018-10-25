@@ -1,93 +1,140 @@
 ---
-layout: default  
+layout: default
 ---
-<div class="padd-fixedtop"></div> 
- 
-
-<div data-room-id="{{page.room_code}}"  rt3-rooms-browser="browser" rt3-room-details="details"  ng-cloak>
-<section class="padd-fixedtopinner">
-    <div class="container no-padding">
-     
-       <div class="col-md-6">
-	          <div class="content-left2 inner">
-	            <h2>[[details.name]]</h2>
-	            <h3 class="gold_gotham">TONIGHT’S RATE</h3>
-	            <h4 class="right-pd light_grey" rt3-code="[[details.code]]">  <img  src="/images/icons/ellipsis.svg"></h4>
-	            <p class="right-pd">
-	            [[details.description]]
-	            </p>
-	            <!--p class="text-right">
-	            <a ng-href="https://thecelinohotel.reztrip.com/search?selected_room_category=[[details.category]]&selected_room=[[details.code]]" class="btn-booknow hvr-fade">BOOK NOW</a> 
-	            </p-->
-	           </div>
-       </div>
-
-         <div class="col-md-6 no-padding">
-          <div class="bottom-right-bg2 tiles2 pull-right">
-           <img ng-src="[[details.photos[0].large]]" class="img-responsive">
-         </div>
-       </div>
-    </div>
-
-</section>
- 
-
- <section>
-    <div class="container">
-        <div ng-if="details.photos.length == 1" class="content-room"><img  ng-src="[[details.photos[0].large]]" class="img-reponsive full" alt="hero image [[details.name]]">
+<div class="loading" style="display:block">Loading&#8230;</div>
+<div class="padd-fixedtop"></div>
+<section  ng-controller="roomDetail" rt3-room-details="room" >
+  <div>
+    <section class="padd-fixedtopinner">
+      <div class="container no-padding">
+        <div class="col-md-6">
+          <div class="content-left2 inner">
+            <h2 ng-bind-html="room.name | renderHTMLCorrectly"></h2>
+            <!-- <h3 class="gold_gotham">TONIGHT’S RATE</h3>
+            <h4 class="right-pd"><a ng-href="{{site.reztripUrl}}[[room.todayRate == 'Check Availability' ?  '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="light_grey"><span ng-show="room.todayRate != 'Check Availability'">[[portalInfo.default_currency_symbol]]</span>[[ room.todayRate ]]</a></h4> -->
+            <p class="right-pd" ng-bind-html="room.description | renderHTMLCorrectly"></p>
+            <p class="text-right">
+              <a ng-href="{{site.reztripUrl}}[[room.todayRate == 'Check Availability' ?  '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="btn-border hvr-border-fade">BOOK NOW</a>
+            </p>
+          </div>
         </div>
-    	<div ng-if="details.photos.length > 1" id="roomslide" class="carousel slide" data-ride="carousel">
-				  <!-- Indicators -->
-				  <ol class="carousel-indicators">
-				    <li ng-repeat="gallery in details.photos"  data-target="#roomslide" data-slide-to="$index" ng-class="{active:!$index}"></li> 
-				  </ol>
 
-				  <!-- Wrapper for slides -->
-				  <div class="carousel-inner" role="listbox">
-				    <div ng-class="{active:!$index}" ng-repeat="gallery in details.photos" class="item">
-				      <img ng-src="[[gallery.large]]" alt="gallery [[details.name]]"> 
-				    </div>
+        <div class="col-md-6 no-padding">
+          <div class="bottom-right-bg2 tiles2 pull-right">
+            <img ng-src="[[ room.photos[0].large ]]" class="img-responsive" alt="[[ room.name ]]">
+          </div>
+        </div>
+      </div>
+    </section>
 
-				     
-				  </div>
+    <section>
+      <div class="container">
+        <div ng-if="room.photos.length == 1" class="content-room">
+          <img ng-src="[[ room.photos[0].large ]]" class="img-reponsive full" alt="hero image [[ room.name ]]">
+        </div>
+        <div ng-if="room.photos.length > 1" id="roomslide" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li ng-repeat="gallery in room.photos" data-target="#roomslide" data-slide-to="$index" ng-class="{active : !$index}"></li>
+          </ol>
 
-				  <!-- Left and right controls -->
-				  <a class="left carousel-control" href="#roomslide" role="button" data-slide="prev">
-				     <span class="left-arrow"><img src="/images/arrow-gold-left.png"></span>
-				  </a>
-				  <a class="right carousel-control" href="#roomslide" role="button" data-slide="next">
-				   <span class="right-arrow"> <img src="/images/arrow-gold-right.png"></span>
-				  </a>
-	      </div> 
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div ng-class="{ active : !$index }" ng-repeat="gallery in room.photos" class="item">
+              <img ng-src="[[ gallery.large ]]" alt="gallery [[ room.name ]]">
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#roomslide" role="button" data-slide="prev">
+            <span class="left-arrow"><img src="/images/arrow-gold-left.png"></span>
+          </a>
+          <a class="right carousel-control" href="#roomslide" role="button" data-slide="next">
+            <span class="right-arrow"> <img src="/images/arrow-gold-right.png"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="content-room">
+          <div class="col-sm-7">
+            <!-- <h4>Views</h4>
+            <p>Looking North and South with view of neighboring building or courtyard.</p> -->
+            <h4 ng-show="room.amenities.length > 0 || hotelInfo.common_room_amenities.length > 0">Amenities</h4>
+            <p ng-repeat="feature in hotelInfo.common_room_amenities">
+              [[ feature ]]
+            </p>
+            <p ng-repeat="feature in room.amenities">
+              [[ feature ]]
+            </p>
+          </div>
+          <div class="col-sm-5">
+            <ul class="amentities">
+              <li>[[room.max_number_of_guests]] PERSON ROOM</li>
+              <!-- <li>30 ROOMS LIKE THIS ONE</li> -->
+              <!-- <li>00 CONNECTING ROOMS</li> -->
+              <li>[[room.room_size]] <span ng-bind-html="room.room_size_units | renderHTMLCorrectly"></span></li>
+            </ul>
+            <p class="text-left">
+              <a ng-href="{{site.reztripUrl}}[[room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="btn-border hvr-border-fade">BOOK NOW</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="content-room padd-btm">
+    <div class="container more-listings">
+      <h4 class="text-center">More Rooms</h4>
+      <div>
+        <div class="col-sm-12 col-md-4 panel" ng-repeat="r in browser.roomsList | filter: {'code' : '!' + room.code} | limitTo: 3" on-finish-render="hideLoader">
+          <img ng-src="[[ r.photos[0].large ]]" alt="[[ r.name ]]" class="img-responsive">
+          <h3 class="gold_gotham" ng-bind-html="r.name | renderHTMLCorrectly"></h3>
+          <h5 class="light_grey">Tonight's Rate - <a ng-href="{{site.reztripUrl}}[[r.todayRate == 'Check Availability' ?  '?selected_room='+r.code : 'search?selected_room='+r.code ]]" class="light_grey"><span ng-show="r.todayRate != 'Check Availability'">[[portalInfo.default_currency_symbol]]</span>[[ r.todayRate ]]</a></h5>
+          <div>
+            <div>
+              [[ r.bed_types[0].name ]]
+            </div>
+            <div>
+              [[ room.max_number_of_guests ]] Person Room
+            </div>
+            <div>
+              <p ng-bind-html="r.short_description | renderHTMLCorrectly"></p>
+            </div>
+          </div>
+          <a href="/room/#[[ r.name | formatNameForLink ]]" class="btn-border hvr-border-fade">View Room</a>
+        </div>
+      </div>
     </div>
- </section>
-<section>
-	<div class="container">
-	   <div class="content-room">
-		<div class="col-sm-7">
-			<h4>Views</h4>
-			<p>Looking North and South with view of neighboring building or courtyard.</p>
-			<h4>Ammenities</h4>
-			<p> <span ng-repeat="amanities in details.amenities">[[amanities]], </span>
+    <div class="text-center margin-top">
+      <a href="/rooms" class="btn btn-lg btn-link">See All</a>
+    </div>
+  </section>
 
-			</p>
-		</div>
-		<div class="col-sm-5">
-			<ul class="amentities">
-			<li>[[details.max_number_of_guests]] PERSON ROOM</li>
-			<li>30 ROOMS LIKE THIS ONE</li>
-			<li>00 CONNECTING ROOMS</li>
-			<li>[[details.room_size]] [[details.room_size_units]]</li>
-			</ul>
-			<!--p class="text-left">
-	            <a ng-href="https://thecelinohotel.reztrip.com/search?selected_room_category=[[details.category]]&selected_room=[[details.code]]" class="btn-booknow hvr-fade">BOOK NOW</a> 
-	       </p-->
-		</div>	
-	  </div>
-	</div>
-
+  <section class="bg-lightblue">
+    <div class="container no-padding">
+      <div class="contact-strip-2" style="background-image:url(/images/contact/contact-strip-1.jpg)"></div>
+      <div class="container mapsec">
+        <div class="col-md-12">
+          <div class="wrapper-rText">
+            <div class="block-title">
+              <h1 class="rotate">THE WAY <br>TO PARADISE</h1>
+            </div>
+            <div class="rightBx marg-27">
+              <div class="row">
+                <div class="col-md-12 margin-top">
+                  {% include location-map.html %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </section>
-</div>
-
- 
-{% include owl-rooms.html%}
+{% include newsletter.html %}

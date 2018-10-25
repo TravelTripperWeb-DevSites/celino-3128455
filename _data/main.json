@@ -1,32 +1,32 @@
 
-{  
-    
-      
+{
+
+
       "logo":"/images/logo.png",
       "m-logo":"/images/logo.png",
 
       "booking-link":"​https://anchorageinn.reztrip.com",
       "contact-link": "mailto:info@anchorageinn.com",
 
-       "header-links":[   
-            {"name":"ROOMS & SUITES","url":"/rooms/", "parent":"rooms"},   
+       "header-links":[
+            {"name":"ROOMS & SUITES","url":"/rooms/", "parent":"rooms"},
             {"name":"Contact", "url":"/contact/", "parent":"contact"},
-            {"name":"Location", "url":"/location/", "parent":"location"} 
-         ], 
-      "footer-links":[ 
+            {"name":"Location", "url":"/location/", "parent":"location"}
+            ],
+      "footer-links":[
                         {"name":"Anchorageinn Beach Resort", "parent":"Tsokkos"}
-                       
+
                      ],
- 
-      "social-media":[ 
-                        {"class-name":"fa fa-facebook", "url":"https://www.facebook.com/anchorageinn"}, 
-                        {"class-name":"fa fa-twitter", "url":"https://twitter.com/anchorageinn"}  
-                    ], 
+
+      "social-media":[
+                        {"class-name":"fa fa-facebook", "url":"https://www.facebook.com/anchorageinn"},
+                        {"class-name":"fa fa-twitter", "url":"https://twitter.com/anchorageinn"}
+                    ],
       "copyrights":"© 2016 Anchorageinn",
       "email":"info@anchorageinn.com",
       "address": "PO Box 1329 - RT 1A, <br>265 Long Beach Avenue ",
       "address2":"York Beach, ME 03910",
-      "tel":"(207)363-5112", 
-      "fax": "(207)363-5112" 
+      "tel":"(207)363-5112",
+      "fax": "(207)363-5112"
 }
 

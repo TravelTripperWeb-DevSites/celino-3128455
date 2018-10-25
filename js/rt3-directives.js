@@ -8,6 +8,15 @@ angular.module('rezTrip')
       }
     };
   }])
+  .directive('rt3PortalInfo', ['rt3PortalInfo', function(rt3PortalInfo) {
+    return {
+      restrict: 'A',
+      scope: true,
+      link: function(scope, element, attrs) {
+        scope[attrs['rt3PortalInfo']] = rt3PortalInfo;
+      }
+    };
+  }])
   .directive('rt3SearchForm', ['rt3Search', function(rt3Search) {
     return {
       restrict: 'A',
@@ -44,36 +53,12 @@ angular.module('rezTrip')
       }
     };
   }])
-  .directive('rt3Code', ['rt3RoomCode', '$rootScope', 'rt3api', function(rt3RoomCode, $rootScope, rt3api) {
-    return {
-      restrict: 'A',
-      scope: true, 
-      link: function(scope, element, attrs) { 
-        //scope[attrs['rt3Code']] = rt3RoomCode; 
-        rt3api.availableRoomsTonight().then(function(response) {
-            $rootScope.$apply(function() {  
-                scope.roomsTonight = response.room_details_list;
-                  var roomRates =   scope.roomsTonight.filter(function(item){ 
-                   return item.code == attrs.rt3Code; 
-                  });
-                  if(roomRates.length || roomRates.length > 0){
-                    scope.roomRate = '<span class="price">$ '+ Math.round(roomRates[0].min_average_price) +'</span> / night'; 
-                  }else{
-                      scope.roomRate ="Check Availability";
-                  }
-                  
-                 element.html(scope.roomRate); 
-             });
-        });
-      }
-    };
-  }])
   .directive('rt3RecentBookings', ['rt3RecentBookings', function(rt3RecentBookings) {
     return {
       restrict: 'A',
       scope: true,
       link: function(scope, element, attrs) {
-        scope[attrs['rt3RecentBookings']] = rt3RecentBookings; 
+        scope[attrs['rt3RecentBookings']] = rt3RecentBookings;
       }
     };
   }])
@@ -85,5 +70,39 @@ angular.module('rezTrip')
         scope[attrs['rt3RateShopping']] = rt3RateShopping;
       }
     }
-  }]);
- 
+  }])
+ .directive('onSearchChanged', function (rt3Search) {
+      return {
+        scope: false,
+        restrict: 'A',
+        link: function (scope, element, attrs) {
+          scope.$watch('search.params', function (params) {
+            if (params.arrival_date && params.departure_date) {
+              scope.$eval(attrs.onSearchChanged);
+            }
+          }, true);
+
+          scope.$eval(attrs.onSearchChanged);
+        }
+      };
+    })
+.directive('onFinishRender',['$timeout', function ($timeout) {
+     return {
+        restrict: 'A',
+        priority: 301,
+        link: function (scope, element, attr) {
+            if (scope.$last === true) {
+                $timeout(function () {
+                    scope.$emit('ngRepeatFinished');
+                    if ( !! attr.onFinishRender) {
+                      $timeout(function() {
+                        var func = attr.onFinishRender;
+                        scope.$eval(func)();
+                      }, 0);
+                    }
+                });
+            }
+
+        }
+    }
+}]);

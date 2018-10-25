@@ -73,6 +73,7 @@ Galleria.ready(function() {
     });
 });
 
+if ($('.galleria').length) {
             $('.galleria').galleria({
                 transition: 'fade',
                 data_source: data,
@@ -80,6 +81,8 @@ Galleria.ready(function() {
                 _toggleInfo: false,
 
                 });
+            }
+
 jQuery('#slideShow h3').fitText(1.2, { maxFontSize: '129px' });
 jQuery('#slideShow h2').fitText(2.6, {   maxFontSize: '70px' });
 
@@ -127,7 +130,7 @@ jQuery('#slideShow h2').fitText(2.6, {   maxFontSize: '70px' });
 
 
 }); //end of jquery ready state
-  
+
 
  smoothScroll.init({
             offset:100,
@@ -158,7 +161,12 @@ if ($('#back-to-top').length) {
 
 
 $(window).load(function() {
-
+  var filter = [].slice.call(document.getElementsByClassName('nav--filter'))
+  if (filter.length > 0) {
+    filter.forEach( function(filterElement) {
+      filterSetup(filterElement);
+    });
+  }
 
         function resizeImage(){
           img.css({'height': el.height(), 'width': el.width()/2});
@@ -174,14 +182,18 @@ $(window).load(function() {
             resizeImage();
         }
 
-    var hash = location.hash.replace('#','');
+        var hash = location.hash.replace('#','');
         if(hash != ''){
         // smooth scroll to the anchor id
-        $('html, body').animate({
-            scrollTop: $(window.location.hash).offset().top - 89 +"px"
-        },500, 'swing');
+        var hashOffset = $(window.location.hash).offset();
+        if(hashOffset) {
+          $('html, body').animate({
+              scrollTop: hashOffset.top - 89 +"px"
+          },500, 'swing');
+        }
        }
 
+       $(".ttweb-booking-widget form").attr("target",null);
 });
 
 $(function(){
@@ -247,3 +259,4 @@ $("#downClick").click(function() {
     $if.attr("src", '/empty.html');
     $if.attr("src", src);
 });
+
