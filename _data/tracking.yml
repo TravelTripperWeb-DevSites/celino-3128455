@@ -1,3 +1,4 @@
+---
 # Analytics
 analytics:
   provider: gtm # false (default), "google", "gtm", "custom"
