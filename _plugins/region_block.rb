@@ -4,7 +4,7 @@ module Jekyll
     def initialize(tag_name, text, options)
       super
       params = text.to_s.strip.split(',')
-      @filename = params.shift.strip + '.json'
+      @region_name = params.shift.strip
       @options = process_params(params)
     end
 
@@ -39,8 +39,10 @@ module Jekyll
       @inner_html ||= render_all(@nodelist, context)
     end
     
-    def empty_region_content(include_data_path, context)
-      include(include_data_path, context, 0, {"_template"=>"html", "content"=>"#{inner_html(context)}"})
+    #def empty_region_content(include_data_path, context)
+    def empty_region_content(context)
+      #include(include_data_path, context, 0, {"_template"=>"html", "content"=>"#{inner_html(context)}"})
+      include(context, 0, {"_template"=>"html", "content"=>"#{inner_html(context)}"})
       #inner_html(context)
     end
 

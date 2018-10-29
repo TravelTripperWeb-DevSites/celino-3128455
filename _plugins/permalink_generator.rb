@@ -3,16 +3,25 @@ module Jekyll
     alias_method :read_orig, :read
 
     def read(files)
-      read_orig(files)
+      filtered_files = read_orig(files)
       @unfiltered_content.each do |page|
         site.store_page_permalink!(page)
+        site.unfiltered_pages << page        
       end
+      return filtered_files
     end
   end
 
   class Site
     attr_reader :permalinks_table
+    attr_accessor :unfiltered_pages
 
+    alias_method :reset_without_page_reader, :reset
+    def reset
+      reset_without_page_reader
+      self.unfiltered_pages = []
+    end
+    
     def store_page_permalink!(page)
       @permalinks_table ||= {}
 
@@ -40,16 +49,17 @@ module Jekyll
 
   module PermalinkGenerator
     def permalink(path_or_page, *args)
+      site = Jekyll.sites.last # each regeneration adds new site (if using watch or serve)
+      
       model_dir = args.first && args.first['model_dir']
-      locale = args.first && args.first['locale']
+      locale = args.first ? args.first['locale'] : site.active_lang
+
 
       if path_or_page.kind_of?(Hash)
         key = 'url' + (locale.nil? ? '' : "_#{locale}" )
         path_or_page[key]
       else
-        site = Jekyll.sites.last # each regeneration adds new site (if using watch or serve)
         page = detect_page(site, path_or_page, model_dir)
-
         if page
           page.url(locale || site.active_lang)
         else
