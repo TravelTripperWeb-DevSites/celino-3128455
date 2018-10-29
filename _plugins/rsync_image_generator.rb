@@ -11,8 +11,10 @@ module Jekyll
       system("mkdir -p #{site.config['destination']}");
 
       root = site.config['source']
+      
       (site.config['rsync_copy'] || ['_assets']).each do |path|
         new_path = path[1..-1]
+        system "mkdir -p #{site.config['destination']}/#{new_path}/"
         full_path = File.join(root, path)
         if Dir.exists?(full_path)
           system("rsync --archive --delete #{full_path}/ #{site.config['destination']}/#{new_path}/")
