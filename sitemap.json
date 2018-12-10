@@ -16,7 +16,7 @@
         },
         "data_source": null,
         "source_path": "index.html",
-        "order": 22
+        "order": 14
       }
     ],
     "contact": {
@@ -37,45 +37,17 @@
       "__PAGES__": [
 
       ],
-      "oceanfront-1-bedroom-suite": {
+      "classic-2-queen": {
         "__PAGES__": [
           {
-            "label": "Celino Hotel South Beach - Oceanfront bedroom suite",
+            "label": "Celino Hotel South Beach - Classic 2 Queen",
             "published": true,
             "locales": {
-              "en": "/rooms-suites/oceanfront-1-bedroom-suite/"
+              "en": "/rooms-suites/classic-2-queen/"
             },
             "data_source": null,
-            "source_path": "rooms-suites/oceanfront-1-bedroom-suite.html",
+            "source_path": "rooms-suites/classic-2-queen.html",
             "order": 2
-          }
-        ]
-      },
-      "partial-ocean-view-2-queen": {
-        "__PAGES__": [
-          {
-            "label": "Celino Hotel South Beach - Partial Ocean View 2 Queen",
-            "published": true,
-            "locales": {
-              "en": "/rooms-suites/partial-ocean-view-2-queen/"
-            },
-            "data_source": null,
-            "source_path": "rooms-suites/partial-ocean-view-2-queen.html",
-            "order": 3
-          }
-        ]
-      },
-      "classic-king": {
-        "__PAGES__": [
-          {
-            "label": "Celino Hotel South Beach - Classic King",
-            "published": true,
-            "locales": {
-              "en": "/rooms-suites/classic-king/"
-            },
-            "data_source": null,
-            "source_path": "rooms-suites/classic-king.html",
-            "order": 4
           }
         ]
       },
@@ -89,35 +61,7 @@
             },
             "data_source": null,
             "source_path": "rooms-suites/classic-king-ada.html",
-            "order": 5
-          }
-        ]
-      },
-      "classic-2-queen": {
-        "__PAGES__": [
-          {
-            "label": "Celino Hotel South Beach - Classic 2 Queen",
-            "published": true,
-            "locales": {
-              "en": "/rooms-suites/classic-2-queen/"
-            },
-            "data_source": null,
-            "source_path": "rooms-suites/classic-2-queen.html",
-            "order": 6
-          }
-        ]
-      },
-      "oceanfront-king": {
-        "__PAGES__": [
-          {
-            "label": "Celino Hotel South Beach - Oceanfront King",
-            "published": true,
-            "locales": {
-              "en": "/rooms-suites/oceanfront-king/"
-            },
-            "data_source": null,
-            "source_path": "rooms-suites/oceanfront-king.html",
-            "order": 7
+            "order": 3
           }
         ]
       },
@@ -131,21 +75,21 @@
             },
             "data_source": null,
             "source_path": "rooms-suites/pool-view-balcony-2-queen-suite.html",
-            "order": 8
+            "order": 4
           }
         ]
       },
-      "oceanfront-balcony-junior-suite": {
+      "oceanfront-1-bedroom-suite": {
         "__PAGES__": [
           {
-            "label": "Celino Hotel South Beach - Oceanfront Balcony Junior Suite",
+            "label": "Celino Hotel South Beach - Oceanfront bedroom suite",
             "published": true,
             "locales": {
-              "en": "/rooms-suites/oceanfront-balcony-junior-suite/"
+              "en": "/rooms-suites/oceanfront-1-bedroom-suite/"
             },
             "data_source": null,
-            "source_path": "rooms-suites/oceanfront-balcony-junior-suite.html",
-            "order": 9
+            "source_path": "rooms-suites/oceanfront-1-bedroom-suite.html",
+            "order": 5
           }
         ]
       },
@@ -159,7 +103,35 @@
             },
             "data_source": null,
             "source_path": "rooms-suites/partial-ocean-view-king.html",
-            "order": 10
+            "order": 6
+          }
+        ]
+      },
+      "classic-king": {
+        "__PAGES__": [
+          {
+            "label": "Celino Hotel South Beach - Classic King",
+            "published": true,
+            "locales": {
+              "en": "/rooms-suites/classic-king/"
+            },
+            "data_source": null,
+            "source_path": "rooms-suites/classic-king.html",
+            "order": 7
+          }
+        ]
+      },
+      "partial-ocean-view-2-queen": {
+        "__PAGES__": [
+          {
+            "label": "Celino Hotel South Beach - Partial Ocean View 2 Queen",
+            "published": true,
+            "locales": {
+              "en": "/rooms-suites/partial-ocean-view-2-queen/"
+            },
+            "data_source": null,
+            "source_path": "rooms-suites/partial-ocean-view-2-queen.html",
+            "order": 8
           }
         ]
       },
@@ -173,66 +145,38 @@
             },
             "data_source": null,
             "source_path": "rooms-suites/pool-view-king-suite.html",
+            "order": 9
+          }
+        ]
+      },
+      "oceanfront-balcony-junior-suite": {
+        "__PAGES__": [
+          {
+            "label": "Celino Hotel South Beach - Oceanfront Balcony Junior Suite",
+            "published": true,
+            "locales": {
+              "en": "/rooms-suites/oceanfront-balcony-junior-suite/"
+            },
+            "data_source": null,
+            "source_path": "rooms-suites/oceanfront-balcony-junior-suite.html",
+            "order": 10
+          }
+        ]
+      },
+      "oceanfront-king": {
+        "__PAGES__": [
+          {
+            "label": "Celino Hotel South Beach - Oceanfront King",
+            "published": true,
+            "locales": {
+              "en": "/rooms-suites/oceanfront-king/"
+            },
+            "data_source": null,
+            "source_path": "rooms-suites/oceanfront-king.html",
             "order": 11
           }
         ]
       }
-    },
-    "offer": {
-      "__PAGES__": [
-        {
-          "label": "Offer Details",
-          "published": true,
-          "locales": {
-            "en": "/offer/"
-          },
-          "data_source": null,
-          "source_path": "offer.html",
-          "order": 12
-        }
-      ]
-    },
-    "thankyou": {
-      "__PAGES__": [
-        {
-          "label": "Thank you | Celino Hotel South Beach",
-          "published": true,
-          "locales": {
-            "en": "/thankyou/"
-          },
-          "data_source": null,
-          "source_path": "thankyou.html",
-          "order": 13
-        }
-      ]
-    },
-    "terms-of-use": {
-      "__PAGES__": [
-        {
-          "label": "Terms of Use | Celino Hotel South Beach",
-          "published": true,
-          "locales": {
-            "en": "/terms-of-use/"
-          },
-          "data_source": null,
-          "source_path": "terms-of-use.html",
-          "order": 14
-        }
-      ]
-    },
-    "offers": {
-      "__PAGES__": [
-        {
-          "label": "South Beach Miami Hotel Deals | Celino Hotel Offers",
-          "published": true,
-          "locales": {
-            "en": "/offers/"
-          },
-          "data_source": null,
-          "source_path": "offers.html",
-          "order": 15
-        }
-      ]
     },
     "room": {
       "__PAGES__": [
@@ -244,7 +188,35 @@
           },
           "data_source": null,
           "source_path": "room.html",
-          "order": 16
+          "order": 12
+        }
+      ]
+    },
+    "offer": {
+      "__PAGES__": [
+        {
+          "label": "Offer Details",
+          "published": true,
+          "locales": {
+            "en": "/offer/"
+          },
+          "data_source": null,
+          "source_path": "offer.html",
+          "order": 13
+        }
+      ]
+    },
+    "privacy-policy": {
+      "__PAGES__": [
+        {
+          "label": "Privacy Policy | Celino Hotel South Beach",
+          "published": true,
+          "locales": {
+            "en": "/privacy-policy/"
+          },
+          "data_source": null,
+          "source_path": "privacy-policy.html",
+          "order": 15
         }
       ]
     },
@@ -258,21 +230,21 @@
           },
           "data_source": null,
           "source_path": "error-page.html",
-          "order": 17
+          "order": 16
         }
       ]
     },
-    "location": {
+    "terms-of-use": {
       "__PAGES__": [
         {
-          "label": "Location | Celino Hotel South Beach",
+          "label": "Terms of Use | Celino Hotel South Beach",
           "published": true,
           "locales": {
-            "en": "/location/"
+            "en": "/terms-of-use/"
           },
           "data_source": null,
-          "source_path": "location.html",
-          "order": 18
+          "source_path": "terms-of-use.html",
+          "order": 17
         }
       ]
     },
@@ -286,6 +258,20 @@
           },
           "data_source": null,
           "source_path": "rooms.html",
+          "order": 18
+        }
+      ]
+    },
+    "thankyou": {
+      "__PAGES__": [
+        {
+          "label": "Thank you | Celino Hotel South Beach",
+          "published": true,
+          "locales": {
+            "en": "/thankyou/"
+          },
+          "data_source": null,
+          "source_path": "thankyou.html",
           "order": 19
         }
       ]
@@ -304,17 +290,31 @@
         }
       ]
     },
-    "privacy-policy": {
+    "location": {
       "__PAGES__": [
         {
-          "label": "Privacy Policy | Celino Hotel South Beach",
+          "label": "Location | Celino Hotel South Beach",
           "published": true,
           "locales": {
-            "en": "/privacy-policy/"
+            "en": "/location/"
           },
           "data_source": null,
-          "source_path": "privacy-policy.html",
+          "source_path": "location.html",
           "order": 21
+        }
+      ]
+    },
+    "offers": {
+      "__PAGES__": [
+        {
+          "label": "South Beach Miami Hotel Deals | Celino Hotel Offers",
+          "published": true,
+          "locales": {
+            "en": "/offers/"
+          },
+          "data_source": null,
+          "source_path": "offers.html",
+          "order": 22
         }
       ]
     }
@@ -327,5 +327,5 @@
     "tracking",
     "main"
   ],
-  "__SHA__": "a832c89384a02f17e1c0efff07e6dc8072190330"
+  "__SHA__": "b8b3e5a156d8a38f0fc2d5d04da88186ca1f9a4a"
 }
