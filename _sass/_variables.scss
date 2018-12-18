@@ -1,0 +1,85 @@
+// Variables
+// ==========================================================================
+
+
+// Typography
+$font-size-base: 1rem !default;
+
+//theme font
+$heading-font: 'AmericanaStd-ExtraBold', serif !default;
+$text-font: 'Montserrat', sans-serif !default;
+
+// System typefaces
+$serif: Georgia, Times, serif !default;
+$sans-serif: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', Arial, sans-serif !default;
+$monospace: Monaco, Consolas, 'Lucida Console', monospace !default;
+
+// Sans serif typefaces
+$sans-serif-narrow: $sans-serif !default;
+$helvetica: Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
+
+// Serif typefaces
+$georgia: Georgia, serif !default;
+$times: Times, serif !default;
+$bodoni: 'Bodoni MT', serif !default;
+$calisto: 'Calisto MT', serif !default;
+$garamond: Garamond, serif !default;
+$global-font-family: $text-font !default;
+$header-font-family: $heading-font !default;
+$caption-font-family: $serif !default;
+
+// Type scale
+$type-size-1: rem-calc(72) !default; // ~72px
+$type-size-2: rem-calc(68) !default; // ~68px
+$type-size-3: rem-calc(50) !default; // ~50px
+$type-size-4: rem-calc(48) !default; // ~48px
+$type-size-5: rem-calc(40) !default; // ~40px
+$type-size-6: rem-calc(36) !default; // ~36px
+$type-size-7: rem-calc(32) !default; // ~32px
+$type-size-8: rem-calc(30) !default; // ~30px
+$type-size-9: rem-calc(25) !default; // ~25px
+$type-size-9: rem-calc(20) !default; // ~20px
+$type-size-11: rem-calc(18) !default; // ~18px
+$type-size-12: rem-calc(14) !default; // ~14px
+$type-size-13: rem-calc(13) !default; // ~13px
+$type-size-14: rem-calc(12) !default; // ~12px
+$type-size-15: rem-calc(11) !default; // ~11px
+$type-size-16: rem-calc(10) !default; // ~10px
+$type-size-17: rem-calc(8) !default; // ~8px
+
+// Colors
+$gray: #7a8288 !default;
+$dark-gray: #535353 !default;
+$darker-gray: #515151 !default;
+$light-gray: #f2f3f7 !default;
+$lighter-gray: mix(#fff, $gray, 90%) !default;
+$body-color: #fff !default;
+$background-color: #fff !default;
+$text-color: #333 !default;
+$border-color: $lighter-gray !default;
+$primary-color: #7a8288 !default;
+$success-color: #62c462 !default;
+$warning-color: #f89406 !default;
+$danger-color: #ee5f5b !default;
+$info-color: #007a9c !default;
+$purple-color: #8031a7 !default;
+$dark-blue-color: #0f1237 !default;
+$gold-color: #c6aa76 !default;
+
+// Brands
+$facebook-color: #3b5998 !default;
+$google-plus-color: #dd4b39 !default;
+$instagram-color: #517fa4 !default;
+$pinterest-color: #cb2027 !default;
+$twitter-color: #55acee !default;
+$youtube-color: #b00 !default;
+
+// Links
+$link-color: $info-color !default;
+$link-color-hover: mix(#000, $link-color, 25%) !default;
+$link-color-visited: mix(#fff, $link-color, 25%) !default;
+
+// Other
+$border-radius: 4px !default;
+$box-shadow: 0 1px 1px rgba(0, 0, 0, .125) !default;
+$global-transition: all .2s ease-in-out !default;

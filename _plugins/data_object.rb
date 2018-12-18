@@ -14,13 +14,14 @@ class DataObject
     definition.each do |key, details|
       rd[key] = self.send(key)
     end
-    data.merge(rd)
+    rd
   end
   
 
   def match?(key, values)
     key = key.to_s
     values = values.map(&:to_s)
+
     if definition.has_key?(key) && definition[key].has_key?('type') && definition[key]['type'] == 'model'
       storage.send "find_#{definition[key]['model_name']}_by_#{definition[key]['foreign_key'] || 'id'}", values
     else
@@ -54,11 +55,7 @@ class DataObject
   end
 
   def to_liquid
-    self.rich_data
-  end
-  
-  def json
-    self.data.to_json
+    self
   end
 
   def [](property)

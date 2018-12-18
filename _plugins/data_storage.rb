@@ -47,11 +47,7 @@ class DataStorage
   def to_liquid
     self
   end
-  
-  def to_json
-    collection.to_json
-  end
-  
+
   def [](property)
     send(property)
   end

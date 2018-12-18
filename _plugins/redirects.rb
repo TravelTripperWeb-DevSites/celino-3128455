@@ -52,8 +52,6 @@ END
     priority :lowest
     attr_reader :site
   
-    BAD_SOURCE_FILE = /[\?<>\:\"\\\|\*\#]+/
-  
     def self.redirect_pages
       @@redirect_pages ||= []
     end
@@ -63,14 +61,14 @@ END
         fpath = p.site.in_dest_dir(p.permalink)
         dir_parts = fpath.split('/')
         fname = dir_parts.pop
-        dir = dir_parts.shift
+        dir = ''
         skip = false
         dir_parts.each do |dir_name|
+          dir += "/#{dir_name}"
           if File.file?(dir)
             skip = true
             break
           end
-          dir = File.join(dir, "#{dir_name}")
         end
         unless skip
           if !File.exists?(fpath)
@@ -94,13 +92,7 @@ END
       return if !redirects_content.is_a?(Array)
       redirects_content.each do |hash|
         hash.each do |source, destination|
-          if source =~ /^http/i
-            puts "#{source} is a full URL and not a valid redirect. Skipping."
-          end
-          if source =~ BAD_SOURCE_FILE
-            puts "#{source} is not a valid redirect source. Skipping."
-            next
-          end
+          next if source =~ /^http/i
           unless source =~ /\/index.html$/i
             source += '/' if !source.end_with?('/')
             source += 'index.html' 

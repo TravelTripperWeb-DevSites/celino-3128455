@@ -4,7 +4,7 @@ module Jekyll
     def initialize(tag_name, text, options)
       super
       params = text.to_s.strip.split(',')
-      @region_name = params.shift.strip
+      @filename = params.shift.strip + '.json'
       @options = process_params(params)
     end
 

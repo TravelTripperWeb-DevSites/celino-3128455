@@ -1,36 +1,14 @@
-<footer class="footer">
-	<div class="container">
-	    <div class="row">
-	    <div class="col-sm-4"> <img src="/images/footer-logo.png" alt="Celino" class="img-responsive center-block">
-	    </div>
-	    <div class="col-sm-5">
-	         <ul class="links-menu">
-	             <!--li> <a id="gallery-footer" href="#">GALLERY</a></li-->
-	             <li> <a data-scroll href="/#contact" title="Contact">CONTACT</a></li>
-	             <li> <a data-scroll href="/#signup" title="Sign Up">SIGN UP</a></li>
-               <li> <a  href="http://www.highgate.com/careers" target="_blank" title="Careers">CAREERS</a></li>
-               <li> <a href="/privacy-policy/" title="Privacy Policy">PRIVACY POLICY</a></li>
-               <li> <a href="/terms-of-use/" title="Terms of Use">TERMS OF USE</a></li>
-	         </ul>
-	         <hr id="contact">
-	         <p class="copyright">
-640 Ocean Drive,
-Miami Beach, FL 33139 <br>
-(p): <a href="tel:786.574.4090" title="786.574.4090">786.574.4090</a><br>
-General Inquires: <a href="mailto:info@thecelinohotel.com" title="info@thecelinohotel.com">info@thecelinohotel.com</a><br>
-Sales Inquires: <a href="mailto:sales@thecelinohotel.com" title="sales@thecelinohotel.com">sales@thecelinohotel.com</a><br>
-PR Inquiries: <a href="mailto:TheCelino@Quinn.PR" title="theCelino@Quinn.PR">theCelino@Quinn.PR</a>
-
-</p>
-	    </div>
-	     <div class="col-sm-3">
-	      <a href="http://www.highgate.com/" target="_blank" title="Homw"> <img src="/images/highgate-logo-white.png" alt="highgate" style="max-width: 90px; margin-top: 20px;" class="center-block"></a>
-
-	      <!--p class="social-links"><strong>@celinohotel</strong> <span><a href="https://www.instagram.com/celinohotel/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i>
-</a></span> <span><a href="https://www.facebook.com/celinohotel/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i>
-</a></span> <!--span><a href=""><i class="fa fa-twitter" aria-hidden="true"></i>
-</a></span-->
-	     </div>
-	    </div>
-	</div>
-</footer>
+<div class="container d-flex justify-content-between">
+  <div class="social-icons">
+    {% if site.data.ui-text[site.default_lang].follow_label %}
+      <strong>{{ site.data.ui-text[site.default_lang].follow_label }}</strong>
+    {% endif %}
+    {% if site.data.social.twitter.username %}
+      <a href="https://twitter.com/{{ site.data.social.twitter.username }}"><i class="fab fa-twitter-square" aria-hidden="true"></i> Twitter</a>
+    {% endif %}
+    {% if site.data.social.facebook.username %}
+      <a href="https://facebook.com/{{ site.data.social.facebook.username }}"><i class="fab fa-facebook-square" aria-hidden="true"></i> Facebook</a>
+    {% endif %}
+  </div>
+  <span class="text-muted">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}</span>
+</div>
