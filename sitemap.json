@@ -9,281 +9,323 @@
   "__ROOT__": {
     "__PAGES__": [
       {
-        "label": "robots.txt",
-        "published": true,
-        "locales": {
-          "en": "/robots.txt"
-        },
-        "data_source": null,
-        "source_path": "robots.txt",
-        "order": 18
-      },
-      {
-        "label": "index.html",
+        "label": "Ocean Drive Lifestyle Hotel | Celino Hotel South Beach",
         "published": true,
         "locales": {
           "en": "/"
         },
         "data_source": null,
         "source_path": "index.html",
-        "order": 19
-      },
-      {
-        "label": "sitemap.xml",
-        "published": true,
-        "locales": {
-          "en": "/sitemap.xml"
-        },
-        "data_source": null,
-        "source_path": "sitemap.xml",
-        "order": 20
+        "order": 12
       }
     ],
-    "blog": {
-      "__PAGES__": [
-        {
-          "label": "Blog Posts",
-          "published": true,
-          "locales": {
-            "en": "/blog/"
-          },
-          "data_source": null,
-          "source_path": "_pages/blog/index.html",
-          "order": 1
-        }
-      ]
-    },
-    "page-not-found": {
-      "__PAGES__": [
-        {
-          "label": "Page Not Found",
-          "published": true,
-          "locales": {
-            "en": "/page-not-found/"
-          },
-          "data_source": null,
-          "source_path": "_pages/404.html",
-          "order": 2
-        }
-      ]
-    },
-    "offers": {
-      "__PAGES__": [
-        {
-          "label": "Offers",
-          "published": true,
-          "locales": {
-            "en": "/offers/"
-          },
-          "data_source": null,
-          "source_path": "_pages/offers.html",
-          "order": 3
-        }
-      ]
-    },
-    "offer-details": {
-      "__PAGES__": [
-        {
-          "label": "Offer Details",
-          "published": true,
-          "locales": {
-            "en": "/offer-details/"
-          },
-          "data_source": null,
-          "source_path": "_pages/offer.html",
-          "order": 4
-        }
-      ]
-    },
-    "dining": {
-      "__PAGES__": [
-        {
-          "label": "Dining",
-          "published": true,
-          "locales": {
-            "en": "/dining/"
-          },
-          "data_source": null,
-          "source_path": "_pages/dining.html",
-          "order": 5
-        }
-      ]
-    },
-    "terms": {
-      "__PAGES__": [
-        {
-          "label": "Terms and Conditions",
-          "published": true,
-          "locales": {
-            "en": "/terms/"
-          },
-          "data_source": null,
-          "source_path": "_pages/terms.html",
-          "order": 6
-        }
-      ]
-    },
-    "room-details": {
-      "__PAGES__": [
-        {
-          "label": "Room Details",
-          "published": true,
-          "locales": {
-            "en": "/room-details/"
-          },
-          "data_source": null,
-          "source_path": "_pages/room.html",
-          "order": 7
-        }
-      ]
-    },
-    "gallery": {
-      "__PAGES__": [
-        {
-          "label": "Gallery",
-          "published": true,
-          "locales": {
-            "en": "/gallery/"
-          },
-          "data_source": null,
-          "source_path": "_pages/gallery.html",
-          "order": 8
-        }
-      ]
-    },
     "contact": {
       "__PAGES__": [
         {
-          "label": "Contact",
+          "label": "Contact | Celino Hotel South Beach",
           "published": true,
           "locales": {
             "en": "/contact/"
           },
           "data_source": null,
-          "source_path": "_pages/contact.html",
-          "order": 9
+          "source_path": "contact/index.html",
+          "order": 1
         }
       ]
     },
-    "attractions": {
+    "rooms-suites": {
       "__PAGES__": [
-        {
-          "label": "Attractions",
-          "published": true,
-          "locales": {
-            "en": "/attractions/"
-          },
-          "data_source": null,
-          "source_path": "_pages/attractions.html",
-          "order": 10
-        }
-      ]
+
+      ],
+      "classic-king": {
+        "__PAGES__": [
+          {
+            "label": "Celino Hotel South Beach - Classic King",
+            "published": true,
+            "locales": {
+              "en": "/rooms-suites/classic-king/"
+            },
+            "data_source": null,
+            "source_path": "rooms-suites/classic-king.html",
+            "order": 2
+          }
+        ]
+      },
+      "classic-king-ada": {
+        "__PAGES__": [
+          {
+            "label": "Celino Hotel South Beach - Classic King ADA",
+            "published": true,
+            "locales": {
+              "en": "/rooms-suites/classic-king-ada/"
+            },
+            "data_source": null,
+            "source_path": "rooms-suites/classic-king-ada.html",
+            "order": 3
+          }
+        ]
+      },
+      "pool-view-king-suite": {
+        "__PAGES__": [
+          {
+            "label": "Celino Hotel South Beach - Pool View King Suite",
+            "published": true,
+            "locales": {
+              "en": "/rooms-suites/pool-view-king-suite/"
+            },
+            "data_source": null,
+            "source_path": "rooms-suites/pool-view-king-suite.html",
+            "order": 4
+          }
+        ]
+      },
+      "classic-2-queen": {
+        "__PAGES__": [
+          {
+            "label": "Celino Hotel South Beach - Classic 2 Queen",
+            "published": true,
+            "locales": {
+              "en": "/rooms-suites/classic-2-queen/"
+            },
+            "data_source": null,
+            "source_path": "rooms-suites/classic-2-queen.html",
+            "order": 5
+          }
+        ]
+      },
+      "oceanfront-balcony-junior-suite": {
+        "__PAGES__": [
+          {
+            "label": "Celino Hotel South Beach - Oceanfront Balcony Junior Suite",
+            "published": true,
+            "locales": {
+              "en": "/rooms-suites/oceanfront-balcony-junior-suite/"
+            },
+            "data_source": null,
+            "source_path": "rooms-suites/oceanfront-balcony-junior-suite.html",
+            "order": 6
+          }
+        ]
+      },
+      "partial-ocean-view-2-queen": {
+        "__PAGES__": [
+          {
+            "label": "Celino Hotel South Beach - Partial Ocean View 2 Queen",
+            "published": true,
+            "locales": {
+              "en": "/rooms-suites/partial-ocean-view-2-queen/"
+            },
+            "data_source": null,
+            "source_path": "rooms-suites/partial-ocean-view-2-queen.html",
+            "order": 7
+          }
+        ]
+      },
+      "oceanfront-1-bedroom-suite": {
+        "__PAGES__": [
+          {
+            "label": "Celino Hotel South Beach - Oceanfront bedroom suite",
+            "published": true,
+            "locales": {
+              "en": "/rooms-suites/oceanfront-1-bedroom-suite/"
+            },
+            "data_source": null,
+            "source_path": "rooms-suites/oceanfront-1-bedroom-suite.html",
+            "order": 8
+          }
+        ]
+      },
+      "partial-ocean-view-king": {
+        "__PAGES__": [
+          {
+            "label": "Celino Hotel South Beach - Partial Ocean View King",
+            "published": true,
+            "locales": {
+              "en": "/rooms-suites/partial-ocean-view-king/"
+            },
+            "data_source": null,
+            "source_path": "rooms-suites/partial-ocean-view-king.html",
+            "order": 9
+          }
+        ]
+      },
+      "pool-view-balcony-2-queen-suite": {
+        "__PAGES__": [
+          {
+            "label": "Celino Hotel South Beach - Pool View Balcony 2 Queen Suite",
+            "published": true,
+            "locales": {
+              "en": "/rooms-suites/pool-view-balcony-2-queen-suite/"
+            },
+            "data_source": null,
+            "source_path": "rooms-suites/pool-view-balcony-2-queen-suite.html",
+            "order": 10
+          }
+        ]
+      },
+      "oceanfront-king": {
+        "__PAGES__": [
+          {
+            "label": "Celino Hotel South Beach - Oceanfront King",
+            "published": true,
+            "locales": {
+              "en": "/rooms-suites/oceanfront-king/"
+            },
+            "data_source": null,
+            "source_path": "rooms-suites/oceanfront-king.html",
+            "order": 11
+          }
+        ]
+      }
     },
-    "location": {
+    "room": {
       "__PAGES__": [
         {
-          "label": "Location",
+          "label": "Room Details",
           "published": true,
           "locales": {
-            "en": "/location/"
+            "en": "/room/"
           },
           "data_source": null,
-          "source_path": "_pages/location.html",
-          "order": 11
-        }
-      ]
-    },
-    "events": {
-      "__PAGES__": [
-        {
-          "label": "Events",
-          "published": true,
-          "locales": {
-            "en": "/events/"
-          },
-          "data_source": null,
-          "source_path": "_pages/events.html",
-          "order": 12
-        }
-      ]
-    },
-    "sitemap": {
-      "__PAGES__": [
-        {
-          "label": "Sitemap",
-          "published": true,
-          "locales": {
-            "en": "/sitemap/"
-          },
-          "data_source": null,
-          "source_path": "_pages/sitemap.html",
+          "source_path": "room.html",
           "order": 13
         }
       ]
     },
-    "about": {
+    "error-page": {
       "__PAGES__": [
         {
-          "label": "About",
+          "label": "Page Not Found | Celino Hotel South Beach",
           "published": true,
           "locales": {
-            "en": "/about/"
+            "en": "/error-page/"
           },
           "data_source": null,
-          "source_path": "_pages/about.html",
+          "source_path": "error-page.html",
           "order": 14
         }
       ]
     },
-    "amenities": {
+    "terms-of-use": {
       "__PAGES__": [
         {
-          "label": "Amenities",
+          "label": "Terms of Use | Celino Hotel South Beach",
           "published": true,
           "locales": {
-            "en": "/amenities/"
+            "en": "/terms-of-use/"
           },
           "data_source": null,
-          "source_path": "_pages/amenities.html",
+          "source_path": "terms-of-use.html",
           "order": 15
-        }
-      ]
-    },
-    "privacy": {
-      "__PAGES__": [
-        {
-          "label": "Privacy Policy",
-          "published": true,
-          "locales": {
-            "en": "/privacy/"
-          },
-          "data_source": null,
-          "source_path": "_pages/privacy.html",
-          "order": 16
         }
       ]
     },
     "rooms": {
       "__PAGES__": [
         {
-          "label": "Rooms",
+          "label": "Hotels on Ocean Drive, Miami | Celino Hotel South Beach",
           "published": true,
           "locales": {
             "en": "/rooms/"
           },
           "data_source": null,
-          "source_path": "_pages/rooms.html",
+          "source_path": "rooms.html",
+          "order": 16
+        }
+      ]
+    },
+    "offers": {
+      "__PAGES__": [
+        {
+          "label": "South Beach Miami Hotel Deals | Celino Hotel Offers",
+          "published": true,
+          "locales": {
+            "en": "/offers/"
+          },
+          "data_source": null,
+          "source_path": "offers.html",
           "order": 17
+        }
+      ]
+    },
+    "privacy-policy": {
+      "__PAGES__": [
+        {
+          "label": "Privacy Policy | Celino Hotel South Beach",
+          "published": true,
+          "locales": {
+            "en": "/privacy-policy/"
+          },
+          "data_source": null,
+          "source_path": "privacy-policy.html",
+          "order": 18
+        }
+      ]
+    },
+    "offer": {
+      "__PAGES__": [
+        {
+          "label": "Offer Details",
+          "published": true,
+          "locales": {
+            "en": "/offer/"
+          },
+          "data_source": null,
+          "source_path": "offer.html",
+          "order": 19
+        }
+      ]
+    },
+    "index_2": {
+      "__PAGES__": [
+        {
+          "label": "Celino Hotel South Beach",
+          "published": true,
+          "locales": {
+            "en": "/index_2/"
+          },
+          "data_source": null,
+          "source_path": "index_2.html",
+          "order": 20
+        }
+      ]
+    },
+    "thankyou": {
+      "__PAGES__": [
+        {
+          "label": "Thank you | Celino Hotel South Beach",
+          "published": true,
+          "locales": {
+            "en": "/thankyou/"
+          },
+          "data_source": null,
+          "source_path": "thankyou.html",
+          "order": 21
+        }
+      ]
+    },
+    "location": {
+      "__PAGES__": [
+        {
+          "label": "Location | Celino Hotel South Beach",
+          "published": true,
+          "locales": {
+            "en": "/location/"
+          },
+          "data_source": null,
+          "source_path": "location.html",
+          "order": 22
         }
       ]
     }
   },
-  "__REGIONS__": null,
+  "__REGIONS__": [
+    "privacy-policy.html/privacy_policy.json",
+    "terms-of-use.html/terms_of_use.json"
+  ],
   "__SETTINGS__": [
     "tracking",
-    "social",
-    "navigation",
-    "forms"
+    "main"
   ],
-  "__SHA__": "5062312547226dceecdcfd0365f4271f74480258"
+  "__SHA__": "b634d69409a0fd7f4043c9d18b4031c85e6a7e09"
 }
