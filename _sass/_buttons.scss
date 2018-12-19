@@ -1,0 +1,67 @@
+.button {
+  display: inline-block;
+  min-width: 190px;
+  padding: 16px 38px;
+  font-weight: 700;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .25rem;
+  background-color: $purple-color;
+  transition: $global-transition;
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+    background-color: $dark-blue-color;
+  }
+
+  &--gold {
+    background-color: $gold-color;
+  }
+
+  &--arrow {
+    position: relative;
+    min-width: 150px;
+    margin-right: 54px;
+    padding: 16px 19px;
+    background-color: $dark-blue-color;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      right: -54px;
+      bottom: 0;
+      width: 54px;
+      content: '';
+      background-color: $purple-color;
+      transition: $global-transition;
+    }
+
+    &:before {
+      position: absolute;
+      top: 16px;
+      right: -32px;
+      bottom: 10px;
+      z-index: 1;
+      width: 22px;
+      height: 22px;
+      content: '';
+      border-top: 2px solid $white;
+      border-right: 2px solid $white;
+      transform: rotate(45deg); 
+    }
+
+    &:hover {
+      background-color: $purple-color;
+
+      &:before {
+        animation: bounceRight 1s linear .2s;
+      }
+    }
+
+    &--gold {
+      background-color: $gold-color;
+    }
+  }
+}

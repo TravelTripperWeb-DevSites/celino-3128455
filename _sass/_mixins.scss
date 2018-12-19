@@ -4,6 +4,25 @@
 
 // Vertical Center (Includes IE9)
 
+// Fixed Width Template
+@mixin fixed-width-layout {
+  @include make-container;
+  width: 1300px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+//flex center column
+@mixin flex-center-col {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+// Vertical Center (Includes IE9)
 @mixin vertical-center {
   position: relative;
   top: 50%;
@@ -11,9 +30,32 @@
   transform: translateY(-50%);
 }
 
+@mixin bg-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
 
 @function strip-unit($num) {
   @return $num / ($num * 0 + 1);
+}
+
+@keyframes bounceRight {
+  0%, 80%, 100% {
+    right: -32px;
+  }
+  20% {
+    right: -37px;
+  }
+  30% {
+    right: -32px;
+  }
+  40% {
+    right: -28px;
+  }
+  60% {
+    right: -32px;
+  }
 }
 
 // rem calculator for px
