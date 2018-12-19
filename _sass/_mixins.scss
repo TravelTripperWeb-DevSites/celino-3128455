@@ -24,7 +24,7 @@
 
 // Vertical Center (Includes IE9)
 @mixin vertical-center {
-  position: relative;
+  position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -40,6 +40,14 @@
   @return $num / ($num * 0 + 1);
 }
 
+@keyframes menuFix {
+  0% {
+    top:-80px;
+  }
+  100% {
+    top: 0;
+  }
+}
 @keyframes bounceRight {
   0%, 80%, 100% {
     right: -32px;
