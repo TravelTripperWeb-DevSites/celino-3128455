@@ -33,20 +33,6 @@
         }
       ]
     },
-    "room-details": {
-      "__PAGES__": [
-        {
-          "label": "Room Details",
-          "published": true,
-          "locales": {
-            "en": "/room-details/"
-          },
-          "data_source": null,
-          "source_path": "_pages/room.html",
-          "order": 2
-        }
-      ]
-    },
     "contact": {
       "__PAGES__": [
         {
@@ -57,21 +43,21 @@
           },
           "data_source": null,
           "source_path": "_pages/contact.html",
-          "order": 3
+          "order": 2
         }
       ]
     },
-    "page-not-found": {
+    "gallery": {
       "__PAGES__": [
         {
-          "label": "Page Not Found",
+          "label": "Gallery",
           "published": true,
           "locales": {
-            "en": "/page-not-found/"
+            "en": "/gallery/"
           },
           "data_source": null,
-          "source_path": "_pages/404.html",
-          "order": 4
+          "source_path": "_pages/gallery.html",
+          "order": 3
         }
       ]
     },
@@ -85,20 +71,34 @@
           },
           "data_source": null,
           "source_path": "_pages/offer.html",
+          "order": 4
+        }
+      ]
+    },
+    "rooms": {
+      "__PAGES__": [
+        {
+          "label": "Rooms",
+          "published": true,
+          "locales": {
+            "en": "/rooms/"
+          },
+          "data_source": null,
+          "source_path": "_pages/rooms.html",
           "order": 5
         }
       ]
     },
-    "events": {
+    "room-details": {
       "__PAGES__": [
         {
-          "label": "Events",
+          "label": "Room Details",
           "published": true,
           "locales": {
-            "en": "/events/"
+            "en": "/room-details/"
           },
           "data_source": null,
-          "source_path": "_pages/events.html",
+          "source_path": "_pages/room.html",
           "order": 6
         }
       ]
@@ -117,34 +117,6 @@
         }
       ]
     },
-    "sitemap": {
-      "__PAGES__": [
-        {
-          "label": "Sitemap",
-          "published": true,
-          "locales": {
-            "en": "/sitemap/"
-          },
-          "data_source": null,
-          "source_path": "_pages/sitemap.html",
-          "order": 8
-        }
-      ]
-    },
-    "attractions": {
-      "__PAGES__": [
-        {
-          "label": "Attractions",
-          "published": true,
-          "locales": {
-            "en": "/attractions/"
-          },
-          "data_source": null,
-          "source_path": "_pages/attractions.html",
-          "order": 9
-        }
-      ]
-    },
     "privacy": {
       "__PAGES__": [
         {
@@ -155,63 +127,35 @@
           },
           "data_source": null,
           "source_path": "_pages/privacy.html",
+          "order": 8
+        }
+      ]
+    },
+    "page-not-found": {
+      "__PAGES__": [
+        {
+          "label": "Page Not Found",
+          "published": true,
+          "locales": {
+            "en": "/page-not-found/"
+          },
+          "data_source": null,
+          "source_path": "_pages/404.html",
+          "order": 9
+        }
+      ]
+    },
+    "events": {
+      "__PAGES__": [
+        {
+          "label": "Events",
+          "published": true,
+          "locales": {
+            "en": "/events/"
+          },
+          "data_source": null,
+          "source_path": "_pages/events.html",
           "order": 10
-        }
-      ]
-    },
-    "about": {
-      "__PAGES__": [
-        {
-          "label": "About",
-          "published": true,
-          "locales": {
-            "en": "/about/"
-          },
-          "data_source": null,
-          "source_path": "_pages/about.html",
-          "order": 11
-        }
-      ]
-    },
-    "rooms": {
-      "__PAGES__": [
-        {
-          "label": "Rooms",
-          "published": true,
-          "locales": {
-            "en": "/rooms/"
-          },
-          "data_source": null,
-          "source_path": "_pages/rooms.html",
-          "order": 12
-        }
-      ]
-    },
-    "terms": {
-      "__PAGES__": [
-        {
-          "label": "Terms and Conditions",
-          "published": true,
-          "locales": {
-            "en": "/terms/"
-          },
-          "data_source": null,
-          "source_path": "_pages/terms.html",
-          "order": 13
-        }
-      ]
-    },
-    "gallery": {
-      "__PAGES__": [
-        {
-          "label": "Gallery",
-          "published": true,
-          "locales": {
-            "en": "/gallery/"
-          },
-          "data_source": null,
-          "source_path": "_pages/gallery.html",
-          "order": 14
         }
       ]
     },
@@ -225,6 +169,62 @@
           },
           "data_source": null,
           "source_path": "_pages/dining.html",
+          "order": 11
+        }
+      ]
+    },
+    "about": {
+      "__PAGES__": [
+        {
+          "label": "About",
+          "published": true,
+          "locales": {
+            "en": "/about/"
+          },
+          "data_source": null,
+          "source_path": "_pages/about.html",
+          "order": 12
+        }
+      ]
+    },
+    "amenities": {
+      "__PAGES__": [
+        {
+          "label": "Amenities",
+          "published": true,
+          "locales": {
+            "en": "/amenities/"
+          },
+          "data_source": null,
+          "source_path": "_pages/amenities.html",
+          "order": 13
+        }
+      ]
+    },
+    "attractions": {
+      "__PAGES__": [
+        {
+          "label": "Attractions",
+          "published": true,
+          "locales": {
+            "en": "/attractions/"
+          },
+          "data_source": null,
+          "source_path": "_pages/attractions.html",
+          "order": 14
+        }
+      ]
+    },
+    "sitemap": {
+      "__PAGES__": [
+        {
+          "label": "Sitemap",
+          "published": true,
+          "locales": {
+            "en": "/sitemap/"
+          },
+          "data_source": null,
+          "source_path": "_pages/sitemap.html",
           "order": 15
         }
       ]
@@ -243,16 +243,16 @@
         }
       ]
     },
-    "amenities": {
+    "terms": {
       "__PAGES__": [
         {
-          "label": "Amenities",
+          "label": "Terms and Conditions",
           "published": true,
           "locales": {
-            "en": "/amenities/"
+            "en": "/terms/"
           },
           "data_source": null,
-          "source_path": "_pages/amenities.html",
+          "source_path": "_pages/terms.html",
           "order": 17
         }
       ]
@@ -261,9 +261,9 @@
   "__REGIONS__": null,
   "__SETTINGS__": [
     "social",
-    "forms",
     "tracking",
-    "navigation"
+    "navigation",
+    "forms"
   ],
-  "__SHA__": "7796e4a7192f1aec18cec04de7d84270931dcf95"
+  "__SHA__": "5fcfc05009884b44216310e1222aae07c4c3cd64"
 }
