@@ -5,15 +5,16 @@
 $(function() {
 
     var header = $(".top-nav");
-    $(window).scroll(function() {
+    $(window).on("load resize scroll",function() {
         var scroll = $(window).scrollTop();
 
-        if (scroll >= 80) {
-            header.removeClass('top-nav--flower').addClass("top-nav--gradient");
-            header.addClass("top-nav--gradient--fix"); 
+        if (scroll >= 170) {
+          header.removeClass('top-nav--flower').addClass("top-nav--gradient");
+          header.css({'top':'','bottom':''});
         } else {
-            header.removeClass("top-nav--gradient").addClass('top-nav--flower');
-            header.removeClass("top-nav--gradient--fix");
+          var scrollTopPx = $(window).scrollTop();
+          header.css({'top': '-'+scrollTopPx+'px'});
+          header.removeClass("top-nav--gradient").addClass('top-nav--flower');
         }
     });
 
