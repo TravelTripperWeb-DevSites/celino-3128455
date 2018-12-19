@@ -10,7 +10,7 @@ meta_tags:
 <section class="page-banner">
   <div id="pageBanner" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-      {% assign banners = site.data._models.page-banners | sort: 'order' %}
+      {% assign banners = site.data._models.page-banners %}
       {% for banner in banners %}
         <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active"{% endif %}></li>
       {% endfor %}
