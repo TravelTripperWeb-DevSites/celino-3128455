@@ -1,6 +1,91 @@
 // Navigation Elements
 // ========================================================================== */
+.top-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
 
+.hotel-logo {
+  display: inline-block;
+  width: 218px;
+  padding-top: 27px;
+  img {
+    width: 218px;
+    max-width: 100%;
+  }
+}
+.booking-toggle {
+  position: absolute;
+  top: 34px;
+  left: 37px;
+  max-width: 245px;
+  height: 83px;
+  padding-left: 130px;
+  font-family: $heading-font;
+  font-size: $type-size-9;
+  line-height: 25px;
+  color: $white;
+  text-transform: uppercase;
+  vertical-align: middle;
+  background: url('/assets/images/leaf.png') -25px center no-repeat;
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+  .vertical-line {
+    position: absolute;
+    left: 92px;
+    display: inline-block;
+    width: 5px;
+    height: 100%;
+    vertical-align: middle;
+    background-color: $white;
+  }
+  strong {
+    display: inline-block;
+    padding-top: 16px;
+    font-weight: 400;
+    letter-spacing: rem-calc(4.3);
+  }
+}
+.menu-toggle {
+  position: absolute;
+  top: 34px;
+  right: 37px;
+  display: block;
+  width: 44px;
+  height: 40px;
+  font-size: 0;
+  span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: $white;
+
+    &:after {
+      position: absolute;
+      top: 17.5px;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      content: '';
+      background-color: $white;
+    }
+    &:before {
+      position: absolute;
+      top: 35px;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      content: '';
+      background-color: $white;
+    }
+  }
+}
 // Removes margins, padding, and bullet points from navigation lists
 nav {
   ul {
