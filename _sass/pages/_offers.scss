@@ -4,6 +4,7 @@
 .page-banner {
   position: relative;
   text-align: center;
+
   .carousel-item {
     img {
       width: 100%;
@@ -17,7 +18,41 @@
 
   h1 {
     @include vertical-center;
+    right: 0;
+    left: 0;
     color: $white;
     text-shadow: 0 0 7px rgba($black, .35);
+  }
+}
+
+.carousel-indicators {
+  top: auto;
+  right: 22px;
+  bottom: 18px;
+  left: auto;
+  margin: 0;
+
+  @include media-breakpoint-up(md) {
+    right: 80px;
+    bottom: 65px;
+  }
+
+  li {
+    width: 9px;
+    height: 9px;
+    margin: 0 0 0 16px;
+    cursor: pointer;
+    background-color: $white;
+    border-radius: 50%;
+
+    @include media-breakpoint-up(md) {
+      width: 16px;
+      height: 16px;
+      margin: 0 0 0 30px;
+    }
+
+    &.active {
+      background-color: $purple-color;
+    }
   }
 }
