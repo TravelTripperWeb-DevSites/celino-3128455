@@ -30,6 +30,18 @@
   transform: translateY(-50%);
 }
 
+// Absolute Position
+@mixin absolute-position($top, $right, $bottom, $left, $width, $height) {
+ position: absolute;
+ top: $top;
+ right: $right;
+ bottom: $bottom;
+ left: $left;
+ width: $width;
+ height: $height;
+ content: '';
+}
+
 @mixin bg-cover {
   background-repeat: no-repeat;
   background-position: center center;
@@ -40,12 +52,15 @@
   @return $num / ($num * 0 + 1);
 }
 
-@keyframes menuFix {
+@keyframes flower {
   0% {
-    top:-80px;
+    background: url('/assets/images/nav-flowers.png') top -200px center repeat-x;
+  }
+  80% {
+    background: url('/assets/images/nav-flowers.png') top -20px center repeat-x;
   }
   100% {
-    top: 0;
+    background: url('/assets/images/nav-flowers.png') top 0 center repeat-x;
   }
 }
 @keyframes bounceRight {
