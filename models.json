@@ -9,6 +9,10 @@
 
   ],
   "page-banners": [
-
+    {
+      "name": "Offers",
+      "title": "Offers",
+      "file": "page-banners1.json"
+    }
   ]
 }

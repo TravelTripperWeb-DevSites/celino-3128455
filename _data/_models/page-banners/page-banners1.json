@@ -1,7 +1,7 @@
 {
   "order": 1,
   "title": "Offers",
-  "category": "Offers",
+  "page_name": "Offers",
   "image": [
     {
       "name": "offers-banner",
@@ -87,5 +87,6 @@
       "alt": "Offers",
       "caption": ""
     }
-  ]
+  ],
+  "banner_title": "Deals & Offers"
 }

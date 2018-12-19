@@ -3,7 +3,7 @@
     "label": "Page Name",
     "required": true
   },
-  "category": {
+  "page_name": {
     "label": "Select Page",
     "type": "select",
     "options": ["Hotel", "Stay", "Offers", "Dine & Drink", "Explore", "Gallery", "Location"],
@@ -14,6 +14,9 @@
     "type": "image",
     "required": true,
     "multiple": true
+  },
+  "banner_title": {
+    "label": "Banner Title"
   },
   "order": {
     "type": "integer",
