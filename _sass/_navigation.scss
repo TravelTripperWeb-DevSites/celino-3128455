@@ -1,35 +1,82 @@
 // Navigation Elements
 // ========================================================================== */
 .top-nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
+  height: 192px;
   text-align: center;
+  &--flower {
+    background-image: url('/assets/images/nav-flowers.png');
+    background-repeat: repeat-x;
+    background-position: center center;
+  }
+
+  &--gradient {
+    position: fixed;
+    top: -80px;
+    height: 110px;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 25%, rgba(0,0,0,0.06) 93%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 25%,rgba(0,0,0,0.06) 93%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 25%,rgba(0,0,0,0.06) 93%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+    transition: position .5s ease-in-out;
+
+    &--fix {
+      top: 0;
+    }
+    .hotel-logo {
+      img {
+        max-width: 148px;
+      }
+    }
+
+    .booking-toggle {
+      top: 26px;
+      max-width: 205px;
+      height: 57px;
+      padding-left: 103px;
+      background: url('/assets/images/Leaf_BookNow.png') left 25px center no-repeat;
+
+      .vertical-line {
+        left: 86px;
+        width: 4px;
+      }
+      strong {
+        padding-top: 3px;
+        font-size: $type-size-11;
+      }
+    }
+  }
+
 }
 
 .hotel-logo {
   display: inline-block;
   width: 218px;
   padding-top: 27px;
+  transition: $global-transition;
   img {
     width: 218px;
     max-width: 100%;
+    transition: $global-transition;
   }
 }
 .booking-toggle {
   position: absolute;
-  top: 34px;
-  left: 37px;
+  top: 30px;
+  left: 12px;
   max-width: 245px;
   height: 83px;
-  padding-left: 130px;
+  padding-left: 155px;
   font-family: $heading-font;
   font-size: $type-size-9;
   line-height: 25px;
   color: $white;
   text-transform: uppercase;
   vertical-align: middle;
-  background: url('/assets/images/leaf.png') -25px center no-repeat;
+  background: url('/assets/images/leaf.png') left center no-repeat;
+  transition: $global-transition;
 
   &:hover {
     color: $white;
@@ -37,18 +84,21 @@
   }
   .vertical-line {
     position: absolute;
-    left: 92px;
+    left: 117px;
     display: inline-block;
     width: 5px;
     height: 100%;
     vertical-align: middle;
     background-color: $white;
+    transition: $global-transition;
   }
   strong {
     display: inline-block;
     padding-top: 16px;
     font-weight: 400;
+    text-shadow: -1px 1px 20px $black;
     letter-spacing: rem-calc(4.3);
+    transition: $global-transition;
   }
 }
 .menu-toggle {
