@@ -3,5 +3,6 @@
 .hero-banner {
   width: 100%;
   height: 100vh;
-  background-color: $lighter-gray;
+  background-color: $black;
+  @include bg-cover;
 }
