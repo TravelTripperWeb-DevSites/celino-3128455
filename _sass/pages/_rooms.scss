@@ -1,2 +1,28 @@
 // Rooms & Room Details Page Elements
 // ==========================================================================
+.inner-page-intro {
+  @include fixed-width-layout;
+  &__wrap {
+    @include make-row;
+    margin: 0;
+  }
+  &__image {
+    @include make-col-ready;
+    @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+    &__floral-bg {
+      max-width: 550px;
+      height: 465px;
+      padding: 38px 0 55px 43px;
+      background-image: url('/assets/images/rooms/floral-bg.jpg');
+      @include bg-cover;
+    }
+  }
+  &__image {
+    @include make-col-ready;
+    @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+  }
+}

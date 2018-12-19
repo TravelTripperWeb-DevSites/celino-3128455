@@ -7,14 +7,21 @@ meta_tags:
   robots:
 ---
 
-{% comment %}
+<section class="inner-page-intro">
+  <div class="inner-page-intro__wrap">
+    <div class="inner-page-intro__image">
+      <div class="inner-page-intro__image__floral-bg">
+        {% regionblock intro-image, type:image %}
+          <img src="/assets/images/rooms/man-sitting.png" alt="Man Sitting" class="inner-page-intro__inner-image">
+        {% endregionblock %}
+      </div>
+    </div>
+    <div class="inner-page-intro__text">
 
-  Name:
+    </div>
+  </div>
+</section>
 
-    Rooms Listing Page
+<div class="rooms-filter">
 
-  Description:
-
-    Display room list from RezTrip.
-
-{% endcomment %}
+</div>
