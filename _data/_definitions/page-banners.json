@@ -1,0 +1,15 @@
+{
+  "title": {
+    "label": "Page Name",
+    "required": true
+  },
+  "image": {
+    "label": "Banner Image",
+    "type": "image",
+    "required": true
+  },
+  "order": {
+    "type": "integer",
+    "required": true
+  }
+}

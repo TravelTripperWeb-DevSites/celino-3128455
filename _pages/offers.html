@@ -7,14 +7,22 @@ meta_tags:
   robots:
 ---
 
-{% comment %}
-
-  Name:
-
-    Offers Listing Page
-
-  Description:
-
-    Display offer list from RezTrip.
-
-{% endcomment %}
+<section class="page-banner">
+  <div id="pageBanner" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      {% assign banners = site.data._models.page-banners | sort: 'order' %}
+      {% for banner in banners %}
+        <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active"{% endif %}></li>
+      {% endfor %}
+    </ol>
+    <div class="carousel-inner">
+      {% assign banners = site.data._models.page-banners %}
+      {% for banner in banners %}
+        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+          <img src="{{ banner.image.url_medium }}" alt="{{ banner.title }}">
+        </div>
+      {% endfor %}
+    </div>
+    <h1>Deals & Offers</h1>
+  </div>
+</section>
