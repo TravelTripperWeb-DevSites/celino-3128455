@@ -17,7 +17,12 @@ meta_tags:
       </div>
     </div>
     <div class="inner-page-intro__text">
-
+      {% regionblock intro_title, type:header %}
+        <h2>Lorem Ipsum</h2>
+      {% endregionblock %}
+      {% regionblock intro_text, type:text %}
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc venenatis, leo sed tempus viverra, diam nibh maximus nisi, ut viverra nunc nunc ut sapien. Ut finibus sapien quam, sit amet pellentesque elit consectetur sit amet. Suspendisse semper mattis tristique. Donec semper purus quis felis bibendum varius.</p>
+      {% endregionblock %}  
     </div>
   </div>
 </section>

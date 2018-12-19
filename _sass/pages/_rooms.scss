@@ -19,7 +19,7 @@
       @include bg-cover;
     }
   }
-  &__image {
+  &__text {
     @include make-col-ready;
     @include media-breakpoint-up(md) {
       @include make-col(6);
