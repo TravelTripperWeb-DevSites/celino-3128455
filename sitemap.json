@@ -259,9 +259,11 @@
     }
   },
   "__REGIONS__": [
+    "_pages/rooms.html/intro-image-bg.json",
     "_pages/rooms.html/intro-image.json",
     "_pages/rooms.html/intro_title.json",
-    "_pages/rooms.html/intro_text.json"
+    "_pages/rooms.html/intro_text.json",
+    "_pages/rooms.html/intro_cta.json"
   ],
   "__SETTINGS__": [
     "tracking",
@@ -269,5 +271,5 @@
     "navigation",
     "forms"
   ],
-  "__SHA__": "680ffe625a9fc73e216c2eb67d6d8f42981c6d1d"
+  "__SHA__": "5216ff6ad1ceb0aedc5d2d17ddc93943865068b9"
 }

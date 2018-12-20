@@ -1,28 +1,95 @@
 // Rooms & Room Details Page Elements
 // ==========================================================================
+
 .inner-page-intro {
+  margin-bottom: 44px;
   @include fixed-width-layout;
+  padding: 0;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 50px;
+    padding: 0 10px;
+  }
+
   &__wrap {
     @include make-row;
     margin: 0;
   }
+
   &__image {
     @include make-col-ready;
+    position: relative;
+    padding: 0 35px;
     @include media-breakpoint-up(md) {
       @include make-col(6);
+      padding: 0 15px;
     }
+
     &__floral-bg {
-      max-width: 550px;
-      height: 465px;
-      padding: 38px 0 55px 43px;
-      background-image: url('/assets/images/rooms/floral-bg.jpg');
-      @include bg-cover;
+      max-width: 85%;
+      object-fit: cover;
+      @include media-breakpoint-up(md) {
+        max-width: 90%;
+        height: 100%;
+      }
+    }
+
+    &__inner-image {
+      @include vertical-center;
+      right: 30px;
+      max-width: 75%;
+      height: 90%;
+      object-fit: cover;
+      @include media-breakpoint-up(md) {
+        right: 0;
+        max-width: 90%;
+      }
     }
   }
+
   &__text {
     @include make-col-ready;
+    padding: 0 20px;
+    text-align: center;
     @include media-breakpoint-up(md) {
       @include make-col(6);
+      padding: 0 15px 0 65px;
+      text-align: left;
+    }
+
+    h2 {
+      position: relative;
+      margin: 20px 0 18px;
+      padding-bottom: 18px;
+      font-size: $type-size-9;
+      color: $dark-blue-color;
+      @include media-breakpoint-up(md) {
+        margin: 0 0 40px;
+        padding-bottom: 25px;
+        font-size: $type-size-4;
+      }
+
+      &:after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 80px;
+        height: 2px;
+        margin: auto;
+        content: '';
+        background-color: $gold-color;
+        @include media-breakpoint-up(md) {
+          right: auto;
+          margin: 0;
+        }
+      }
+    }
+
+    p {
+      margin-bottom: 22px;
+      @include media-breakpoint-up(md) {
+        margin-bottom: 40px;
+      }
     }
   }
 }
