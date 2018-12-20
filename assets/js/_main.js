@@ -19,3 +19,24 @@ $(function() {
     });
 
 });
+
+$(document).ready(function() {
+  // Map
+  if ($("#map").length > 0) {
+    var mapOptions = {
+      hotelTitle: '<h4>CELINO HOTEL</h4>',
+      hotelAddress: '<p><a href="#" rel="nofollow" target="_blank">640 Ocean Drive, Miami Beach, Florida 33139.</a></p>',
+      hotelLat: 25.776360,
+      hotelLong: -80.131820,
+      hotelMarker: '/assets/images/leaflet/marker.png',
+      markerSize: [88, 99],
+      zoom: 16,
+      maxZoom: 20,
+      showPopup: true,
+      fitBounds: true,
+      getDirectionBtn: true,
+      TileStyle: 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png'
+    };
+    $('#map').leafMap(mapOptions);
+  }
+});
