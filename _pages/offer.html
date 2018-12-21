@@ -7,14 +7,23 @@ meta_tags:
   robots:
 ---
 
-{% comment %}
-
-  Name:
-
-    Offer Details Page
-
-  Description:
-
-    Display a single offer from RezTrip.
-
-{% endcomment %}
+<section class="page-banner">
+  <div id="pageBanner" class="carousel slide" data-ride="carousel">
+  {% assign banners = site.data._models.page-banners | where: 'page_name', 'Offers' %}
+    {% for banner in banners | limit: 1 %}
+      <ol class="carousel-indicators">
+        {% for bannerimage in banner.image %}
+          <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}"  {% if forloop.first %}class="active"{% endif %}></li>
+        {% endfor %}
+      </ol>
+      <div class="carousel-inner">
+        {% for bannerimage in banner.image %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <img src="{{ bannerimage.url_medium }}" alt="{{ bannerimage.alt }}">
+          </div>
+        {% endfor %}
+      </div>
+      <h1>{{ banner.banner_title }}</h1>
+    {% endfor %}
+  </div>
+</section>
