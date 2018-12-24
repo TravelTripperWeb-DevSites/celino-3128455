@@ -12,7 +12,6 @@
     @include media-breakpoint-up(md) {
       @include make-col(6);
     }
-    padding: 0;
 
     figure {
       margin-right: 103px;
@@ -33,7 +32,27 @@
       @include make-col(6);
     }
     article {
-      padding: 0 70px;
+      padding: 0 35px;
+
+      hr {
+        display: inline-block;
+        width: 74px;
+        height: 3px;
+        margin-bottom: 2rem;
+        background-color: $gold-color;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+
+      p {
+        max-width: 540px;
+      }
+
+      .button {
+        margin-top: 1rem;
+      }
     }
   }
 }

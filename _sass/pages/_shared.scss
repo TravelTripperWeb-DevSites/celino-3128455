@@ -28,3 +28,92 @@
     }
   }
 }
+
+.offers-slider {
+  position: relative;
+  padding-bottom: 60px;
+  text-align: center;
+  background: $dark-blue-color url('/assets/images/floral-bg.jpg');
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    background: linear-gradient(to bottom, rgba($black,0) 0%,rgba($black,.65) 100%);
+  }
+
+  &__wrap {
+    position: relative;
+    display: block;
+    @include fixed-width-layout;
+    padding: 0 122px;
+
+    h3 {
+      margin: 0;
+      padding: 35px 15px;
+      color: $white;
+    }
+
+    .slick-slide {
+      margin: 0 12px 50px;
+      background-color: $white;
+      img {
+        width: 100%;
+      }
+    }
+
+    .slick-arrow {
+      position: relative;
+      font-size: 0;
+      cursor: pointer;
+      background: none;
+      border: 0;
+
+      &:before {
+        display: block;
+        width: 16px;
+        height: 16px;
+        content: '';
+        border-right: 1px solid $white;
+        border-bottom: 1px solid $white;
+        transform: rotate(135deg);
+      }
+
+      &.slick-next {
+        position: absolute;
+        top: 49%;
+        right: -30px;
+        left: auto;
+        &:before {
+          transform: rotate(-45deg);
+        }
+      }
+
+      &.slick-prev {
+        position: absolute;
+        top: 49%;
+        right: auto;
+        left: -30px;
+      }
+    }
+  }
+
+  &__detail {
+    position: relative;
+    padding: 0 20px 30px;
+    text-align: center;
+    .button {
+      position: absolute;
+      right: 0;
+      bottom: -26px;
+      left: 0;
+      display: inline-block;
+      max-width: 192px;
+      margin: 0 auto;
+      padding: 16px 22px;
+    }
+  }
+}
