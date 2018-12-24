@@ -1,155 +1,348 @@
 // Navigation Elements
 // ========================================================================== */
+
 .top-nav {
   position: fixed;
   top: 0;
   z-index: 999;
   width: 100%;
-  height: 192px;
+  height: 100px;
   text-align: center;
+  @include media-breakpoint-up(md) {
+    height: 130px;
+  }
+  @include media-breakpoint-up(lg) {
+    height: 192px;
+  }
+
   &--flower {
-    background: url('/assets/images/nav-flowers.png') center center repeat-x;
-    animation: flower .3s linear;
+    background: url("/assets/images/nav-flowers.png") top center repeat-x;
+    background-size: auto 80px;
+    @include media-breakpoint-up(md) {
+      background-size: auto 130px;
+    }
+    @include media-breakpoint-up(lg) {
+      background-size: unset;
+      animation: flower 0.3s linear;
+    }
   }
 
   &--gradient {
     position: fixed;
     top: 0;
     height: 110px;
-    background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 25%, rgba(0,0,0,0.06) 93%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 25%,rgba(0,0,0,0.06) 93%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 25%,rgba(0,0,0,0.06) 93%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 25%,rgba(0,0,0,0.06) 93%,rgba(0,0,0,0) 100%);
     transition: $global-transition;
-
-    .hotel-logo {
-      img {
-        max-width: 148px;
+    @include media-breakpoint-up(lg) {
+      .hotel-logo {
+        img {
+          max-width: 148px;
+        }
       }
-    }
 
-    .booking-toggle {
-      top: 26px;
-      max-width: 205px;
-      height: 57px;
-      padding-left: 103px;
-      background: url('/assets/images/Leaf_BookNow.png') left 25px center no-repeat;
+      .booking-toggle {
+        top: 26px;
+        max-width: 205px;
+        height: 57px;
+        padding-left: 103px;
+        background: url("/assets/images/Leaf_BookNow.png") left 25px center no-repeat;
 
-      .vertical-line {
-        left: 86px;
-        width: 4px;
-      }
-      strong {
-        padding-top: 3px;
-        font-size: $type-size-11;
+        .vertical-line {
+          left: 86px;
+          width: 4px;
+        }
+
+        strong {
+          padding-top: 3px;
+          font-size: $type-size-11;
+        }
       }
     }
   }
-
 }
 
 .hotel-logo {
   display: inline-block;
-  width: 218px;
-  padding-top: 27px;
+  width: 83px;
+  padding-top: 15px;
   transition: $global-transition;
-  img {
+  @include media-breakpoint-up(md) {
+    width: 160px;
+    padding-top: 27px;
+  }
+  @include media-breakpoint-up(lg) {
     width: 218px;
+  }
+
+  img {
+    width: 83px;
     max-width: 100%;
     transition: $global-transition;
+    @include media-breakpoint-up(md) {
+      width: 218px;
+    }
   }
 }
+
 .booking-toggle {
   position: absolute;
-  top: 30px;
-  left: 12px;
-  max-width: 245px;
-  height: 83px;
-  padding-left: 155px;
+  top: 10;
+  right: 45px;
+  left: auto;
+  max-width: 70px;
+  height: 60px;
+  padding-left: 0;
   font-family: $heading-font;
-  font-size: $type-size-9;
-  line-height: 25px;
+  font-size: $type-size-14;
+  line-height: 12px;
   color: $white;
   text-transform: uppercase;
   vertical-align: middle;
-  background: url('/assets/images/leaf.png') left center no-repeat;
   transition: $global-transition;
+  @include media-breakpoint-up(md) {
+    top: 20px;
+    right: auto;
+    left: 12px;
+    max-width: 200px;
+    padding-left: 104px;
+    font-size: $type-size-11;
+    line-height: 18px;
+    background: url('/assets/images/leaf.png') left center no-repeat;
+    background-size: auto 70px;
+  }
+  @include media-breakpoint-up(lg) {
+    top: 30px;
+    right: auto;
+    left: 12px;
+    max-width: 245px;
+    height: 83px;
+    padding-left: 155px;
+    font-size: $type-size-9;
+    line-height: 25px;
+    background: url('/assets/images/leaf.png') left center no-repeat;
+    background-size: unset;
+  }
 
   &:hover {
     color: $white;
     text-decoration: none;
   }
+
   .vertical-line {
     position: absolute;
     left: 117px;
-    display: inline-block;
+    display: none;
     width: 5px;
     height: 100%;
     vertical-align: middle;
     background-color: $white;
     transition: $global-transition;
+    @include media-breakpoint-up(md) {
+      left: 80px;
+      display: inline-block;
+    }
+    @include media-breakpoint-up(lg) {
+      left: 117px;
+      display: inline-block;
+    }
   }
+
   strong {
     display: inline-block;
-    padding-top: 16px;
+    padding-top: 15px;
     font-weight: 400;
     text-shadow: -1px 1px 20px $black;
     letter-spacing: rem-calc(4.3);
     transition: $global-transition;
+    @include media-breakpoint-up(lg) {
+      padding-top: 16px;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-top: 16px;
+    }
   }
 }
+
 .menu-toggle {
   position: absolute;
-  top: 34px;
-  right: 37px;
+  top: 14px;
+  right: 15px;
   display: block;
-  width: 44px;
-  height: 40px;
+  width: 25px;
+  height: 22px;
   font-size: 0;
+  cursor: pointer;
+  @include media-breakpoint-up(md) {
+    top: 24px;
+    right: 37px;
+    width: 44px;
+    height: 40px;
+  }
+  @include media-breakpoint-up(lg) {
+    top: 34px;
+  }
+
   span {
     position: relative;
     display: block;
     width: 100%;
-    height: 5px;
+    height: 3px;
     background-color: $white;
+    @include media-breakpoint-up(md) {
+      height: 5px;
+    }
 
     &:after {
       position: absolute;
-      top: 17.5px;
+      top: 9.4px;
       left: 0;
       width: 100%;
-      height: 5px;
+      height: 3px;
       content: '';
       background-color: $white;
+      @include media-breakpoint-up(md) {
+        top: 17.5px;
+        height: 5px;
+      }
     }
+
     &:before {
       position: absolute;
-      top: 35px;
+      top: 19px;
       left: 0;
       width: 100%;
-      height: 5px;
+      height: 3px;
       content: '';
       background-color: $white;
+      @include media-breakpoint-up(md) {
+        top: 35px;
+        height: 5px;
+      }
+    }
+  }
+}
+
+.menu-items {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  background: $dark-blue-color url('/assets/images/floral-bg.jpg');
+
+  &__wrap {
+    position: relative;
+    flex: 0 80%;
+    min-height: 100vh;
+    padding-bottom: 30px;
+    overflow-y: auto;
+    background-color: $white;
+    @include media-breakpoint-up(md) {
+      flex: 0 50%;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    bottom: auto;
+    left: auto;
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    @include media-breakpoint-up(md) {
+      top: 50px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 30px;
+      height: 3px;
+      content: '';
+      background-color: $gold-color;
+      transform: rotate(45deg);
+      @include media-breakpoint-up(md) {
+        width: 60px;
+        height: 4px;
+      }
+    }
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 30px;
+      height: 3px;
+      content: '';
+      background-color: $gold-color;
+      transform: rotate(-45deg);
+      @include media-breakpoint-up(md) {
+        width: 60px;
+        height: 4px;
+      }
     }
   }
 }
 // Removes margins, padding, and bullet points from navigation lists
+
 nav {
+  address {
+    padding: rem-calc(10) rem-calc(36);
+    @include media-breakpoint-up(md) {
+      padding: rem-calc(10) rem-calc(78);
+    }
+
+    span {
+      display: block;
+      @include media-breakpoint-up(md) {
+        display: inline-block;
+      }
+    }
+  }
+
   ul {
     margin: 0;
-    padding: 0;
+    padding: rem-calc(35) rem-calc(25) 0;
+    font-family: $text-font;
+    @include media-breakpoint-up(md) {
+      padding: rem-calc(65) rem-calc(65) 0;
+    }
   }
 
   li {
+    font-size: $type-size-11;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
     list-style: none;
+    @include media-breakpoint-up(md) {
+      font-size: $type-size-7;
+    }
   }
 
   a {
+    color: $dark-blue-color;
     text-decoration: none;
+    transition: $global-transition;
+
+    &:hover {
+      color: $gold-color;
+    }
   }
-
   // Override white-space for nested lists
-
   ol li,
   ul li {
     margin-bottom: 0;
