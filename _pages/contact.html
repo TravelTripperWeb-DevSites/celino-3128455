@@ -7,22 +7,36 @@ meta_tags:
   robots:
 ---
 
-{% comment %}
+<section class="contact-intro">
+  <div class="contact-intro__inner">
+    <div class="contact-intro__text">
+      <h2>EXPLORE MIAMI, STAY WITH US</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu is nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste </p>
+    </div>
+    <div class="contact-intro__images">
+      <div class="contact-intro__images__holder">
+        <img src="/assets/images/contact/intro-1.jpg" alt="Intro">
+        <img src="/assets/images/contact/intro-2.jpg" alt="Intro">
+      </div>
+    </div>
+  </div>
+</section>
 
-  Name:
+<div class="full-map" id="map">
+</div>
 
-    Contact Page
-
-  Description:
-
-    Static content that can be modified by editable regions.
-
-  Usage:
-
-    Text   - {% regionblock region_name, type:html %}{% endregionblock %}
-
-    Header - {% regionblock region_name, type:header %}{% endregionblock %}
-
-    Image  - {% regionblock region_name, type:image %}{% endregionblock %}
-
-{% endcomment %}
+<section class="contact-details">
+  <div class="contact-details__inner">
+    <div class="contact-details__content">
+      <h4>CELINO HOTEL</h4>
+      <p>640 Ocean Drive, Miami Beach,<br> Florida 33139.</p>
+      <p>P: <a href="tel:786.574.4090">786.574.4090</a></p>
+      <p>For any questions or concerns<br> please send an email to<br>
+      <a href="mailto:info@celinohotel.com">info@celinohotel.com</a>
+      </p>
+    </div>
+    <div class="contact-details__form-block">
+      {% include forms/jotform/contact.html %}
+    </div>
+  </div>
+</section>
