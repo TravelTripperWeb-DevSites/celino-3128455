@@ -6,3 +6,229 @@ permalink: /room-details/
 meta_tags:
   robots:
 ---
+
+<section class="page-banner mb-55">
+  <div id="pageBanner" class="carousel slide" data-ride="carousel">
+  {% assign banners = site.data._models.page-banners | where: 'page_name', 'Room Details' %}
+    {% for banner in banners | limit: 1 %}
+      <ol class="carousel-indicators">
+        {% for bannerimage in banner.image %}
+          <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}"  {% if forloop.first %}class="active"{% endif %}></li>
+        {% endfor %}
+      </ol>
+      <div class="carousel-inner">
+        {% for bannerimage in banner.image %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <img src="{{ bannerimage.url_medium }}" alt="{{ bannerimage.alt }}">
+          </div>
+        {% endfor %}
+      </div>
+      <h1>{{ banner.banner_title }}</h1>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="room-details-intro">
+  <div class="room-details-intro__wrap">
+    <div class="room-details-intro__intro-text">
+      <h2>CLASSIC KING ROOM</h2>
+      <p>The Classic King features one King bed and offers tropical elegance in a fresh and inviting, all-natural setting.  Pastel salmon accents provide a sense of Latin flavor and warmth to the interior.  The signature finishes include white washed oak hardwood floors and headboard, a 100% hand tufted New Zealand wool area rug and locally produced graphic artwork. The wash room features contemporary fixtures, a floating pedestal sink and a luxe walk-in shower.  </p>
+    </div>
+    <div class="room-details-intro__highlights">
+      <h6>SUITE HIGHLIGHTS</h6>
+      <ul>
+        <li> Room Size: 225 - 275 Sq Ft. </li>
+        <li> Sleeps: 2 Guests </li>
+        <li> Bed Types: 1 King Bed </li>
+        <li> WiFi </li>
+        <li> Butler Service </li>
+        <li> Air Conditioning </li>
+      </ul>
+      <a href="#" class="button button--arrow">Reserve This Room</a>
+    </div>
+  </div>
+</section>
+
+<section class="room-images-gallery clearfix d-none d-md-block">
+  <div class="item fancybox" data-src="/assets/images/room-details/room-1.jpg" data-exthumbimage="/assets/images/room-details/room-1.jpg">
+    <img src="/assets/images/room-details/room-1.jpg" class="img-fluid" alt="Room 1">
+    <div class="overlay">
+      <img src="/assets/images/zoom-icon.png" alt="Zoom">
+    </div>
+  </div>
+  <div class="item fancybox" data-src="/assets/images/room-details/room-2.jpg" data-exthumbimage="/assets/images/room-details/room-2.jpg">
+    <img src="/assets/images/room-details/room-2.jpg" class="img-fluid" alt="Room 2">
+    <div class="overlay">
+      <img src="/assets/images/zoom-icon.png" alt="Zoom">
+    </div>
+  </div>
+  <div class="item fancybox" data-src="/assets/images/room-details/room-3.jpg" data-exthumbimage="/assets/images/room-details/room-3.jpg">
+    <img src="/assets/images/room-details/room-3.jpg" class="img-fluid" alt="Room 3">
+    <div class="overlay">
+      <img src="/assets/images/zoom-icon.png" alt="Zoom">
+    </div>
+  </div>
+  <div class="item fancybox" data-src="/assets/images/room-details/room-4.jpg" data-exthumbimage="/assets/images/room-details/room-4.jpg">
+    <img src="/assets/images/room-details/room-4.jpg" class="img-fluid" alt="Room 4">
+    <div class="overlay">
+      <img src="/assets/images/zoom-icon.png" alt="Zoom">
+    </div>
+  </div>
+  <div class="item fancybox" data-src="/assets/images/room-details/room-5.jpg" data-exthumbimage="/assets/images/room-details/room-5.jpg">
+    <img src="/assets/images/room-details/room-5.jpg" class="img-fluid" alt="Room 5">
+    <div class="overlay">
+      <img src="/assets/images/zoom-icon.png" alt="Zoom">
+    </div>
+  </div>
+  <div class="item fancybox" data-src="/assets/images/room-details/room-6.jpg" data-exthumbimage="/assets/images/room-details/room-6.jpg">
+    <img src="/assets/images/room-details/room-6.jpg" class="img-fluid" alt="Room 6">
+    <div class="overlay">
+      <img src="/assets/images/zoom-icon.png" alt="Zoom">
+    </div>
+  </div>
+</section>
+
+<section class="mobile-carousel d-md-none">
+  <div id="roomImages" class="carousel slide" data-ride="carousel">
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/assets/images/room-details/room-1.jpg" alt="Room 1">
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/images/room-details/room-2.jpg" alt="Room 2">
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/images/room-details/room-3.jpg" alt="Room 3">
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/images/room-details/room-4.jpg" alt="Room 4">
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/images/room-details/room-5.jpg" alt="Room 5">
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/images/room-details/room-6.jpg" alt="Room 6">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#roomImages" data-slide="prev">
+      <img src="/assets/images/left-arrow.png" alt="Previous Item">
+    </a>
+    <a class="carousel-control-next" href="#roomImages" data-slide="next">
+      <img src="/assets/images/right-arrow.png" alt="Next Item">
+    </a>
+  </div>
+</section>
+
+<section class="guest-changes">
+  <div class="guest-changes__inner">
+    <h4>LUXURIOUS AMENITIES</h4>
+    <ul>
+      <li>
+        <div class="holder">
+          <img src="/assets/images/hotel/tv.png" alt="TV">
+        </div>
+        <span>50” Flat Screen HDTV</span>
+      </li>
+      <li>
+        <div class="holder">
+          <img src="/assets/images/hotel/coffee.png" alt="Coffee">
+        </div>
+        <span>Coffee Maker</span>
+      </li>
+      <li>
+        <div class="holder">
+          <img src="/assets/images/hotel/wine.png" alt="Wine">
+        </div>
+        <span>Curated Gourmet Mini Bar</span>
+      </li>
+      <li>
+        <div class="holder">
+          <img src="/assets/images/hotel/speaker.png" alt="Speaker">
+        </div>
+        <span>Bluetooth Speaker</span>
+      </li>
+      <li>
+        <div class="holder">
+          <img src="/assets/images/hotel/shower.png" alt="Shower">
+        </div>
+        <span>Walk-In Shower</span>
+      </li>
+      <li>
+        <div class="holder">
+          <img src="/assets/images/hotel/bag.png" alt="Bag">
+        </div>
+        <span>Celino Signature Beach Bag</span>
+      </li>
+      <li>
+        <div class="holder">
+          <img src="/assets/images/hotel/robe.png" alt="Robe">
+        </div>
+        <span>Designer Robe &amp; Slippers</span>
+      </li>
+      <li>
+        <div class="holder">
+          <img src="/assets/images/hotel/bed.png" alt="Bed">
+        </div>
+        <span>Custom Hemp-Blend Mattress by Keetsa</span>
+      </li>
+      <li>
+        <div class="holder">
+          <img src="/assets/images/hotel/amenities.png" alt="Amenities">
+        </div>
+        <span>Exclusive Board and Batten Bath Amenities</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="other-rooms">
+  <h4 class="text-center">SIMILAR ROOMS & SUITES</h4>
+  <div class="rooms-listing__list-items active" id="park-central-king">
+    <div class="rooms-listing__single-room">
+      <div class="rooms-listing__single-room__image">
+        <img src="/assets/images/rooms/room-1.jpg" alt="Room 1">
+      </div>
+      <div class="rooms-listing__single-room__room-text">
+        <h2>classic king Room</h2>
+        <p class="rooms-listing__single-room__room-text__prices"> <a href="#" class="rooms-listing__single-room__room-text__tonight_price">Tonight’s Rate </a> <span class="rooms-listing__single-room__room-text__pernight_price"><strong>$350</strong> / night</span></p>
+        <p class="rooms-listing__single-room__room-text__description">The Classic King features one King bed and offers tropical elegance in a fresh and inviting, all-natural setting.  Pastel salmon accents provide a sense of Latin flavor and warmth to the interior.  The signature finishes include white washed oak hardwood floors and headboard, a 100% hand tufted New Zealand wool area rug and locally produced graphic artwork. The wash room features contemporary fixtures, a floating pedestal sink and a luxe walk-in shower.</p>
+        <p class="rooms-listing__single-room__room-text__btns-holder">
+          <a href="#" class="button button--arrow">Book Now</a>
+          <a href="/room-details/" class="button button--gold">Explore</a>
+        </p>
+      </div>
+    </div>
+    <div class="rooms-listing__single-room">
+      <div class="rooms-listing__single-room__image">
+        <img src="/assets/images/rooms/room-2.jpg" alt="Room 2">
+      </div>
+      <div class="rooms-listing__single-room__room-text">
+        <h2>Ocean View King Room 1</h2>
+        <p class="rooms-listing__single-room__room-text__prices"> <a href="#" class="rooms-listing__single-room__room-text__tonight_price">Tonight’s Rate </a> <span class="rooms-listing__single-room__room-text__pernight_price"><strong>$350</strong> / night</span></p>
+        <p class="rooms-listing__single-room__room-text__description">The Partial Ocean View King features one King bed with views of the Atlantic Ocean and offers tropical elegance in a fresh and inviting, all-natural setting.  Pastel salmon accents provide a sense of Latin flavor and warmth to the interior.  The signature finishes include white washed oak hardwood floors and headboard, a 100% hand tufted New Zealand wool area rug and locally produced graphic artwork. The wash room features contemporary fixtures, a floating pedestal sink and a luxe walk-in shower.</p>
+        <p class="rooms-listing__single-room__room-text__btns-holder">
+          <a href="#" class="button button--arrow">Book Now</a>
+          <a href="/room-details/" class="button button--gold">Explore</a>
+        </p>
+      </div>
+    </div>
+    <div class="rooms-listing__single-room">
+      <div class="rooms-listing__single-room__image">
+        <img src="/assets/images/rooms/room-3.jpg" alt="Room 3">
+      </div>
+      <div class="rooms-listing__single-room__room-text">
+        <h2>Ocean View King Room 2</h2>
+        <p class="rooms-listing__single-room__room-text__prices"> <a href="#" class="rooms-listing__single-room__room-text__tonight_price">Tonight’s Rate </a> <span class="rooms-listing__single-room__room-text__pernight_price"><strong>$350</strong> / night</span></p>
+        <p class="rooms-listing__single-room__room-text__description">The Ocean View King features one King bed, endless views of the Atlantic Ocean and offers tropical elegance in a fresh and inviting, all-natural setting.  Ocean pastel blues accent the room and provide a sense of place and warmth to the interior.  The signature finishes include white washed oak hardwood floors and headboard, a 100% hand tufted New Zealand wool area rug, locally produced graphic artwork and cozy corner chaise lounge. The wash room features contemporary fixtures, a floating pedestal sink and a luxe walk-in shower.</p>
+        <p class="rooms-listing__single-room__room-text__btns-holder">
+          <a href="#" class="button button--arrow">Book Now</a>
+          <a href="/room-details/" class="button button--gold">Explore</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
