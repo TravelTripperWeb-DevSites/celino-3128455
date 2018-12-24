@@ -1,8 +1,26 @@
 // Shared Page Elements
 // ==========================================================================
+
 .hero-banner {
+  position: relative;
   width: 100%;
   height: 100vh;
+  text-align: center;
   background-color: $black;
   @include bg-cover;
+  @include flex-center-col;
+
+  &__detail {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h1 {
+      color: $white;
+      text-shadow: $global-text-shadow;
+    }
+
+    .button {
+      margin-top: 2rem;
+    }
+  }
 }
