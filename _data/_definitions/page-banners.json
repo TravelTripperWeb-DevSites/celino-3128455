@@ -6,7 +6,7 @@
   "page_name": {
     "label": "Select Page",
     "type": "select",
-    "options": ["Hotel", "Stay", "Offers", "Dine & Drink", "Explore", "Gallery", "Location"],
+    "options": ["Hotel", "Stay", "Room Details", "Offers", "Dine & Drink", "Explore", "Gallery", "Location", "Contact"],
     "required": true
   },
   "image": {
