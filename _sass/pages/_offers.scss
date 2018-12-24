@@ -216,6 +216,7 @@
 .offer-detail {
   @include fixed-width-layout;
   padding-top: 55px;
+  padding-bottom: 55px;
 
   &__row {
     @include make-row;
