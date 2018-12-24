@@ -5,6 +5,18 @@
   "posts": [
 
   ],
+  "page-banners": [
+    {
+      "name": "Offers",
+      "title": "Offers",
+      "file": "page-banners1.json"
+    },
+    {
+      "name": "Rooms",
+      "title": "Rooms",
+      "file": "page-banners2.json"
+    }
+  ],
   "categories": [
 
   ]
