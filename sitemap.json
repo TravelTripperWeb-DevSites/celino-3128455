@@ -9,6 +9,26 @@
   "__ROOT__": {
     "__PAGES__": [
       {
+        "label": "index.html",
+        "published": true,
+        "locales": {
+          "en": "/"
+        },
+        "data_source": null,
+        "source_path": "index.html",
+        "order": 18
+      },
+      {
+        "label": "sitemap.xml",
+        "published": true,
+        "locales": {
+          "en": "/sitemap.xml"
+        },
+        "data_source": null,
+        "source_path": "sitemap.xml",
+        "order": 19
+      },
+      {
         "label": "robots.txt",
         "published": true,
         "locales": {
@@ -265,5 +285,5 @@
     "tracking",
     "navigation"
   ],
-  "__SHA__": "de448a6c7636f58cae4ea792fe1d26ab8cb234eb"
+  "__SHA__": "54629e692e562235ae7410e60b7564ef3cd832c5"
 }
