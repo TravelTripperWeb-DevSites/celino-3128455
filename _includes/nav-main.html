@@ -2,25 +2,23 @@
 
 <div class="top-nav top-nav--flower">
   <a class="hotel-logo" href="/"><img src="/assets/images/celino-logo.png" alt="{{ site.name}} logo"></a>
-  <a class="booking-toggle" href="/"><span class="vertical-line"></span><strong>View Rates</strong></a>
-  <a class="menu-toggle" href="/" title="Menu"><span>Menu</span> </a>
+  <a class="booking-toggle" id="toggle-booking" href="/"><span class="vertical-line"></span><strong>View Rates</strong></a>
+  <a class="menu-toggle" id="toggle-menu" href="/" title="Menu"><span>Menu</span> </a>
 </div>
 
-
-
-
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">Bedrock</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-	  <span class="navbar-toggler-icon"></span>
-	</button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
+<div class="menu-items" id="menuItems">
+  <nav class="menu-items__wrap">
+    <span class="menu-items__close" id="closeMenu"></span>
+    <ul>
     {% for link in links %}
       <li class="nav-item{% if page.url == link.url %} active{% endif%}">
         <a class="nav-link" href="{{ link.url | absolute_url }}">{{ link.title }}{% if page.url == link.url %}<span class="sr-only">(current)</span>{% endif%}</a>
       </li>
     {% endfor %}
     </ul>
-  </div>
-</nav> -->
+    <address>
+      <span>640 Ocean Drive, Miami Beach, Florida 33139</span> (p): <a href="tel:786.574.4090">786.574.4090</a>
+    </address>
+  </nav>
+
+</div>
