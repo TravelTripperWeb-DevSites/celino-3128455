@@ -17,9 +17,5 @@
   },
   "banner_title": {
     "label": "Banner Title"
-  },
-  "order": {
-    "type": "integer",
-    "required": true
   }
 }

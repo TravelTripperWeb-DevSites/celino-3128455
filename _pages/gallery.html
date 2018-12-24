@@ -1,29 +1,29 @@
 ---
 layout: default
 title: Gallery
-meta_description:
+meta_description: Gallery
 permalink: /gallery/
 meta_tags:
   robots:
 ---
 
-{% comment %}
-
-  Name:
-
-    Gallery Page
-
-  Description:
-
-    Display gallery images from the media library.
-
-  Usage:
-
-    Create a new gallery from the 'manage galleries' tab, then display the
-    images by looping over the gallery items, referenced by the gallery name.
-
-    eg. {% for photo in site.data._galleries.GALLERY_NAME.photos %}
-          <img src="{{ photo.url }}" alt="{{ photo.description }}">
+<section class="page-banner">
+  <div id="pageBanner" class="carousel slide" data-ride="carousel">
+  {% assign banners = site.data._models.page-banners | where: 'page_name', 'Gallery' %}
+    {% for banner in banners | limit: 1 %}
+      <ol class="carousel-indicators">
+        {% for bannerimage in banner.image %}
+          <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}"  {% if forloop.first %}class="active"{% endif %}></li>
         {% endfor %}
-
-{% endcomment %}
+      </ol>
+      <div class="carousel-inner">
+        {% for bannerimage in banner.image %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <img src="{{ bannerimage.url_medium }}" alt="{{ bannerimage.alt }}">
+          </div>
+        {% endfor %}
+      </div>
+      <h1>{{ banner.banner_title }}</h1>
+    {% endfor %}
+  </div>
+</section>
