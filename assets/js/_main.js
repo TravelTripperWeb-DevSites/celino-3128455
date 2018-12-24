@@ -67,4 +67,11 @@ $(document).ready(function() {
     };
     $('#map').leafMap(mapOptions);
   }
+
+
+  $(".room-images-gallery").lightGallery({
+    selector: ".item",
+    thumbnail:true
+  });
+
 });
