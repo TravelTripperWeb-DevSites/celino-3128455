@@ -168,10 +168,14 @@
 
       li {
         position: relative;
-        display: inline-block;
-        width: 49%;
+
+        display: block;
         margin-bottom: 34px;
 
+        @include media-breakpoint-up(md) {
+          display: inline-block;
+          width: 49%;
+        }
         @include media-breakpoint-up(lg) {
           width: 33%;
         }

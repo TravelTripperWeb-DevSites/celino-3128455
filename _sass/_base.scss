@@ -111,5 +111,7 @@ svg:not(:root) {
   overflow: hidden;
 }
 .mb-55 {
-  margin-bottom: 55px;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 55px;
+  }
 }
