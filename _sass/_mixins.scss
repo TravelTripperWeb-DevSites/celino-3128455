@@ -6,9 +6,8 @@
 
 // Fixed Width Template
 @mixin fixed-width-layout {
-  @include make-container;
-  width: 1300px;
-  max-width: 100%;
+  @include make-container; 
+  max-width: 1330px;
   margin: 0 auto;
 }
 

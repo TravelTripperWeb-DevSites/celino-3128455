@@ -1,7 +1,9 @@
 .luxury-intro {
   @include fixed-width-layout;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 35px;
+  @include media-breakpoint-up(lg) {
+    padding: 50px 15px;
+  }
 
   &__wrap {
     @include make-row();
@@ -9,31 +11,74 @@
 
   &__photo {
     @include make-col-ready();
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       @include make-col(6);
     }
-    padding: 0;
 
     figure {
-      margin-right: 103px;
-      padding: 43px;
+      margin-right: 53px;
+      padding: 13px;
       background: url('/assets/images/home/pattern-hotel.jpg');
-
+      @include media-breakpoint-up(md) {
+        margin-right: 103px;
+        padding: 33px 50px 33px 53px;
+      }
+      @include media-breakpoint-up(lg) {
+        margin-right: 103px;
+        padding: 43px;
+      }
       img {
-        width: calc(100% + 146px);
-        margin-right: -103px;
+        width: calc(100% + 63px);
         object-fit: cover;
+        @include media-breakpoint-up(md) {
+          width: calc(100% + 153px);
+          margin-right: -133px;
+        }
+        @include media-breakpoint-up(lg) {
+          width: calc(100% + 146px);
+          margin-right: -103px;
+        }
       }
     }
   }
 
   &__detail {
     @include make-col-ready();
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       @include make-col(6);
     }
     article {
-      padding: 0 70px;
+      padding: 0;
+      text-align: center;
+      @include media-breakpoint-up(lg) {
+        padding: 0 35px;
+        text-align: left;
+      }
+      hr {
+        width: 35px;
+        height: 2px;
+        background-color: $gold-color;
+        @include media-breakpoint-up(lg) {
+          display: inline-block;
+          width: 74px;
+          height: 3px;
+          margin-bottom: 2rem;
+        }
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+
+      p {
+        max-width: 540px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .button {
+        margin-top: 1rem;
+      }
     }
   }
 }
