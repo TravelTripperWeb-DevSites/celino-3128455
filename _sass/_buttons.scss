@@ -2,6 +2,7 @@
   display: inline-block;
   min-width: 190px;
   padding: 16px 38px;
+  font-size: $type-size-12;
   font-weight: 700;
   color: $white;
   text-align: center;
@@ -49,7 +50,7 @@
       content: '';
       border-top: 2px solid $white;
       border-right: 2px solid $white;
-      transform: rotate(45deg); 
+      transform: rotate(45deg);
     }
 
     &:hover {

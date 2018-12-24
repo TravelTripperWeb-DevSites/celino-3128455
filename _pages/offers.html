@@ -7,14 +7,136 @@ meta_tags:
   robots:
 ---
 
-{% comment %}
+<section class="page-banner">
+  <div id="pageBanner" class="carousel slide" data-ride="carousel">
+  {% assign banners = site.data._models.page-banners | where: 'page_name', 'Offers' %}
+    {% for banner in banners | limit: 1 %}
+      <ol class="carousel-indicators">
+        {% for bannerimage in banner.image %}
+          <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}"  {% if forloop.first %}class="active"{% endif %}></li>
+        {% endfor %}
+      </ol>
+      <div class="carousel-inner">
+        {% for bannerimage in banner.image %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <img src="{{ bannerimage.url_medium }}" alt="{{ bannerimage.alt }}">
+          </div>
+        {% endfor %}
+      </div>
+      <h1>{{ banner.banner_title }}</h1>
+    {% endfor %}
+  </div>
+</section>
 
-  Name:
+<section class="intro">
+  <div class="intro__row">
+    <div class="intro__content">
+      <div class="intro__content__inner">
+        <h2>DISCOVER OUR EXCLUSIVE OFFERS</h2>
+        <div class="hline"></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu is nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste</p>
+      </div>
+    </div>
+    <div class="intro__image">
+      <div class="intro__image__inner">
+        <h6>Stay longer & save</h6>
+        <img src="/assets/images/offers/stay-longer.jpg" alt="Stay longer & save">
+        <div class="btn-holder">
+          <a href="" class="button button--arrow">Book Now</a>
+          <a href="" class="button button--gold">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    Offers Listing Page
-
-  Description:
-
-    Display offer list from RezTrip.
-
-{% endcomment %}
+<section class="offers">
+  <div class="offers__container">
+    <div class="offers__row">
+      <div class="offers__item">
+        <div class="offers__item__inner">
+          <a href="">
+            <img src="/assets/images/offers/offer-1.jpg" alt="Dine & Drink at Celino">
+          </a>
+          <div class="offers__item__content">
+            <h4>
+              <a href="">Dine & Drink at Celino</a>
+            </h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+            <a href="" class="button button--arrow">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="offers__item">
+        <div class="offers__item__inner">
+          <a href="">
+            <img src="/assets/images/offers/offer-2.jpg" alt="Dine & Drink at Celino">
+          </a>
+          <div class="offers__item__content">
+            <h4>
+              <a href="">Explore South Beach</a>
+            </h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+            <a href="" class="button button--arrow">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="offers__item">
+        <div class="offers__item__inner">
+          <a href="">
+            <img src="/assets/images/offers/offer-1.jpg" alt="Dine & Drink at Celino">
+          </a>
+          <div class="offers__item__content">
+            <h4>
+              <a href="">Fun in the Floridita Sun</a>
+            </h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+            <a href="" class="button button--arrow">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="offers__item">
+        <div class="offers__item__inner">
+          <a href="">
+            <img src="/assets/images/offers/offer-2.jpg" alt="Dine & Drink at Celino">
+          </a>
+          <div class="offers__item__content">
+            <h4>
+              <a href="">South Beach Bar Tour</a>
+            </h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+            <a href="" class="button button--arrow">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="offers__item">
+        <div class="offers__item__inner">
+          <a href="">
+            <img src="/assets/images/offers/offer-1.jpg" alt="Dine & Drink at Celino">
+          </a>
+          <div class="offers__item__content">
+            <h4>
+              <a href="">Group Traveling Rates</a>
+            </h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+            <a href="" class="button button--arrow">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="offers__item">
+        <div class="offers__item__inner">
+          <a href="">
+            <img src="/assets/images/offers/offer-2.jpg" alt="Dine & Drink at Celino">
+          </a>
+          <div class="offers__item__content">
+            <h4>
+              <a href="">Complimentary Breakfast</a>
+            </h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+            <a href="" class="button button--arrow">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
