@@ -18,6 +18,16 @@ $(function() {
         }
     });
 
+    //show / hide menu items on hamburger click
+    $("#toggle-menu").click(function(e){
+      e.preventDefault();
+      $("#menuItems").css("display", "flex").hide().fadeIn();
+    });
+    $("#closeMenu").click(function(e){
+      e.preventDefault();
+      $("#menuItems").fadeOut();
+    });
+
 });
 
 $(document).ready(function() {
