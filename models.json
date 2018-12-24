@@ -5,6 +5,9 @@
   "posts": [
 
   ],
+  "categories": [
+
+  ],
   "page-banners": [
     {
       "name": "Offers",
@@ -16,8 +19,5 @@
       "title": "Rooms",
       "file": "page-banners2.json"
     }
-  ],
-  "categories": [
-
   ]
 }

@@ -222,8 +222,10 @@
 
   &__content {
     @include make-col-ready;
+    text-align: center;
     @include media-breakpoint-up(md) {
       @include make-col(8);
+      text-align: left;
     }
 
     h5 {
@@ -244,6 +246,7 @@
   }
 
   &__terms {
+    text-align: left;
     @include media-breakpoint-up(md) {
       max-width: 630px;
     }
@@ -272,9 +275,15 @@
 
   &__image {
     @include make-col-ready;
+    margin-top: 40px;
+    padding-top: 35px;
+    padding-bottom: 35px;
     text-align: center;
+    background-color: $lighter-gray;
     @include media-breakpoint-up(md) {
       @include make-col(4);
+      margin-top: 0;
+      background-color: transparent;
     }
 
     &__inner {
@@ -299,9 +308,12 @@
     }
 
     figure {
-      width: 245px;
-      margin: 0 auto 60px;
+      max-width: 245px;
+      margin: 0 auto 40px;
       border-radius: 50%;
+      @include media-breakpoint-up(md) {
+        margin: 0 auto 60px;
+      }
 
       img {
         width: 100%;
