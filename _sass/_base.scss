@@ -11,7 +11,7 @@ body {
   padding: 0;
   font-family: $global-font-family;
   line-height: 1.438;
-  color: $text-color; 
+  color: $text-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -51,7 +51,12 @@ h5 {
 }
 
 h6 {
-  font-size: $type-size-7;
+  font-family: $heading-font;
+  font-size: $type-size-8;
+  line-height: 45.64px;
+  color: $dark-blue-color;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 small, .small {

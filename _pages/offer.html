@@ -7,14 +7,54 @@ meta_tags:
   robots:
 ---
 
-{% comment %}
+<section class="page-banner">
+  <div id="pageBanner" class="carousel slide" data-ride="carousel">
+  {% assign banners = site.data._models.page-banners | where: 'page_name', 'Offers' %}
+    {% for banner in banners | limit: 1 %}
+      <ol class="carousel-indicators">
+        {% for bannerimage in banner.image %}
+          <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}"  {% if forloop.first %}class="active"{% endif %}></li>
+        {% endfor %}
+      </ol>
+      <div class="carousel-inner">
+        {% for bannerimage in banner.image %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <img src="{{ bannerimage.url_medium }}" alt="{{ bannerimage.alt }}">
+          </div>
+        {% endfor %}
+      </div>
+      <h1>{{ banner.banner_title }}</h1>
+    {% endfor %}
+  </div>
+</section>
 
-  Name:
-
-    Offer Details Page
-
-  Description:
-
-    Display a single offer from RezTrip.
-
-{% endcomment %}
+<section class="offer-detail">
+  <div class="offer-detail__row">
+    <div class="offer-detail__content">
+      <h5>Heat up this season with a group trip to the celino south beach</h5>
+      <div class="hline"></div>
+      <div class="offer-detail__description">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu is nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste</p>
+        <h6>Terms & Conditions</h6>
+      </div>
+      <div class="offer-detail__terms">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu is nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <ul>
+          <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</li>
+          <li>fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in</li>
+          <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</li>
+          <li>fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in</li>
+        </ul>
+      </div>
+    </div>
+    <div class="offer-detail__image">
+      <div class="offer-detail__image__inner">
+        <figure>
+          <img src="/assets/images/offers/service.jpg" alt="Reservation">
+        </figure>
+        <p>Reserve online, contact your preferred travel<br>professional, or call <a href="tel:(786) 574-4090"><strong>(786) 574-4090</strong></a><br>and reference promotion code <strong>FLSUN</strong></p>
+        <a href="" class="button button--arrow mt-2">Book Now</a>
+      </div>
+    </div>
+  </div>
+</section>
