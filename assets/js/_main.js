@@ -28,6 +28,18 @@ $(function() {
       $("#menuItems").fadeOut();
     });
 
+    //offers slick slider
+    $("#deals-offers").slick({
+      slidesToShow: 3,
+      responsive: [{
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1
+        }
+      }]
+    });
+
+
 });
 
 $(document).ready(function() {
