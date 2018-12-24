@@ -1,2 +1,97 @@
 // Gallery Page Elements
 // ==========================================================================
+
+.filter-nav {
+  @include fixed-width-layout;
+  margin-top: 55px;
+  padding: 28px 0;
+
+  &.bg-cover {
+    @include bg-cover;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: $white;
+
+    li {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 0;
+
+      &:after {
+        @include absolute-position(7px,0,7px,auto,2px,auto);
+        background-color: $dark-blue-color;
+      }
+
+      &:last-child {
+        &:after {
+          content: normal;
+        }
+      }
+
+      a {
+        display: block;
+        padding-right: 15px;
+        padding-left: 15px;
+        font-size: $type-size-8;
+        font-weight: 700;
+        color: $dark-blue-color;
+        text-transform: uppercase;
+        letter-spacing: 8.87px;
+        transition: $global-transition;
+
+        &:hover {
+          color: $gold-color;
+          text-decoration: none;
+        }
+
+        &.active {
+          font-weight: 900;
+          color: $gold-color;
+        }
+      }
+    }
+  }
+}
+
+.gallery-carousel {
+  @include fixed-width-layout;
+  margin-top: 55px;
+
+  .carousel-item {
+    img {
+      width: 100%;
+    }
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 55px;
+    background-color: $white;
+    opacity: 1;
+  }
+
+  .carousel-control-prev {
+    justify-content: flex-start;
+  }
+
+  .carousel-control-next {
+    justify-content: flex-end;
+  }
+
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 24px;
+    height: 44px;
+  }
+
+  .carousel-control-prev-icon {
+    background-image: url('/assets/images/arrow-left.png');
+  }
+
+  .carousel-control-next-icon {
+    background-image: url('/assets/images/arrow-right.png');
+  }
+}
