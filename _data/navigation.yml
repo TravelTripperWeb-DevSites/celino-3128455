@@ -1,6 +1,6 @@
 main:
   - title: Hotel
-    url: /hotel/
+    url: /about/
   - title: Stay
     url: /rooms/
   - title: Offers
@@ -10,6 +10,6 @@ main:
   - title: Explore
     url: /explore/
   - title: Gallery
-    url: /gallery/ 
+    url: /gallery/
   - title: Contact
     url: /contact/
