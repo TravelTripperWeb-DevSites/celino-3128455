@@ -1,0 +1,38 @@
+{
+  "page-banners": [
+    {
+      "name": "Offers",
+      "title": "Offers",
+      "file": "page-banners1.json"
+    },
+    {
+      "name": "Contact",
+      "title": "Contact",
+      "file": "page-banners4.json"
+    },
+    {
+      "name": "Gallery",
+      "title": "Gallery",
+      "file": "page-banners2.json"
+    },
+    {
+      "name": "Room Details",
+      "title": "Room Details",
+      "file": "page-banners5.json"
+    },
+    {
+      "name": "Hotel",
+      "title": "Hotel",
+      "file": "page-banners3.json"
+    }
+  ],
+  "posts": [
+
+  ],
+  "categories": [
+
+  ],
+  "tags": [
+
+  ]
+}
