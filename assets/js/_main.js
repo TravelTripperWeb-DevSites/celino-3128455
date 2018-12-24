@@ -4,7 +4,7 @@
 //scroll change header style
 $(function() {
 
-    var header = $(".top-nav");
+    var header = $("#home-nav");
     $(window).on("load resize scroll",function() {
         var scroll = $(window).scrollTop();
 
