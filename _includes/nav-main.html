@@ -1,6 +1,6 @@
 {% assign links = site.data.navigation.main %}
 
-<div class="top-nav top-nav--flower">
+<div class="top-nav {% if page.url =='/'%}top-nav--flower" id="home-nav" {% else%}top-nav--gradient"{% endif%}>
   <a class="hotel-logo" href="/"><img src="/assets/images/celino-logo.png" alt="{{ site.name}} logo"></a>
   <a class="booking-toggle" id="toggle-booking" href="/"><span class="vertical-line"></span><strong>View Rates</strong></a>
   <a class="menu-toggle" id="toggle-menu" href="/" title="Menu"><span>Menu</span> </a>
