@@ -99,38 +99,69 @@
 .rooms-listing {
   &__filter-wrap {
     @include fixed-width-layout;
+    position: relative;
+    padding: 0;
+    @include media-breakpoint-up(md) {
+      padding: 0 15px;
+    }
+  }
+
+  .drop-down-arrow {
+    position: absolute;
+    top: 24px;
+    right: 12px;
+    z-index: 9;
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
   }
 
   &__main-filter {
     &__filter-label {
       float: left;
-      width: 280px;
-      padding: 30px 0 30px 30px;
+      width: 170px;
+      padding: 20px 0 20px 20px;
       font-family: $heading-font;
-      font-size: $font-size-base;
+      font-size: $type-size-16;
       font-weight: 400;
       color: $dark-blue-color;
       text-transform: uppercase;
-      letter-spacing: 0.15rem;
+      letter-spacing: .15rem;
       background-color: $lighter-gray;
+      @include media-breakpoint-up(md) {
+        width: 280px;
+        padding: 30px 0 30px 30px;
+        font-size: $font-size-base;
+      }
     }
 
     &__filter-items {
       float: left;
-      width: calc(100% - 280px);
+      width: calc(100% - 170px);
       border: 0;
-
+      @include media-breakpoint-up(md) {
+          width: calc(100% - 280px);
+      }
       .nav-item {
-        display: inline-block;
+        display: none;
         float: left;
-        width: 25%;
+        width: 100%;
         margin-bottom: 0;
         margin-left: 0;
         text-align: center;
-
+        @include media-breakpoint-up(md) {
+          display: inline-block;
+          width: 25%;
+        }
+        &.active {
+          display: block;
+          @include media-breakpoint-up(md) {
+            display: inline-block;
+          }
+        }
         a {
-          padding: 30px 0;
-          font-size: $font-size-base;
+          padding: 20px 0;
+          font-size: $type-size-16;
           font-weight: 700;
           color: $dark-blue-color;
           text-transform: uppercase;
@@ -138,7 +169,10 @@
           border: 0;
           border-radius: 0;
           @include global-transition(0.3s);
-
+          @include media-breakpoint-up(md) {
+            padding: 30px 0;
+            font-size: $font-size-base;
+          }
           &.active,
           &:hover {
             color: $dark-blue-color;
@@ -151,37 +185,55 @@
 
   &__subfilter-wrap {
     @include fixed-width-layout;
+    padding: 0;
+    @include media-breakpoint-up(md) {
+      padding: 0 15px;
+    }
   }
 
   &__subfilter-bg {
-    padding: 20px 0;
+    padding: 0;
     text-align: center;
     background-image: url("/assets/images/rooms/filter-floral-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-
+    @include media-breakpoint-up(md) {
+      padding: 20px 0;
+    }
     &__subfilter {
       display: block;
       padding: 10px 0;
-      background-color: $white;
-
+      background-color: transparent;
+      border-bottom: 0;
+      @include media-breakpoint-up(md) {
+        background-color: $white;
+      }
       .nav-item {
         display: inline-block;
 
         .nav-link {
-          padding: 0 68px;
-          font-size: $type-size-8;
+          padding: 0 20px;
+          font-size: $type-size-16;
           font-weight: 900;
-          line-height: $type-size-8;
-          color: $dark-blue-color;
+          line-height: normal;
+          color: $white;
+          background-color: transparent;
           border: 0;
           border-right: 1px solid;
           border-radius: 0;
           @include global-transition(0.3s);
-
+          @include media-breakpoint-up(md) {
+            padding: 0 68px;
+            font-size: $type-size-8;
+            line-height: $type-size-8;
+            color: $dark-blue-color;
+          }
           &.active,
           &:hover {
-            color: $gold-color;
+            color: $dark-blue-color;
+            @include media-breakpoint-up(md) {
+              color: $gold-color;
+            }
           }
         }
 
@@ -359,9 +411,8 @@
     @include vertical-center;
     right: 0;
     left: 0;
-    max-width: 168px;
     margin: auto;
-    @include media-breakpoint-up(md) {      
+    @include media-breakpoint-up(md) {
       max-width: 330px;
     }
     h5 {
