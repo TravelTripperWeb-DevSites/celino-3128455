@@ -74,4 +74,13 @@ $(document).ready(function() {
     thumbnail:true
   });
 
+  $(document).on("click", ".rooms-listing__main-filter__filter-items .nav-item.active", function() {
+    $(".rooms-listing__main-filter__filter-items .nav-item").not('.active').slideToggle();
+  });
+  $(document).on("click", ".rooms-listing__main-filter__filter-items .nav-item:not(.active)", function() {
+    $(".rooms-listing__main-filter__filter-items .nav-item").removeClass("active");
+    $(this).addClass("active");
+    $(".rooms-listing__main-filter__filter-items .nav-item:not(.active)").slideUp();
+  });
+
 });
