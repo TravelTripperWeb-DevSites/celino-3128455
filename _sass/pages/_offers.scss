@@ -20,7 +20,7 @@
     @include vertical-center;
     right: 0;
     left: 0;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     color: $white;
     text-shadow: 0 0 7px rgba($black, .35);
@@ -216,6 +216,7 @@
 .offer-detail {
   @include fixed-width-layout;
   padding-top: 55px;
+  padding-bottom: 55px;
 
   &__row {
     @include make-row;
@@ -224,8 +225,10 @@
 
   &__content {
     @include make-col-ready;
+    text-align: center;
     @include media-breakpoint-up(md) {
       @include make-col(8);
+      text-align: left;
     }
 
     h5 {
@@ -246,6 +249,7 @@
   }
 
   &__terms {
+    text-align: left;
     @include media-breakpoint-up(md) {
       max-width: 630px;
     }
@@ -274,9 +278,15 @@
 
   &__image {
     @include make-col-ready;
+    margin-top: 40px;
+    padding-top: 35px;
+    padding-bottom: 35px;
     text-align: center;
+    background-color: $lighter-gray;
     @include media-breakpoint-up(md) {
       @include make-col(4);
+      margin-top: 0;
+      background-color: transparent;
     }
 
     &__inner {
@@ -301,9 +311,12 @@
     }
 
     figure {
-      width: 245px;
-      margin: 0 auto 60px;
+      max-width: 245px;
+      margin: 0 auto 40px;
       border-radius: 50%;
+      @include media-breakpoint-up(md) {
+        margin: 0 auto 60px;
+      }
 
       img {
         width: 100%;

@@ -1,29 +1,93 @@
 ---
 layout: default
 title: Gallery
-meta_description:
+meta_description: Gallery
 permalink: /gallery/
 meta_tags:
   robots:
 ---
 
-{% comment %}
-
-  Name:
-
-    Gallery Page
-
-  Description:
-
-    Display gallery images from the media library.
-
-  Usage:
-
-    Create a new gallery from the 'manage galleries' tab, then display the
-    images by looping over the gallery items, referenced by the gallery name.
-
-    eg. {% for photo in site.data._galleries.GALLERY_NAME.photos %}
-          <img src="{{ photo.url }}" alt="{{ photo.description }}">
+<section class="page-banner">
+  <div id="pageBanner" class="carousel slide" data-ride="carousel">
+  {% assign banners = site.data._models.page-banners | where: 'page_name', 'Gallery' %}
+    {% for banner in banners | limit: 1 %}
+      <ol class="carousel-indicators">
+        {% for bannerimage in banner.image %}
+          <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}"  {% if forloop.first %}class="active"{% endif %}></li>
         {% endfor %}
+      </ol>
+      <div class="carousel-inner">
+        {% for bannerimage in banner.image %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <img src="{{ bannerimage.url_medium }}" alt="{{ bannerimage.alt }}">
+          </div>
+        {% endfor %}
+      </div>
+      <h1>{{ banner.banner_title }}</h1>
+    {% endfor %}
+  </div>
+</section>
 
-{% endcomment %}
+<section class="filter-nav bg-cover" style="background-image:url('/assets/images/rooms/filter-floral-bg.jpg');">
+  <ul>
+    <li><a href="" class="active">All</a></li>
+    <li><a href="">Lobby</a></li>
+    <li><a href="">Rooms & Suites</a></li>
+    <li><a href="">Amenities</a></li>
+    <li><a href="">Video</a></li>
+  </ul>
+</section>
+
+<section class="gallery-carousel">
+  <div id="galleryBanner" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/assets/images/gallery/gallery1.jpg" alt="Gallery">
+        <div class="caption">FLORIDITA SWIMMING POOL AREA</div>
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/images/gallery/gallery1.jpg" alt="Gallery">
+        <div class="caption">FLORIDITA SWIMMING POOL AREA</div>
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/images/gallery/gallery1.jpg" alt="Gallery">
+        <div class="caption">FLORIDITA SWIMMING POOL AREA</div>
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/images/gallery/gallery1.jpg" alt="Gallery">
+        <div class="caption">FLORIDITA SWIMMING POOL AREA</div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#galleryBanner" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#galleryBanner" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="gallery__row">
+    <div class="gallery__item">
+      <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
+    </div>
+    <div class="gallery__item">
+      <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
+    </div>
+    <div class="gallery__item">
+      <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
+    </div>
+    <div class="gallery__item">
+      <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
+    </div>
+    <div class="gallery__item">
+      <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
+    </div>
+    <div class="gallery__item">
+      <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
+    </div>
+  </div>
+</section>
