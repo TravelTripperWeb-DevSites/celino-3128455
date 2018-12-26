@@ -45,6 +45,28 @@ $(function() {
       }]
     });
 
+    //instagram gallery in footer
+  var instaurl = 'https://instafeed.traveltripper.io/u/thecelinohotel';
+	$.ajax({
+		url: instaurl,
+		jsonpCallback: 'callback',
+		dataType: "json",
+		success: function (response) {
+			setTimeout(function () {
+				$.each(response.medias, function (i, item) {
+          var imageIG = item.thumbnail;
+          var urlIG = 'https://www.instagram.com/p/' + item.shortcode;
+
+					if (i > 6) return false;
+          $('#instagram-photos').append('<div class="instagram-gallery__photo">'+
+            '<a href="'+ urlIG +'" target="_blank" rel="nofollow">'+
+              '<div class="instagram-gallery__photo__bg" style="background-image: url(\''+ imageIG + '\');"></div><img src="/assets/images/image-holder.png" alt="placeholder image">'+
+            '</a>'+
+          '</div>');
+				});
+			}, 1500);
+		}
+	}); //eof IG
 
 });
 
@@ -73,7 +95,7 @@ $(document).ready(function() {
     selector: ".item",
     thumbnail:true
   });
-  if(window.innerWidth < 768) {    
+  if(window.innerWidth < 768) {
     $(document).on("click", ".rooms-listing__main-filter__filter-items .nav-item.active", function() {
       $(".rooms-listing__main-filter__filter-items .nav-item").not('.active').slideToggle();
     });

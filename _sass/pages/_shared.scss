@@ -155,26 +155,71 @@
   &__title {
     @include make-col-ready();
     @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(lg) {
       @include make-col(3);
+      font-size: $type-size-7;
     }
     margin-top: 18px;
-    font-size: $type-size-1;
+    font-size: $type-size-12;
     font-weight: 900;
-    color: $gold-color;
+    color: $dark-blue-color;
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: rem-calc(20);
+
+    .svg-inline--fa {
+      color: $gold-color;
+    }
   }
   &__image-bg {
     @include make-col-ready();
     @include media-breakpoint-up(md) {
-      @include make-col(9);
+      @include make-col(6);
     }
-    min-height: 81px;
+    @include media-breakpoint-up(lg) {
+      @include make-col(9);
+      min-height: 81px;
+    }
+
+    min-height: 32px;
     margin-top: 28px;
     margin-bottom: 28px;
     padding: 20px 0;
     background: url('/assets/images/floral_image-instagram.jpg') repeat-x;
     @include bg-cover;
+  }
+
+  &__photo {
+    position: relative;
+    @include make-col-ready();
+    @include make-col(6);
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(2);
+    }
+
+    padding: 0;
+    overflow: hidden;
+
+    &__bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      @include bg-cover;
+      transition: $global-transition;
+      transform: scale(1.02);
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    img {
+      width: 100%;
+    }
   }
 }
