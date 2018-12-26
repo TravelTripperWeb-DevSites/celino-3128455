@@ -1,4 +1,90 @@
 // Footer Elements
 // ==========================================================================
 
-// For sticky footer see https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+footer {
+  position: relative;
+  padding: rem-calc(103) 0 rem-calc(90);
+  background-image: url('/assets/images/floral-bg.jpg');
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    background-color: rgba($dark-blue-color,.8);
+  }
+
+  .footer {
+    position: relative;
+    @include fixed-width-layout;
+    color: $white;
+
+    &__wrap {
+      @include make-row();
+    }
+
+    &__contact,
+    &__inquiries,
+    &__logo,
+    &__social {
+      @include make-col-ready();
+      @include media-breakpoint-up(md) {
+        @include make-col(3);
+      }
+      line-height: 24px;
+
+      h5 {
+        margin: 0;
+        font-size: $type-size-13;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: .01rem;
+        span {
+          display: inline-block;
+          font-weight: 400;
+          text-transform: none;
+          @include media-breakpoint-up(md) {
+            display: block;
+          }
+        }
+      }
+      p {
+        max-width: 242px;
+        font-size: $type-size-13;
+        font-weight: 400;
+      }
+      a {
+        color: $white;
+      }
+    }
+    &__logo {
+      padding-top: 1rem;
+      img {
+        width: 219px;
+        max-width: 100%;
+      }
+    }
+    &__social {
+      display: flex;
+      flex-grow: 1;
+
+      &__col {
+        flex: 0 50%;
+
+        &--right {
+          text-align: right;
+        }
+      }
+      .svg-inline--fa {
+        margin-right: 12px;
+        font-size: $type-size-10;
+        color: $gold-color;
+      }
+      .social-icons {
+        padding-top: 1rem;
+      }
+    }
+  }
+}
