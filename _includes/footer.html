@@ -1,14 +1,53 @@
-<div class="container d-flex justify-content-between">
-  <div class="social-icons">
-    {% if site.data.ui-text[site.default_lang].follow_label %}
-      <strong>{{ site.data.ui-text[site.default_lang].follow_label }}</strong>
-    {% endif %}
-    {% if site.data.social.twitter.username %}
-      <a href="https://twitter.com/{{ site.data.social.twitter.username }}"><i class="fab fa-twitter-square" aria-hidden="true"></i> Twitter</a>
-    {% endif %}
-    {% if site.data.social.facebook.username %}
-      <a href="https://facebook.com/{{ site.data.social.facebook.username }}"><i class="fab fa-facebook-square" aria-hidden="true"></i> Facebook</a>
-    {% endif %}
-  </div>
-  <span class="text-muted">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}</span>
-</div>
+ <div class="footer">
+   <div class="footer__wrap">
+     <div class="footer__logo">
+       <img src="/assets/images/celino-logo.png" alt="{{ site.name }}">
+     </div>
+     <div class="footer__contact">
+       <h5>Contact</h5>
+       <p>640 Ocean Drive, Miami Beach, Florida 33139 <br>
+         (p): <a href="tel:786.574.4090">786.574.4090</a>
+       </p>
+     </div>
+     <div class="footer__inquiries">
+       <h5>Inquiries</h5>
+       <p>General: <a href="mailto:info@thecelinohotel.com">info@thecelinohotel.com</a> <br>
+          Sales: <a href="mailto:sales@thecelinohotel.com">sales@thecelinohotel.com</a> <br>
+          PR: <a href="mailto:theCelino@Quinn.PR">theCelino@Quinn.PR</a>
+       </p>
+     </div>
+     <div class="footer__social">
+
+       <div class="footer__social__col">
+         <h5>Follow Us <span>@CelinoHotel</span></h5>
+         <p class="social-icons">
+          {% if site.data.social.twitter.username %}
+          <a href="https://instagram.com/{{ site.data.social.instagram.username }}"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          {% endif %}
+          {% if site.data.social.facebook.username %}
+          <a href="https://facebook.com/{{ site.data.social.facebook.username }}"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
+          {% endif %}
+          {% if site.data.social.twitter.username %}
+          <a href="https://twitter.com/{{ site.data.social.twitter.username }}"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+          {% endif %}
+        </p>
+       </div>
+       <div class="footer__social__col footer__social__col--right">
+         <a href="https://highgate.com/" rel="nofollow" target="_blank">
+           <img src="/assets/images/highgate_logo.png" alt="highgate">
+         </a>
+       </div>
+     </div>
+   </div>
+ </div>
+  <!-- {% if site.data.ui-text[site.default_lang].follow_label %}
+    <strong>{{ site.data.ui-text[site.default_lang].follow_label }}</strong>
+  {% endif %}
+  {% if site.data.social.twitter.username %}
+    <a href="https://twitter.com/{{ site.data.social.twitter.username }}"><i class="fab fa-twitter-square" aria-hidden="true"></i> Twitter</a>
+  {% endif %}
+  {% if site.data.social.facebook.username %}
+    <a href="https://facebook.com/{{ site.data.social.facebook.username }}"><i class="fab fa-facebook-square" aria-hidden="true"></i> Facebook</a>
+  {% endif %}
+
+  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }} -->
