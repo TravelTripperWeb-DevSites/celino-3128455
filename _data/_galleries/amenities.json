@@ -1,7 +1,26 @@
 {
   "name": "Amenities",
   "photos": [
-
+    {
+      "name": "gallery",
+      "file_name": "gallery.jpg",
+      "url": "//cdn.traveltripper.io/site-assets/192_424_22302/media/2018-12-26-041042/gallery.jpg",
+      "tags": "",
+      "description": "",
+      "date_added": "2018-12-26-041042",
+      "file_type": "image/jpeg",
+      "width": 480,
+      "height": 314,
+      "file_size": 112253,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_424_22302/media/2018-12-26-041042/large_gallery.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22302/media/2018-12-26-041042/medium_gallery.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_424_22302/media/2018-12-26-041042/small_gallery.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22302/media/2018-12-26-041042/xsmall_gallery.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22302/media/2018-12-26-041042/thumb_gallery.jpg",
+      "git_file_name": "_assets/image_data/gallery.json",
+      "path": "//cdn.traveltripper.io/site-assets/192_424_22302/media/2018-12-26-041042/gallery.jpg",
+      "alt": "gallery"
+    }
   ],
   "description": ""
 }
