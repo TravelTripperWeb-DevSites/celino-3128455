@@ -267,7 +267,6 @@
 
 .dine-intro {
   @include make-container();
-
   &__wrap {
     @include make-row();
     &--even {
@@ -357,9 +356,21 @@
           height: 3px;
           margin-bottom: 2rem;
         }
+        &.full {
+          @include media-breakpoint-down(md) {
+            width: 100%;
+          }
+        }
       }
 
     }
   }
-
+  // dining page responsives
+  &--space {
+    padding: 0 15px;
+    background-color: $light-gray;
+    @include media-breakpoint-down(md) {
+      padding: 40px 35px 0;
+    }
+  }
 }

@@ -2,7 +2,7 @@
 // ==========================================================================
 
 
-.dine-intro {
+.dine {
   @include fixed-width-layout;
   max-width: 1250px;
   margin-top: 18px;
@@ -37,12 +37,13 @@
       position: relative;
       margin: 0 0 20px;
       padding-bottom: 10px;
-      font-size: $type-size-4;
+      font-size: $type-size-10;
       color: $dark-blue-color;
 
       @include media-breakpoint-up(md) {
         margin: 0 0 40px;
         padding-bottom: 40px;
+        font-size: $type-size-4;
       }
 
       &:after {
@@ -76,6 +77,7 @@
 
   &__image {
     @include make-col-ready;
+    position: relative;
     padding: 0 35px;
     @include media-breakpoint-up(md) {
       @include make-col(4.5);
@@ -84,46 +86,23 @@
 
     &__floral-bg {
       max-width: 85%;
-
+      object-fit: cover;
       @include media-breakpoint-up(md) {
         max-width: 90%;
-
-      }
-      img {
-        width: 100%;
-        object-fit: cover;
-        @include media-breakpoint-up(md) {
-          max-width: 90%;
-
-        }
+        height: 100%;
       }
     }
 
     &__inner-image {
-      //@include vertical-center;
-      position: absolute;
-      top: 26px;
+      @include vertical-center;
       right: 30px;
       max-width: 75%;
+      height: 90%;
+      object-fit: cover;
       @include media-breakpoint-up(md) {
-        position: absolute;
-        top: 26px;
-        right: 15px;
+        right: 0;
         max-width: 90%;
       }
-      img {
-        width: 100%;
-        object-fit: cover;
-        @include media-breakpoint-up(md) {
-          max-width: 90%;
-        }
-      }
-    }
-    .button--arrow {
-      position: relative;
-      bottom: 36px;
-      min-width: 327px;
-      margin-left: 31px;
     }
   }
 
