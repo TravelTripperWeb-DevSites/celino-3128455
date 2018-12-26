@@ -77,7 +77,7 @@ meta_tags:
       {% assign catname = category[0] %}
         {% for photo in site.data._galleries[catname].photos %}
           <div class="gallery__item item fancybox" data-filter="{{ catname }}" data-src="{% if photo.url_large %}{{ photo.url_large }}{% else %}{{ photo.url }}{% endif %}" data-exthumbimage="{% if photo.url_medium %}{{ photo.url_medium }}{% else %}{{ photo.url }}{% endif %}" >
-            <img src="{{ photo.url_small }}" alt="{{ photo.url_small.alt }}">
+            <img src="{{ photo.url_small }}" alt="{{ photo.alt }}">
           </div>
         {% endfor %}
       {% endfor %}
