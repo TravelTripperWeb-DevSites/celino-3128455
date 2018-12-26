@@ -1,15 +1,22 @@
 .button {
   display: inline-block;
-  min-width: 190px;
-  padding: 16px 38px;
-  font-size: $type-size-12;
+  min-width: 120px;
+  padding: 15px 18px;
+  font-size: $type-size-16;
   font-weight: 800;
   color: $white;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: .25rem;
+  letter-spacing: .05rem;
   background-color: $purple-color;
   transition: $global-transition;
+
+  @include media-breakpoint-up(md) {
+    min-width: 190px;
+    padding: 16px 38px;
+    font-size: $type-size-12;
+    letter-spacing: .25rem;
+  }
 
   &:hover {
     color: $white;
@@ -23,34 +30,48 @@
 
   &--arrow {
     position: relative;
-    min-width: 150px;
-    margin-right: 54px;
-    padding: 16px 19px;
+    min-width: 120px;
+    margin-right: 39px;
+    padding: 15px 19px;
     background-color: $dark-blue-color;
-
+    @include media-breakpoint-up(md) {
+      min-width: 150px;
+      margin-right: 54px;
+      padding: 16px 19px;
+    }
     &:after {
       position: absolute;
       top: 0;
-      right: -54px;
+      right: -39px;
       bottom: 0;
-      width: 54px;
+      width: 39px;
       content: '';
       background-color: $purple-color;
       transition: $global-transition;
+      @include media-breakpoint-up(md) {
+        right: -54px;
+        width: 54px;
+      }
     }
 
     &:before {
       position: absolute;
       top: 16px;
-      right: -32px;
+      right: -22px;
       bottom: 10px;
       z-index: 1;
-      width: 22px;
-      height: 22px;
+      width: 12px;
+      height: 12px;
       content: '';
       border-top: 2px solid $white;
       border-right: 2px solid $white;
       transform: rotate(45deg);
+      @include media-breakpoint-up(md) {
+        top: 16px;
+        right: -32px;
+        width: 22px;
+        height: 22px;
+      }
     }
 
     &:hover {
