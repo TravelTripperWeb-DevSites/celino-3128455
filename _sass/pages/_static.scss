@@ -1,0 +1,40 @@
+// Static Page Elements
+// ==========================================================================
+
+.static-content {
+  @include fixed-width-layout;
+  padding: 35px;
+  @include media-breakpoint-up(lg) {
+    padding: 50px 15px;
+  }
+  .sitemap {
+    max-width: 200px;
+    margin: 0 auto;
+    a {
+      color: $light-text;
+    }
+  }
+  ul {
+    margin-left: 30px;
+    padding: 0;
+    li {
+      position: relative;
+      display: block;
+      padding-left: 14px;
+      font-family: $text-font;
+      font-size: $type-size-12;
+      font-weight: 400;
+      line-height: 2.188rem;
+      color: $light-text;
+      &::before {
+        position: absolute;
+        top: 14px;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        content: '';
+        background-color: $gold-color;
+      }
+    }
+  }
+}
