@@ -13,7 +13,7 @@
   &--inner {
     max-height: 600px;
   }
-  
+
   &__detail {
     max-width: 240px;
     margin: 0 auto;
@@ -94,7 +94,7 @@
 
       &.slick-next {
         position: absolute;
-        top: 49%;
+        top: 40%;
         right: -15px;
         left: auto;
         @include media-breakpoint-up(md) {
@@ -108,7 +108,7 @@
 
       &.slick-prev {
         position: absolute;
-        top: 49%;
+        top: 40%;
         right: auto;
         left: -15px;
         @include media-breakpoint-up(md) {
@@ -126,6 +126,13 @@
       padding: 0 20px 30px;
     }
 
+    h4 {
+      @include media-breakpoint-up(md) {
+        margin-top: 18px;
+        font-size: $type-size-10;
+      }
+    }
+
     .button {
       position: absolute;
       right: 0;
@@ -136,5 +143,38 @@
       margin: 0 auto;
       padding: 16px 22px;
     }
+  }
+}
+
+.instagram-gallery {
+  @include make-container();
+
+  &__wrap {
+    @include make-row();
+  }
+  &__title {
+    @include make-col-ready();
+    @include media-breakpoint-up(md) {
+      @include make-col(3);
+    }
+    margin-top: 18px;
+    font-size: $type-size-1;
+    font-weight: 900;
+    color: $gold-color;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: rem-calc(20);
+  }
+  &__image-bg {
+    @include make-col-ready();
+    @include media-breakpoint-up(md) {
+      @include make-col(9);
+    }
+    min-height: 81px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    padding: 20px 0;
+    background: url('/assets/images/floral_image-instagram.jpg') repeat-x;
+    @include bg-cover;
   }
 }
