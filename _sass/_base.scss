@@ -99,8 +99,11 @@ del a {
 // Links
 
 a {
+  color: $dark-blue-color;
   &:hover,
   &:active {
+    color: $dark-blue-color;
+    text-decoration: none;
     outline: 0;
   }
 }
