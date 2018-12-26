@@ -29,13 +29,14 @@ meta_tags:
 </section>
 
 <section class="filter-nav bg-cover" style="background-image:url('/assets/images/rooms/filter-floral-bg.jpg');">
-  <ul>
-    <li><a href="" class="active">All</a></li>
-    <li><a href="">Lobby</a></li>
-    <li><a href="">Rooms & Suites</a></li>
-    <li><a href="">Amenities</a></li>
-    <li><a href="">Video</a></li>
-  </ul>
+  {% assign categories = site.data._galleries | sort: sort_order %}
+    <ul>
+      <li><a href="javascript:void(0);" class="filter active" data-filter="all">All</a></li>
+      {% for category in categories %}
+       {% assign catname = category[0] %}
+        <li><a href="javascript:void(0);" class="filter" data-filter="{{ catname }}">{{ site.data._galleries[catname].name }}</a></li>
+      {% endfor %}
+    </ul>
 </section>
 
 <section class="gallery-carousel">
@@ -70,24 +71,15 @@ meta_tags:
 </section>
 
 <section class="gallery">
-  <div class="gallery__row">
-    <div class="gallery__item">
-      <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
-    </div>
-    <div class="gallery__item">
-      <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
-    </div>
-    <div class="gallery__item">
-      <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
-    </div>
-    <div class="gallery__item">
-      <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
-    </div>
-    <div class="gallery__item">
-      <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
-    </div>
-    <div class="gallery__item">
-      <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
-    </div>
-  </div>
+  {% assign categories = site.data._galleries %}
+    <div class="gallery__row" id="lightgallery">
+      {% for category in categories %}
+      {% assign catname = category[0] %}
+        {% for photo in site.data._galleries[catname].photos %}
+          <div class="gallery__item item fancybox" data-filter="{{ catname }}" data-src="{% if photo.url_large %}{{ photo.url_large }}{% else %}{{ photo.url }}{% endif %}" data-exthumbimage="{% if photo.url_medium %}{{ photo.url_medium }}{% else %}{{ photo.url }}{% endif %}" >
+            <img src="{{ photo.url_small }}" alt="{{ photo.url_small.alt }}">
+          </div>
+        {% endfor %}
+      {% endfor %}
+     </div>
 </section>
