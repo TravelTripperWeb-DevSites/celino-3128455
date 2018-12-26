@@ -1,28 +1,82 @@
 ---
 layout: default
-title: Dining
+title: Dine & Drink
 meta_description:
-permalink: /dining/
+permalink: /dine-drink/
 meta_tags:
   robots:
 ---
 
-{% comment %}
+<section class="page-banner">
+  <div id="pageBanner" class="carousel slide" data-ride="carousel">
+  {% assign banners = site.data._models.page-banners | where: 'page_name', 'Dine & Drink' %}
+    {% for banner in banners | limit: 1 %}
+      <ol class="carousel-indicators">
+        {% for bannerimage in banner.image %}
+          <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}"  {% if forloop.first %}class="active"{% endif %}></li>
+        {% endfor %}
+      </ol>
+      <div class="carousel-inner">
+        {% for bannerimage in banner.image %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <img src="{{ bannerimage.url_medium }}" alt="{{ bannerimage.alt }}">
+          </div>
+        {% endfor %}
+      </div>
+      <h1>{{ banner.banner_title }}</h1>
+    {% endfor %}
+  </div>
+</section>
 
-  Name:
 
-    Dining Page
+<section class="dine-intro">
+  <div class="dine-intro__inner">
+    <div class="dine-intro__text">
+      <h2>CUISINE IN THE HEART OF MIAMI</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu is nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste </p>
+    </div>
 
-  Description:
-
-    Static content that can be modified by editable regions.
-
-  Usage:
-
-    Text   - {% regionblock region_name, type:html %}{% endregionblock %}
-
-    Header - {% regionblock region_name, type:header %}{% endregionblock %}
-
-    Image  - {% regionblock region_name, type:image %}{% endregionblock %}
-
-{% endcomment %}
+    <div class="dine-intro__image">
+        <div class="dine-intro__image__floral-bg">
+      {% regionblock intro-image-bg, type:image %}
+        <img src="/assets/images/dine/pattern.jpg"  alt="Floral Background">
+      {% endregionblock %}
+      </div>
+      <div class="dine-intro__image__inner-image">
+      {% regionblock intro-image, type:image %}
+        <img src="/assets/images/dine/intro.jpg" alt="Man Sitting" >
+      {% endregionblock %}
+      </div>
+      <a href="/contact/" class="button button--arrow">RESERVE TABLE here</a>
+    </div>
+  </div>
+</section>
+<!-- <section class="restaurant">
+  <div class="restaurant__wrapper">
+    <div class="restaurant__image col-md-6"><img src="/assets/images/dine/salte.jpg"/ alt"salte"></div>
+      <div class="restaurant__info align-self-center">
+        <div class="restaurant__info__text">
+          <h4>Salte</h4>
+          <p>Salte offers Italian inspired cuisine in a stylishly elegant setting. Using the freshest and finest ingredients, Salte offers a distinctive take on Italian cuisine using contemporary techniques and features such as, house-made ricotta, wood-fired pizzas, and made-from-scratch pastas. At Salte, our approach is simple; source the best ingredients possible and prepare them in an uncomplicated and modern way.</p>
+          <a href="/contact/" class="button button--arrow">LEARN MORE</a>
+        </div>
+      </div>
+  </div>
+  <div class="restaurant__wrapper flex-row-reverse">
+    <div class="restaurant__image col-md-6"><img src="/assets/images/dine/salte.jpg"/ alt"salte"></div>
+      <div class="restaurant__info align-self-center">
+        <div class="restaurant__info__text--right">
+          <h4>Salte</h4>
+          <p>Salte offers Italian inspired cuisine in a stylishly elegant setting. Using the freshest and finest ingredients, Salte offers a distinctive take on Italian cuisine using contemporary techniques and features such as, house-made ricotta, wood-fired pizzas, and made-from-scratch pastas. At Salte, our approach is simple; source the best ingredients possible and prepare them in an uncomplicated and modern way.</p>
+          <a href="/contact/" class="button button--arrow">LEARN MORE</a>
+        </div>
+      </div>
+  </div>
+</section> -->
+<section class="virtual-tour d-flex align-items-center">
+  <img src="/assets/images/dine/cta.jpg" alt="GET IN TOUCH">
+  <div class="virtual-tour__content">
+    <h3>Host your events<br>at Celino</h3>
+    <a href="/contact/" class="button button--arrow button--arrow--gold">GET IN TOUCH</a>
+  </div>
+</section>

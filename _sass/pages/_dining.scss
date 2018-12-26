@@ -1,2 +1,130 @@
 // Dining Page Elements
 // ==========================================================================
+
+
+.dine-intro {
+  @include fixed-width-layout;
+  max-width: 1250px;
+  margin-top: 18px;
+  margin-bottom: 40px;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 53px;
+    margin-bottom: 58px;
+  }
+
+  &__inner {
+    @include make-row();
+  }
+
+  &__text {
+    @include make-col-ready;
+    margin-bottom: 30px;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      @include make-col(7.5);
+      margin-bottom: 0;
+      padding-right: 30px;
+      text-align: left;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding-right: 162px;
+    }
+
+    h2 {
+      position: relative;
+      margin: 0 0 20px;
+      padding-bottom: 10px;
+      font-size: $type-size-4;
+      color: $dark-blue-color;
+
+      @include media-breakpoint-up(md) {
+        margin: 0 0 40px;
+        padding-bottom: 40px;
+      }
+
+      &:after {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 80px;
+        height: 2px;
+        content: '';
+        background-color: $gold-color;
+        transform: translateX(-50%);
+
+        @include media-breakpoint-up(md) {
+          left: 0;
+          width: 80px;
+          height: 2px;
+          transform: translateX(0);
+        }
+      }
+    }
+    p {
+      &:nth-child(3) {
+        margin-bottom: 26px;
+
+        @include media-breakpoint-up(md) {
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+
+  &__image {
+    @include make-col-ready;
+    padding: 0 35px;
+    @include media-breakpoint-up(md) {
+      @include make-col(4.5);
+      padding: 0;
+    }
+
+    &__floral-bg {
+      max-width: 85%;
+
+      @include media-breakpoint-up(md) {
+        max-width: 90%;
+
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        @include media-breakpoint-up(md) {
+          max-width: 90%;
+
+        }
+      }
+    }
+
+    &__inner-image {
+      //@include vertical-center;
+      position: absolute;
+      top: 26px;
+      right: 30px;
+      max-width: 75%;
+      @include media-breakpoint-up(md) {
+        position: absolute;
+        top: 26px;
+        right: 15px;
+        max-width: 90%;
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        @include media-breakpoint-up(md) {
+          max-width: 90%;
+        }
+      }
+    }
+    .button--arrow {
+      position: relative;
+      bottom: 36px;
+      min-width: 327px;
+      margin-left: 31px;
+    }
+  }
+
+}
