@@ -9,7 +9,7 @@ meta_tags:
 
 <section class="page-banner">
   <div id="pageBanner" class="carousel slide" data-ride="carousel">
-  {% assign banners = site.data._models.page-banners | where: 'page_name', 'Contact' %}
+  {% assign banners = site.data._models.page-banners | where: 'page_name', 'Explore' %}
     {% for banner in banners | limit: 1 %}
       <ol class="carousel-indicators">
         {% for bannerimage in banner.image %}
@@ -19,7 +19,7 @@ meta_tags:
       <div class="carousel-inner">
         {% for bannerimage in banner.image %}
           <div class="carousel-item {% if forloop.first %}active{% endif %}">
-            <img src="{{ bannerimage.url_medium }}" alt="{{ bannerimage.alt }}">
+            <img src="{{ bannerimage.url_large }}" alt="{{ bannerimage.alt }}">
           </div>
         {% endfor %}
       </div>
