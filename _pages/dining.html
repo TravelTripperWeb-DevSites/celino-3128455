@@ -1,28 +1,106 @@
 ---
 layout: default
-title: Dining
+title: Dine & Drink
 meta_description:
-permalink: /dining/
+permalink: /dine-drink/
 meta_tags:
   robots:
 ---
 
-{% comment %}
+<section class="page-banner">
+  <div id="pageBanner" class="carousel slide" data-ride="carousel">
+  {% assign banners = site.data._models.page-banners | where: 'page_name', 'Dine & Drink' %}
+    {% for banner in banners | limit: 1 %}
+      <ol class="carousel-indicators">
+        {% for bannerimage in banner.image %}
+          <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}"  {% if forloop.first %}class="active"{% endif %}></li>
+        {% endfor %}
+      </ol>
+      <div class="carousel-inner">
+        {% for bannerimage in banner.image %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <img src="{{ bannerimage.url_medium }}" alt="{{ bannerimage.alt }}">
+          </div>
+        {% endfor %}
+      </div>
+      <h1>{{ banner.banner_title }}</h1>
+    {% endfor %}
+  </div>
+</section>
 
-  Name:
 
-    Dining Page
+<section class="dine">
+  <div class="dine__inner">
+    <div class="dine__text">
+      <h2>CUISINE IN THE HEART OF MIAMI</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu is nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste </p>
+    </div>
 
-  Description:
+    <div class="dine__image">
+      {% regionblock intro-image-bg, type:image %}
+        <img src="/assets/images/dine/pattern.jpg" class="dine__image__floral-bg" alt="Floral Background">
+      {% endregionblock %}
+      {% regionblock intro-image, type:image %}
+        <img src="/assets/images/dine/intro.jpg" alt="Man Sitting" class="dine__image__inner-image">
+      {% endregionblock %}
+    </div>
 
-    Static content that can be modified by editable regions.
+  </div>
+</section>
 
-  Usage:
 
-    Text   - {% regionblock region_name, type:html %}{% endregionblock %}
+<section class="dine-intro--space">
+  <div class="dine-intro__wrap">
+    <div class="dine-intro__image">
+      <img src="/assets/images/dine/salte.jpg" alt="Salte">
+    </div>
+    <div class="dine-intro__detail  align-self-center">
+      <article>
+        <h5>Salte</h5>
+        <hr class="full">
+        <p>Salte offers Italian inspired cuisine in a stylishly elegant setting. Using the freshest and finest ingredients, Salte offers a distinctive take on Italian cuisine using contemporary techniques and features such as, house-made ricotta, wood-fired pizzas, and made-from-scratch pastas. At Salte, our approach is simple; source the best ingredients possible and prepare them in an uncomplicated and modern way.</p>
+        <p>
+          <a href="#" class="button button--arrow">Learn More</a>
+        </p>
+      </article>
+    </div>
+  </div>
+  <div class="dine-intro__wrap dine-intro__wrap--even">
+    <div class="dine-intro__image">
+      <img src="/assets/images/dine/salte.jpg" alt="Salte">
+    </div>
+    <div class="dine-intro__detail  align-self-center">
+      <article>
+        <h5>Salte</h5>
+        <hr class="full">
+        <p>Salte offers Italian inspired cuisine in a stylishly elegant setting. Using the freshest and finest ingredients, Salte offers a distinctive take on Italian cuisine using contemporary techniques and features such as, house-made ricotta, wood-fired pizzas, and made-from-scratch pastas. At Salte, our approach is simple; source the best ingredients possible and prepare them in an uncomplicated and modern way.</p>
+        <p>
+          <a href="#" class="button button--arrow">Reserve Now</a>
+        </p>
+      </article>
+    </div>
+  </div>
+  <div class="dine-intro__wrap">
+    <div class="dine-intro__image">
+      <img src="/assets/images/dine/salte.jpg" alt="Salte">
+    </div>
+    <div class="dine-intro__detail align-self-center">
+      <article >
+        <h5>Salte</h5>
+        <hr class="full">
+        <p>Salte offers Italian inspired cuisine in a stylishly elegant setting. Using the freshest and finest ingredients, Salte offers a distinctive take on Italian cuisine using contemporary techniques and features such as, house-made ricotta, wood-fired pizzas, and made-from-scratch pastas. At Salte, our approach is simple; source the best ingredients possible and prepare them in an uncomplicated and modern way.</p>
+        <p>
+          <a href="#" class="button button--arrow">Reserve Now</a>
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
 
-    Header - {% regionblock region_name, type:header %}{% endregionblock %}
-
-    Image  - {% regionblock region_name, type:image %}{% endregionblock %}
-
-{% endcomment %}
+<section class="virtual-tour d-flex align-items-center">
+  <img src="/assets/images/dine/cta.jpg" alt="GET IN TOUCH">
+  <div class="virtual-tour__content">
+    <h3>Host your events<br>at Celino</h3>
+    <a href="/contact/" class="button button--arrow button--arrow--gold">GET IN TOUCH</a>
+  </div>
+</section>
