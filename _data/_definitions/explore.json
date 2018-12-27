@@ -1,0 +1,38 @@
+{
+  "name": {
+    "required": true
+  },
+  "short_detail": {
+    "required": true
+  },
+  "detail": {
+    "required": true,
+    "type": "richtext"
+  },
+  "image": {
+    "type": "image",
+    "required": true
+  },
+  "Lat": {
+    "required": true
+  },
+  "Long": {
+    "required": true
+  },
+  "categories": {
+    "type": "select",
+    "options": ["attractions","shopping","dining","nightlife","culture"]
+  },
+  "url_friendly_name": {
+    "label": "URL Friendly Name",
+    "type": "url_slug"
+  },
+  "title": {
+    "label": "Seo Title",
+    "required": true
+  },
+  "meta_description": {
+    "label": "Seo Description",
+    "required": true
+  }
+}
