@@ -166,5 +166,25 @@
       "alt": "iconik-banner",
       "caption": ""
     }
-  ]
+  ],
+  "dine_image": {
+    "name": "iconik",
+    "file_name": "iconik.jpg",
+    "url": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041447/iconik.jpg",
+    "tags": "",
+    "description": "",
+    "date_added": "2018-12-27-041447",
+    "file_type": "image/jpeg",
+    "width": 722,
+    "height": 379,
+    "file_size": 248899,
+    "url_large": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041447/large_iconik.jpg",
+    "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041447/medium_iconik.jpg",
+    "url_small": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041447/small_iconik.jpg",
+    "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041447/xsmall_iconik.jpg",
+    "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041447/thumb_iconik.jpg",
+    "path": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041447/iconik.jpg",
+    "alt": "iconik",
+    "caption": ""
+  }
 }
