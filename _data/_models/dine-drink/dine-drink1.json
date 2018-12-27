@@ -187,5 +187,19 @@
     "path": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041447/iconik.jpg",
     "alt": "iconik",
     "caption": ""
-  }
+  },
+  "menu_items": [
+    {
+      "name": "Brunch MENU",
+      "detail": "/"
+    },
+    {
+      "name": "Wine MENU",
+      "detail": "/"
+    },
+    {
+      "name": "DINNER MENU",
+      "detail": "/"
+    }
+  ]
 }

@@ -7,7 +7,7 @@ layout: default
       <ol class="carousel-indicators">
         {% for image in page.image %}
         <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}"{% if forloop.first %} class="active"{% endif %}></li>
-      {% endfor %}
+        {% endfor %}
       </ol>
       <div class="carousel-inner">
         {% for image in page.image %}
@@ -39,9 +39,7 @@ layout: default
   <img src="/assets/images/dine/cta-details.jpg" alt="GET IN TOUCH">
   <div class="cta__content">
     <h3>Premium food<br>from day to night</h3>
-
-
-    {% for menu in item.menu_items %}
+    {% for menu in page.menu_items %}
      <a href="{{menu.detail}}" class="button"> {{menu.name}} </a>
     {% endfor %}
     <!-- <a href="/contact/" class="button">Brunch MENU</a>

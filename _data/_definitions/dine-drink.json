@@ -41,10 +41,12 @@
     "hint": "Enter Menu Name. Click on 'Add New Menu Items' below to add more Menu Titles.",
     "fields": {
        "name": {
+         "label": "Menu Title",
          "type": "text",
          "hint": "Please add Menu Title Ex: Brunch Menu"
        },
        "detail": {
+        "label": "Menu URL",
         "type": "text",
         "hint": "Please add URL"
        }
