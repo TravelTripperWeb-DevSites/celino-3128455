@@ -39,9 +39,14 @@ layout: default
   <img src="/assets/images/dine/cta-details.jpg" alt="GET IN TOUCH">
   <div class="cta__content">
     <h3>Premium food<br>from day to night</h3>
-    <a href="/contact/" class="button">Brunch MENU</a>
+
+
+    {% for menu in item.menu_items %}
+     <a href="{{menu.detail}}" class="button"> {{menu.name}} </a>
+    {% endfor %}
+    <!-- <a href="/contact/" class="button">Brunch MENU</a>
     <a href="/contact/" class="button">Lunch  MENU</a>
-    <a href="/contact/" class="button">Dinner MENU</a>
+    <a href="/contact/" class="button">Dinner MENU</a> -->
   </div>
 </section>
 
@@ -84,11 +89,11 @@ layout: default
       {% assign offerslist = site.data._models.dine-offers %}
       {% for offer in offerslist %}
       <div>
-        <a href="#"><img src="/assets/images/dine/offer.jpg" alt="Thanksgiving Plan"></a>
+        <a href="#"><img src="{{ offer.dine_image.url_medium }}" alt="Thanksgiving Plan"></a>
         <div class="offers-slider__detail">
-          <h4><a href="#">{{offer.title}}</a></h4>
-          {{offer.description}}
-          <a href="{{offer.link}}" class="button">Learn More</a>
+          <h4><a href="#">{{ offer.title }}</a></h4>
+          {{ offer.description }}
+          <a href="{{ offer.link }}" class="button">Learn More</a>
         </div>
       </div>
       {% endfor %}

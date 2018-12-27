@@ -34,6 +34,22 @@
     "label": "URL Friendly Name",
     "required": true
   },
+
+  "menu_items": {
+    "type": "nested",
+    "multiple": true,
+    "hint": "Enter Menu Name. Click on 'Add New Menu Items' below to add more Menu Titles.",
+    "fields": {
+       "name": {
+         "type": "text",
+         "hint": "Please add Menu Title Ex: Brunch Menu"
+       },
+       "detail": {
+        "type": "text",
+        "hint": "Please add URL"
+       }
+     }
+  },
   "gallery": {
     "label": "Dine Gallery Image",
     "type": "image",
