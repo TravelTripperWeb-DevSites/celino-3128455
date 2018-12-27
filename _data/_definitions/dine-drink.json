@@ -6,7 +6,7 @@
   "dine_image": {
     "label": "Dine Images",
     "type": "image",
-    "required": true,
+    "required": true
   },
   "image": {
     "label": "Dine Banner Images",
