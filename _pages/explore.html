@@ -1,0 +1,54 @@
+---
+layout: default
+title: Explore | Celino Hotel South Beach
+meta_description:
+permalink: /explore/
+meta_tags:
+  robots:
+---
+
+<section class="page-banner">
+  <div id="pageBanner" class="carousel slide" data-ride="carousel">
+  {% assign banners = site.data._models.page-banners | where: 'page_name', 'Contact' %}
+    {% for banner in banners | limit: 1 %}
+      <ol class="carousel-indicators">
+        {% for bannerimage in banner.image %}
+          <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}"  {% if forloop.first %}class="active"{% endif %}></li>
+        {% endfor %}
+      </ol>
+      <div class="carousel-inner">
+        {% for bannerimage in banner.image %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <img src="{{ bannerimage.url_medium }}" alt="{{ bannerimage.alt }}">
+          </div>
+        {% endfor %}
+      </div>
+      <h1>{{ banner.banner_title }}</h1>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="luxury-intro">
+  <div class="luxury-intro__wrap">
+    <div class="luxury-intro__photo">
+      <figure>
+        {% regionblock luxury_photo, type:image %}
+        <img src="/assets/images/explore/couple-south-beach.jpg" alt="South Beaches in Miami for Couples">
+        {% endregionblock %}
+      </figure>
+    </div>
+    <div class="luxury-intro__detail">
+      <article>
+        {% regionblock luxury_detail, type:text %}
+        <h2>LOREM IPSUM</h2>
+        <hr>
+        <p>The Celino brings a new lifestyle of indulgence to South Beach, a personality rich in fashion fused with Latin charisma and tropical class, a vibrant reinterpretation of a party that happened on New Year’s Eve 1940. By bridging the historic Park Central Hotel with a fully modern, loft-style, ocean front oasis, a new standard of luxury will be set on Ocean Drive. The Celino will encompass the ambiance of timeless allure and transform itself into a memorable destination for entertainment and noteworthy moments. Get your dancing shoes ready!</p>
+
+        <a href="#" class="button button--arrow button--arrow--gold">Amenities</a>
+        {% endregionblock %}
+      </article>
+    </div>
+  </div>
+</section>
+
+{% include attractions.html %}
