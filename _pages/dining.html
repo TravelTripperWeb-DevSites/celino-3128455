@@ -50,10 +50,10 @@ meta_tags:
 
 
 <section class="dine-intro--space">
-
   {% assign dinelist = site.data._models.dine-drink %}
   {% for dine in dinelist %}
-  <div class="dine-intro__wrap">
+   {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+  <div class="dine-intro__wrap {% if thecycle == 'even' %}dine-intro__wrap--even{% endif %}">
     <div class="dine-intro__image">
       <img src="{{ dine.dine_image.url_large }}" alt="{{ dine.image.alt}}">
     </div>
@@ -62,13 +62,11 @@ meta_tags:
         <h5>{{dine.title }}</h5>
         <hr class="full">
         {{dine.short_description}}
-          <a href="/dine-drink/{{ dine.url_friendly_name }}/" class="button button--arrow">Learn More</a>
-        </p>
+        <a href="/dine-drink/{{ dine.url_friendly_name }}/" class="button button--arrow">Learn More</a>
       </article>
     </div>
   </div>
   {% endfor %}
-
 </section>
 
 <section class="virtual-tour d-flex align-items-center">

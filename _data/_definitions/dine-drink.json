@@ -25,6 +25,10 @@
     "type": "richtext",
     "required": true
   },
+  "reserve_link": {
+    "label": "Reserve Link",
+    "required": true
+  },
   "url_friendly_name": {
     "type": "url_slug",
     "label": "URL Friendly Name",

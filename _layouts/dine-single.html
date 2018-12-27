@@ -16,7 +16,7 @@ layout: default
   			</div>
       {% endfor %}
       </div>
-      <h1>{{ page.title }}</h1>
+      <h1>Dine at {{ page.title }}</h1>
   </div>
 </section>
 
@@ -28,7 +28,7 @@ layout: default
       </article>
     </div>
     <div class="dine-details__contact">
-      <a href="/contact/" class="button button--arrow">RESERVE Now</a>
+      <a href="{{page.reserve_link}}" class="button button--arrow">RESERVE Now</a>
       <p>For reservations and information about ICONIK,</br> call  <a href="tel:786 574-4090" title="786 574-4090">(786) 574-4090</a> or email us <br>to <a href="mailto:dine@celino.com" title="dine@celino.com">dine@celino.com</a></p>
       <p>Open Daily from 7:00am – 12:00am<br>Tues-Thurs until 11pm</p>
     </div>
@@ -47,9 +47,9 @@ layout: default
 
 <section class="gallery d-none d-md-block">
   <h4 class="text-center">Gallery</h4>
-  <div class="gallery__row">
+  <div class="gallery__row"  id="lightgallery">
     {% for image in page.gallery %}
-    <div class="gallery__item fancybox">
+    <div class="gallery__item item fancybox" data-src="{{ image.url_large }}" data-exthumbimage="{{ image.url_large }}">
     	<img src="{{ image.url_large }}" alt="{{image.alt}}">
     </div>
     {% endfor %}
@@ -58,35 +58,20 @@ layout: default
 </section>
 
 <section class="mobile-carousel d-md-none">
-  <div id="roomImages" class="carousel slide" data-ride="carousel">
-
+  <div id="dine-gallery" class="carousel slide" data-ride="carousel">
     <!-- The slideshow -->
     <div class="carousel-inner">
-      <div class="carousel-item active">
-      <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
+      {% for image in page.gallery %}
+      <div class="carousel-item{% if forloop.first %} active{% endif %}">
+        <img src="{{ image.url_large }}" alt="{{image.alt}}">
       </div>
-      <div class="carousel-item">
-      <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
-      </div>
-      <div class="carousel-item">
-        <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
-      </div>
-      <div class="carousel-item">
-        <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
-      </div>
-      <div class="carousel-item">
-        <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
-      </div>
-      <div class="carousel-item">
-      <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
-      </div>
+      {% endfor %}
     </div>
-
     <!-- Left and right controls -->
-    <a class="carousel-control-prev" href="#roomImages" data-slide="prev">
+    <a class="carousel-control-prev" href="#dine-gallery" data-slide="prev">
       <img src="/assets/images/left-arrow.png" alt="Previous Item">
     </a>
-    <a class="carousel-control-next" href="#roomImages" data-slide="next">
+    <a class="carousel-control-next" href="#dine-gallery" data-slide="next">
       <img src="/assets/images/right-arrow.png" alt="Next Item">
     </a>
   </div>
@@ -96,15 +81,18 @@ layout: default
   <div class="offers-slider__wrap">
     <h3>Dine & Offers</h3>
     <div class="offers-slider__items" id="deals-offers">
+      {% assign offerslist = site.data._models.dine-offers %}
+      {% for offer in offerslist %}
       <div>
         <a href="#"><img src="/assets/images/dine/offer.jpg" alt="Thanksgiving Plan"></a>
         <div class="offers-slider__detail">
-          <h4><a href="#">Thanksgiving Plan</a></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-          <a href="#" class="button">Learn More</a>
+          <h4><a href="#">{{offer.title}}</a></h4>
+          {{offer.description}}
+          <a href="{{offer.link}}" class="button">Learn More</a>
         </div>
       </div>
-      <div>
+      {% endfor %}
+      <!--div>
         <a href="#"><img src="/assets/images/dine/offer.jpg" alt="dine and drinks"></a>
         <div class="offers-slider__detail">
           <h4><a href="#">Thanksgiving Plan</a></h4>
@@ -119,7 +107,9 @@ layout: default
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
           <a href="#" class="button">Learn More</a>
         </div>
-      </div>
+      </div-->
     </div>
   </div>
 </section>
+
+{% include instagram.html %}
