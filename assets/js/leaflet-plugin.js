@@ -1,7 +1,7 @@
 // Leaflet Interactive Map Plugin
 
 (function ($) {
-  $.fn.leafMap = function (options) {
+  $.fn.leafletMap = function (options) {
     var self     = this;
     var defaults = {
       hotelTitle      : 'Bedrock',
@@ -10,12 +10,13 @@
       hotelLong       : -74.000173,
       hotelMarker     : '/assets/images/map-marker.png',
       markerSize      : [36, 46],
-      zoom            : 14,
+      zoom            : 15,
       minZoom         : 0,
-      maxZoom         : 20,
+      maxZoom         : 18,
       fitBounds       : true,
       attrIconClass   : 'map-circle-icon',
       attrLabel       : false,
+      showPopup       : true,
       markerLabelText : false,
       categorytypeIcon: false,
       scrollWheelZoom : false,
@@ -23,10 +24,12 @@
       getDirectionBtn : false,
       googleLink      : false,
       websiteLink     : false,
-      getDirectionBtnLabel: 'Get Direction',
-      hideMarkerLabelHover: true,
-      TileStyle       : 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png',
-      attribution     : 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+      getDirectionBtnLabel  : 'Get Directions',
+      hideMarkerLabelHover  : true,
+      markerClickAction     : false,
+      TileStyle             : 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
+      attribution           : 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      attractionsList : null
     },
 
     options                       = $.extend(defaults, options);
@@ -53,7 +56,7 @@
       }).addTo(map);
 
       // Enable scrolling on map after clicking
-      map.on('click', function () {
+      map.addEventListener("dblclick", function () {
         if(!options.scrollWheelZoom && options.scrollOnClick) {
           if (map.scrollWheelZoom.enabled()) { // if scroll is already enabled then clicking should disable it
             map.scrollWheelZoom.disable();
@@ -96,33 +99,45 @@
     function loadAttractionMarkers() {
       for (var i = 0; i < attractionsArray.length; i++) {
         var infoText ='';
-        if (options.googleLink) {
-          infoText = '<a href="http://maps.google.com/maps?q='+attractionsArray[i][0]+'+'+ attractionsArray[i][4]+'" target="_blank"><h4>' + attractionsArray[i][0] + '</h4>' + attractionsArray[i][4]+ '</a>';
-        }else if(!options.websiteLink && options.getDirectionBtn){
-          infoText = '<h4>' + attractionsArray[i][0] + '</h4>' + attractionsArray[i][4]+ ' <br><a class="btnDirection" href="http://maps.google.com/maps?q='+ encodeURIComponent(attractionsArray[i][0]).replace(/ /g,'+')+'+'+ encodeURIComponent(attractionsArray[i][4]).replace(/ /g,'+')+'" target="_blank">'+options.getDirectionBtnLabel+'</a>';
-        }else if( options.websiteLink && !options.getDirectionBtn) {
-          infoText = '<h4><a href="'+attractionsArray[i][5]+'">' + attractionsArray[i][0] + '</a></h4>' + attractionsArray[i][4];
-        }
-        else if( options.websiteLink && options.getDirectionBtn) {
-        infoText = '<h4><a href="'+attractionsArray[i][5]+'">' + attractionsArray[i][0] + '</a></h4>' + attractionsArray[i][4]+ ' <br><a class="btnDirection" href="http://maps.google.com/maps?q='+encodeURIComponent(attractionsArray[i][0]).replace(/ /g,"+")+'+'+ encodeURIComponent(attractionsArray[i][4]).replace(/ /g,'+')+'" target="_blank">'+options.getDirectionBtnLabel+'</a>';
-        }
-        else{
-          infoText = '<h4>' + attractionsArray[i][0] + '</h4>' + attractionsArray[i][4];
-        }
 
-        var category                = attractionsArray[i][3];
+
+        var category  = attractionsArray[i][3];
         var iconClass = options.categorytypeIcon ? attractionsArray[i][3] : '';
         var iconLabel = options.markerLabelText ? attractionsArray[i][0] : i + 1;
 
         attractionsfilter[category] = attractionsfilter[category] || [];
 
         marker = new L.marker([attractionsArray[i][1], attractionsArray[i][2]], {
-          title: options.hideMarkerLabelHover ? '': attractionsArray[i][0],
-          alt  : attractionsArray[i][3],
-          icon : attractionMarkersIcon(iconLabel, iconClass),
-          riseOnHover: true
-        }).bindPopup(infoText).addTo(map);
+          title       : options.hideMarkerLabelHover ? '' : attractionsArray[i][0],
+          attractionTitle: attractionsArray[i][0],
+          alt         : attractionsArray[i][3],
+          marker_item : i+1,
+          icon        : attractionMarkersIcon(iconLabel, iconClass),
+          riseOnHover : true
+        });
 
+        if(options.showPopup) {
+          if (options.googleLink) {
+            infoText = '<a href="http://maps.google.com/maps?q='+attractionsArray[i][0]+'+'+ attractionsArray[i][4]+'" target="_blank"><h4>' + attractionsArray[i][0] + '</h4>' + attractionsArray[i][4]+ '</a>';
+          }else if(!options.websiteLink && options.getDirectionBtn) {
+            infoText = '<h4>' + attractionsArray[i][0] + '</h4> <a href="http://maps.google.com/maps?q='+ encodeURIComponent(attractionsArray[i][0]).replace(/ /g,'+')+'+'+ encodeURIComponent(attractionsArray[i][4]).replace(/ /g,'+')+'" class="link" target="_blank">'+options.getDirectionBtnLabel+'</a>';
+          }else if( options.websiteLink && !options.getDirectionBtn) {
+            infoText = '<h4><a rel="nofollow" target="_blank" href="'+attractionsArray[i][5]+'">' + attractionsArray[i][0] + '</a></h4> <a rel="nofollow" target="_blank" href="'+attractionsArray[i][5]+'" class="link">Get Directions</a>';
+          }
+          else if( options.websiteLink && options.getDirectionBtn) {
+          infoText = '<h4><a href="'+attractionsArray[i][5]+'">' + attractionsArray[i][0] + '</a></h4>' + attractionsArray[i][4]+ ' <br><a class="btnDirection" href="http://maps.google.com/maps?q='+encodeURIComponent(attractionsArray[i][0]).replace(/ /g,"+")+'+'+ encodeURIComponent(attractionsArray[i][4]).replace(/ /g,'+')+'" target="_blank">'+options.getDirectionBtnLabel+'</a>';
+          }
+          else {
+            infoText = '<h4>' + attractionsArray[i][0] + '</h4>' + attractionsArray[i][4];
+          }
+          marker = marker.bindPopup(infoText);
+        }
+        marker.addTo(map);
+
+        // Add custom action on click of Marker defined as per site's requirement
+        if(options.markerClickAction && options.markerClickAction instanceof Function) {
+          marker.on('click', options.markerClickAction);
+        }
         var attractionObj = {
           lat     : attractionsArray[i][1],
           lon     : attractionsArray[i][2],
@@ -142,6 +157,7 @@
 
       // Add filter
       if (categories.length > 1) {
+        alert();
         // Setup tabs
         if (mapcategoryFilterEle) {
           // First add 'All' option
@@ -187,7 +203,7 @@
           if (options.fitBounds) {
             map.fitBounds(bound);
           }
-        },200);
+        },300);
       });
     }
 
@@ -201,7 +217,8 @@
         $.each(attractionsfilter, function (key1, value1) {
           mapCategoryHtmlListEle.append('<div data-mappable-category="' + key1 + '"><h3>' + key1 + '</h3><ul class="attraction-lists list-' + key1 + '"></ul></div>');
           for (var i = 0; i < value1.length; i++) {
-            $('ul.list-' + key1).append('<li data-mappable-item="' + i + '" data-mappable-category="' + value1[i].category + '">' + value1[i].marker.options.title + '</li>');
+
+            $('ul.list-' + key1).append('<li data-mappable-item="' + i + '" data-mappable-category="' + value1[i].category + '">' + value1[i].marker.options.attractionTitle + '</li>');
           };
         });
 
@@ -212,24 +229,36 @@
 
           // 'On hover' highlight selected attraction's marker
           $(this).hover(function () {
-            $(marker.icon).removeClass('active');
             $(attractionsfilter[categoryitem][itemID].marker._icon).addClass('active');
           }, function () {
             $(attractionsfilter[categoryitem][itemID].marker._icon).removeClass('active');
           });
 
-          // 'On click' show selected attraction's popup
-          $(this).click(function () {
-            var mlat = $(attractionsfilter[categoryitem][itemID].marker._latlng.lat);
-            var mlng = $(attractionsfilter[categoryitem][itemID].marker._latlng.lng);
-            mlat.push.apply(mlat, mlng);
-
-            map.panTo({
-              lat: mlat[0],
-              lng: mlat[1]
+          // 'On click' show selected attraction's popup if enabled and show active Category name in filter tab
+          $(this).click(function (event) {
+            $.each(attractionsfilter[categoryitem], function(i, item){
+              $(item.marker._icon).removeClass('active');
             });
-            attractionsfilter[categoryitem][itemID].marker.openPopup();
+            setTimeout(function(){
+              if (options.fitBounds) {
+                map.fitBounds([$(attractionsfilter[categoryitem][itemID].marker.getLatLng())]);
+              }
+              $(attractionsfilter[categoryitem][itemID].marker._icon).addClass('active');
+            }, 400);
+
+            if (options.showPopup) {
+              var mlat = $(attractionsfilter[categoryitem][itemID].marker._latlng.lat);
+              var mlng = $(attractionsfilter[categoryitem][itemID].marker._latlng.lng);
+              mlat.push.apply(mlat, mlng);
+
+              map.panTo({
+                lat: mlat[0],
+                lng: mlat[1]
+              });
+              attractionsfilter[categoryitem][itemID].marker.openPopup();
+            }
           });
+
         });
       }
     }
