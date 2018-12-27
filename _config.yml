@@ -1,11 +1,11 @@
 # Site Settings
-title: "Bedrock"
+title: "Ocean Drive Lifestyle Hotel"
 title_separator: "|"
-name: "Hotel Property Name"
-description: "Site default description."
-url: # the base hostname & protocol for your site e.g. "https://www.traveltripper.io"
-repository: # GitHub username/repo-name e.g. "TravelTripperWeb/bedrock"
-
+name: "Celino Hotel South Beach"
+description: "Situated on the iconic Ocean Drive, The Celino will bring a new lifestyle of indulgence to South Beach, a personality rich in fashion fused with Latin charisma and tropical class."
+url: "https://www.thecelinohotel.com"
+repository: "TravelTripperWeb/celino"
+reztripUrl: "https://thecelinohotel.reztrip.com/"
 # Language Settings
 default_lang: 'en'
 languages: ['en']
