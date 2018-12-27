@@ -213,11 +213,11 @@
     order: 2;
 
     article {
+      max-width: 500px;
       margin: 0 auto;
       padding: 0 15px;
       text-align: center;
-      @include media-breakpoint-up(lg) {
-        max-width: 500px;
+      @include media-breakpoint-up(md) {
         padding: 0 30px;
         text-align: left;
       }
@@ -259,6 +259,7 @@
     .button-holder {
       display: flex;
       justify-content: space-between;
+      margin: 0 auto;
       padding-top: 1.5rem;
       border-top: 3px solid $gold-color;
     }
@@ -337,6 +338,7 @@
     article {
       max-width: 500px;
       margin: 0 auto;
+      padding-bottom: 2rem;
 
       h5 {
         font-family: $heading-font;
