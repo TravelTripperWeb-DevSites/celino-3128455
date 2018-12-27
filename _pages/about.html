@@ -40,9 +40,7 @@ meta_tags:
       The Celino Hotel will lead an Ocean Drive revival. </p>
       {% endregionblock %}
       {% regionblock intro_btn, type:text %}
-      <div>
-        <a href="/rooms/" class="button button--arrow button--arrow--gold">view our rooms</a>
-      </div>
+      <a href="/rooms/" class="button button--arrow button--arrow--gold">view our rooms</a>
       {% endregionblock %}
     </div>
     <div class="hotel-intro__images">
@@ -75,35 +73,17 @@ meta_tags:
     </div>
   </div>
   {% endfor %}
-  <!-- <div class="luxuxy-amenities__block">
-    <div class="luxuxy-amenities__block__content p-0">
-      <div class="luxuxy-amenities__block__content__holder">
-        <h2>24 hour fitness room</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque sagittis purus sit amet volutpat consequat. Turpis massa sed elementum tempus. Habitant morbi tristique senectus et netus et malesuada fames ac. Ut lectus arcu bibendum.</p>
-      </div>
-    </div>
-    <div class="luxuxy-amenities__block__image p-0">
-      <img src="/assets/images/hotel/fitness.jpg" alt="Fitness">
-    </div>
-  </div>
-  <div class="luxuxy-amenities__block">
-    <div class="luxuxy-amenities__block__content p-0">
-      <div class="luxuxy-amenities__block__content__holder">
-        <h2>IN-ROOM SPA SERVICE</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque sagittis purus sit amet volutpat consequat. Turpis massa sed elementum tempus. Habitant morbi tristique senectus et netus et malesuada fames ac. Ut lectus arcu bibendum.</p>
-      </div>
-    </div>
-    <div class="luxuxy-amenities__block__image p-0">
-      <img src="/assets/images/hotel/spa.jpg" alt="Spa">
-    </div>
-  </div> -->
 </section>
 
 <section class="virtual-tour d-flex align-items-center">
   <img src="/assets/images/hotel/virtual-tour.jpg" alt="Take a virtual tour">
   <div class="virtual-tour__content">
+    {% regionblock virtual_tour_heading, type:header %}
     <h3>Take a virtual tour</h3>
+    {% endregionblock %}
+    {% regionblock virtual_tour_btn, type:text %}
     <a href="/gallery/" class="button button--arrow button--arrow--gold">VIEW GALLERY</a>
+    {% endregionblock %}
   </div>
 </section>
 
@@ -111,8 +91,12 @@ meta_tags:
   <div class="hotel-location__block">
     <div class="hotel-location__content p-0">
       <div class="hotel-location__content__holder">
+        {% regionblock location_heading, type:header %}
         <h3>LOCATION</h3>
+        {% endregionblock %}
+        {% regionblock location_text, type:text %}
         <p>Located beachfront in the heart of South Beach on the southern end of iconic Ocean Drive next to the SoFi neighborhood, steps from the Atlantic Ocean and with direct access to downtown Miami and the Port of Miami via MacArthur Causeway. The Celino is less than seven miles from Miami’s top urban destinations including Wynwood, Brickell, Midtown and just blocks from South Pointe Park, Lincoln Road and Española Way. </p>
+        {% endregionblock %}
       </div>
     </div>
     <div class="hotel-location__map p-0" id="map">
