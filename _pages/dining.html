@@ -50,22 +50,25 @@ meta_tags:
 
 
 <section class="dine-intro--space">
+
+  {% assign dinelist = site.data._models.dine-drink | sort: 'order' %}
+  {% for dine in dinelist %}
   <div class="dine-intro__wrap">
     <div class="dine-intro__image">
-      <img src="/assets/images/dine/salte.jpg" alt="Salte">
+      <img src="{{ dine.excerpt_image.url_medium }}" alt="{{ dine.excerpt_image.alt}}">
     </div>
     <div class="dine-intro__detail  align-self-center">
       <article>
-        <h5>Salte</h5>
+        <h5>{{dine.title }}</h5>
         <hr class="full">
-        <p>Salte offers Italian inspired cuisine in a stylishly elegant setting. Using the freshest and finest ingredients, Salte offers a distinctive take on Italian cuisine using contemporary techniques and features such as, house-made ricotta, wood-fired pizzas, and made-from-scratch pastas. At Salte, our approach is simple; source the best ingredients possible and prepare them in an uncomplicated and modern way.</p>
-        <p>
-          <a href="#" class="button button--arrow">Learn More</a>
+        {{dine.short_description}}
+          <a href="/dine-drink/{{ dine.url_friendly_name }}/" class="button button--arrow">Learn More</a>
         </p>
       </article>
     </div>
   </div>
-  <div class="dine-intro__wrap dine-intro__wrap--even">
+  {% endfor %}
+  <!--div class="dine-intro__wrap dine-intro__wrap--even">
     <div class="dine-intro__image">
       <img src="/assets/images/dine/salte.jpg" alt="Salte">
     </div>
@@ -94,7 +97,7 @@ meta_tags:
         </p>
       </article>
     </div>
-  </div>
+  </div-->
 </section>
 
 <section class="virtual-tour d-flex align-items-center">

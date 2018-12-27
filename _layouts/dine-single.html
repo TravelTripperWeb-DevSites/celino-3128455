@@ -1,11 +1,13 @@
 ---
 layout: default
-title: About
+title: Dine/Drink Details
 meta_description:
-permalink: /dine-details/
 meta_tags:
   robots:
 ---
+
+{% assign dine-drink = page %}
+{% assign model = page %}
 <section class="page-banner">
   <div id="pageBanner" class="carousel slide" data-ride="carousel">
   {% assign banners = site.data._models.page-banners | where: 'page_name', 'Hotel' %}
@@ -22,7 +24,7 @@ meta_tags:
           </div>
         {% endfor %}
       </div>
-      <h1>{{ banner.banner_title }}</h1>
+      <h1>{{ dine-drink.title }}</h1>
     {% endfor %}
   </div>
 </section>
