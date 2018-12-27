@@ -1,31 +1,22 @@
 ---
 layout: default
-title: Dine/Drink Details
-meta_description:
-meta_tags:
-  robots:
 ---
 
-{% assign dine-drink = page %}
-{% assign model = page %}
 <section class="page-banner">
   <div id="pageBanner" class="carousel slide" data-ride="carousel">
-  {% assign banners = site.data._models.page-banners | where: 'page_name', 'Hotel' %}
-    {% for banner in banners | limit: 1 %}
       <ol class="carousel-indicators">
-        {% for bannerimage in banner.image %}
-          <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}"  {% if forloop.first %}class="active"{% endif %}></li>
-        {% endfor %}
+        {% for image in page.image %}
+        <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}"{% if forloop.first %} class="active"{% endif %}></li>
+      {% endfor %}
       </ol>
       <div class="carousel-inner">
-        {% for bannerimage in banner.image %}
-          <div class="carousel-item {% if forloop.first %}active{% endif %}">
-            <img src="{{ bannerimage.url_medium }}" alt="{{ bannerimage.alt }}">
-          </div>
-        {% endfor %}
+        {% for image in page.image %}
+  			<div class="carousel-item{% if forloop.first %} active{% endif %}">
+  				<img src="{{ image.url_large }}" alt="{{image.alt}}">
+  			</div>
+      {% endfor %}
       </div>
-      <h1>{{ dine-drink.title }}</h1>
-    {% endfor %}
+      <h1>{{ page.title }}</h1>
   </div>
 </section>
 
@@ -33,8 +24,7 @@ meta_tags:
   <div class="dine-details__inner">
     <div class="dine-details__text">
       <article>
-        <h2>FLORIDITA STYLE CUISINE</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu is nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste</p>
+        {{page.description}}
       </article>
     </div>
     <div class="dine-details__contact">
@@ -55,28 +45,15 @@ meta_tags:
   </div>
 </section>
 
-
 <section class="gallery d-none d-md-block">
   <h4 class="text-center">Gallery</h4>
   <div class="gallery__row">
+    {% for image in page.gallery %}
     <div class="gallery__item fancybox">
-      <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
+    	<img src="{{ image.url_large }}" alt="{{image.alt}}">
     </div>
-    <div class="gallery__item fancybox">
-      <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
-    </div>
-    <div class="gallery__item fancybox">
-      <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
-    </div>
-    <div class="gallery__item fancybox">
-      <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
-    </div>
-    <div class="gallery__item fancybox">
-      <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
-    </div>
-    <div class="gallery__item fancybox">
-      <img src="/assets/images/gallery/gallery.jpg" alt="gallery">
-    </div>
+    {% endfor %}
+
   </div>
 </section>
 

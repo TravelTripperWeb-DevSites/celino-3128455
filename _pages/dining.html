@@ -19,7 +19,7 @@ meta_tags:
       <div class="carousel-inner">
         {% for bannerimage in banner.image %}
           <div class="carousel-item {% if forloop.first %}active{% endif %}">
-            <img src="{{ bannerimage.url_medium }}" alt="{{ bannerimage.alt }}">
+            <img src="{{ bannerimage.url_large }}" alt="{{ bannerimage.alt }}">
           </div>
         {% endfor %}
       </div>
@@ -55,7 +55,7 @@ meta_tags:
   {% for dine in dinelist %}
   <div class="dine-intro__wrap">
     <div class="dine-intro__image">
-      <img src="{{ dine.excerpt_image.url_medium }}" alt="{{ dine.excerpt_image.alt}}">
+      <img src="{{ dine.dine_image.url_large }}" alt="{{ dine.image.alt}}">
     </div>
     <div class="dine-intro__detail  align-self-center">
       <article>
@@ -68,36 +68,7 @@ meta_tags:
     </div>
   </div>
   {% endfor %}
-  <!--div class="dine-intro__wrap dine-intro__wrap--even">
-    <div class="dine-intro__image">
-      <img src="/assets/images/dine/salte.jpg" alt="Salte">
-    </div>
-    <div class="dine-intro__detail  align-self-center">
-      <article>
-        <h5>Salte</h5>
-        <hr class="full">
-        <p>Salte offers Italian inspired cuisine in a stylishly elegant setting. Using the freshest and finest ingredients, Salte offers a distinctive take on Italian cuisine using contemporary techniques and features such as, house-made ricotta, wood-fired pizzas, and made-from-scratch pastas. At Salte, our approach is simple; source the best ingredients possible and prepare them in an uncomplicated and modern way.</p>
-        <p>
-          <a href="#" class="button button--arrow">Reserve Now</a>
-        </p>
-      </article>
-    </div>
-  </div>
-  <div class="dine-intro__wrap">
-    <div class="dine-intro__image">
-      <img src="/assets/images/dine/salte.jpg" alt="Salte">
-    </div>
-    <div class="dine-intro__detail align-self-center">
-      <article >
-        <h5>Salte</h5>
-        <hr class="full">
-        <p>Salte offers Italian inspired cuisine in a stylishly elegant setting. Using the freshest and finest ingredients, Salte offers a distinctive take on Italian cuisine using contemporary techniques and features such as, house-made ricotta, wood-fired pizzas, and made-from-scratch pastas. At Salte, our approach is simple; source the best ingredients possible and prepare them in an uncomplicated and modern way.</p>
-        <p>
-          <a href="#" class="button button--arrow">Reserve Now</a>
-        </p>
-      </article>
-    </div>
-  </div-->
+
 </section>
 
 <section class="virtual-tour d-flex align-items-center">

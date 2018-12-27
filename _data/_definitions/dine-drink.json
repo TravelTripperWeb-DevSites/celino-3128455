@@ -3,9 +3,13 @@
     "label": "Dine Name",
     "required": true
   },
-
+  "dine_image": {
+    "label": "Dine Images",
+    "type": "image",
+    "required": true,
+  },
   "image": {
-    "label": "Dine Image",
+    "label": "Dine Banner Images",
     "type": "image",
     "required": true,
     "multiple": true
@@ -27,7 +31,7 @@
     "required": true
   },
   "gallery": {
-    "label": "gallery Image",
+    "label": "Dine Gallery Image",
     "type": "image",
     "required": true,
     "multiple": true
