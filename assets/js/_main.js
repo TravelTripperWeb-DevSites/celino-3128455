@@ -68,6 +68,75 @@ $(function() {
 		}
 	}); //eof IG
 
+
+  //booking widget
+
+  var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "June",
+  "July", "Aug", "Sept", "Oct", "Nov", "Dec"
+];
+var date = new Date('2018-12-31');
+var dd = date.getDate();
+var mm = date.getMonth() + 1;
+var yyyy = date.getFullYear();
+var date2 = new Date(date.setDate(date.getDate() + 1));
+var dd2 = date2.getDate();
+var mm2 = date2.getMonth() + 1;
+var yyyy2 = date2.getFullYear();
+
+var FromDate =  yyyy+ '-'+mm+'-'+dd;
+var ToDate = yyyy2+ '-'+mm2+'-'+dd2;
+$('#arrival_date').val(FromDate);
+$('#departure_date').val(ToDate);
+
+ setTimeout(function() {
+   var dateArrival = new Date($("#arrival_date").val());
+   var dateDeparture = new Date($("#departure_date").val());
+   $('#arrival_holder').val(monthNames[dateArrival.getMonth()]+' '+dateArrival.getDate());
+   $('#departure_holder').val(monthNames[dateDeparture.getMonth()]+' '+dateDeparture.getDate());
+ },200);
+
+  $("#arrival_date").datepicker({
+    dateFormat: "yy-mm-dd",
+    setDate: 0,
+    minDate: 0,
+    onSelect: function (date) {
+      var dateselected = $(this).datepicker('getDate');
+       $('#arrival_holder').val(monthNames[dateselected.getMonth()]+' '+dateselected.getDate());
+       var minDate = new Date(dateselected);
+       minDate.setDate(minDate.getDate() + 1);
+       $('#departure_date').datepicker('setDate',minDate);
+       setTimeout(function(){
+         var dateselectedDepart = $("#departure_date").datepicker('getDate');
+         $('#departure_holder').val(monthNames[dateselectedDepart.getMonth()]+' '+dateselectedDepart.getDate());
+       },100);
+       //sets minDate to dt1 date + 1
+       $('#departure_date').datepicker('option', 'minDate' , minDate);
+    }
+  });
+  $('#departure_date').datepicker({
+    dateFormat: "yy-mm-dd",
+    minDate: 1,
+    setDate: 1,
+    onSelect: function (date) {
+       var dt1 = $('#arrival_date').datepicker('getDate');
+       var dt2 = $(this).datepicker('getDate');
+       var dateselectedDepart2 = dt2;
+       console.log( dateselectedDepart2.getMonth());
+       $('#departure_holder').val(monthNames[dateselectedDepart2.getMonth()]+' '+dateselectedDepart2.getDate());
+
+    }
+  });
+
+  //show / hide booking widget
+  $("#toggle-booking").click(function(e){
+    e.preventDefault();
+    $("#bookingWidget").css("display", "flex").hide().fadeIn();
+  });
+  $("#closeBooking").click(function(e){
+    e.preventDefault();
+    $("#bookingWidget").fadeOut();
+  });
+
   //map configuration
 
   // Map
