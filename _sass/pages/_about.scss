@@ -19,12 +19,14 @@
   &__text {
     @include make-col-ready;
     margin-bottom: 30px;
+    padding: 0 30px;
     text-align: center;
 
     @include media-breakpoint-up(md) {
       @include make-col(7.5);
       margin-bottom: 0;
       padding-right: 30px;
+      padding-left: 15px;
       text-align: left;
     }
 
@@ -36,7 +38,6 @@
       position: relative;
       margin: 0 0 20px;
       padding-bottom: 10px;
-      font-size: $type-size-4;
       color: $dark-blue-color;
 
       @include media-breakpoint-up(md) {
@@ -72,55 +73,35 @@
       }
     }
   }
+
   &__images {
     @include make-col-ready;
     @include media-breakpoint-up(md) {
       @include make-col(4.5);
     }
 
-    &__holder {
-      width: 100%;
-      text-align: center;
-
+    figure {
+      margin-right: 28px;
+      padding: 36px 0 0 40px;
+      background: url('/assets/images/hotel/intro-2.jpg') no-repeat;
       @include media-breakpoint-up(md) {
-        position: absolute;
-        right: 0;
-        height: 518px;
+        margin-right: 103px;
+        padding: 33px 50px 33px 53px;
       }
-
-      @include media-breakpoint-up(xl) {
-        width: 421px;
+      @include media-breakpoint-up(lg) {
+        margin-right: 103px;
+        padding: 43px;
       }
-
       img {
-        width: 49.3%;
+        width: calc(100% + 23px);
         object-fit: cover;
-
         @include media-breakpoint-up(md) {
-          position: absolute;
-          width: 90%;
+          width: calc(100% + 153px);
+          margin-right: -133px;
         }
-
-        @include media-breakpoint-up(xl) {
-          width: auto;
-        }
-
-        &:first-child {
-          @include media-breakpoint-up(md) {
-            top: 0;
-            left: 0;
-          }
-        }
-
-        &:last-child {
-          @include media-breakpoint-up(md) {
-            top: 40px;
-            right: 0;
-          }
-
-          @include media-breakpoint-up(xl) {
-            bottom: 0;
-          }
+        @include media-breakpoint-up(lg) {
+          width: calc(100% + 116px);
+          margin-right: -103px;
         }
       }
     }
@@ -151,13 +132,17 @@
     @include fixed-width-layout;
     max-width: 1100px;
 
-    h4 {
+    h3 {
       position: relative;
       z-index: 1;
       margin: 0 0 22px;
-      font-size: $type-size-6;
+      font-size: $type-size-9;
       color: $white;
       text-align: center;
+
+      @include media-breakpoint-up(md) {
+        font-size: $type-size-6;
+      }
     }
 
     ul {
@@ -219,12 +204,13 @@
 .luxuxy-amenities {
   h4 {
     margin: 0 0 20px;
-    font-size: $type-size-6;
+    font-size: $type-size-10;
     color: $dark-blue-color;
     text-align: center;
 
     @include media-breakpoint-up(md) {
       margin: 0 0 50px;
+      font-size: $type-size-6;
     }
   }
   &__block {
@@ -266,26 +252,32 @@
         order: 1;
       }
       &__holder {
-        padding: 0 15px;
+        padding: 0 30px;
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+          text-align: left;
+        }
 
         @include media-breakpoint-up(xl) {
           padding: 0 80px 0 120px;
         }
 
         h2 {
-          margin: 0 0 20px;
-          font-size: $type-size-4;
+          margin: 0 0 10px;
           color: $dark-blue-color;
 
           @include media-breakpoint-up(md) {
+            max-width: 490px;
             margin: 0 0 40px;
           }
         }
 
         p {
+          margin-bottom: 0;
+
           @include media-breakpoint-up(md) {
             max-width: 460px;
-            margin-bottom: 0;
           }
         }
       }
@@ -374,15 +366,19 @@
     }
 
     &__holder {
-      padding: 0 15px;
+      padding: 0 30px;
+      text-align: center;
+
+      @include media-breakpoint-up(md) {
+        text-align: left;
+      }
 
       @include media-breakpoint-up(xl) {
         padding: 0 80px 0 120px;
       }
 
-      h4 {
+      h3 {
         margin: 0 0 20px;
-        font-size: $type-size-6;
         color: $dark-blue-color;
 
         @include media-breakpoint-up(md) {

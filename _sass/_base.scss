@@ -58,10 +58,13 @@ h4 {
 }
 
 h5 {
-  font-size: $type-size-6;
+  font-size: $type-size-10;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: rem-calc(8.97);
+  @include media-breakpoint-up(md) {
+    font-size: $type-size-6;
+  }
 }
 
 h6 {
@@ -79,8 +82,12 @@ small, .small {
 
 p {
   margin-bottom: 1.3rem;
-  font-size: $type-size-12;
-  line-height: rem-calc(26);
+  font-size: $type-size-15;
+  line-height: rem-calc(18);
+  @include media-breakpoint-up(md) {
+    font-size: $type-size-12;
+    line-height: rem-calc(26);
+  }
 }
 
 u,
@@ -99,8 +106,11 @@ del a {
 // Links
 
 a {
+  color: $dark-blue-color;
   &:hover,
   &:active {
+    color: $dark-blue-color;
+    text-decoration: none;
     outline: 0;
   }
 }

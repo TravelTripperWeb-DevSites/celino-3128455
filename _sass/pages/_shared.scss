@@ -13,7 +13,7 @@
   &--inner {
     max-height: 600px;
   }
-  
+
   &__detail {
     max-width: 240px;
     margin: 0 auto;
@@ -72,6 +72,17 @@
 
       img {
         width: 100%;
+        height: 198px;
+        object-fit: cover;
+        @include media-breakpoint-up(md) {
+          height: 200px;
+        }
+        @include media-breakpoint-up(lg) {
+          height: 228px;
+        }
+        @include media-breakpoint-up(xl) {
+          height: 258px;
+        }
       }
     }
 
@@ -94,7 +105,7 @@
 
       &.slick-next {
         position: absolute;
-        top: 49%;
+        top: 40%;
         right: -15px;
         left: auto;
         @include media-breakpoint-up(md) {
@@ -108,7 +119,7 @@
 
       &.slick-prev {
         position: absolute;
-        top: 49%;
+        top: 40%;
         right: auto;
         left: -15px;
         @include media-breakpoint-up(md) {
@@ -126,6 +137,13 @@
       padding: 0 20px 30px;
     }
 
+    h4 {
+      @include media-breakpoint-up(md) {
+        margin-top: 18px;
+        font-size: $type-size-10;
+      }
+    }
+
     .button {
       position: absolute;
       right: 0;
@@ -135,6 +153,84 @@
       max-width: 192px;
       margin: 0 auto;
       padding: 16px 22px;
+    }
+  }
+}
+
+.instagram-gallery {
+  @include make-container();
+
+  &__wrap {
+    @include make-row();
+  }
+  &__title {
+    @include make-col-ready();
+    @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(3);
+      font-size: $type-size-7;
+    }
+    margin-top: 18px;
+    font-size: $type-size-12;
+    font-weight: 900;
+    color: $dark-blue-color;
+    text-align: center;
+
+    .svg-inline--fa {
+      color: $gold-color;
+    }
+  }
+  &__image-bg {
+    @include make-col-ready();
+    @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(9);
+      min-height: 81px;
+    }
+
+    min-height: 32px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    padding: 20px 0;
+    background: url('/assets/images/floral_image-instagram.jpg') repeat-x;
+    @include bg-cover;
+  }
+
+  &__photo {
+    position: relative;
+    @include make-col-ready();
+    @include make-col(6);
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(2);
+    }
+
+    padding: 0;
+    overflow: hidden;
+
+    &__bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      @include bg-cover;
+      transition: $global-transition;
+      transform: scale(1.02);
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    img {
+      width: 100%;
     }
   }
 }

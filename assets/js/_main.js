@@ -45,33 +45,101 @@ $(function() {
       }]
     });
 
+    //instagram gallery in footer
+  var instaurl = 'https://instafeed.traveltripper.io/u/thecelinohotel';
+	$.ajax({
+		url: instaurl,
+		jsonpCallback: 'callback',
+		dataType: "json",
+		success: function (response) {
+			setTimeout(function () {
+				$.each(response.medias, function (i, item) {
+          var imageIG = item.thumbnail;
+          var urlIG = 'https://www.instagram.com/p/' + item.shortcode;
+
+					if (i > 6) return false;
+          $('#instagram-photos').append('<div class="instagram-gallery__photo">'+
+            '<a href="'+ urlIG +'" target="_blank" rel="nofollow">'+
+              '<div class="instagram-gallery__photo__bg" style="background-image: url(\''+ imageIG + '\');"></div><img src="/assets/images/image-holder.png" alt="placeholder image">'+
+            '</a>'+
+          '</div>');
+				});
+			}, 1500);
+		}
+	}); //eof IG
+
+  //map configuration
+
+  // Map
+  if ($("#map").length > 0) {
+    var mapOptions = {
+      hotelTitle: 'CELINO HOTEL',
+      hotelAddress: '<p><a href="https://goo.gl/maps/8m8a43AbMz82" rel="nofollow" target="_blank">640 Ocean Drive, Miami Beach, Florida 33139.</a></p>',
+      hotelLat: 25.776360,
+      hotelLong: -80.131820,
+      hotelMarker: '/assets/images/leaflet/marker.png',
+      markerSize: [44, 50],
+      zoom: 15,
+      maxZoom: 19,
+      showPopup: true,
+      getDirectionBtn: true
+    };
+    if(attractions.length > 0) {
+  	   mapOptions.attractionsList =  attractions
+  	}
+    $('#map').leafletMap(mapOptions);
+    $("[data-category='attractions']").trigger('click');
+  }
+
+  //galery lightbox
+  $("#lightgallery").lightGallery({
+    selector: ".item",
+    thumbnail:true
+  });
+  // Gallery Filter Function
+  $(".filter-nav li a").on("click", function() {
+
+    // Remove active class from everything
+    $(".filter-nav li a").each(function() {
+      $(this).removeClass('active');
+    });
+
+    // Add active class to selected option
+    $(this).addClass('active');
+
+    // Assign filter variable
+    var $filter = $(this).attr("data-filter");
+
+    // If we select "All," show all
+    if ($filter == 'all') {
+      $(".fancybox").attr("data-fancybox-group", "gallery").not(":visible").fadeIn();
+    } else {
+      $(".fancybox").fadeOut(0).filter(function() {
+        // set data-filter value as the data-rel value of selected
+        return $(this).data("filter") == $filter;
+      }).attr("data-fancybox-group", $filter).fadeIn(1000); // set data-fancybox-group and show filtered elements
+    }
+
+  });
+
 
 });
 
 $(document).ready(function() {
-  // Map
-  if ($("#map").length > 0) {
-    var mapOptions = {
-      hotelTitle: '<h4>CELINO HOTEL</h4>',
-      hotelAddress: '<p><a href="#" rel="nofollow" target="_blank">640 Ocean Drive, Miami Beach, Florida 33139.</a></p>',
-      hotelLat: 25.776360,
-      hotelLong: -80.131820,
-      hotelMarker: '/assets/images/leaflet/marker.png',
-      markerSize: [88, 99],
-      zoom: 16,
-      maxZoom: 20,
-      showPopup: true,
-      fitBounds: true,
-      getDirectionBtn: true,
-      TileStyle: 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png'
-    };
-    $('#map').leafMap(mapOptions);
-  }
-
 
   $(".room-images-gallery").lightGallery({
     selector: ".item",
     thumbnail:true
   });
+  if(window.innerWidth < 768) {
+    $(document).on("click", ".rooms-listing__main-filter__filter-items .nav-item.active", function() {
+      $(".rooms-listing__main-filter__filter-items .nav-item").not('.active').slideToggle();
+    });
+    $(document).on("click", ".rooms-listing__main-filter__filter-items .nav-item:not(.active)", function() {
+      $(".rooms-listing__main-filter__filter-items .nav-item").removeClass("active");
+      $(this).addClass("active");
+      $(".rooms-listing__main-filter__filter-items .nav-item:not(.active)").slideUp();
+    });
+  }
 
 });

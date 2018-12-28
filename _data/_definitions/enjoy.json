@@ -1,0 +1,32 @@
+{
+  "name": {
+    "label": "Title",
+    "required": true
+  },
+  "short_description": {
+    "required": true
+  },
+  "description": {
+    "type": "richtext",
+    "required": true
+  },
+  "image": {
+    "type": "image",
+    "required": true
+  },
+  "url_friendly_name": {
+    "label": "URL Friendly Name",
+    "type": "url_slug"
+  },
+  "title": {
+    "label": "Meta Title",
+    "required": true
+  },
+  "meta_description": {
+    "label": "Meta Description",
+    "required": true
+  },
+  "sort_order": {
+
+  }
+}

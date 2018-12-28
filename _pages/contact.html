@@ -30,13 +30,19 @@ meta_tags:
 <section class="contact-intro">
   <div class="contact-intro__inner">
     <div class="contact-intro__text">
+      {% regionblock intro_heading, type:header %}
       <h2>EXPLORE MIAMI, STAY WITH US</h2>
+      {% endregionblock %}
+      {% regionblock intro_text, type:text %}
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu is nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste </p>
+      {% endregionblock %}
     </div>
     <div class="contact-intro__images">
       <div class="contact-intro__images__holder">
         <img src="/assets/images/contact/intro-1.jpg" alt="Intro">
+        {% regionblock intro_img, type:image %}
         <img src="/assets/images/contact/intro-2.jpg" alt="Intro">
+        {% endregionblock %}
       </div>
     </div>
   </div>
@@ -48,12 +54,20 @@ meta_tags:
 <section class="contact-details">
   <div class="contact-details__inner">
     <div class="contact-details__content">
+      {% regionblock hotel_name, type:header %}
       <h4>CELINO HOTEL</h4>
+      {% endregionblock %}
+      {% regionblock hotel_address, type:text %}
       <p>640 Ocean Drive, Miami Beach,<br> Florida 33139.</p>
+      {% endregionblock %}
+      {% regionblock hotel_number, type:text %}
       <p>P: <a href="tel:786.574.4090">786.574.4090</a></p>
+      {% endregionblock %}
+      {% regionblock hotel_email, type:text %}
       <p>For any questions or concerns<br> please send an email to<br>
       <a href="mailto:info@celinohotel.com">info@celinohotel.com</a>
       </p>
+      {% endregionblock %}
     </div>
     <div class="contact-details__form-block">
       {% include forms/jotform/contact.html %}

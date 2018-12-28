@@ -1,0 +1,29 @@
+{
+  "sort_order": "3",
+  "name": "Culture",
+  "short_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>",
+  "image": {
+    "name": "Culture",
+    "file_name": "Culture.jpg",
+    "url": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-044443/Culture.jpg",
+    "tags": "",
+    "description": "",
+    "date_added": "2018-12-27-044443",
+    "file_type": "image/jpeg",
+    "width": 1438,
+    "height": 768,
+    "file_size": 180033,
+    "url_large": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-044443/large_Culture.jpg",
+    "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-044443/medium_Culture.jpg",
+    "url_small": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-044443/small_Culture.jpg",
+    "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-044443/xsmall_Culture.jpg",
+    "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-044443/thumb_Culture.jpg",
+    "path": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-044443/Culture.jpg",
+    "alt": "Culture",
+    "caption": ""
+  },
+  "url_friendly_name": "culture",
+  "title": "Culture",
+  "meta_description": "Culture"
+}
