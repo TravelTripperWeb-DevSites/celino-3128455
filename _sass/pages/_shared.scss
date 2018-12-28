@@ -101,6 +101,12 @@
         border-right: 1px solid $white;
         border-bottom: 1px solid $white;
         transform: rotate(135deg);
+        @include media-breakpoint-up(md) {
+          width: 22px;
+          height: 22px;
+          border-right: 2px solid $white;
+          border-bottom: 2px solid $white;
+        }
       }
 
       &.slick-next {
