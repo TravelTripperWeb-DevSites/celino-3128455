@@ -39,6 +39,65 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="">
     {% endif %}
     <script src="/js/angular.min.js"></script>
+    <script type='application/ld+json'>
+    {
+      "@context": "http://www.schema.org",
+      "@type": "Organization",
+      "name": "Celino Hotel South Beach",
+      "url": "https://www.thecelinohotel.com/",
+      "logo": "https://www.thecelinohotel.com/images/logo.png",
+      "description": "Situated on the iconic Ocean Drive, The Celino will bring a new lifestyle of indulgence to South Beach, a personality rich in fashion fused with Latin charisma and tropical class.",
+         "sameAs": [
+        "https://www.facebook.com/celinohotel/"
+
+      ]
+      }
+    }
+    </script>
+    <script type='application/ld+json'>
+    {
+      "@context": "http://schema.org",
+      "@type": "Hotel",
+      "image": "https://www.thecelinohotel.com/images/gallery/celino-hotel-miami-exterior.jpg",
+      "starRating" : { "@type" : "Rating",
+                           "ratingValue" : "3"},
+      "priceRange" : "from $100",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "640 Ocean Drive",
+        "addressLocality": "Miami Beach",
+        "addressRegion": "Florida",
+        "postalCode": "FL 33139",
+        "addressCountry": "United States"
+     },
+      "description": "Situated on the iconic Ocean Drive, The Celino will bring a new lifestyle of indulgence to South Beach, a personality rich in fashion fused with Latin charisma and tropical class.",
+      "name": "The Celino Hotel",
+      "alternateName":"The Celino South Beach",
+      "telephone": "786.574.4090",
+      "email": "info@thecelinohotel.com",
+      "url": "https://www.thecelinohotel.com/",
+       "sameAs" : ["https://www.facebook.com/celinohotel/","https://www.tripadvisor.com/Hotel_Review-g34439-d14080007-Reviews-The_Celino_Hotel-Miami_Beach_Florida.html"]
+        },
+       "https://www.google.com/maps/place/The+Celino+Hotel/@25.7763824,-80.1340995,17z/data=!3m1!4b1!4m5!3m4!1s0x88d9b4ed54d489bb:0x18541a235602f52d!8m2!3d25.7763776!4d-80.1319108"
+     },
+
+      "potentialAction":{
+       "@type":"ReserveAction",
+       "target":{
+       "@type":"EntryPoint",
+       "urlTemplate":"https://thecelinohotel.reztrip.com/classic/en/searches/5c1228443ad7b42dbdd3e7fe/hotels/MIACEL/rooms/":[
+       "http://schema.org/DesktopWebPlatform",
+       "http://schema.org/IOSPlatform",
+        "http://schema.org/AndroidPlatform"
+    ]
+    },
+       "result":{
+       "@type":"LodgingReservation",
+       "name":"Book Now"
+      }
+     }
+    }
+    </script>
 
    </head>
   <body ng-app="rezTrip" ng-controller="mainController" rt3-hotel-info="hotelInfo" rt3-portal-info="portalInfo" rt3-rooms-browser="browser" ng-cloak>
