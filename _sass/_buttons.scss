@@ -24,6 +24,14 @@
     background-color: $dark-blue-color;
   }
 
+  &--booknow {
+    font-family: $heading-font;
+    cursor: pointer;
+    background-color: $gold-color;
+    border: 0;
+    margin: 30px auto;
+  }
+
   &--gold {
     background-color: $gold-color;
   }

@@ -1,6 +1,6 @@
 {% assign links = site.data.navigation.main %}
 
-<div class="top-nav {% if page.url =='/'%}top-nav--flower" id="home-nav" {% else%}top-nav--gradient"{% endif%}>
+<div class="top-nav {% if page.url =='/' %}top-nav--flower" id="home-nav" {% else%}top-nav--gradient"{% endif%}>
   <a class="hotel-logo" href="/"><img src="/assets/images/celino-logo.png" alt="{{ site.name}} logo"></a>
   <a class="booking-toggle" id="toggle-booking" href="/"><span class="vertical-line"></span><strong>View Rates</strong></a>
   <a class="menu-toggle" id="toggle-menu" href="/" title="Menu"><span>Menu</span> </a>
@@ -21,4 +21,44 @@
     </address>
   </nav>
 
+</div>
+
+<div class="booking-widget" id="bookingWidget">
+  <div class="booking-widget__wrap">
+    <form action="{{ site.reztripUrl }}search?" method="get">
+      <div class="booking-widget__form-inputs">
+        <div class="booking-widget__form-inputs__input">
+          <label for="arrival_date">Arrival</label>
+          <input type="text" name="arrival_holder" id="arrival_holder" required>
+          <input type="text" name="arrival_date" id="arrival_date" required>
+        </div>
+        <div class="booking-widget__form-inputs__input">
+          <label for="departure_date">Departure</label>
+          <input type="text" name="departure_holder" id="departure_holder">
+          <input type="text" name="departure_date" id="departure_date">
+        </div>
+        <div class="booking-widget__form-inputs__select">
+          <label for="rooms">Rooms</label>
+          <select id="rooms" name="rooms">
+            <option selected>1</option>
+            <option>2</option>
+          </select>
+        </div>
+        <div class="booking-widget__form-inputs__select">
+          <label for="adults">Guests</label>
+          <select id="adults" name="adults">
+            <option>1</option>
+            <option selected>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+        </div>
+      </div>
+      <div class="booking-widget__form-button">
+        <button type="submit" class="button button--booknow">Book Now</button>
+      </div>
+    </form>
+
+    <div class="booking-widget__close" id="closeBooking">X</div>
+  </div>
 </div>
