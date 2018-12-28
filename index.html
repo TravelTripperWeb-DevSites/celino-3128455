@@ -152,58 +152,24 @@ meta_tags:
     </div>
     <div class="dine-intro__categories"></div>
   </div>
-  <div class="dine-intro__wrap">
+  {% assign dinelist = site.data._models.dine-drink %}
+  {% for dine in dinelist %}
+   {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+  <div class="dine-intro__wrap {% if thecycle == 'even' %}dine-intro__wrap--even{% endif %}">
     <div class="dine-intro__image">
-      <img src="/assets/images/home/dine-photo.jpg" alt="Salte">
+      <img src="{{ dine.dine_image.url_large }}" alt="{{ dine.image.alt}}">
     </div>
     <div class="dine-intro__detail">
       <article>
-        <h5>Salte</h5>
+        <h5>{{dine.title }}</h5>
         <hr>
-        <p>Salte offers Italian inspired cuisine in a stylishly elegant setting. Using the freshest and finest ingredients, Salte offers a distinctive take on Italian cuisine using contemporary techniques and features such as, house-made ricotta, wood-fired pizzas, and made-from-scratch pastas. At Salte, our approach is simple; source the best ingredients possible and prepare them in an uncomplicated and modern way.</p>
-        <a href="#" class="button button--arrow">Learn More</a>
+        {{dine.short_description}}
+        <a href="{{dine.reserve_link}}" class="button button--arrow">RESERVE Now</a>
       </article>
     </div>
   </div>
-  <div class="dine-intro__wrap dine-intro__wrap--even">
-    <div class="dine-intro__image">
-      <img src="/assets/images/home/dine-photo.jpg" alt="Salte">
-    </div>
-    <div class="dine-intro__detail">
-      <article>
-        <h5>Salte</h5>
-        <hr>
-        <p>Salte offers Italian inspired cuisine in a stylishly elegant setting. Using the freshest and finest ingredients, Salte offers a distinctive take on Italian cuisine using contemporary techniques and features such as, house-made ricotta, wood-fired pizzas, and made-from-scratch pastas. At Salte, our approach is simple; source the best ingredients possible and prepare them in an uncomplicated and modern way.</p>
-        <a href="#" class="button button--arrow">Reserve Now</a>
-      </article>
-    </div>
-  </div>
-  <div class="dine-intro__wrap">
-    <div class="dine-intro__image">
-      <img src="/assets/images/home/dine-photo.jpg" alt="Salte">
-    </div>
-    <div class="dine-intro__detail">
-      <article>
-        <h5>Salte</h5>
-        <hr>
-        <p>Salte offers Italian inspired cuisine in a stylishly elegant setting. Using the freshest and finest ingredients, Salte offers a distinctive take on Italian cuisine using contemporary techniques and features such as, house-made ricotta, wood-fired pizzas, and made-from-scratch pastas. At Salte, our approach is simple; source the best ingredients possible and prepare them in an uncomplicated and modern way.</p>
-        <a href="#" class="button button--arrow">Reserve Now</a>
-      </article>
-    </div>
-  </div>
-  <div class="dine-intro__wrap dine-intro__wrap--even">
-    <div class="dine-intro__image">
-      <img src="/assets/images/home/dine-photo.jpg" alt="Salte">
-    </div>
-    <div class="dine-intro__detail">
-      <article>
-        <h5>Salte</h5>
-        <hr>
-        <p>Salte offers Italian inspired cuisine in a stylishly elegant setting. Using the freshest and finest ingredients, Salte offers a distinctive take on Italian cuisine using contemporary techniques and features such as, house-made ricotta, wood-fired pizzas, and made-from-scratch pastas. At Salte, our approach is simple; source the best ingredients possible and prepare them in an uncomplicated and modern way.</p>
-        <a href="#" class="button button--arrow">Reserve Now</a>
-      </article>
-    </div>
-  </div>
+  {% endfor %}
 </section>
+
 
 {% include instagram.html %}

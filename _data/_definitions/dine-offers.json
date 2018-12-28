@@ -1,0 +1,20 @@
+{
+  "title": {
+    "label": "Dine Offer Name",
+    "required": true
+  },
+  "dine_image": {
+    "label": "Dine Offer Images",
+    "type": "image",
+    "required": true
+  },
+  "description": {
+    "label": "Description",
+    "type": "richtext",
+    "required": true
+  },
+  "link": {
+    "label": "Reserve Link",
+    "required": true
+  }
+}
