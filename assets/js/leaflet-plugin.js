@@ -4,8 +4,8 @@
   $.fn.leafletMap = function (options) {
     var self     = this;
     var defaults = {
-      hotelTitle      : 'Bedrock',
-      hotelAddress    : '9 Crosby St New York, NY 10013',
+      hotelTitle      : 'The Celino Hotel',
+      hotelAddress    : '640 Ocean Dr, Miami Beach, FL 33139, USA',
       hotelLat        : 40.719892,
       hotelLong       : -74.000173,
       hotelMarker     : '/assets/images/map-marker.png',
@@ -28,7 +28,7 @@
       hideMarkerLabelHover  : true,
       markerClickAction     : false,
       TileStyle             : 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
-      attribution           : 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      attribution           : 'Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       attractionsList : null
     },
 
@@ -120,7 +120,7 @@
           if (options.googleLink) {
             infoText = '<a href="http://maps.google.com/maps?q='+attractionsArray[i][0]+'+'+ attractionsArray[i][4]+'" target="_blank"><h4>' + attractionsArray[i][0] + '</h4>' + attractionsArray[i][4]+ '</a>';
           }else if(!options.websiteLink && options.getDirectionBtn) {
-            infoText = '<h4>' + attractionsArray[i][0] + '</h4> <a href="http://maps.google.com/maps?q='+ encodeURIComponent(attractionsArray[i][0]).replace(/ /g,'+')+'+'+ encodeURIComponent(attractionsArray[i][4]).replace(/ /g,'+')+'" class="link" target="_blank">'+options.getDirectionBtnLabel+'</a>';
+            infoText = '<img src="'+attractionsArray[i][6]+'" alt="' + attractionsArray[i][0] + '"><h4>' + attractionsArray[i][0] + '</h4> <a href="http://maps.google.com/maps/dir/The+Celino+Hotel,+Ocean+Drive,+Miami+Beach,+FL,+USA/'+ encodeURIComponent(attractionsArray[i][0]).replace(/ /g,'+')+'+'+ encodeURIComponent(attractionsArray[i][4]).replace(/ /g,'+')+'" class="button" target="_blank">'+options.getDirectionBtnLabel+'</a>';
           }else if( options.websiteLink && !options.getDirectionBtn) {
             infoText = '<h4><a rel="nofollow" target="_blank" href="'+attractionsArray[i][5]+'">' + attractionsArray[i][0] + '</a></h4> <a rel="nofollow" target="_blank" href="'+attractionsArray[i][5]+'" class="link">Get Directions</a>';
           }
