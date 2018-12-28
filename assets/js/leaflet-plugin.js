@@ -120,7 +120,7 @@
           if (options.googleLink) {
             infoText = '<a href="http://maps.google.com/maps?q='+attractionsArray[i][0]+'+'+ attractionsArray[i][4]+'" target="_blank"><h4>' + attractionsArray[i][0] + '</h4>' + attractionsArray[i][4]+ '</a>';
           }else if(!options.websiteLink && options.getDirectionBtn) {
-            infoText = '<img src="'+attractionsArray[i][6]+'" alt="' + attractionsArray[i][0] + '"><h4>' + attractionsArray[i][0] + '</h4> <a href="http://maps.google.com/maps/dir/The+Celino+Hotel,+Ocean+Drive,+Miami+Beach,+FL,+USA/'+ encodeURIComponent(attractionsArray[i][0]).replace(/ /g,'+')+'+'+ encodeURIComponent(attractionsArray[i][4]).replace(/ /g,'+')+'" class="button" target="_blank">'+options.getDirectionBtnLabel+'</a>';
+            infoText = '<img src="'+attractionsArray[i][6]+'" alt="' + attractionsArray[i][0] + '"><h4>' + attractionsArray[i][0] + '</h4> <a rel="nofollow" href="http://maps.google.com/maps/dir/The+Celino+Hotel,+Ocean+Drive,+Miami+Beach,+FL,+USA/'+ encodeURIComponent(attractionsArray[i][0]).replace(/ /g,'+')+'+'+ encodeURIComponent(attractionsArray[i][4]).replace(/ /g,'+')+'" class="button" target="_blank">'+options.getDirectionBtnLabel+'</a>';
           }else if( options.websiteLink && !options.getDirectionBtn) {
             infoText = '<h4><a rel="nofollow" target="_blank" href="'+attractionsArray[i][5]+'">' + attractionsArray[i][0] + '</a></h4> <a rel="nofollow" target="_blank" href="'+attractionsArray[i][5]+'" class="link">Get Directions</a>';
           }
@@ -137,7 +137,12 @@
         // Add custom action on click of Marker defined as per site's requirement
         if(options.markerClickAction && options.markerClickAction instanceof Function) {
           marker.on('click', options.markerClickAction);
+        }else{
+          marker.on('click', function(e){
+            map.panTo(this.getLatLng());
+          });
         }
+
         var attractionObj = {
           lat     : attractionsArray[i][1],
           lon     : attractionsArray[i][2],
@@ -203,7 +208,7 @@
           if (options.fitBounds) {
             map.fitBounds(bound);
           }
-        },300);
+        },500);
       });
     }
 
@@ -247,6 +252,7 @@
             }, 400);
 
             if (options.showPopup) {
+              alert()
               var mlat = $(attractionsfilter[categoryitem][itemID].marker._latlng.lat);
               var mlng = $(attractionsfilter[categoryitem][itemID].marker._latlng.lng);
               mlat.push.apply(mlat, mlng);
