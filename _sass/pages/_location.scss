@@ -67,11 +67,18 @@
 }
 
 .map-circle-icon {
-  width: 8px;
-  height: 8px;
+  display: block;
+  width: 13px !important;
+  height: 13px !important;
   background-color: $gold-color;
   border: 4px solid $white;
   border-radius: 50%;
+  transition: $global-transition;
+
+  &.active,
+  &:hover {
+    background-color: $dark-blue-color;
+  }
 }
 .leaflet-layer {
   position: relative;
