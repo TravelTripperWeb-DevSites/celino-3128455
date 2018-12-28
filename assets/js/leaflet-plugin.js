@@ -139,7 +139,10 @@
           marker.on('click', options.markerClickAction);
         }else{
           marker.on('click', function(e){
+            $('.leaflet-marker-icon').removeClass('active');
             map.panTo(this.getLatLng());
+            console.dir(this);
+            $(this._icon).addClass('active');
           });
         }
 
