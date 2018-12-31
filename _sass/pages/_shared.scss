@@ -41,6 +41,10 @@
   text-align: center;
   background: $dark-blue-color url('/assets/images/floral-bg.jpg');
 
+  &.included-offer {
+    display: none;
+  }
+
   &:before {
     position: absolute;
     top: 0;
@@ -64,6 +68,10 @@
       margin: 0;
       padding: 35px 15px;
       color: $white;
+
+      a {
+        color: $white;
+      }
     }
 
     .slick-slide {
@@ -169,6 +177,7 @@
   &__wrap {
     @include make-row();
   }
+
   &__title {
     @include make-col-ready();
     @include media-breakpoint-up(md) {
@@ -188,6 +197,7 @@
       color: $gold-color;
     }
   }
+
   &__image-bg {
     @include make-col-ready();
     @include media-breakpoint-up(md) {
@@ -197,12 +207,11 @@
       @include make-col(9);
       min-height: 81px;
     }
-
     min-height: 32px;
     margin-top: 28px;
     margin-bottom: 28px;
     padding: 20px 0;
-    background: url('/assets/images/floral_image-instagram.jpg') repeat-x;
+    background: url("/assets/images/floral_image-instagram.jpg") repeat-x;
     @include bg-cover;
   }
 
@@ -216,7 +225,6 @@
     @include media-breakpoint-up(lg) {
       @include make-col(2);
     }
-
     padding: 0;
     overflow: hidden;
 

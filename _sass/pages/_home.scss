@@ -184,6 +184,7 @@
 
   .tab-content {
     margin: 0 -15px;
+     
   }
 
   &__rooms {
@@ -246,6 +247,10 @@
       @include media-breakpoint-up(md) {
         font-size: $type-size-11;
         letter-spacing: rem-calc(2.8);
+      }
+      em {
+        font-size: $type-size-15;
+        font-style: normal;
       }
       span {
         margin-right: 12px;
