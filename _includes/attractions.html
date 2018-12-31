@@ -1,18 +1,18 @@
 {% assign attractions =   site.data._models.explore | where: 'categories','attractions' %}
 <section class="offers-slider">
   <div class="offers-slider__wrap">
-    <h3>Attractions</h3>
+    <h3 tabindex="0">Attractions</h3>
     <div class="offers-slider__items" id="deals-offers">
       {% for attraction in attractions %}
       <div>
-        <a href="/attraction/{{ attraction.url_friendly_name }}/"><img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}"></a>
+        <a href="/attraction/{{ attraction.url_friendly_name }}/" tabindex="-1"><img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}"></a>
         <div class="offers-slider__detail">
           <h4><a href="/attraction/{{ attraction.url_friendly_name }}/">{{ attraction.name }}</a></h4>
-          <p>{{ attraction.short_detail }}</p>
+          <p tabindex="0">{{ attraction.short_detail }}</p>
           <a href="/attraction/{{ attraction.url_friendly_name }}/" class="button">Learn More</a>
         </div>
       </div>
       {% endfor %}
     </div>
   </div>
-</section> 
+</section>

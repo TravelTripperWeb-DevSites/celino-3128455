@@ -15,9 +15,13 @@
     {% endcase %}
   {% endif %}
 
-  {% include nav-main.html %}
+  <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
 
-  {{ content }}
+  {% include nav-main.html %}
+  
+  <div id="main">
+    {{ content }}
+  </div>
 
   <footer>
     {% include footer/custom.html %}
