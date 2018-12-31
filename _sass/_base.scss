@@ -69,11 +69,15 @@ h5 {
 
 h6 {
   font-family: $heading-font;
-  font-size: $type-size-8;
+  font-size: $type-size-10;
   line-height: 45.64px;
   color: $dark-blue-color;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+  @include media-breakpoint-up(md) {
+    font-size: $type-size-8;
+    letter-spacing: 3px;
+  }
 }
 
 small, .small {
