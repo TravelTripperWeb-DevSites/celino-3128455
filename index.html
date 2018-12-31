@@ -40,7 +40,6 @@ meta_tags:
 </section>
 
 {% include deals-offers.html %}
-
 <section class="home-stay">
   <div class="home-stay__wrap">
     <div class="home-stay__title">
@@ -60,85 +59,74 @@ meta_tags:
   </div>
   <div class="tab-content" id="nav-tabContent">
     <div class="home-stay__rooms tab-pane fade show active" id="nav-king" role="tabpanel" aria-labelledby="nav-king-tab">
+      <section ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
+        <div class="home-stay__rooms__wrap" ng-class-even="'home-stay__rooms__wrap--even'" ng-repeat="room in value" ng-if="room.categoryGroup =='King'">
 
-      <div class="home-stay__rooms__wrap">
-        <div class="home-stay__room-image">
-          <a href="#"><img src="/assets/images/rooms/room-1.jpg" alt="room"></a>
-        </div>
-        <div class="home-stay__room-detail">
-          <article>
-            <h2><a href="#">Classic King Room</a></h2>
-            <h4><a href="#"><span>Tonight’s Rate</span> $350  /  night</a></h4>
-            <p>The Classic King features one King bed and offers tropical elegance in a fresh and inviting, all-natural setting.  Pastel salmon accents provide a sense of Latin flavor and warmth to the interior.  The signature finishes include white washed oak hardwood floors and headboard, a 100% hand tufted New Zealand wool area rug and locally produced graphic artwork. The wash room features contemporary fixtures, a floating pedestal sink and a luxe walk-in shower.</p>
+          <div class="home-stay__room-image">
+            <a ng-href="/room/#[[ room.name | formatNameForLink ]]"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
+          </div>
+          <div class="home-stay__room-detail">
+            <article>
+              <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></h2>
+              <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
+              <p>[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
 
-            <div class="button-holder">
-              <a href="#" class="button button--arrow">Book Now</a>
-              <a href="#" class="button button--gold">Explore</a>
-            </div>
-          </article>
+              <div class="button-holder">
+                <a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="button button--arrow">Book Now</a>
+                <a ng-href="/room/#[[ room.name | formatNameForLink ]]" class="button button--gold">Explore</a>
+              </div>
+            </article>
+          </div>
         </div>
-      </div>
-      <div class="home-stay__rooms__wrap home-stay__rooms__wrap--even">
-        <div class="home-stay__room-image">
-          <a href="#"><img src="/assets/images/rooms/room-1.jpg" alt="room"></a>
-        </div>
-        <div class="home-stay__room-detail">
-          <article>
-            <h2><a href="#">Classic King Room</a></h2>
-            <h4><a href="#"><span>Tonight’s Rate</span> $350  /  night</a></h4>
-            <p>The Classic King features one King bed and offers tropical elegance in a fresh and inviting, all-natural setting.  Pastel salmon accents provide a sense of Latin flavor and warmth to the interior.  The signature finishes include white washed oak hardwood floors and headboard, a 100% hand tufted New Zealand wool area rug and locally produced graphic artwork. The wash room features contemporary fixtures, a floating pedestal sink and a luxe walk-in shower.</p>
-
-            <div class="button-holder">
-              <a href="#" class="button button--arrow">Book Now</a>
-              <a href="#" class="button button--gold">Explore</a>
-            </div>
-          </article>
-        </div>
-      </div>
-      <div class="home-stay__rooms__wrap">
-        <div class="home-stay__room-image">
-          <a href="#"><img src="/assets/images/rooms/room-1.jpg" alt="room"></a>
-        </div>
-        <div class="home-stay__room-detail">
-          <article>
-            <h2><a href="#">Classic King Room</a></h2>
-            <h4><a href="#"><span>Tonight’s Rate</span> $350  /  night</a></h4>
-            <p>The Classic King features one King bed and offers tropical elegance in a fresh and inviting, all-natural setting.  Pastel salmon accents provide a sense of Latin flavor and warmth to the interior.  The signature finishes include white washed oak hardwood floors and headboard, a 100% hand tufted New Zealand wool area rug and locally produced graphic artwork. The wash room features contemporary fixtures, a floating pedestal sink and a luxe walk-in shower.</p>
-
-            <div class="button-holder">
-              <a href="#" class="button button--arrow">Book Now</a>
-              <a href="#" class="button button--gold">Explore</a>
-            </div>
-          </article>
-        </div>
-      </div>
-
+      </section>
     </div>
+
     <div class="home-stay__rooms tab-pane fade" id="nav-queen" role="tabpanel" aria-labelledby="nav-queen-tab">
-      <div class="home-stay__rooms__wrap">
-        <div class="home-stay__room-image">
-          <img src="/assets/images/rooms/room-1.jpg" alt="room">
+      <section ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
+        <div class="home-stay__rooms__wrap" ng-class-even="'home-stay__rooms__wrap--even'" ng-repeat="room in value" ng-if="room.categoryGroup =='Queen'">
+
+          <div class="home-stay__room-image">
+            <a ng-href="/room/#[[ room.name | formatNameForLink ]]"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
+          </div>
+          <div class="home-stay__room-detail">
+            <article>
+              <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></h2>
+              <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
+              <p>[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
+
+              <div class="button-holder">
+                <a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="button button--arrow">Book Now</a>
+                <a ng-href="/room/#[[ room.name | formatNameForLink ]]" class="button button--gold">Explore</a>
+              </div>
+            </article>
+          </div>
         </div>
-        <div class="home-stay__room-detail">
-          <article>
-            <h2>Classic King Room</h2>
-          </article>
-        </div>
-      </div>
+      </section>
     </div>
     <div class="home-stay__rooms tab-pane fade" id="nav-suites" role="tabpanel" aria-labelledby="nav-suites-tab">
-      <div class="home-stay__rooms__wrap">
-        <div class="home-stay__room-image">
-          <img src="/assets/images/rooms/room-1.jpg" alt="room">
-        </div>
-        <div class="home-stay__room-detail">
-          <article>
-            <h2>Classic King Room</h2>
-          </article>
-        </div>
+     <section ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
+        <div class="home-stay__rooms__wrap" ng-class-even="'home-stay__rooms__wrap--even'" ng-repeat="room in value" ng-if="room.categoryGroup =='Suite'">
+
+          <div class="home-stay__room-image">
+            <a ng-href="/room/#[[ room.name | formatNameForLink ]]"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
+          </div>
+          <div class="home-stay__room-detail">
+            <article>
+              <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></h2>
+              <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
+              <p>[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
+
+              <div class="button-holder">
+                <a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="button button--arrow">Book Now</a>
+                <a ng-href="/room/#[[ room.name | formatNameForLink ]]" class="button button--gold">Explore</a>
+              </div>
+            </article>
+          </div>
       </div>
+     </section>
     </div>
-  </div>
+
+    </div>
 </section>
 
 {% include cta-two-column.html %}

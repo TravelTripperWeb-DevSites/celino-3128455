@@ -4,6 +4,11 @@
 //scroll change header style
 $(function() {
 
+  $('#rooms-tab a').click(function (e) {
+       e.preventDefault();
+       $(this).tab('show');
+   });
+
     var header = $("#home-nav");
     $(window).on("load resize scroll",function() {
         var scroll = $(window).scrollTop();
@@ -29,21 +34,24 @@ $(function() {
     });
 
     //offers slick slider
-    $("#deals-offers").slick({
-      slidesToShow: 3,
-      responsive: [{
-        breakpoint: 1024,
+    setTimeout(function(){
+      $(".offers-slider.included-offer").show();
+       $("#deals-offers").slick({
+        slidesToShow: 3,
+        responsive: [{
+          breakpoint: 1024,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+          breakpoint: 600,
           settings: {
-            slidesToShow: 2
+            slidesToShow: 1
           }
-        },
-        {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1
-        }
-      }]
-    });
+        }]
+      });
+    },3000);
 
     //instagram gallery in footer
   var instaurl = 'https://instafeed.traveltripper.io/u/thecelinohotel';
