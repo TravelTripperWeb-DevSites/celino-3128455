@@ -215,6 +215,7 @@
     text-align: center;
     background-color: $light-gray;
     order: 2;
+    @include flex-center-col;
 
     article {
       max-width: 500px;
