@@ -299,6 +299,7 @@
       @include make-col(5);
     }
     order: 2;
+    @include flex-center-col;
 
     article {
       max-width: 500px;
@@ -310,7 +311,10 @@
         text-align: left;
       }
     }
-
+    em {
+      font-size: $type-size-15;
+      font-style: normal;
+    }
     h4 {
       margin-bottom: 1.4rem;
       font-size: $type-size-14;

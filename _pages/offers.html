@@ -52,62 +52,20 @@ meta_tags:
   </div>
 </section>
 
-<section class="offers">
+<section class="offers" rt3-special-rates="offers" ng-show="offers.special_rates.length > 0">
   <div class="offers__container">
     <div class="offers__row">
-      <div class="offers__item">
+      <div class="offers__item" ng-repeat="offer in offers.special_rates">
         <div class="offers__item__inner">
-          <a href="" tabindex="-1">
-            <img src="/assets/images/offers/offer-1.jpg" alt="Dine & Drink at Celino">
+          <a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]" tabindex="-1">
+            <img ng-src="[[ offer.images[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ offer.rate_plan_name ]]">
           </a>
           <div class="offers__item__content">
             <h4 tabindex="0">
-              <a href="">Dine & Drink at Celino</a>
+              <a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]">Dine & Drink at Celino</a>
             </h4>
-            <p tabindex="0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-            <a href="" class="button button--arrow">Book Now</a>
-          </div>
-        </div>
-      </div>
-      <div class="offers__item">
-        <div class="offers__item__inner">
-          <a href="" tabindex="-1">
-            <img src="/assets/images/offers/offer-1.jpg" alt="Dine & Drink at Celino">
-          </a>
-          <div class="offers__item__content">
-            <h4 tabindex="0">
-              <a href="">Dine & Drink at Celino</a>
-            </h4>
-            <p tabindex="0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-            <a href="" class="button button--arrow">Book Now</a>
-          </div>
-        </div>
-      </div>
-      <div class="offers__item">
-        <div class="offers__item__inner">
-          <a href="" tabindex="-1">
-            <img src="/assets/images/offers/offer-1.jpg" alt="Dine & Drink at Celino">
-          </a>
-          <div class="offers__item__content">
-            <h4 tabindex="0">
-              <a href="">Dine & Drink at Celino</a>
-            </h4>
-            <p tabindex="0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-            <a href="" class="button button--arrow">Book Now</a>
-          </div>
-        </div>
-      </div>
-      <div class="offers__item">
-        <div class="offers__item__inner">
-          <a href="" tabindex="-1">
-            <img src="/assets/images/offers/offer-1.jpg" alt="Dine & Drink at Celino">
-          </a>
-          <div class="offers__item__content">
-            <h4 tabindex="0">
-              <a href="">Dine & Drink at Celino</a>
-            </h4>
-            <p tabindex="0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-            <a href="" class="button button--arrow">Book Now</a>
+            <p tabindex="0" ng-bind-html="offer.short_description | renderHTMLCorrectly"></p>
+            <a ng-href="[[offer.promo_url]]" class="button button--arrow">Book Now</a>
           </div>
         </div>
       </div>
