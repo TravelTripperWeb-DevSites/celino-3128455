@@ -193,6 +193,32 @@ $('#departure_date').val(ToDate);
     selector: ".item",
     thumbnail:true
   });
+
+  // Gallery filter for dropdown
+  $(".filter-select").on("change", function () {
+
+      // Remove active class from everything
+      $(".filter-select option").each(function () {
+          $(this).removeClass('active');
+      });
+
+      // Add active class to selected option
+      $(".filter-select option:selected").addClass('active');
+
+      // Assign filter variable
+      var $filter = $(".filter-select option:selected").attr("value");
+
+      // If we select "All," show all
+      if ($filter == 'all') {
+          $(".fancybox").attr("data-fancybox-group", "gallery").not(":visible").fadeIn();
+      } else {
+          $(".fancybox").fadeOut(0).filter(function () {
+              // set data-filter value as the data-rel value of selected
+              return $(this).data("filter") == $filter;
+          }).attr("data-fancybox-group", $filter).fadeIn(1000); // set data-fancybox-group and show filtered elements
+      }
+    });
+
   // Gallery Filter Function
   $(".filter-nav li a").on("click", function() {
 
@@ -210,13 +236,13 @@ $('#departure_date').val(ToDate);
     // If we select "All," show all
     if ($filter == 'all') {
       $(".fancybox").attr("data-fancybox-group", "gallery").not(":visible").fadeIn();
-    } else {
+    }
+    else {
       $(".fancybox").fadeOut(0).filter(function() {
         // set data-filter value as the data-rel value of selected
         return $(this).data("filter") == $filter;
       }).attr("data-fancybox-group", $filter).fadeIn(1000); // set data-fancybox-group and show filtered elements
     }
-
   });
 
 

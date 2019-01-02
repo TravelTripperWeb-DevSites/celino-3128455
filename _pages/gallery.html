@@ -32,10 +32,11 @@ meta_tags:
 
 <div class="mobile-filter d-block d-md-none">
   <p>Filter by category</p>
-  <select class="filter-select">
+  <select class="custom-control filter-select" aria-label="Filter by category">
+    <option value="all" class="filter">All</option>
     {% for category in categories %}
       {% assign catname = category[0] %}
-      <option value="" class="filter" data-filter="{{ catname }}">{{ site.data._galleries[catname].name }}</option>
+      <option value="{{ catname }}" class="filter">{{ site.data._galleries[catname].name }}</option>
     {% endfor %}
   </select>
 </div>
