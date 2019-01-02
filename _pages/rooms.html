@@ -95,63 +95,76 @@ meta_tags:
           </ul>
         </div>
       </div>
+      <div class="tab-content ">
+          <div class="rooms-listing__list-items tab-pane fade show active" id="park-central-king">
+           <section ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
+            <div class="stay-block__rooms__wrap" ng-repeat="room in value" ng-if="room.categoryGroup =='King'"  ng-class-even="'stay-block__rooms__wrap--even'">
+              <div class="stay-block__room-image">
+                <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img  ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
+              </div>
+              <div class="stay-block__room-detail">
+                <article>
+                  <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]">[[ room.name ]]</a></h2>
+                  <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
+                  <div tabindex="0">
+                    <p>[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
+                  </div>
 
-      <div class="rooms-listing__list-items active" id="park-central-king">
-        <div class="stay-block__rooms__wrap">
-          <div class="stay-block__room-image">
-            <a href="#" tabindex="-1"><img src="/assets/images/rooms/room-1.jpg" alt="room"></a>
-          </div>
-          <div class="stay-block__room-detail">
-            <article>
-              <h2><a href="#">Classic King Room</a></h2>
-              <h4><a href="#"><span>Tonight’s Rate</span> $350  /  night</a></h4>
-              <div tabindex="0">
-                <p>The Classic King features one King bed and offers tropical elegance in a fresh and inviting, all-natural setting.  Pastel salmon accents provide a sense of Latin flavor and warmth to the interior.  The signature finishes include white washed oak hardwood floors and headboard, a 100% hand tufted New Zealand wool area rug and locally produced graphic artwork. The wash room features contemporary fixtures, a floating pedestal sink and a luxe walk-in shower.</p>
+                  <div class="button-holder">
+                    <a href="#" class="button button--arrow">Book Now</a>
+                    <a ng-href="/room/#[[ room.name | formatNameForLink ]]" class="button button--gold">Explore</a>
+                  </div>
+                </article>
               </div>
+            </div>
+          </section>
+          </div>
+          <div class="rooms-listing__list-items tab-pane" id="park-central-queen">
+           <section ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
+            <div class="stay-block__rooms__wrap" ng-repeat="room in value" ng-if="room.categoryGroup =='Queen'"  ng-class-even="'stay-block__rooms__wrap--even'">
+              <div class="stay-block__room-image">
+                <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img  ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
+              </div>
+              <div class="stay-block__room-detail">
+                <article>
+                  <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]">[[ room.name ]]</a></h2>
+                  <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
+                  <div tabindex="0">
+                    <p>[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
+                  </div>
 
-              <div class="button-holder">
-                <a href="#" class="button button--arrow">Book Now</a>
-                <a href="/room-details/" class="button button--gold">Explore</a>
+                  <div class="button-holder">
+                    <a href="#" class="button button--arrow">Book Now</a>
+                    <a ng-href="/room/#[[ room.name | formatNameForLink ]]" class="button button--gold">Explore</a>
+                  </div>
+                </article>
               </div>
-            </article>
-          </div>
+            </div>
+          </section>
         </div>
-        <div class="stay-block__rooms__wrap stay-block__rooms__wrap--even">
-          <div class="stay-block__room-image">
-            <a href="#" tabindex="-1"><img src="/assets/images/rooms/room-1.jpg" alt="room"></a>
+        <div class="rooms-listing__list-items tab-pane" id="park-central-suites">
+         <section ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
+          <div class="stay-block__rooms__wrap" ng-repeat="room in value" ng-if="room.categoryGroup =='Suite'"  ng-class-even="'stay-block__rooms__wrap--even'">
+            <div class="stay-block__room-image">
+              <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img  ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
+            </div>
+            <div class="stay-block__room-detail">
+              <article>
+                <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]">[[ room.name ]]</a></h2>
+                <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
+                <div tabindex="0">
+                  <p>[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
+                </div>
+
+                <div class="button-holder">
+                  <a href="#" class="button button--arrow">Book Now</a>
+                  <a ng-href="/room/#[[ room.name | formatNameForLink ]]" class="button button--gold">Explore</a>
+                </div>
+              </article>
+            </div>
           </div>
-          <div class="stay-block__room-detail">
-            <article>
-              <h2><a href="#">Classic King Room</a></h2>
-              <h4><a href="#"><span>Tonight’s Rate</span> $350  /  night</a></h4>
-              <div tabindex="0">
-                <p>The Classic King features one King bed and offers tropical elegance in a fresh and inviting, all-natural setting.  Pastel salmon accents provide a sense of Latin flavor and warmth to the interior.  The signature finishes include white washed oak hardwood floors and headboard, a 100% hand tufted New Zealand wool area rug and locally produced graphic artwork. The wash room features contemporary fixtures, a floating pedestal sink and a luxe walk-in shower.</p>
-              </div>
-              <div class="button-holder">
-                <a href="#" class="button button--arrow">Book Now</a>
-                <a href="/room-details/" class="button button--gold">Explore</a>
-              </div>
-            </article>
-          </div>
-        </div>
-        <div class="stay-block__rooms__wrap">
-          <div class="stay-block__room-image">
-            <a href="#" tabindex="-1"><img src="/assets/images/rooms/room-1.jpg" alt="room"></a>
-          </div>
-          <div class="stay-block__room-detail">
-            <article>
-              <h2><a href="#">Classic King Room</a></h2>
-              <h4><a href="#"><span>Tonight’s Rate</span> $350  /  night</a></h4>
-              <div tabindex="0">
-                <p>The Classic King features one King bed and offers tropical elegance in a fresh and inviting, all-natural setting.  Pastel salmon accents provide a sense of Latin flavor and warmth to the interior.  The signature finishes include white washed oak hardwood floors and headboard, a 100% hand tufted New Zealand wool area rug and locally produced graphic artwork. The wash room features contemporary fixtures, a floating pedestal sink and a luxe walk-in shower.</p>
-              </div>
-              <div class="button-holder">
-                <a href="#" class="button button--arrow">Book Now</a>
-                <a href="/room-details/" class="button button--gold">Explore</a>
-              </div>
-            </article>
-          </div>
-        </div>
+        </section>
+      </div>
       </div>
 
     </div>
