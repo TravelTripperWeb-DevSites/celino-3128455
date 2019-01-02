@@ -2,7 +2,7 @@
 layout: default
 title: Offer Details
 meta_description:
-permalink: /offer-details/
+permalink: /offer/
 meta_tags:
   robots:
 ---
@@ -28,42 +28,37 @@ meta_tags:
   </div>
 </section>
 
-<section class="offer-detail">
+<section class="offer-detail" rt3-special-rates="offers" ng-controller="offerDetail">
   <div class="offer-detail__row">
     <div class="offer-detail__content">
-      <h5 tabindex="0">Heat up this season with a group trip to the celino south beach</h5>
+      <h5 tabindex="0" ng-bind-html="offers.sRdetail.rate_plan_name | renderHTMLCorrectly"></h5>
       <div class="hline"></div>
       <div class="offer-detail__description">
         <div tabindex="0">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu is nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste</p>
+          <p ng-bind-html="offers.sRdetail.long_description | renderHTMLCorrectly"></p>
         </div>
         <div class="d-block d-md-none">
-          <a href="" class="button button--arrow mt-1">Book Now</a>
+          <a ng-href="[[ offers.sRdetail.promo_url ]]" class="button button--arrow mt-1">Book Now</a>
         </div>
       </div>
       <div class="offer-detail__terms d-none d-md-block">
         <h6 tabindex="0">Terms & Conditions</h6>
-        <div tabindex="0">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu is nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
+        <p>[[ offers.special_rate_page_text ]]</p>
         <ul tabindex="0">
-          <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</li>
-          <li>fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in</li>
-          <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</li>
-          <li>fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in</li>
+          <li ng-repeat="policy in offers.sRdetail.policy_description">[[ policy ]]</li>
         </ul>
       </div>
     </div>
     <div class="offer-detail__image">
       <div class="offer-detail__image__inner">
         <figure>
-          <img src="/assets/images/offers/customer.png" alt="Reservation">
+          <img ng-src="[[ offers.sRdetail.images[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ offer.rate_plan_name ]]">
         </figure>
         <div tabindex="0">
-          <p>Reserve online, contact your preferred travel<br>professional, or call <a href="tel:(786) 574-4090"><strong>(786) 574-4090</strong></a><br>and reference promotion code <strong>FLSUN</strong></p>
+          <p>Reserve online, contact your preferred travel<br>professional, or call <a href="tel:(786) 574-4090"><strong>(786) 574-4090</strong></a><br>and reference promotion code <strong>[[ offers.sRdetail.rate_plan_code ]]</strong></p>
         </div>
         <div class="d-none d-md-block">
-          <a href="" class="button button--arrow mt-2">Book Now</a>
+          <a ng-href="[[ offers.sRdetail.promo_url ]]" class="button button--arrow mt-2">Book Now</a>
         </div>
       </div>
       <div class="offer-detail__terms d-block d-md-none">
