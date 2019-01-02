@@ -124,11 +124,13 @@
 
   &__item {
     @include make-col-ready;
-    padding-right: 0;
-    padding-left: 0;
+    margin-bottom: 15px;
     cursor: pointer;
     @include media-breakpoint-up(md) {
       @include make-col(4);
+      margin-bottom: 0;
+      padding-right: 0;
+      padding-left: 0;
     }
 
     &:after {
@@ -149,8 +151,11 @@
 
     img {
       width: 100%;
-      height: 315px;
+      height: 250px;
       object-fit: cover;
+      @include media-breakpoint-up(md) {
+        height: 315px;
+      }
     }
   }
 }

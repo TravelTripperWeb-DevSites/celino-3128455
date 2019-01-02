@@ -9,28 +9,28 @@ layout: default
         <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}"{% if forloop.first %} class="active"{% endif %}></li>
         {% endfor %}
       </ol>
-      <div class="carousel-inner">
+      <div class="carousel-inner" role="listbox">
         {% for image in page.image %}
-  			<div class="carousel-item{% if forloop.first %} active{% endif %}">
+  			<div class="carousel-item{% if forloop.first %} active{% endif %}" role="option">
   				<img src="{{ image.url_large }}" alt="{{image.alt}}">
   			</div>
       {% endfor %}
       </div>
-      <h1>Dine at {{ page.title }}</h1>
+      <h1 tabindex="0">Dine at {{ page.title }}</h1>
   </div>
 </section>
 
 <section class="dine-details">
   <div class="dine-details__inner">
     <div class="dine-details__text">
-      <article>
+      <article tabindex="0">
         {{page.description}}
       </article>
     </div>
     <div class="dine-details__contact">
       <a href="{{page.reserve_link}}" class="button button--arrow">RESERVE Now</a>
-      <p>For reservations and information about ICONIK,</br> call  <a href="tel:786 574-4090" title="786 574-4090">(786) 574-4090</a> or email us <br>to <a href="mailto:dine@celino.com" title="dine@celino.com">dine@celino.com</a></p>
-      <p>Open Daily from 7:00am – 12:00am<br>Tues-Thurs until 11pm</p>
+      <p tabindex="0">For reservations and information about ICONIK,<br> call  <a href="tel:786 574-4090" title="786 574-4090">(786) 574-4090</a> or email us <br>to <a href="mailto:dine@celino.com" title="dine@celino.com">dine@celino.com</a></p>
+      <p tabindex="0">Open Daily from 7:00am – 12:00am<br>Tues-Thurs until 11pm</p>
     </div>
   </div>
 </section>
@@ -38,7 +38,7 @@ layout: default
 <section class="cta d-flex align-items-center">
   <img src="/assets/images/dine/cta-details.jpg" alt="GET IN TOUCH">
   <div class="cta__content">
-    <h3>Premium food<br>from day to night</h3>
+    <h3 tabindex="0">Premium food<br>from day to night</h3>
     {% for menu in page.menu_items %}
      <a href="{{menu.detail}}" class="button"> {{menu.name}} </a>
     {% endfor %}
@@ -48,7 +48,7 @@ layout: default
   </div>
 </section>
 
-<section class="gallery d-none d-md-block">
+<section class="gallery d-none d-md-block" tabindex="-1">
   <h4 class="text-center">Gallery</h4>
   <div class="gallery__row"  id="lightgallery">
     {% for image in page.gallery %}
@@ -63,9 +63,9 @@ layout: default
 <section class="mobile-carousel d-md-none">
   <div id="dine-gallery" class="carousel slide" data-ride="carousel">
     <!-- The slideshow -->
-    <div class="carousel-inner">
+    <div class="carousel-inner" role="listbox">
       {% for image in page.gallery %}
-      <div class="carousel-item{% if forloop.first %} active{% endif %}">
+      <div class="carousel-item{% if forloop.first %} active{% endif %}" role="option">
         <img src="{{ image.url_large }}" alt="{{image.alt}}">
       </div>
       {% endfor %}
@@ -82,35 +82,21 @@ layout: default
 
 <section class="offers-slider">
   <div class="offers-slider__wrap">
-    <h3>Dine & Offers</h3>
+    <h3 tabindex="0">Dine & Offers</h3>
     <div class="offers-slider__items" id="deals-offers">
       {% assign offerslist = site.data._models.dine-offers %}
       {% for offer in offerslist %}
       <div>
-        <a href="#"><img src="{{ offer.dine_image.url_medium }}" alt="Thanksgiving Plan"></a>
+        <a href="#" tabindex="-1"><img src="{{ offer.dine_image.url_medium }}" alt="Thanksgiving Plan"></a>
         <div class="offers-slider__detail">
           <h4><a href="#">{{ offer.title }}</a></h4>
-          {{ offer.description }}
+          <div tabindex="0">
+            {{ offer.description }}
+          </div>
           <a href="{{ offer.link }}" class="button">Learn More</a>
         </div>
       </div>
       {% endfor %}
-      <!--div>
-        <a href="#"><img src="/assets/images/dine/offer.jpg" alt="dine and drinks"></a>
-        <div class="offers-slider__detail">
-          <h4><a href="#">Thanksgiving Plan</a></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-          <a href="#" class="button">Learn More</a>
-        </div>
-      </div>
-      <div>
-        <a href="#"><img src="/assets/images/dine/offer.jpg" alt="dine and drinks"></a>
-        <div class="offers-slider__detail">
-          <h4><a href="#">Thanksgiving Plan</a></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-          <a href="#" class="button">Learn More</a>
-        </div>
-      </div-->
     </div>
   </div>
 </section>
