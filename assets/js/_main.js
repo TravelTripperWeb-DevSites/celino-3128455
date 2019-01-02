@@ -119,6 +119,10 @@ $('#departure_date').val(ToDate);
    $('#departure_holder').val(monthNames[dateDeparture.getMonth()]+' '+dateDeparture.getDate());
  },200);
 
+ $('.booking-widget__form-inputs__input').on('click', function() {
+    $(this).find('.hasDatepicker').trigger('focus');
+  });
+
   $("#arrival_date").datepicker({
     dateFormat: "yy-mm-dd",
     setDate: 0,
