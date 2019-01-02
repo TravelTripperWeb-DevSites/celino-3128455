@@ -16,14 +16,14 @@ meta_tags:
           <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}"  {% if forloop.first %}class="active"{% endif %}></li>
         {% endfor %}
       </ol>
-      <div class="carousel-inner">
+      <div class="carousel-inner" role="listbox">
         {% for bannerimage in banner.image %}
-          <div class="carousel-item {% if forloop.first %}active{% endif %}">
+          <div class="carousel-item {% if forloop.first %}active{% endif %}" role="option">
             <img src="{{ bannerimage.url_medium }}" alt="{{ bannerimage.alt }}">
           </div>
         {% endfor %}
       </div>
-      <h1>{{ banner.banner_title }}</h1>
+      <h1 tabindex="0">{{ banner.banner_title }}</h1>
     {% endfor %}
   </div>
 </section>
@@ -31,18 +31,22 @@ meta_tags:
 <section class="offer-detail">
   <div class="offer-detail__row">
     <div class="offer-detail__content">
-      <h5>Heat up this season with a group trip to the celino south beach</h5>
+      <h5 tabindex="0">Heat up this season with a group trip to the celino south beach</h5>
       <div class="hline"></div>
       <div class="offer-detail__description">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu is nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste</p>
+        <div tabindex="0">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu is nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste</p>
+        </div>
         <div class="d-block d-md-none">
           <a href="" class="button button--arrow mt-1">Book Now</a>
         </div>
       </div>
       <div class="offer-detail__terms d-none d-md-block">
-        <h6>Terms & Conditions</h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu is nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <ul>
+        <h6 tabindex="0">Terms & Conditions</h6>
+        <div tabindex="0">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu is nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <ul tabindex="0">
           <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</li>
           <li>fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in</li>
           <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</li>
@@ -55,15 +59,19 @@ meta_tags:
         <figure>
           <img src="/assets/images/offers/customer.png" alt="Reservation">
         </figure>
-        <p>Reserve online, contact your preferred travel<br>professional, or call <a href="tel:(786) 574-4090"><strong>(786) 574-4090</strong></a><br>and reference promotion code <strong>FLSUN</strong></p>
+        <div tabindex="0">
+          <p>Reserve online, contact your preferred travel<br>professional, or call <a href="tel:(786) 574-4090"><strong>(786) 574-4090</strong></a><br>and reference promotion code <strong>FLSUN</strong></p>
+        </div>
         <div class="d-none d-md-block">
           <a href="" class="button button--arrow mt-2">Book Now</a>
         </div>
       </div>
       <div class="offer-detail__terms d-block d-md-none">
-        <h6>Terms & Conditions</h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu is nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <ul>
+        <h6 tabindex="0">Terms & Conditions</h6>
+        <div tabindex="0">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu is nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <ul tabindex="0">
           <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</li>
           <li>fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in</li>
           <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</li>

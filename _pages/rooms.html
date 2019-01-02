@@ -8,7 +8,7 @@ meta_tags:
 ---
 
 <section class="page-banner mb-55">
-  <div id="pageBanner" class="carousel slide" data-ride="carousel">
+  <div id="pageBanner" class="carousel slide" data-ride="carousel" >
   {% assign banners = site.data._models.page-banners | where: 'page_name', 'Stay' %}
     {% for banner in banners | limit: 1 %}
       <ol class="carousel-indicators">
@@ -16,14 +16,14 @@ meta_tags:
           <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}"  {% if forloop.first %}class="active"{% endif %}></li>
         {% endfor %}
       </ol>
-      <div class="carousel-inner">
+      <div class="carousel-inner" role="listbox">
         {% for bannerimage in banner.image %}
-          <div class="carousel-item {% if forloop.first %}active{% endif %}">
+          <div class="carousel-item {% if forloop.first %}active{% endif %}" role="option">
             <img src="{{ bannerimage.url_large }}" alt="{{ bannerimage.alt }}">
           </div>
         {% endfor %}
       </div>
-      <h1>{{ banner.banner_title }}</h1>
+      <h1 tabindex="0">{{ banner.banner_title }}</h1>
     {% endfor %}
   </div>
 </section>
@@ -40,11 +40,13 @@ meta_tags:
     </div>
     <div class="inner-page-intro__text">
       {% regionblock intro_title, type:header %}
-        <h2>Lorem Ipsum</h2>
+        <h2 tabindex="0">Lorem Ipsum</h2>
       {% endregionblock %}
-      {% regionblock intro_text, type:text %}
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc venenatis, leo sed tempus viverra, diam nibh maximus nisi, ut viverra nunc nunc ut sapien. Ut finibus sapien quam, sit amet pellentesque elit consectetur sit amet. Suspendisse semper mattis tristique. Donec semper purus quis felis bibendum varius.</p>
-      {% endregionblock %}
+      <div tabindex="0">
+        {% regionblock intro_text, type:text %}
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc venenatis, leo sed tempus viverra, diam nibh maximus nisi, ut viverra nunc nunc ut sapien. Ut finibus sapien quam, sit amet pellentesque elit consectetur sit amet. Suspendisse semper mattis tristique. Donec semper purus quis felis bibendum varius.</p>
+        {% endregionblock %}
+      </div>
       {% regionblock intro_cta, type:text %}
         <a href="#" class="button button--arrow button--arrow--gold  d-inline-block d-md-none">Learn More</a>
       {% endregionblock %}
@@ -55,10 +57,10 @@ meta_tags:
 <section class="rooms-listing">
   <div class="rooms-listing__filter-wrap">
     <div class="rooms-listing__main-filter">
-      <div class="rooms-listing__main-filter__filter-label">
+      <div class="rooms-listing__main-filter__filter-label" tabindex="0">
         Select Building
       </div>
-      <ul class="nav nav-tabs rooms-listing__main-filter__filter-items">
+      <ul class="nav nav-tabs rooms-listing__main-filter__filter-items" role="tablist">
         <li class="nav-item active">
           <a class="nav-link active" data-toggle="tab" href="#park-central">PARK CENTRAL</a>
         </li>
@@ -97,13 +99,15 @@ meta_tags:
       <div class="rooms-listing__list-items active" id="park-central-king">
         <div class="stay-block__rooms__wrap">
           <div class="stay-block__room-image">
-            <a href="#"><img src="/assets/images/rooms/room-1.jpg" alt="room"></a>
+            <a href="#" tabindex="-1"><img src="/assets/images/rooms/room-1.jpg" alt="room"></a>
           </div>
           <div class="stay-block__room-detail">
             <article>
               <h2><a href="#">Classic King Room</a></h2>
               <h4><a href="#"><span>Tonight’s Rate</span> $350  /  night</a></h4>
-              <p>The Classic King features one King bed and offers tropical elegance in a fresh and inviting, all-natural setting.  Pastel salmon accents provide a sense of Latin flavor and warmth to the interior.  The signature finishes include white washed oak hardwood floors and headboard, a 100% hand tufted New Zealand wool area rug and locally produced graphic artwork. The wash room features contemporary fixtures, a floating pedestal sink and a luxe walk-in shower.</p>
+              <div tabindex="0">
+                <p>The Classic King features one King bed and offers tropical elegance in a fresh and inviting, all-natural setting.  Pastel salmon accents provide a sense of Latin flavor and warmth to the interior.  The signature finishes include white washed oak hardwood floors and headboard, a 100% hand tufted New Zealand wool area rug and locally produced graphic artwork. The wash room features contemporary fixtures, a floating pedestal sink and a luxe walk-in shower.</p>
+              </div>
 
               <div class="button-holder">
                 <a href="#" class="button button--arrow">Book Now</a>
@@ -114,14 +118,15 @@ meta_tags:
         </div>
         <div class="stay-block__rooms__wrap stay-block__rooms__wrap--even">
           <div class="stay-block__room-image">
-            <a href="#"><img src="/assets/images/rooms/room-1.jpg" alt="room"></a>
+            <a href="#" tabindex="-1"><img src="/assets/images/rooms/room-1.jpg" alt="room"></a>
           </div>
           <div class="stay-block__room-detail">
             <article>
               <h2><a href="#">Classic King Room</a></h2>
               <h4><a href="#"><span>Tonight’s Rate</span> $350  /  night</a></h4>
-              <p>The Classic King features one King bed and offers tropical elegance in a fresh and inviting, all-natural setting.  Pastel salmon accents provide a sense of Latin flavor and warmth to the interior.  The signature finishes include white washed oak hardwood floors and headboard, a 100% hand tufted New Zealand wool area rug and locally produced graphic artwork. The wash room features contemporary fixtures, a floating pedestal sink and a luxe walk-in shower.</p>
-
+              <div tabindex="0">
+                <p>The Classic King features one King bed and offers tropical elegance in a fresh and inviting, all-natural setting.  Pastel salmon accents provide a sense of Latin flavor and warmth to the interior.  The signature finishes include white washed oak hardwood floors and headboard, a 100% hand tufted New Zealand wool area rug and locally produced graphic artwork. The wash room features contemporary fixtures, a floating pedestal sink and a luxe walk-in shower.</p>
+              </div>
               <div class="button-holder">
                 <a href="#" class="button button--arrow">Book Now</a>
                 <a href="/room-details/" class="button button--gold">Explore</a>
@@ -131,14 +136,15 @@ meta_tags:
         </div>
         <div class="stay-block__rooms__wrap">
           <div class="stay-block__room-image">
-            <a href="#"><img src="/assets/images/rooms/room-1.jpg" alt="room"></a>
+            <a href="#" tabindex="-1"><img src="/assets/images/rooms/room-1.jpg" alt="room"></a>
           </div>
           <div class="stay-block__room-detail">
             <article>
               <h2><a href="#">Classic King Room</a></h2>
               <h4><a href="#"><span>Tonight’s Rate</span> $350  /  night</a></h4>
-              <p>The Classic King features one King bed and offers tropical elegance in a fresh and inviting, all-natural setting.  Pastel salmon accents provide a sense of Latin flavor and warmth to the interior.  The signature finishes include white washed oak hardwood floors and headboard, a 100% hand tufted New Zealand wool area rug and locally produced graphic artwork. The wash room features contemporary fixtures, a floating pedestal sink and a luxe walk-in shower.</p>
-
+              <div tabindex="0">
+                <p>The Classic King features one King bed and offers tropical elegance in a fresh and inviting, all-natural setting.  Pastel salmon accents provide a sense of Latin flavor and warmth to the interior.  The signature finishes include white washed oak hardwood floors and headboard, a 100% hand tufted New Zealand wool area rug and locally produced graphic artwork. The wash room features contemporary fixtures, a floating pedestal sink and a luxe walk-in shower.</p>
+              </div>
               <div class="button-holder">
                 <a href="#" class="button button--arrow">Book Now</a>
                 <a href="/room-details/" class="button button--gold">Explore</a>

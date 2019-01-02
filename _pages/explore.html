@@ -16,14 +16,14 @@ meta_tags:
           <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}"  {% if forloop.first %}class="active"{% endif %}></li>
         {% endfor %}
       </ol>
-      <div class="carousel-inner">
+      <div class="carousel-inner" role="listbox">
         {% for bannerimage in banner.image %}
-          <div class="carousel-item {% if forloop.first %}active{% endif %}">
+          <div class="carousel-item {% if forloop.first %}active{% endif %}" role="option">
             <img src="{{ bannerimage.url_large }}" alt="{{ bannerimage.alt }}">
           </div>
         {% endfor %}
       </div>
-      <h1>{{ banner.banner_title }}</h1>
+      <h1 tabindex="0">{{ banner.banner_title }}</h1>
     {% endfor %}
   </div>
 </section>
@@ -39,21 +39,23 @@ meta_tags:
     </div>
     <div class="luxury-intro__detail">
       <article>
-        {% regionblock luxury_detail, type:text %}
-        <h2>LOREM IPSUM</h2>
-        <hr>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-        </p>
+        {% regionblock luxury_detail_heading, type:header %}
+        <h2 tabindex="0">LOREM IPSUM</h2>
         {% endregionblock %}
+        <hr>
+        <div tabindex="0">
+          {% regionblock luxury_detail, type:text %}
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in</p>
+          {% endregionblock %}
+        </div>
       </article>
     </div>
   </div>
 </section>
 
-<section class="explore-map">
+<section class="explore-map" tabindex="-1">
   <div class="explore-map__wrap">
-    <ul class="nav nav-pills nav-fill" role="tablist">
+    <ul class="nav nav-pills nav-fill">
       <li class="nav-item">
         <a class="nav-link active" data-toggle="tab" data-category="attractions" href="#">attractions</a>
       </li>
@@ -78,7 +80,7 @@ meta_tags:
 
 <section class="enjoy">
   <div class="enjoy__wrap">
-    <div class="enjoy__title">
+    <div class="enjoy__title" tabindex="0">
       {% regionblock dine_title, type: header %}
       Enjoy
       {% endregionblock %}
@@ -94,9 +96,9 @@ meta_tags:
       </div>
       <div class="enjoy__detail">
         <article>
-          <h5>{{ enjoy.name }}</h5>
+          <h5 tabindex="0">{{ enjoy.name }}</h5>
           <hr>
-          <p>{{ enjoy.short_description }}</p>
+          <p tabindex="0">{{ enjoy.short_description }}</p>
           <a href="/{{ enjoy.url_friendly_name }}/" class="button button--arrow">Learn More</a>
         </article>
       </div>
