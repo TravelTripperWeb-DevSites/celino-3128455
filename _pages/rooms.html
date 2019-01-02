@@ -144,9 +144,9 @@ meta_tags:
         </div>
         <div class="rooms-listing__list-items tab-pane" id="park-central-suites">
          <section ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
-          <div class="stay-block__rooms__wrap" ng-repeat="room in value" ng-if="room.categoryGroup =='Suite'"  ng-class-even="'stay-block__rooms__wrap--even'">
+          <div class="stay-block__rooms__wrap" ng-repeat="room in value" ng-if="room.categoryGroup =='Suite'" ng-class-even="'stay-block__rooms__wrap--even'">
             <div class="stay-block__room-image">
-              <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img  ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
+              <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
             </div>
             <div class="stay-block__room-detail">
               <article>
@@ -157,7 +157,7 @@ meta_tags:
                 </div>
 
                 <div class="button-holder">
-                  <a href="#" class="button button--arrow">Book Now</a>
+                  <a ng-href="{{ site.reztripUrl}}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="button button--arrow">Book Now</a>
                   <a ng-href="/room/#[[ room.name | formatNameForLink ]]" class="button button--gold">Explore</a>
                 </div>
               </article>
