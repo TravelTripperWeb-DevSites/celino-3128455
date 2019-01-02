@@ -53,6 +53,22 @@ $(function() {
       });
     },3000);
 
+    $("#attraction-gallery").slick({
+     slidesToShow: 3,
+     responsive: [{
+       breakpoint: 1024,
+         settings: {
+           slidesToShow: 2
+         }
+       },
+       {
+       breakpoint: 600,
+       settings: {
+         slidesToShow: 1
+       }
+     }]
+   });
+
     //instagram gallery in footer
   var instaurl = 'https://instafeed.traveltripper.io/u/thecelinohotel';
 	$.ajax({

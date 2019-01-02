@@ -2,194 +2,117 @@
 layout: default
 title: Room Details
 meta_description:
-permalink: /room-details/
+permalink: /room/
 meta_tags:
   robots:
 ---
-
-<section class="page-banner mb-55">
-  <div id="pageBanner" class="carousel slide" data-ride="carousel">
-  {% assign banners = site.data._models.page-banners | where: 'page_name', 'Room Details' %}
-    {% for banner in banners | limit: 1 %}
-      <ol class="carousel-indicators">
-        {% for bannerimage in banner.image %}
-          <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}"  {% if forloop.first %}class="active"{% endif %}></li>
-        {% endfor %}
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        {% for bannerimage in banner.image %}
-          <div class="carousel-item {% if forloop.first %}active{% endif %}" role="option">
-            <img src="{{ bannerimage.url_medium }}" alt="{{ bannerimage.alt }}">
+<section ng-controller="roomDetail" rt3-room-details="room">
+  <section class="page-banner mb-55">
+    <div id="pageBanner" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li ng-repeat="photo in room.photos" data-target="#pageBanner" data-slide-to="[[ $index ]]" ng-class="{'active': $index == 0}"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item" ng-repeat="photo in room.photos" ng-class="{'active': $index == 0}" role="option">
+            <img ng-src="[[ photo.yankee_large ]]" alt="[[ room.name ]]">
           </div>
-        {% endfor %}
+        </div>
+        <h1 tabindex="0" ng-bind-html="room.name | renderHTMLCorrectly"></h1>
+    </div>
+  </section>
+
+  <section class="room-details-intro">
+    <div class="room-details-intro__wrap">
+      <div class="room-details-intro__intro-text">
+        <h2 tabindex="0" ng-bind-html="room.name | renderHTMLCorrectly"></h2>
+        <div tabindex="0">
+          <p ng-bind-html="room.description | renderHTMLCorrectly"></p>
+        </div>
       </div>
-      <h1 tabindex="0">{{ banner.banner_title }}</h1>
-    {% endfor %}
-  </div>
+      <div class="room-details-intro__highlights">
+        <h6 tabindex="0">SUITE HIGHLIGHTS</h6>
+        <ul tabindex="0">
+          <li> Room Size: [[ room.room_size ]] sqft </li>
+          <li> Sleeps: [[ room.max_number_of_guests ]] Guest(s) </li>
+          <li> Bed Types: [[ room.bed_types[0].name ]] </li>
+          <li ng-repeat="amenities in room.amenities"> [[ amenities ]] </li>
+        </ul>
+        <a ng-href="{{ site.reztripUrl}}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="button button--arrow">Reserve This Room</a>
+      </div>
+    </div>
+  </section>
+
+
+  {% include room-detail-gallery.html %}
+  {% include guest-services.html %}
+
+  <section class="other-rooms">
+    <h4 class="text-center" tabindex="0">SIMILAR ROOMS & SUITES</h4>
+    <div class="rooms-listing__list-items active" ng-show="room.name.indexOf('King') != -1" ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
+      <div class="stay-block__rooms__wrap" ng-class-even="'stay-block__rooms__wrap--even'" ng-repeat="room in value" ng-if="room.categoryGroup =='King'">
+        <div class="stay-block__room-image">
+          <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
+        </div>
+        <div class="stay-block__room-detail">
+          <article>
+            <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]">[[ room.name ]]</a></h2>
+            <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
+            <div tabindex="0">
+              <p>[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
+            </div>
+
+            <div class="button-holder">
+              <a ng-href="{{ site.reztripUrl}}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="button button--arrow">Book Now</a>
+              <a ng-href="/room/#[[ room.name | formatNameForLink ]]" class="button button--gold">Explore</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="rooms-listing__list-items active" ng-show="room.name.indexOf('Queen') != -1" ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
+      <div class="stay-block__rooms__wrap" ng-class-even="'stay-block__rooms__wrap--even'" ng-repeat="room in value" ng-if="room.categoryGroup =='Queen'">
+        <div class="stay-block__room-image">
+          <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
+        </div>
+        <div class="stay-block__room-detail">
+          <article>
+            <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]">[[ room.name ]]</a></h2>
+            <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
+            <div tabindex="0">
+              <p>[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
+            </div>
+
+            <div class="button-holder">
+              <a ng-href="{{ site.reztripUrl}}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="button button--arrow">Book Now</a>
+              <a ng-href="/room/#[[ room.name | formatNameForLink ]]" class="button button--gold">Explore</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="rooms-listing__list-items active" ng-show="room.name.indexOf('Suite') != -1" ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
+      <div class="stay-block__rooms__wrap" ng-class-even="'stay-block__rooms__wrap--even'" ng-repeat="room in value" ng-if="room.categoryGroup =='Suite'">
+        <div class="stay-block__room-image">
+          <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
+        </div>
+        <div class="stay-block__room-detail">
+          <article>
+            <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]">[[ room.name ]]</a></h2>
+            <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
+            <div tabindex="0">
+              <p>[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
+            </div>
+
+            <div class="button-holder">
+              <a ng-href="{{ site.reztripUrl}}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="button button--arrow">Book Now</a>
+              <a ng-href="/room/#[[ room.name | formatNameForLink ]]" class="button button--gold">Explore</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
 </section>
-
-<section class="room-details-intro">
-  <div class="room-details-intro__wrap">
-    <div class="room-details-intro__intro-text">
-      <h2 tabindex="0">CLASSIC KING ROOM</h2>
-      <div tabindex="0">
-        <p>The Classic King features one King bed and offers tropical elegance in a fresh and inviting, all-natural setting.  Pastel salmon accents provide a sense of Latin flavor and warmth to the interior.  The signature finishes include white washed oak hardwood floors and headboard, a 100% hand tufted New Zealand wool area rug and locally produced graphic artwork. The wash room features contemporary fixtures, a floating pedestal sink and a luxe walk-in shower.</p>
-      </div>
-    </div>
-    <div class="room-details-intro__highlights">
-      <h6 tabindex="0">SUITE HIGHLIGHTS</h6>
-      <ul tabindex="0">
-        <li> Room Size: 225 - 275 Sq Ft. </li>
-        <li> Sleeps: 2 Guests </li>
-        <li> Bed Types: 1 King Bed </li>
-        <li> WiFi </li>
-        <li> Butler Service </li>
-        <li> Air Conditioning </li>
-      </ul>
-      <a href="#" class="button button--arrow">Reserve This Room</a>
-    </div>
-  </div>
-</section>
-
-<section class="room-images-gallery clearfix d-none d-md-block">
-  <div class="item fancybox" data-src="/assets/images/room-details/room-1.jpg" data-exthumbimage="/assets/images/room-details/room-1.jpg">
-    <img src="/assets/images/room-details/room-1.jpg" class="img-fluid" alt="Room 1">
-    <div class="overlay">
-      <img src="/assets/images/zoom-icon.png" alt="Zoom">
-    </div>
-  </div>
-  <div class="item fancybox" data-src="/assets/images/room-details/room-2.jpg" data-exthumbimage="/assets/images/room-details/room-2.jpg">
-    <img src="/assets/images/room-details/room-2.jpg" class="img-fluid" alt="Room 2">
-    <div class="overlay">
-      <img src="/assets/images/zoom-icon.png" alt="Zoom">
-    </div>
-  </div>
-  <div class="item fancybox" data-src="/assets/images/room-details/room-3.jpg" data-exthumbimage="/assets/images/room-details/room-3.jpg">
-    <img src="/assets/images/room-details/room-3.jpg" class="img-fluid" alt="Room 3">
-    <div class="overlay">
-      <img src="/assets/images/zoom-icon.png" alt="Zoom">
-    </div>
-  </div>
-  <div class="item fancybox" data-src="/assets/images/room-details/room-4.jpg" data-exthumbimage="/assets/images/room-details/room-4.jpg">
-    <img src="/assets/images/room-details/room-4.jpg" class="img-fluid" alt="Room 4">
-    <div class="overlay">
-      <img src="/assets/images/zoom-icon.png" alt="Zoom">
-    </div>
-  </div>
-  <div class="item fancybox" data-src="/assets/images/room-details/room-5.jpg" data-exthumbimage="/assets/images/room-details/room-5.jpg">
-    <img src="/assets/images/room-details/room-5.jpg" class="img-fluid" alt="Room 5">
-    <div class="overlay">
-      <img src="/assets/images/zoom-icon.png" alt="Zoom">
-    </div>
-  </div>
-  <div class="item fancybox" data-src="/assets/images/room-details/room-6.jpg" data-exthumbimage="/assets/images/room-details/room-6.jpg">
-    <img src="/assets/images/room-details/room-6.jpg" class="img-fluid" alt="Room 6">
-    <div class="overlay">
-      <img src="/assets/images/zoom-icon.png" alt="Zoom">
-    </div>
-  </div>
-</section>
-
-<section class="mobile-carousel d-md-none">
-  <div id="roomImages" class="carousel slide" data-ride="carousel">
-
-    <!-- The slideshow -->
-    <div class="carousel-inner" role="listbox">
-      <div class="carousel-item active" role="option">
-        <img src="/assets/images/room-details/room-1.jpg" alt="Room 1">
-      </div>
-      <div class="carousel-item" role="option">
-        <img src="/assets/images/room-details/room-2.jpg" alt="Room 2">
-      </div>
-      <div class="carousel-item" role="option">
-        <img src="/assets/images/room-details/room-3.jpg" alt="Room 3">
-      </div>
-      <div class="carousel-item" role="option">
-        <img src="/assets/images/room-details/room-4.jpg" alt="Room 4">
-      </div>
-      <div class="carousel-item" role="option">
-        <img src="/assets/images/room-details/room-5.jpg" alt="Room 5">
-      </div>
-      <div class="carousel-item" role="option">
-        <img src="/assets/images/room-details/room-6.jpg" alt="Room 6">
-      </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="carousel-control-prev" href="#roomImages" data-slide="prev">
-      <img src="/assets/images/left-arrow.png" alt="Previous Item">
-    </a>
-    <a class="carousel-control-next" href="#roomImages" data-slide="next">
-      <img src="/assets/images/right-arrow.png" alt="Next Item">
-    </a>
-  </div>
-</section>
-
-{% include guest-services.html %}
-
-<section class="other-rooms">
-  <h4 class="text-center" tabindex="0">SIMILAR ROOMS & SUITES</h4>
-  <div class="rooms-listing__list-items active" id="park-central-king">
-    <div class="stay-block__rooms__wrap">
-      <div class="stay-block__room-image">
-        <a href="#"><img src="/assets/images/rooms/room-1.jpg" alt="room"></a>
-      </div>
-      <div class="stay-block__room-detail">
-        <article>
-          <h2><a href="#">Classic King Room</a></h2>
-          <h4><a href="#"><span>Tonight’s Rate</span> $350  /  night</a></h4>
-          <div tabindex="0">
-            <p>The Classic King features one King bed and offers tropical elegance in a fresh and inviting, all-natural setting.  Pastel salmon accents provide a sense of Latin flavor and warmth to the interior.  The signature finishes include white washed oak hardwood floors and headboard, a 100% hand tufted New Zealand wool area rug and locally produced graphic artwork. The wash room features contemporary fixtures, a floating pedestal sink and a luxe walk-in shower.</p>
-          </div>
-
-          <div class="button-holder">
-            <a href="#" class="button button--arrow">Book Now</a>
-            <a href="/room-details/" class="button button--gold">Explore</a>
-          </div>
-        </article>
-      </div>
-    </div>
-    <div class="stay-block__rooms__wrap stay-block__rooms__wrap--even">
-      <div class="stay-block__room-image">
-        <a href="#"><img src="/assets/images/rooms/room-1.jpg" alt="room"></a>
-      </div>
-      <div class="stay-block__room-detail">
-        <article>
-          <h2><a href="#">Classic King Room</a></h2>
-          <h4><a href="#"><span>Tonight’s Rate</span> $350  /  night</a></h4>
-          <div tabindex="0">
-            <p>The Classic King features one King bed and offers tropical elegance in a fresh and inviting, all-natural setting.  Pastel salmon accents provide a sense of Latin flavor and warmth to the interior.  The signature finishes include white washed oak hardwood floors and headboard, a 100% hand tufted New Zealand wool area rug and locally produced graphic artwork. The wash room features contemporary fixtures, a floating pedestal sink and a luxe walk-in shower.</p>
-          </div>
-
-          <div class="button-holder">
-            <a href="#" class="button button--arrow">Book Now</a>
-            <a href="/room-details/" class="button button--gold">Explore</a>
-          </div>
-        </article>
-      </div>
-    </div>
-    <div class="stay-block__rooms__wrap">
-      <div class="stay-block__room-image">
-        <a href="#"><img src="/assets/images/rooms/room-1.jpg" alt="room"></a>
-      </div>
-      <div class="stay-block__room-detail">
-        <article>
-          <h2><a href="#">Classic King Room</a></h2>
-          <h4><a href="#"><span>Tonight’s Rate</span> $350  /  night</a></h4>
-          <div tabindex="0">
-            <p>The Classic King features one King bed and offers tropical elegance in a fresh and inviting, all-natural setting.  Pastel salmon accents provide a sense of Latin flavor and warmth to the interior.  The signature finishes include white washed oak hardwood floors and headboard, a 100% hand tufted New Zealand wool area rug and locally produced graphic artwork. The wash room features contemporary fixtures, a floating pedestal sink and a luxe walk-in shower.</p>
-          </div>
-
-          <div class="button-holder">
-            <a href="#" class="button button--arrow">Book Now</a>
-            <a href="/room-details/" class="button button--gold">Explore</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
-
 {% include deals-offers.html %}
 
 <div class="full-map m-0" id="map">
