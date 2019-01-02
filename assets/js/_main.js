@@ -53,6 +53,22 @@ $(function() {
       });
     },3000);
 
+    $("#attraction-gallery").slick({
+     slidesToShow: 3,
+     responsive: [{
+       breakpoint: 1024,
+         settings: {
+           slidesToShow: 2
+         }
+       },
+       {
+       breakpoint: 600,
+       settings: {
+         slidesToShow: 1
+       }
+     }]
+   });
+
     //instagram gallery in footer
   var instaurl = 'https://instafeed.traveltripper.io/u/thecelinohotel';
 	$.ajax({
@@ -102,6 +118,10 @@ $('#departure_date').val(ToDate);
    $('#arrival_holder').val(monthNames[dateArrival.getMonth()]+' '+dateArrival.getDate());
    $('#departure_holder').val(monthNames[dateDeparture.getMonth()]+' '+dateDeparture.getDate());
  },200);
+
+ $('.booking-widget__form-inputs__input').on('click', function() {
+    $(this).find('.hasDatepicker').trigger('focus');
+  });
 
   $("#arrival_date").datepicker({
     dateFormat: "yy-mm-dd",

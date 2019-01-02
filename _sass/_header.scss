@@ -31,7 +31,7 @@
     &:hover {
       color: $gold-color;
       border: 2px solid $gold-color;
-      transform: rotate(180deg); 
+      transform: rotate(180deg);
     }
   }
   &__wrap {
@@ -109,7 +109,6 @@
         outline: 0;
         -webkit-appearance: none;
         -moz-appearance: none;
-
         &::-ms-expand {
           display: none;
         }
@@ -127,6 +126,12 @@
         transform: rotate(45deg);
       }
     }
+    &__select {
+      z-index: 1;
+      &:after {
+        z-index: -1;
+      }
+    } 
   }
 }
 

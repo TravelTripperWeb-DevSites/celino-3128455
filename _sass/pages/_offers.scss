@@ -343,8 +343,10 @@
     }
 
     figure {
-      max-width: 245px;
+      width: 245px;
+      height: 245px;
       margin: 0 auto 40px;
+      overflow: hidden;
       border-radius: 50%;
       @include media-breakpoint-up(md) {
         margin: 0 auto 60px;
