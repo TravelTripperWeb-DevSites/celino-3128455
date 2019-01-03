@@ -10,7 +10,7 @@ meta_tags:
 <section class="hero-banner" style="background-image: url('/assets/images/home/beach-miami-celino-hotel.jpg');">
   <div class="hero-banner__detail">
     {% regionblock page_title, type:header %}
-    <h1>Tropical Class in the Heart of South Beach</h1>
+    <h1 tabindex="0">Tropical Class in the Heart of South Beach</h1>
     <a href="/about/" class="button button--arrow">Learn More</a>
     {% endregionblock %}
   </div>
@@ -28,9 +28,11 @@ meta_tags:
     <div class="luxury-intro__detail">
       <article>
         {% regionblock luxury_detail, type:text %}
-        <h2>TIMELESS LUXURY REIMAGINED</h2>
+        <h2 tabindex="0">TIMELESS LUXURY REIMAGINED</h2>
         <hr>
-        <p>The Celino brings a new lifestyle of indulgence to South Beach, a personality rich in fashion fused with Latin charisma and tropical class, a vibrant reinterpretation of a party that happened on New Year’s Eve 1940. By bridging the historic Park Central Hotel with a fully modern, loft-style, ocean front oasis, a new standard of luxury will be set on Ocean Drive. The Celino will encompass the ambiance of timeless allure and transform itself into a memorable destination for entertainment and noteworthy moments. Get your dancing shoes ready!</p>
+        <div tabindex="0">
+          <p>The Celino brings a new lifestyle of indulgence to South Beach, a personality rich in fashion fused with Latin charisma and tropical class, a vibrant reinterpretation of a party that happened on New Year’s Eve 1940. By bridging the historic Park Central Hotel with a fully modern, loft-style, ocean front oasis, a new standard of luxury will be set on Ocean Drive. The Celino will encompass the ambiance of timeless allure and transform itself into a memorable destination for entertainment and noteworthy moments. Get your dancing shoes ready!</p>
+        </div>
 
         <a href="#" class="button button--arrow button--arrow--gold">Amenities</a>
         {% endregionblock %}
@@ -40,9 +42,10 @@ meta_tags:
 </section>
 
 {% include deals-offers.html %}
+
 <section class="home-stay">
   <div class="home-stay__wrap">
-    <div class="home-stay__title">
+    <div class="home-stay__title" tabindex="0">
       {% regionblock stay_title, type: header %}
         Stay
       {% endregionblock %}
@@ -63,13 +66,13 @@ meta_tags:
         <div class="home-stay__rooms__wrap" ng-class-even="'home-stay__rooms__wrap--even'" ng-repeat="room in value" ng-if="room.categoryGroup =='King'">
 
           <div class="home-stay__room-image">
-            <a ng-href="/room/#[[ room.name | formatNameForLink ]]"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
+            <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
           </div>
           <div class="home-stay__room-detail">
             <article>
               <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></h2>
               <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
-              <p>[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
+              <p tabindex="0">[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
 
               <div class="button-holder">
                 <a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="button button--arrow">Book Now</a>
@@ -86,13 +89,13 @@ meta_tags:
         <div class="home-stay__rooms__wrap" ng-class-even="'home-stay__rooms__wrap--even'" ng-repeat="room in value" ng-if="room.categoryGroup =='Queen'">
 
           <div class="home-stay__room-image">
-            <a ng-href="/room/#[[ room.name | formatNameForLink ]]"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
+            <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
           </div>
           <div class="home-stay__room-detail">
             <article>
               <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></h2>
               <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
-              <p>[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
+              <p tabindex="0">[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
 
               <div class="button-holder">
                 <a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="button button--arrow">Book Now</a>
@@ -108,13 +111,13 @@ meta_tags:
         <div class="home-stay__rooms__wrap" ng-class-even="'home-stay__rooms__wrap--even'" ng-repeat="room in value" ng-if="room.categoryGroup =='Suite'">
 
           <div class="home-stay__room-image">
-            <a ng-href="/room/#[[ room.name | formatNameForLink ]]"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
+            <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
           </div>
           <div class="home-stay__room-detail">
             <article>
               <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></h2>
               <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
-              <p>[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
+              <p tabindex="0">[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
 
               <div class="button-holder">
                 <a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="button button--arrow">Book Now</a>
@@ -133,7 +136,7 @@ meta_tags:
 
 <section class="dine-intro">
   <div class="dine-intro__wrap">
-    <div class="dine-intro__title">
+    <div class="dine-intro__title" tabindex="0">
       {% regionblock dine_title, type: header %}
       Dine
       {% endregionblock %}
@@ -149,9 +152,11 @@ meta_tags:
     </div>
     <div class="dine-intro__detail">
       <article>
-        <h5>{{dine.title }}</h5>
+        <h5 tabindex="0">{{dine.title }}</h5>
         <hr>
-        {{dine.short_description}}
+        <div tabindex="0">
+          {{ dine.short_description }}
+        </div>
         <a href="{{dine.reserve_link}}" class="button button--arrow">RESERVE Now</a>
       </article>
     </div>
