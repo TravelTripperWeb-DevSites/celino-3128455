@@ -28,8 +28,20 @@ meta_tags:
   </div>
 </section>
 
-<section class="filter-nav bg-cover" style="background-image:url('/assets/images/rooms/filter-floral-bg.jpg');" tabindex="-1">
-  {% assign categories = site.data._galleries | sort: sort_order %}
+{% assign categories = site.data._galleries | sort: sort_order %}
+
+<div class="mobile-filter d-block d-md-none">
+  <p>Filter by category</p>
+  <select class="custom-control filter-select" aria-label="Filter by category">
+    <option value="all" class="filter">All</option>
+    {% for category in categories %}
+      {% assign catname = category[0] %}
+      <option value="{{ catname }}" class="filter">{{ site.data._galleries[catname].name }}</option>
+    {% endfor %}
+  </select>
+</div>
+
+<section class="filter-nav bg-cover d-none d-md-block" style="background-image:url('/assets/images/rooms/filter-floral-bg.jpg');" tabindex="-1">
     <ul>
       <li><a href="javascript:void(0);" class="filter active" data-filter="all">All</a></li>
       {% for category in categories %}
