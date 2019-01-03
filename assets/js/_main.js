@@ -179,7 +179,8 @@ $('#departure_date').val(ToDate);
       zoom: 15,
       maxZoom: 19,
       showPopup: true,
-      getDirectionBtn: true
+      getDirectionBtn: true,
+      websiteLink: true
     };
     if(attractions.length > 0) {
   	   mapOptions.attractionsList =  attractions

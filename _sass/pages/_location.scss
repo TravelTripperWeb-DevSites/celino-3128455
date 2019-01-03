@@ -126,8 +126,12 @@
       }
       h4 {
         margin: 0;
-        padding: 18px 15px;
+        padding: 18px 15px 0;
         font-size: $type-size-10;
+
+        a {
+          color: $dark-blue-color;
+        }
       }
       p {
         margin-top: 0;
