@@ -3,17 +3,14 @@
     "required": true
   },
   "short_detail": {
+    "label": "Detail",
     "required": true
-  },
-  "detail": {
-    "required": true,
-    "type": "richtext"
   },
   "image": {
     "type": "image",
     "required": true
   },
-  "address": { 
+  "address": {
     "required": true
   },
   "Lat": {
@@ -26,16 +23,8 @@
     "type": "select",
     "options": ["attractions","shopping","dining","nightlife","culture"]
   },
-  "url_friendly_name": {
-    "label": "URL Friendly Name",
-    "type": "url_slug"
-  },
-  "title": {
-    "label": "Seo Title",
-    "required": true
-  },
-  "meta_description": {
-    "label": "Seo Description",
+  "learn_more_link": {
+    "label": "Learn More URL",
     "required": true
   }
 }
