@@ -81,7 +81,7 @@ $(function() {
           var imageIG = item.thumbnail;
           var urlIG = 'https://www.instagram.com/p/' + item.shortcode;
 
-					if (i > 6) return false;
+					if (i > 5) return false;
           $('#instagram-photos').append('<div class="instagram-gallery__photo">'+
             '<a href="'+ urlIG +'" target="_blank" rel="nofollow">'+
               '<div class="instagram-gallery__photo__bg" style="background-image: url(\''+ imageIG + '\');"></div><img src="/assets/images/image-holder.png" alt="placeholder image">'+
