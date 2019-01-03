@@ -125,7 +125,7 @@
             infoText = '<h4><a rel="nofollow" target="_blank" href="'+attractionsArray[i][5]+'">' + attractionsArray[i][0] + '</a></h4> <a rel="nofollow" target="_blank" href="'+attractionsArray[i][5]+'" class="link">Get Directions</a>';
           }
           else if( options.websiteLink && options.getDirectionBtn) {
-          infoText = '<h4><a href="'+attractionsArray[i][5]+'">' + attractionsArray[i][0] + '</a></h4>' + attractionsArray[i][4]+ ' <br><a class="btnDirection" href="http://maps.google.com/maps?q='+encodeURIComponent(attractionsArray[i][0]).replace(/ /g,"+")+'+'+ encodeURIComponent(attractionsArray[i][4]).replace(/ /g,'+')+'" target="_blank">'+options.getDirectionBtnLabel+'</a>';
+          infoText = '<img src="'+attractionsArray[i][6]+'" alt="' + attractionsArray[i][0] + '"><h4><a rel="nofollow" target="_blank" href="'+attractionsArray[i][5]+'">' + attractionsArray[i][0] + '</a></h4>' + attractionsArray[i][4]+ ' <br><a href="http://maps.google.com/maps/dir/The+Celino+Hotel,+Ocean+Drive,+Miami+Beach,+FL,+USA/'+ encodeURIComponent(attractionsArray[i][0]).replace(/ /g,'+')+'+'+ encodeURIComponent(attractionsArray[i][4]).replace(/ /g,'+')+'" class="button" target="_blank">'+options.getDirectionBtnLabel+'</a>';
           }
           else {
             infoText = '<h4>' + attractionsArray[i][0] + '</h4>' + attractionsArray[i][4];
