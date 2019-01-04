@@ -78,10 +78,10 @@
       margin: 0 12px 50px;
       background-color: $white;
 
-      img {
+      figure {
         width: 100%;
         height: 198px;
-        object-fit: cover;
+        overflow: hidden;
         @include media-breakpoint-up(md) {
           height: 200px;
         }
@@ -90,6 +90,16 @@
         }
         @include media-breakpoint-up(xl) {
           height: 258px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          transition: $global-transition;
+          object-fit: cover;
+          &:hover {
+            transform: scale(1.1);
+          }
         }
       }
     }
@@ -173,7 +183,7 @@
 
 .instagram-gallery {
   @include make-container();
-
+  background-color: $white;
   &__wrap {
     @include make-row();
   }
@@ -227,6 +237,7 @@
     }
     padding: 0;
     overflow: hidden;
+    background-color: $gold-color;
 
     &__bg {
       position: absolute;
@@ -237,14 +248,75 @@
       @include bg-cover;
       transition: $global-transition;
       transform: scale(1.02);
+      @include flex-center-col;
+
+      .svg-inline--fa {
+        z-index: 1;
+        font-size: $type-size-10;
+        color: $white;
+        opacity: 0;
+        transition: $global-transition;
+      }
+
+      &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: '';
+        background-color: rgba($gold-color,0);
+        transition: $global-transition;
+      }
 
       &:hover {
         transform: scale(1.05);
+        .svg-inline--fa {
+          opacity: 1;
+        }
+        &:before {
+          background-color: rgba($gold-color,1);
+        }
       }
     }
 
     img {
       width: 100%;
     }
+  }
+}
+.cta-banner {
+  position: relative;
+  height: 436px;
+  @include bg-cover;
+  @include flex-center-col;
+
+  &--overlay {
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      background-color: rgba($dark-blue-color,.3);
+    }
+  }
+
+  &__content {
+    @include fixed-width-layout;
+    z-index: 9;
+    h3 {
+      margin: 0 0 60px;
+      color: $dark-blue-color;
+    }
+    &--text-center {
+      text-align: center;
+      h3 {
+        margin: 0 0 60px;
+        color: $white;
+      }
+    }
+
   }
 }
