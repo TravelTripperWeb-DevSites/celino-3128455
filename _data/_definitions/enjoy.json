@@ -14,6 +14,9 @@
     "type": "image",
     "required": true
   },
+  "website_url": {
+    "required": true
+  },
   "url_friendly_name": {
     "label": "URL Friendly Name",
     "type": "url_slug"

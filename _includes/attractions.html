@@ -1,11 +1,15 @@
 {% assign attractions =   site.data._models.explore | where: 'categories','attractions' %}
-<section class="offers-slider">
+<section class="offers-slider wow fadeIn" data-wow-delay=".3s">
   <div class="offers-slider__wrap">
     <h3 tabindex="0">Attractions</h3>
     <div class="offers-slider__items" id="attraction-gallery">
       {% for attraction in attractions %}
       <div>
-        <a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank" tabindex="-1"><img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}"></a>
+        <a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank" tabindex="-1">
+          <figure>
+            <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
+          </figure>
+        </a>
         <div class="offers-slider__detail">
           <h4><a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank">{{ attraction.name }}</a></h4>
           <p tabindex="0">{{ attraction.short_detail }}</p>

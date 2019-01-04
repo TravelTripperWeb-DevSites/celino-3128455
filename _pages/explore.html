@@ -30,14 +30,14 @@ meta_tags:
 
 <section class="luxury-intro luxury-intro--order-mobile">
   <div class="luxury-intro__wrap">
-    <div class="luxury-intro__photo">
+    <div class="luxury-intro__photo wow fadeIn" data-wow-delay=".3s">
       <figure>
         {% regionblock luxury_photo, type:image %}
         <img src="/assets/images/explore/couple-south-beach.jpg" alt="South Beaches in Miami for Couples">
         {% endregionblock %}
       </figure>
     </div>
-    <div class="luxury-intro__detail">
+    <div class="luxury-intro__detail wow fadeIn" data-wow-delay=".5s">
       <article>
         {% regionblock luxury_detail_heading, type:header %}
         <h2 tabindex="0">LOREM IPSUM</h2>
@@ -92,14 +92,16 @@ meta_tags:
     {% assign mod = forloop.index | modulo: 2 %}
     <div class="enjoy__wrap {% if mod == 0 %}enjoy__wrap--even{% endif %}">
       <div class="enjoy__image">
-        <img src="{{ enjoy.image.url_large }}" alt="{{ enjoy.image.alt }}">
+        <a href="{{ enjoy.website_url }}/" target="_blank" rel="nofollow">
+          <img src="{{ enjoy.image.url_large }}" alt="{{ enjoy.image.alt }}">
+        </a>
       </div>
       <div class="enjoy__detail">
         <article>
           <h5 tabindex="0">{{ enjoy.name }}</h5>
           <hr>
           <p tabindex="0">{{ enjoy.short_description }}</p>
-          <a href="/{{ enjoy.url_friendly_name }}/" class="button button--arrow">Learn More</a>
+          <a href="/{{ enjoy.website_url }}/"  target="_blank" rel="nofollow" class="button button--arrow">Learn More</a>
         </article>
       </div>
     </div>

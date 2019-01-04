@@ -14,12 +14,12 @@ $(function() {
         var scroll = $(window).scrollTop();
 
         if (scroll >= 170) {
-          header.removeClass('top-nav--flower').addClass("top-nav--gradient");
+          header.removeClass('top-nav--flower top-nav--gradient top-nav--gradient--flower').addClass("top-nav--gradient top-nav--gradient--flower");
           header.css({'top':'','bottom':''});
         } else {
           var scrollTopPx = $(window).scrollTop();
           header.css({'top': '-'+scrollTopPx+'px'});
-          header.removeClass("top-nav--gradient").addClass('top-nav--flower');
+          header.removeClass("top-nav--gradient  top-nav--gradient--flower").addClass('top-nav--flower');
         }
     });
 
@@ -51,7 +51,7 @@ $(function() {
           }
         }]
       });
-    },3000);
+    },2500);
 
     $("#attraction-gallery").slick({
      slidesToShow: 3,
@@ -84,7 +84,7 @@ $(function() {
 					if (i > 5) return false;
           $('#instagram-photos').append('<div class="instagram-gallery__photo">'+
             '<a href="'+ urlIG +'" target="_blank" rel="nofollow">'+
-              '<div class="instagram-gallery__photo__bg" style="background-image: url(\''+ imageIG + '\');"></div><img src="/assets/images/image-holder.png" alt="placeholder image">'+
+              '<div class="instagram-gallery__photo__bg" style="background-image: url(\''+ imageIG + '\');"><i class="fab fa-instagram" aria-hidden="true"></i></div><img src="/assets/images/image-holder.png" alt="placeholder image">'+
             '</a>'+
           '</div>');
 				});
@@ -246,6 +246,10 @@ $('#departure_date').val(ToDate);
     }
   });
 
+  //wow js _activate
+  new WOW().init({
+    resetAnimation: false
+  });
 
 });
 
@@ -267,3 +271,8 @@ $(document).ready(function() {
   }
 
 });
+
+//parellex animation
+setTimeout(function() {
+   $(window).trigger('resize').trigger('scroll');
+}, 3000); // wait 500ms

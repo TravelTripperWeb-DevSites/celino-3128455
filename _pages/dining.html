@@ -31,7 +31,7 @@ meta_tags:
 
 <section class="dine">
   <div class="dine__inner">
-    <div class="dine__text">
+    <div class="dine__text wow fadeIn" data-wow-delay=".5s">
       {% regionblock dining_intro, type:header %}
         <h2 tabindex="0">CUISINE IN THE HEART OF MIAMI</h2>
       {% endregionblock %}
@@ -42,7 +42,7 @@ meta_tags:
       </div>
     </div>
 
-    <div class="dine__image">
+    <div class="dine__image wow fadeIn" data-wow-delay="1s">
       <div class="dine__image__floral-bg">
       {% regionblock intro-image-bg, type:image %}
       <img src="/assets/images/dine/pattern.jpg" alt="Floral Background">
@@ -65,10 +65,10 @@ meta_tags:
   {% for dine in dinelist %}
   {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
   <div class="dine-intro__wrap {% if thecycle == 'even' %}dine-intro__wrap--even{% endif %}">
-    <div class="dine-intro__image">
+    <div class="dine-intro__image wow fadeIn" data-wow-delay=".3s">
       <img src="{{ dine.dine_image.url_large }}" alt="{{ dine.image.alt}}">
     </div>
-    <div class="dine-intro__detail  align-self-center">
+    <div class="dine-intro__detail align-self-center wow fadeIn" data-wow-delay=".5s">
       <article>
         <h5 tabindex="0">{{dine.title }}</h5>
         <hr class="full">
@@ -82,9 +82,8 @@ meta_tags:
   {% endfor %}
 </section>
 
-<section class="virtual-tour d-flex align-items-center">
-  <img src="/assets/images/dine/cta.jpg" alt="GET IN TOUCH">
-  <div class="virtual-tour__content">
+<section class="cta-banner  cta-banner--overlay" data-parallax="scroll" data-position="top" data-bleed="10" data-image-src="/assets/images/dine/cta.jpg">
+  <div class="cta-banner__content cta-banner__content--text-center">
     <h3 tabindex="0">Host your events<br>at Celino</h3>
     <a href="/contact/" class="button button--arrow button--arrow--gold">GET IN TOUCH</a>
   </div>
