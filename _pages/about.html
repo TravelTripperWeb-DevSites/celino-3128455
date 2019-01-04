@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About
+title: Timeless Luxury Reimagined | Celino South Beach Hotel
 meta_description:
 permalink: /about/
 meta_tags:
@@ -28,7 +28,7 @@ meta_tags:
   </div>
 </section>
 
-<section class="hotel-intro">
+<section class="hotel-intro wow fadeIn" data-wow-delay=".5s">
   <div class="hotel-intro__inner">
     <div class="hotel-intro__text">
       {% regionblock intro_heading, type:header %}
@@ -63,19 +63,19 @@ meta_tags:
   {% for la in luxury-amenities %}
   <div class="luxuxy-amenities__block">
     <div class="luxuxy-amenities__block__content p-0">
-      <div class="luxuxy-amenities__block__content__holder">
+      <div class="luxuxy-amenities__block__content__holder wow fadeIn" data-wow-delay=".5s">
         <h2>{{ la.title }}</h2>
         <p>{{ la.description }}</p>
       </div>
     </div>
-    <div class="luxuxy-amenities__block__image p-0">
+    <div class="luxuxy-amenities__block__image p-0 wow fadeIn" data-wow-delay="1s">
       <img src="{{ la.image.url_medium }}" alt="{{ la.image.alt }}">
     </div>
   </div>
   {% endfor %}
 </section>
 
-<section class="virtual-tour d-flex align-items-center">
+<section class="virtual-tour d-flex align-items-center wow fadeIn" data-wow-delay=".5s">
   <img src="/assets/images/hotel/virtual-tour.jpg" alt="Take a virtual tour">
   <div class="virtual-tour__content">
     {% regionblock virtual_tour_heading, type:header %}
@@ -90,7 +90,7 @@ meta_tags:
 <section class="hotel-location">
   <div class="hotel-location__block">
     <div class="hotel-location__content p-0">
-      <div class="hotel-location__content__holder">
+      <div class="hotel-location__content__holder wow fadeIn" data-wow-delay=".5s">
         {% regionblock location_heading, type:header %}
         <h3>LOCATION</h3>
         {% endregionblock %}

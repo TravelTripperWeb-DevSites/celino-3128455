@@ -83,11 +83,15 @@ layout: default
 <section class="offers-slider">
   <div class="offers-slider__wrap">
     <h3 tabindex="0">Dine & Offers</h3>
-    <div class="offers-slider__items" id="deals-offers">
+    <div class="offers-slider__items" id="attraction-gallery">
       {% assign offerslist = site.data._models.dine-offers %}
       {% for offer in offerslist %}
-      <div>
-        <a href="#" tabindex="-1"><img src="{{ offer.dine_image.url_medium }}" alt="Thanksgiving Plan"></a>
+      <div class="wow fadeIn" data-wow-delay=".3s">
+        <a href="#" tabindex="-1">
+          <figure>
+            <img src="{{ offer.dine_image.url_medium }}" alt="{{ offer.dine_image.alt }}">
+          </figure>
+        </a>
         <div class="offers-slider__detail">
           <h4><a href="#">{{ offer.title }}</a></h4>
           <div tabindex="0">
