@@ -13,7 +13,6 @@
   letter-spacing: .05rem;
   background-color: $purple-color;
   transition: $global-transition;
-
   @include media-breakpoint-up(md) {
     min-width: 190px;
     padding: 16px 38px;
@@ -28,11 +27,18 @@
   }
 
   &--booknow {
+    position: relative;
+    margin: 30px auto;
     font-family: $heading-font;
     cursor: pointer;
-    background-color: $gold-color;
+    background: $dark-blue-color url('/assets/images/btn-goldenbg.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom 30% center;
     border: 0;
-    margin: 30px auto;
+
+    &:hover {
+      text-shadow: 1px 2px 2px $dark-gray;
+    }
   }
 
   &--gold {
@@ -50,6 +56,7 @@
       margin-right: 54px;
       padding: 16px 19px;
     }
+
     &:after {
       position: absolute;
       top: 0;

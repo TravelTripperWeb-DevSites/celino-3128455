@@ -36,12 +36,29 @@
 
     &--flower {
       max-height: 80px;
-      background: url('/assets/images/nav-flowers.png') top center repeat-x, linear-gradient(to bottom, rgba($black,.65) 25%,rgba($black,.06) 93%,rgba($black,0) 100%);
+      background: linear-gradient(to bottom, rgba($black,.65) 25%,rgba($black,.06) 93%,rgba($black,0) 100%);
       background-size: auto 80px;
       @include media-breakpoint-up(md) {
         max-height: 110px;
-        background: url('/assets/images/Pattern_full_minified.png') top center repeat-x, linear-gradient(to bottom, rgba($black,.65) 25%,rgba($black,.06) 93%,rgba($black,0) 100%);
+        background: linear-gradient(to bottom, rgba($black,.65) 25%,rgba($black,.06) 93%,rgba($black,0) 100%);
         background-size: auto auto;
+      }
+      &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: '';
+        background: url('/assets/images/nav-flowers.png') top center repeat-x;
+        background-size: auto 80px;
+        @include media-breakpoint-up(md) {
+          z-index: -2;
+          background-image: url('/assets/images/Pattern_full_minified.png');
+          background-repeat: repeat-x;
+          background-position: top center;
+          background-size: auto 95%;
+        }
       }
     }
 
@@ -75,15 +92,15 @@
 
 .hotel-logo {
   display: inline-block;
-  width: 83px;
+  width: 93px;
   padding-top: 15px;
   transition: $global-transition;
   @include media-breakpoint-up(md) {
-    width: 160px;
-    padding-top: 27px;
+    width: 170px;
+    padding-top: 19px;
   }
   @include media-breakpoint-up(lg) {
-    width: 218px;
+    width: 235px;
   }
 
   img {
@@ -91,7 +108,7 @@
     max-width: 100%;
     transition: $global-transition;
     @include media-breakpoint-up(md) {
-      width: 218px;
+      width: 235px;
     }
   }
 }
@@ -163,11 +180,12 @@
     display: inline-block;
     padding-top: 15px;
     font-weight: 400;
-    text-shadow: -1px 1px 20px $black;
+    text-shadow: -1px 3px 10px $black;
     letter-spacing: rem-calc(4.3);
     transition: $global-transition;
     @include media-breakpoint-up(lg) {
       padding-top: 16px;
+      text-shadow: -1px 1px 20px $black;
     }
     @include media-breakpoint-up(lg) {
       padding-top: 16px;
