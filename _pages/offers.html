@@ -37,7 +37,7 @@ meta_tags:
         {% endregionblock %}
         <div class="hline"></div>
         <div tabindex="0">
-          {% regionblock exclusive_title, type:text %}
+          {% regionblock exclusive_description, type:text %}
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu is nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste</p>
           {% endregionblock %}
         </div>
@@ -67,17 +67,17 @@ meta_tags:
     <div class="offers__row">
       <div class="offers__item" ng-repeat="offer in offers.special_rates">
         <div class="offers__item__inner">
-          <a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]" tabindex="-1">
+          <a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]" tabindex="-1" aria-label="[[ offer.rate_plan_name ]]">
             <figure>
               <img ng-src="[[ offer.images[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ offer.rate_plan_name ]]">
             </figure>
           </a>
           <div class="offers__item__content">
             <h4 tabindex="0">
-              <a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]">Dine & Drink at Celino</a>
+              <a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]" aria-label="[[ offer.rate_plan_name ]]">Dine & Drink at Celino</a>
             </h4>
             <p tabindex="0" ng-bind-html="offer.short_description | renderHTMLCorrectly"></p>
-            <a ng-href="[[offer.promo_url]]" class="button button--arrow">Book Now</a>
+            <a ng-href="[[offer.promo_url]]" class="button button--arrow" aria-label="[[ offer.rate_plan_name ]]">Book Now</a>
           </div>
         </div>
       </div>

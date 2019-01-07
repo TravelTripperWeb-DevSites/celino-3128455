@@ -11,7 +11,7 @@
         <div class="offers-slider__detail">
           <h4><a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]" ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></a></h4>
           <p>[[ offer.short_description | limitTo: 101 ]][[ offer.short_description.length > 100 ? '...' : '' ]]</p>
-          <a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]" class="button">Learn More</a>
+          <a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]" class="button" aria-label="[[ offer.rate_plan_name ]]">Learn More</a>
         </div>
       </div>
     </div>
