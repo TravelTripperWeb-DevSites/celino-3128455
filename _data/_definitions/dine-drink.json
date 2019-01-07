@@ -34,7 +34,6 @@
     "label": "URL Friendly Name",
     "required": true
   },
-
   "menu_items": {
     "type": "nested",
     "multiple": true,

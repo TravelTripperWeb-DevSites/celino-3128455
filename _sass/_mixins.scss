@@ -1,12 +1,11 @@
 // Mixins
 // ==========================================================================
 
-
 // Vertical Center (Includes IE9)
 
 // Fixed Width Template
 @mixin fixed-width-layout {
-  @include make-container; 
+  @include make-container;
   max-width: 1330px;
   margin: 0 auto;
 }

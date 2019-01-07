@@ -109,7 +109,6 @@ meta_tags:
                   <div tabindex="0">
                     <p>[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
                   </div>
-
                   <div class="button-holder">
                     <a href="#" class="button button--arrow">Book Now</a>
                     <a ng-href="/room/#[[ room.name | formatNameForLink ]]" class="button button--gold">Explore</a>
@@ -132,7 +131,6 @@ meta_tags:
                   <div tabindex="0">
                     <p>[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
                   </div>
-
                   <div class="button-holder">
                     <a href="#" class="button button--arrow">Book Now</a>
                     <a ng-href="/room/#[[ room.name | formatNameForLink ]]" class="button button--gold">Explore</a>
@@ -155,7 +153,6 @@ meta_tags:
                 <div tabindex="0">
                   <p>[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
                 </div>
-
                 <div class="button-holder">
                   <a ng-href="{{ site.reztripUrl}}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="button button--arrow">Book Now</a>
                   <a ng-href="/room/#[[ room.name | formatNameForLink ]]" class="button button--gold">Explore</a>
@@ -166,7 +163,6 @@ meta_tags:
         </section>
       </div>
       </div>
-
     </div>
     <div class="tab-pane" id="imperial">
       <div class="rooms-listing__subfilter-wrap">
@@ -188,10 +184,7 @@ meta_tags:
   </div>
 </section>
 
-
 {% include cta-two-column.html %}
-
 {% include instagram.html %}
 
-<div class="full-map m-0 d-none d-md-block" id="map">
-</div>
+<div class="full-map m-0 d-none d-md-block" id="map"></div>
