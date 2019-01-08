@@ -23,7 +23,7 @@
     }
     @include media-breakpoint-up(lg) {
       background-size: unset;
-      animation: flower 0.3s linear;
+      animation: flower .3s linear;
     }
   }
 
@@ -36,12 +36,9 @@
 
     &--flower {
       max-height: 80px;
-      background: linear-gradient(to bottom, rgba($black,.65) 25%,rgba($black,.06) 93%,rgba($black,0) 100%);
-      background-size: auto 80px;
+      background: transparent;
       @include media-breakpoint-up(md) {
         max-height: 110px;
-        background: linear-gradient(to bottom, rgba($black,.65) 25%,rgba($black,.06) 93%,rgba($black,0) 100%);
-        background-size: auto auto;
       }
       &:before {
         position: absolute;

@@ -120,6 +120,10 @@
     @include media-breakpoint-up(md) {
       @include make-col(5);
     }
+    
+    img {
+      max-width: 100%;
+    }
 
     &__inner {
       @include media-breakpoint-up(md) {
