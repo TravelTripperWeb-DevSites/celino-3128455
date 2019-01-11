@@ -14,7 +14,10 @@
     "required": true,
     "multiple": true
   },
-
+   "seo_title": {
+  },
+  "seo_description": {
+  },
   "short_description": {
     "label": "Short Description",
     "type": "richtext",
