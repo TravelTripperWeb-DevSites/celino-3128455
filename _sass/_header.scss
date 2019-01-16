@@ -15,11 +15,10 @@
   background: $dark-blue-color url('/assets/images/floral-bg.jpg');
 
   &__close {
-    position: absolute;
-    bottom: 30px;
     display: block;
     width: 34px;
     height: 34px;
+    margin: 10px auto;
     font-size: $type-size-10;
     font-weight: 700;
     color: $white;
