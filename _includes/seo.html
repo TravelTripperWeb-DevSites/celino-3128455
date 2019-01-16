@@ -3,11 +3,16 @@
   {% assign seo_url = site.url %}
 {% endif %}
 
-{% if page.title %}
+{% if page.seo_title %}
+{% assign seo_title = page.seo_title | normalize_whitespace | escape_once %}
+
+{% elsif page.title %}
   {% assign seo_title = page.title | normalize_whitespace | escape_once %}
+
 {% else %}
   {% assign seo_title = site.title | append: " " | append: site.title_separator | append: " " | append: site.name %}
 {% endif %}
+
 
 {% if site.url %}
   {% assign canonical_url = page.url | replace: "index.html", "" | prepend: site.url %}
