@@ -1,0 +1,30 @@
+{
+  "learn_more_link": "https://freehandhotels.com/miami/broken-shaker/",
+  "name": "The Broken Shaker",
+  "short_detail": "Compact, romantic watering hole in the Freehand Hostel offering inventive drinks & a large backyard.",
+  "image": {
+    "name": "deal_3_image",
+    "file_name": "deal_3_image.jpg",
+    "url": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-052903/deal_3_image.jpg",
+    "tags": "",
+    "description": "",
+    "date_added": "2018-12-27-052903",
+    "file_type": "image/jpeg",
+    "width": 351,
+    "height": 258,
+    "file_size": 59527,
+    "url_large": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-052903/large_deal_3_image.jpg",
+    "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-052903/medium_deal_3_image.jpg",
+    "url_small": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-052903/small_deal_3_image.jpg",
+    "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-052903/xsmall_deal_3_image.jpg",
+    "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-052903/thumb_deal_3_image.jpg",
+    "git_file_name": "_assets/image_data/deal-3-image.json",
+    "path": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-052903/deal_3_image.jpg",
+    "alt": "deal_3_image",
+    "caption": ""
+  },
+  "address": "2727 Indian Creek Dr, Miami Beach, FL 33140, USA",
+  "Lat": "25.8041417",
+  "Long": "-80.1259877",
+  "categories": "dining"
+}
