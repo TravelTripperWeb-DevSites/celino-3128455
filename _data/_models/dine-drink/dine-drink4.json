@@ -64,7 +64,7 @@
       "caption": ""
     }
   ],
-  "title": "Salte -copy",
+  "title": "Florida Room",
   "dine_image": {
     "name": "salte",
     "file_name": "salte.jpg",
@@ -129,9 +129,9 @@
       "caption": ""
     }
   ],
-  "short_description": "<p>At Salte, our approach is simple; source the best ingredients possible and prepare them in an uncomplicated and modern way. Dine ocean side al fresco year round.</p>",
-  "description": "<h2>CUISINE IN THE HEART OF MIAMI</h2>\n<p>Salte offers Italian inspired cuisine in a stylishly elegant setting. Using the freshest and finest ingredients, Salte offers a distinctive take on Italian cuisine using contemporary techniques and features such as, house-made ricotta, wood-fired pizzas, and made-from-scratch pastas. At Salte, our approach is simple; source the best ingredients possible and prepare them in an uncomplicated and modern way. Dine Oceanside al fresco year round.</p>",
-  "url_friendly_name": "salte-copy",
+  "short_description": "<p>Cocktail mixers shake and conversation hums. Go ahead - drink in the vibe.</p>",
+  "description": "<h2>CUISINE IN THE HEART OF MIAMI</h2>\n<p>Cocktail mixers shake and conversation hums. Go ahead -- drink in the vibe.</p>\n<p>Retreat to the quirky surroundings of the historic Florida Room, a bar for handcrafted cocktails, Cuban bites and selections from the bar&rsquo;s coveted rum list. This timeless haven is ideal place to gather for libations accompanied by the sounds of music performed nightly. Dancing is a strong possibility, rumor has it that the conga line was invented here on New Year&rsquo;s Eve of 1940.</p>",
+  "url_friendly_name": "florida-room",
   "reserve_link": "https://www.thecelinohotel.com/",
   "menu_items": [
     {
@@ -147,5 +147,5 @@
       "detail": "/"
     }
   ],
-  "seo_title": "Salte Italian Restaurant South Beach | Celino Hotel"
+  "seo_title": ""
 }
