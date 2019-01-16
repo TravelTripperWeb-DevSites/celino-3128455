@@ -1,0 +1,30 @@
+{
+  "learn_more_link": "https://www.altermiami.com/",
+  "name": "Alter",
+  "address": "223 NW 23rd St, Miami, FL 33127, USA",
+  "short_detail": "Not a day has gone by where Alter hasn’t been packed. It’s the ever-changing menu that keeps diners coming back again and again. Dinner is tasting menu-only.",
+  "image": {
+    "name": "dummy",
+    "file_name": "dummy.jpg",
+    "url": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-012115/dummy.jpg",
+    "tags": "",
+    "description": "",
+    "date_added": "2019-01-16-012115",
+    "file_type": "image/jpeg",
+    "width": 399,
+    "height": 275,
+    "file_size": 8777,
+    "url_large": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-012115/large_dummy.jpg",
+    "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-012115/medium_dummy.jpg",
+    "url_small": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-012115/small_dummy.jpg",
+    "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-012115/xsmall_dummy.jpg",
+    "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-012115/thumb_dummy.jpg",
+    "git_file_name": "_assets/image_data/dummy.json",
+    "path": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-012115/dummy.jpg",
+    "alt": "dummy",
+    "caption": ""
+  },
+  "Lat": "25.7996812",
+  "Long": "-80.2017869",
+  "categories": "dining"
+}

@@ -165,7 +165,6 @@
 
       // Add filter
       if (categories.length > 1) {
-        alert();
         // Setup tabs
         if (mapcategoryFilterEle) {
           // First add 'All' option
@@ -254,8 +253,7 @@
               $(attractionsfilter[categoryitem][itemID].marker._icon).addClass('active');
             }, 400);
 
-            if (options.showPopup) {
-              alert()
+            if (options.showPopup) { 
               var mlat = $(attractionsfilter[categoryitem][itemID].marker._latlng.lat);
               var mlng = $(attractionsfilter[categoryitem][itemID].marker._latlng.lng);
               mlat.push.apply(mlat, mlng);

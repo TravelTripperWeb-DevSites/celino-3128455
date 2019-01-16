@@ -231,9 +231,11 @@
     }
 
     .button {
-      @include media-breakpoint-down(sm) {
-        display: inherit;
-        margin-bottom: 11px;
+      display: inherit;
+      margin-bottom: 11px;
+      @include media-breakpoint-up(sm) {
+        display: inline-block;
+        margin: 11px 6px;
       }
     }
   }

@@ -14,6 +14,7 @@
   @include media-breakpoint-up(lg) {
     height: 192px;
   }
+  transition: all .3s;
 
   &--flower {
     background: url("/assets/images/nav-flowers.png") top center repeat-x;
@@ -23,7 +24,7 @@
     }
     @include media-breakpoint-up(lg) {
       background-size: unset;
-      animation: flower .3s linear;
+      animation: flower .5s linear;
     }
   }
 

@@ -1,0 +1,30 @@
+{
+  "learn_more_link": "https://www.rosettabakery.com/",
+  "name": "Rosetta Bakery",
+  "short_detail": "Italian pastries and panini’s possibly better than in Italy.  ",
+  "address": "1666 Collins Ave, Miami Beach, FL 33139, USA",
+  "Lat": "25.7914188",
+  "Long": "-80.1322067",
+  "categories": "dining",
+  "image": {
+    "name": "dummy",
+    "file_name": "dummy.jpg",
+    "url": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-012115/dummy.jpg",
+    "tags": "",
+    "description": "",
+    "date_added": "2019-01-16-012115",
+    "file_type": "image/jpeg",
+    "width": 399,
+    "height": 275,
+    "file_size": 8777,
+    "url_large": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-012115/large_dummy.jpg",
+    "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-012115/medium_dummy.jpg",
+    "url_small": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-012115/small_dummy.jpg",
+    "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-012115/xsmall_dummy.jpg",
+    "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-012115/thumb_dummy.jpg",
+    "git_file_name": "_assets/image_data/dummy.json",
+    "path": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-012115/dummy.jpg",
+    "alt": "dummy",
+    "caption": ""
+  }
+}

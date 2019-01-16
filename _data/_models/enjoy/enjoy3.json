@@ -1,7 +1,7 @@
 {
   "sort_order": "3",
   "name": "Culture",
-  "short_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "short_description": "Miami is a contemporary art mecca, it’s a must. Soak it all in.",
   "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>",
   "image": {
     "name": "Culture",
@@ -25,5 +25,6 @@
   },
   "url_friendly_name": "culture",
   "title": "Culture",
-  "meta_description": "Culture"
+  "meta_description": "Culture",
+  "website_url": "#"
 }
