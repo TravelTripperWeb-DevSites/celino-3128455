@@ -102,7 +102,9 @@ meta_tags:
           <h5 tabindex="0">{{ enjoy.name }}</h5>
           <hr>
           <p tabindex="0">{{ enjoy.short_description }}</p>
-          <a href="/{{ enjoy.website_url }}/"  target="_blank" rel="nofollow" class="button button--arrow">Learn More</a>
+          {% if enjoy.website_url and enjoy.website_url!="" %}
+           <a href="/{{ enjoy.website_url }}/"  target="_blank" rel="nofollow" class="button button--arrow">Learn More</a>
+          {% endif %}
         </article>
       </div>
     </div>
