@@ -1,0 +1,29 @@
+{
+  "learn_more_link": "https://www.plantarestaurants.com/location/planta-miami/",
+  "name": "Planta",
+  "short_detail": "https://www.plantarestaurants.com/",
+  "categories": "dining",
+  "Lat": "25.7688818",
+  "Long": "-80.138483",
+  "address": "850 Commerce St, Miami Beach, FL 33139, USA",
+  "image": {
+    "name": "dummy",
+    "file_name": "dummy.png",
+    "url": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-011947/dummy.png",
+    "tags": "",
+    "description": "",
+    "date_added": "2019-01-16-011947",
+    "file_type": "image/png",
+    "width": 640,
+    "height": 480,
+    "file_size": 2224,
+    "url_large": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-011947/large_dummy.png",
+    "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-011947/medium_dummy.png",
+    "url_small": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-011947/small_dummy.png",
+    "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-011947/xsmall_dummy.png",
+    "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-011947/thumb_dummy.png",
+    "path": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-011947/dummy.png",
+    "alt": "dummy",
+    "caption": ""
+  }
+}
