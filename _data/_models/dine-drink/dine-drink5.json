@@ -64,7 +64,7 @@
       "caption": ""
     }
   ],
-  "title": "Jewelbox-copy",
+  "title": "The Parlor",
   "dine_image": {
     "name": "salte",
     "file_name": "salte.jpg",
@@ -108,8 +108,8 @@
       "caption": ""
     }
   ],
-  "short_description": "<p>Here at our poolside jewelbox, dishes as simple as grilled wild-caught fish and as decadent as housemade pastas speak to us. So do crafted cocktails.</p>",
-  "description": "<h2>CUISINE IN THE HEART OF MIAMI</h2>\n<p>Here at our poolside Jewelbox, dishes as simple as grilled wild-caught fish and as decadent as housemade pastas speak to us. So do crafted cocktails. In this land of sunshine, Jewelbox revives the classic American and European cuisine we love with a lighter touch.</p>",
+  "short_description": "<p>Quirky, fern lined parlor room that transforms into a cocktail lounge every evening.</p>\n<p>Coming Soon</p>",
+  "description": "<h2>CUISINE IN THE HEART OF MIAMI</h2>\n<p>Quirky, fern lined parlor room that transforms into a cocktail lounge every evening. The Parlor room of the Celino is one of the most playful &ndash; and most green &ndash; places to be enveloped by art.&nbsp;&nbsp;</p>",
   "url_friendly_name": "jewelbox-copy",
   "reserve_link": "https://www.thecelinohotel.com/",
   "menu_items": [
@@ -126,5 +126,5 @@
       "detail": "/"
     }
   ],
-  "seo_title": "Salte Italian Restaurant South Beach | Celino Hotel"
+  "seo_title": ""
 }
