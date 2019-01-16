@@ -1,0 +1,30 @@
+{
+  "learn_more_link": "http://www.lechickrotisserie.com/",
+  "name": "Royale at Le Chick",
+  "short_detail": "Wynwood’s Le Chick is, first and foremost, a chicken restaurant Mandolin Aegean Bistro – Candle lit Mediterranean al fresco.",
+  "address": "310 NW 24th St, Miami, FL 33127, USA",
+  "Lat": "25.7999038",
+  "Long": "-80.2026557",
+  "image": {
+    "name": "dummy",
+    "file_name": "dummy.jpg",
+    "url": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-012115/dummy.jpg",
+    "tags": "",
+    "description": "",
+    "date_added": "2019-01-16-012115",
+    "file_type": "image/jpeg",
+    "width": 399,
+    "height": 275,
+    "file_size": 8777,
+    "url_large": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-012115/large_dummy.jpg",
+    "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-012115/medium_dummy.jpg",
+    "url_small": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-012115/small_dummy.jpg",
+    "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-012115/xsmall_dummy.jpg",
+    "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-012115/thumb_dummy.jpg",
+    "git_file_name": "_assets/image_data/dummy.json",
+    "path": "//cdn.traveltripper.io/site-assets/192_424_22834/media/2019-01-16-012115/dummy.jpg",
+    "alt": "dummy",
+    "caption": ""
+  },
+  "categories": "dining"
+}
