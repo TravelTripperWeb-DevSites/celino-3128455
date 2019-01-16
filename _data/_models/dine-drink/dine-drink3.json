@@ -64,7 +64,7 @@
       "caption": ""
     }
   ],
-  "title": "Salte ",
+  "title": "Jewelbox",
   "dine_image": {
     "name": "salte",
     "file_name": "salte.jpg",
@@ -106,32 +106,11 @@
       "path": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/iconik-banner.jpg",
       "alt": "iconik-banner",
       "caption": ""
-    },
-    {
-      "name": "iconik-banner",
-      "file_name": "iconik-banner.jpg",
-      "url": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/iconik-banner.jpg",
-      "tags": "",
-      "description": "",
-      "date_added": "2018-12-27-024748",
-      "file_type": "image/jpeg",
-      "width": 1440,
-      "height": 600,
-      "file_size": 583259,
-      "url_large": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/large_iconik-banner.jpg",
-      "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/medium_iconik-banner.jpg",
-      "url_small": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/small_iconik-banner.jpg",
-      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/xsmall_iconik-banner.jpg",
-      "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/thumb_iconik-banner.jpg",
-      "git_file_name": "_assets/image_data/iconik-banner.json",
-      "path": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/iconik-banner.jpg",
-      "alt": "iconik-banner",
-      "caption": ""
     }
   ],
-  "short_description": "<p>Salte offers Italian inspired cuisine in a stylishly elegant setting. Using the freshest and finest ingredients, Salte offers a distinctive take on Italian cuisine using contemporary techniques and features such as, house-made ricotta, wood-fired pizzas, and made-from-scratch pastas. At Salte, our approach is simple; source the best ingredients possible and prepare them in an uncomplicated and modern way.</p>",
-  "description": "<h2>CUISINE IN THE HEART OF MIAMI</h2>\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu is nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste</p>",
-  "url_friendly_name": "salte",
+  "short_description": "<p>Here at our poolside jewelbox, dishes as simple as grilled wild-caught fish and as decadent as housemade pastas speak to us. So do crafted cocktails.</p>",
+  "description": "<h2>CUISINE IN THE HEART OF MIAMI</h2>\n<p>Here at our poolside Jewelbox, dishes as simple as grilled wild-caught fish and as decadent as housemade pastas speak to us. So do crafted cocktails. In this land of sunshine, Jewelbox revives the classic American and European cuisine we love with a lighter touch.</p>",
+  "url_friendly_name": "jewelbox",
   "reserve_link": "https://www.thecelinohotel.com/",
   "menu_items": [
     {
