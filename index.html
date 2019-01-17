@@ -143,7 +143,7 @@ meta_tags:
     </div>
     <div class="dine-intro__categories"></div>
   </div>
-  {% assign dinelist = site.data._models.dine-drink %}
+  {% assign dinelist = site.data._models.dine-drink | sort: "order" %}
   {% for dine in dinelist %}
    {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
   <div class="dine-intro__wrap {% if thecycle == 'even' %}dine-intro__wrap--even{% endif %}">
