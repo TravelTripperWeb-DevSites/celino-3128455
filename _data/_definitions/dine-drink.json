@@ -59,5 +59,8 @@
     "type": "image",
     "required": true,
     "multiple": true
+  },
+  "order": {
+    "type": "integer"
   }
 }

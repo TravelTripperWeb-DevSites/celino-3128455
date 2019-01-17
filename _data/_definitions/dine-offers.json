@@ -16,5 +16,8 @@
   "link": {
     "label": "Reserve Link",
     "required": true
+  },
+  "order": {
+   "type": "integer"
   }
 }

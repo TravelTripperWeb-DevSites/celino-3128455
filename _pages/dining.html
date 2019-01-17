@@ -50,16 +50,18 @@ meta_tags:
       {% regionblock intro-image, type:image %}
       <img src="/assets/images/dine/intro.jpg" alt="Man Sitting" >
       {% endregionblock %}
-      {% regionblock intro-link, type:text %}
+      {% comment %}
+        {% regionblock intro-link, type:text %}
         <a href="/" class="button button--arrow">Reserve Now</a>
         {% endregionblock %}
+      {% endcomment %}
       </div>
     </div>
   </div>
 </section>
 
 <section class="dine-intro--space">
-  {% assign dinelist = site.data._models.dine-drink | sort: 'id' %}
+  {% assign dinelist = site.data._models.dine-drink | sort: 'order' %}
   {% for dine in dinelist %}
   {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
   <div class="dine-intro__wrap {% if thecycle == 'even' %}dine-intro__wrap--even{% endif %}">
