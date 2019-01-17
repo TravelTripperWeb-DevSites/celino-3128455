@@ -4,6 +4,7 @@
 .page-banner {
   position: relative;
   text-align: center;
+  animation: opacityFade 1.5s ease-in;
 
   .carousel-item {
     img {
@@ -120,7 +121,7 @@
     @include media-breakpoint-up(md) {
       @include make-col(5);
     }
-    
+
     img {
       max-width: 100%;
     }
