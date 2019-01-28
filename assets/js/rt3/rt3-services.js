@@ -202,7 +202,7 @@ angular.module('rezTrip')
                       todayRate = {'todayRate': Math.round(roomRate)};
 
                     }
-                    if(room.name.indexOf('King') >= 0) { 
+                    if(room.name.indexOf('King') >= 0) {
                       self.roomsList[key].categoryGroup = 'King';
                     }else if(room.name.indexOf('Queen') >= 0) {
                       self.roomsList[key].categoryGroup = 'Queen';
@@ -210,6 +210,18 @@ angular.module('rezTrip')
                       self.roomsList[key].categoryGroup = 'Suite';
                     }else {
                       self.roomsList[key].categoryGroup = 'other';
+                    }
+
+                    if(room.amenities.indexOf('Courtyard View') >= 0) {
+                      self.roomsList[key].view = 'Courtyard View';
+                    }else if(room.amenities.indexOf('Partial Ocean View') >= 0) {
+                      self.roomsList[key].view = 'Partial Ocean View';
+                    }else if(room.amenities.indexOf('Ocean View') >= 0) {
+                      self.roomsList[key].view = 'Ocean View';
+                    }else if(room.amenities.indexOf('Pool View') >= 0) {
+                      self.roomsList[key].view = 'Pool View';
+                    }else {
+                      self.roomsList[key].view = 'Other';
                     }
                     angular.extend(self.roomsList[key] , todayRate);
                 });

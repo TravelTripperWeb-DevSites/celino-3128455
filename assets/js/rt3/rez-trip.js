@@ -46,6 +46,7 @@
         $scope.updateCategory = function(cat){
             $scope.selectedCat = cat;
         }
+        $scope.filterObject = { categoryGroup : "", view : "", amenities : "", name : ""};
         $scope.setTempItem = function(item) {
             $scope.currentItem = item;
            console.log(item);
