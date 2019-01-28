@@ -330,3 +330,13 @@
 
   }
 }
+.ttweb-booking-widget__header {
+  background-color: $gold-color;
+}
+.ttweb-booking-widget__body__date-selection__calendar .calendar-month table.calendar-month__grid .calendar-month__grid__date--in-selection {
+  background-color: $purple-color !important;
+}
+
+.ttweb-booking-widget button.ttweb-booking-widget__submit {
+  background-color: $dark-blue-color;
+}
