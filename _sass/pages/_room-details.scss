@@ -131,11 +131,11 @@
       bottom: 0;
       left: 0;
       height: 100%;
-      background-color: $purple-color;
+      background-color: rgba($purple-color, .88);
       @include global-transition(.3s);
       opacity: 0;
       &:hover {
-        opacity: .5;
+        opacity: 1;
       }
       img {
         @include vertical-center;

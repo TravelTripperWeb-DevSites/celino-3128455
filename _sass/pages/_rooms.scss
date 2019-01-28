@@ -21,10 +21,24 @@
     @include make-col-ready;
     position: relative;
     padding: 0 35px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background-color: $white;
+      opacity: .5;
+    }
+
     @include media-breakpoint-up(md) {
       @include make-col(6);
       padding: 0;
     }
+
 
     &__floral-bg {
       max-width: 85%;
@@ -38,6 +52,7 @@
     &__inner-image {
       @include vertical-center;
       right: 30px;
+      z-index: 5;
       max-width: 75%;
       height: 90%;
       object-fit: cover;

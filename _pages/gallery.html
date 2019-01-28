@@ -41,7 +41,7 @@ meta_tags:
   </select>
 </div>
 
-<section class="filter-nav bg-cover d-none d-md-block" style="background-image:url('/assets/images/rooms/filter-floral-bg.jpg');" tabindex="-1">
+<section class="filter-nav bg-cover d-none d-md-block" tabindex="-1">
     <ul>
       <li><a href="javascript:void(0);" class="filter active" data-filter="all">All</a></li>
       {% for category in categories %}
@@ -50,7 +50,7 @@ meta_tags:
       {% endfor %}
     </ul>
 </section>
-
+<!--
 <section class="gallery-carousel d-none d-md-block" tabindex="-1">
   <div id="galleryBanner" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
@@ -72,14 +72,14 @@ meta_tags:
       </div>
     </div>
     <!-- Left and right controls -->
-    <a class="carousel-control-prev" href="#galleryBanner" data-slide="prev">
+    <!-- <a class="carousel-control-prev" href="#galleryBanner" data-slide="prev">
       <span class="carousel-control-prev-icon"></span>
     </a>
     <a class="carousel-control-next" href="#galleryBanner" data-slide="next">
       <span class="carousel-control-next-icon"></span>
     </a>
   </div>
-</section>
+</section> --> 
 
 <section class="gallery">
   {% assign categories = site.data._galleries %}

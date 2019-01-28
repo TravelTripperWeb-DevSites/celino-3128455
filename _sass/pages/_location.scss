@@ -52,10 +52,10 @@
 
         &.active {
           position: relative;
-          color: $dark-blue-color;
+          color: $white;
           background-color: $gold-color;
           &:hover {
-            color: $dark-blue-color;
+            color: $white;
           }
           &:before {
             background-color: $gold-color;
