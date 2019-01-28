@@ -14,12 +14,12 @@ $(function() {
         var scroll = $(window).scrollTop();
 
         if (scroll >= 170) {
-          header.removeClass('top-nav--flower top-nav--gradient top-nav--gradient--flower').addClass("top-nav--gradient top-nav--gradient--flower");
+          header.removeClass('top-nav--flower top-nav--gradient top-nav--gradient--flower').addClass("top-nav--gradient");
           header.css({'top':'','bottom':''});
         } else {
           var scrollTopPx = $(window).scrollTop();
           header.css({'top': '-'+scrollTopPx+'px'});
-          header.removeClass("top-nav--gradient  top-nav--gradient--flower").addClass('top-nav--flower');
+          header.removeClass("top-nav--gradient").addClass('top-nav--flower');
         }
     });
 

@@ -34,9 +34,21 @@
     }
 
     figure {
+      position: relative;
       margin-right: 53px;
       padding: 13px;
       background: url('/assets/images/home/pattern-hotel.jpg') no-repeat;
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background-color: $black;
+        opacity: .5;
+      }
       @include media-breakpoint-up(md) {
         margin-right: 103px;
         padding: 33px 50px 33px 53px;
@@ -46,6 +58,8 @@
         padding: 43px;
       }
       img {
+        position: relative;
+        z-index: 4;
         width: calc(100% + 63px);
         object-fit: cover;
         @include media-breakpoint-up(md) {
@@ -133,7 +147,7 @@
     }
     margin-bottom: 18px;
     padding: 10px 0;
-    background: url('/assets/images/bg-texture-categories.jpg') repeat-x;
+    //background: url('/assets/images/bg-texture-categories.jpg') repeat-x;
     @include bg-cover;
     @include media-breakpoint-up(md) {
       margin-top: 28px;
