@@ -4,6 +4,14 @@
 //scroll change header style
 $(function() {
 
+  $('.explore-map .nav-link').click(function(){
+    var $filter = $(this).attr("data-category");;
+    $(".attractions-slider").removeClass("active", function(){
+      $("#"+$filter+"-gallery").closest(".attractions-slider").addClass("active");
+    });
+  });
+
+
   $('#rooms-tab a').click(function (e) {
        e.preventDefault();
        $(this).tab('show');
@@ -53,7 +61,7 @@ $(function() {
       });
     },2500);
 
-    $("#attraction-gallery").slick({
+    $("#attractions-gallery, #shopping-gallery, #dining-gallery, #nightlife-gallery, #culture-gallery").slick({
      slidesToShow: 3,
      responsive: [{
        breakpoint: 1024,
@@ -243,6 +251,7 @@ $('#departure_date').val(ToDate);
         // set data-filter value as the data-rel value of selected
         return $(this).data("filter") == $filter;
       }).attr("data-fancybox-group", $filter).fadeIn(1000); // set data-fancybox-group and show filtered elements
+
     }
   });
 
