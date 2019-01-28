@@ -114,7 +114,7 @@
 .booking-toggle {
   position: absolute;
   top: 10;
-  right: 45px;
+  right: 25px;
   left: auto;
   max-width: 70px;
   height: 60px;
@@ -128,8 +128,8 @@
   transition: $global-transition;
   @include media-breakpoint-up(md) {
     top: 20px;
-    right: auto;
-    left: 12px;
+    right: 20px;
+    left: auto;
     max-width: 200px;
     padding-left: 104px;
     font-size: $type-size-11;
@@ -139,8 +139,8 @@
   }
   @include media-breakpoint-up(lg) {
     top: 30px;
-    right: auto;
-    left: 12px;
+    right: 37px;
+    left: auto;
     max-width: 245px;
     height: 83px;
     padding-left: 155px;
@@ -194,7 +194,8 @@
 .menu-toggle {
   position: absolute;
   top: 14px;
-  right: 15px;
+  right: auto;
+  left: 25px;
   display: block;
   width: 25px;
   height: 22px;
@@ -202,12 +203,13 @@
   cursor: pointer;
   @include media-breakpoint-up(md) {
     top: 24px;
-    right: 37px;
+    right: auto;
+    left: 25px;
     width: 44px;
     height: 40px;
   }
   @include media-breakpoint-up(lg) {
-    top: 34px;
+    top: 24px;
   }
 
   span {
