@@ -55,13 +55,14 @@
 
 @keyframes flower {
   0% {
-    background: url('/assets/images/nav-flowers.png') top -200px center repeat-x;
+    background: url('/assets/images/nav-flowers-sm.png') top -200px center repeat-x;
+
   }
   80% {
-    background: url('/assets/images/nav-flowers.png') top -20px center repeat-x;
+    background: url('/assets/images/nav-flowers-sm.png') top -20px center repeat-x;
   }
   100% {
-    background: url('/assets/images/nav-flowers.png') top 0 center repeat-x;
+    background: url('/assets/images/nav-flowers-sm.png') top center repeat-x;
   }
 }
 @keyframes bounceRight {

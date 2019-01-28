@@ -4,7 +4,7 @@
 .filter-nav {
   @include fixed-width-layout;
   margin-top: 55px;
-  padding: 28px 0;
+  padding: 0;
 
   &.bg-cover {
     @include bg-cover;
