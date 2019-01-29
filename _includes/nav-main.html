@@ -2,7 +2,7 @@
 
 <div class="top-nav {% if page.url =='/' %}top-nav--flower" id="home-nav" {% else%}top-nav--gradient"{% endif%}>
   <a class="hotel-logo" href="/"><img src="/assets/images/celino-logo.png" alt="{{ site.name}} logo"></a>
-  <a class="booking-toggle" id="toggle-booking" href="/"><span class="vertical-line"></span><strong>View Rates</strong></a>
+  <a class="booking-toggle"   href="javascript:void(0);" show-booking-widget><span class="vertical-line"></span><strong>View Rates</strong></a>
   <a class="menu-toggle" id="toggle-menu" href="/" title="Menu"><span>Menu</span> </a>
 </div>
 
@@ -22,7 +22,7 @@
   </nav>
 </div>
 
-<div class="booking-widget" id="bookingWidget">
+<!-- <div class="booking-widget" id="bookingWidget">
   <div class="booking-widget__wrap">
     <form action="{{ site.reztripUrl }}search?" method="get">
       <div class="booking-widget__form-inputs">
@@ -60,4 +60,4 @@
     </form>
 
   </div>
-</div>
+</div> -->

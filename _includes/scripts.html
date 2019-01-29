@@ -1,3 +1,10 @@
+<script>
+    function getIp(data) {
+      sessionStorage.ip_add =  data.ip;
+    }
+</script>
+<script src ="https://api.ipify.org?format=jsonp&callback=getIp"> </script>
+
 <!--[if gte IE 9]><!-->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -27,3 +34,23 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="{{ '/assets/js/main.min.js' | absolute_url }}"></script>
 <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+
+<script>window.cookieConsentConfig = {location: false}</script>
+<script src="https://plugins.traveltripper.io/v2/rt3api.min.js" charset="utf-8"></script>
+<script src="https://plugins.traveltripper.io/v2/jquery.ttweb.js"></script>
+<script>
+  TTWeb.Config.configure({
+    portalId: 'thecelinohotel',
+    hotelId: 'MIACEL',
+    defaultTimezone: 'America/New_York', // timezone of site
+    ipAddress: sessionStorage.ip_add,
+    defaultCurrency: 'USD',
+    //rootPath: 'https://rt3api-prd-ase.ttaws.com' // include this line only if site is on asian server i.e elite and cristalhospitality
+  });
+
+  $("[show-booking-widget]").bookingWidget({
+      // showRateCalendar: true,
+       showOfferCode: true
+  });
+</script>

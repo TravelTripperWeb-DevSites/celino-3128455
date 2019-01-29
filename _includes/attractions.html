@@ -1,10 +1,11 @@
-{% assign attractions =   site.data._models.explore | where: 'categories','attractions' %}
-<section class="offers-slider wow fadeIn" data-wow-delay=".3s">
+{% assign attractionsItems =  site.data._models.explore | where: 'categories','attractions' %}
+{% if attractionsItems.size > 0 %}
+<section class="offers-slider attractions-slider active">
   <div class="offers-slider__wrap">
     <h3 tabindex="0">Attractions</h3>
-    <div class="offers-slider__items" id="attraction-gallery">
-      {% for attraction in attractions %}
-      <div>
+    <div class="offers-slider__items" id="attractions-gallery">
+      {% for attraction in attractionsItems %}
+      <div data-filter="{{attraction.categories}}">
         <a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank" tabindex="-1">
           <figure>
             <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
@@ -20,3 +21,100 @@
     </div>
   </div>
 </section>
+{% endif %}
+{% assign shoppingItems =  site.data._models.explore | where: 'categories','shopping' %}
+{% if shoppingItems.size > 0 %}
+<section class="offers-slider attractions-slider">
+  <div class="offers-slider__wrap">
+    <h3 tabindex="0">Shopping</h3>
+    <div class="offers-slider__items" id="shopping-gallery">
+      {% for attraction in shoppingItems %}
+      <div data-filter="{{attraction.categories}}">
+        <a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank" tabindex="-1">
+          <figure>
+            <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
+          </figure>
+        </a>
+        <div class="offers-slider__detail">
+          <h4><a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank">{{ attraction.name }}</a></h4>
+          <p tabindex="0">{{ attraction.short_detail }}</p>
+          <a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank" class="button">Learn More</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+{% assign diningItems =  site.data._models.explore | where: 'categories','dining' %}
+{% if diningItems.size > 0 %}
+<section class="offers-slider attractions-slider" >
+  <div class="offers-slider__wrap">
+    <h3 tabindex="0">Dining</h3>
+    <div class="offers-slider__items" id="dining-gallery">
+      {% for attraction in diningItems %}
+      <div data-filter="{{attraction.categories}}">
+        <a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank" tabindex="-1">
+          <figure>
+            <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
+          </figure>
+        </a>
+        <div class="offers-slider__detail">
+          <h4><a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank">{{ attraction.name }}</a></h4>
+          <p tabindex="0">{{ attraction.short_detail }}</p>
+          <a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank" class="button">Learn More</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+{% assign nightlifeItems =  site.data._models.explore | where: 'categories','nightlife' %}
+{% if nightlifeItems.size > 0 %}
+<section class="offers-slider attractions-slider" >
+  <div class="offers-slider__wrap">
+    <h3 tabindex="0">Nightlife</h3>
+    <div class="offers-slider__items" id="nightlife-gallery">
+      {% for attraction in nightlifeItems %}
+      <div data-filter="{{attraction.categories}}">
+        <a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank" tabindex="-1">
+          <figure>
+            <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
+          </figure>
+        </a>
+        <div class="offers-slider__detail">
+          <h4><a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank">{{ attraction.name }}</a></h4>
+          <p tabindex="0">{{ attraction.short_detail }}</p>
+          <a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank" class="button">Learn More</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+{% assign cultureItems =  site.data._models.explore | where: 'categories','culture' %}
+{% if cultureItems.size > 0 %}
+<section class="offers-slider attractions-slider" >
+  <div class="offers-slider__wrap">
+    <h3 tabindex="0">Culture</h3>
+    <div class="offers-slider__items" id="culture-gallery">
+      {% for attraction in cultureItems %}
+      <div data-filter="{{attraction.categories}}">
+        <a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank" tabindex="-1">
+          <figure>
+            <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
+          </figure>
+        </a>
+        <div class="offers-slider__detail">
+          <h4><a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank">{{ attraction.name }}</a></h4>
+          <p tabindex="0">{{ attraction.short_detail }}</p>
+          <a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank" class="button">Learn More</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

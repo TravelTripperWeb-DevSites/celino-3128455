@@ -180,6 +180,15 @@
       padding: 16px 22px;
     }
   }
+  &.attractions-slider {
+    height: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    &.active {
+      height: auto;
+      padding-bottom: 60px;
+    }
+  }
 }
 
 .instagram-gallery {
@@ -320,4 +329,14 @@
     }
 
   }
+}
+.ttweb-booking-widget__header {
+  background-color: $gold-color;
+}
+.ttweb-booking-widget__body__date-selection__calendar .calendar-month table.calendar-month__grid .calendar-month__grid__date--in-selection {
+  background-color: $purple-color !important;
+}
+
+.ttweb-booking-widget button.ttweb-booking-widget__submit {
+  background-color: $dark-blue-color;
 }
