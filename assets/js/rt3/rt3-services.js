@@ -212,8 +212,8 @@ angular.module('rezTrip')
                       self.roomsList[key].categoryGroup = 'other';
                     }
 
-                    if(room.amenities.indexOf('Courtyard View') >= 0) {
-                      self.roomsList[key].view = 'Courtyard View';
+                    if(room.amenities.indexOf('Neighborhood or Courtyard View') >= 0) {
+                      self.roomsList[key].view = 'Neighborhood or Courtyard View';
                     }else if(room.amenities.indexOf('Partial Ocean View') >= 0) {
                       self.roomsList[key].view = 'Partial Ocean View';
                     }else if(room.amenities.indexOf('Ocean View') >= 0) {
