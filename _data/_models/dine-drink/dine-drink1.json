@@ -64,7 +64,7 @@
       "caption": ""
     }
   ],
-  "title": "Salte ",
+  "title": "Publico",
   "dine_image": {
     "name": "salte",
     "file_name": "salte.jpg",
@@ -82,7 +82,7 @@
     "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041643/xsmall_salte.jpg",
     "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041643/thumb_salte.jpg",
     "path": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041643/salte.jpg",
-    "alt": "salte",
+    "alt": "Publico",
     "caption": ""
   },
   "image": [
@@ -104,7 +104,7 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/thumb_iconik-banner.jpg",
       "git_file_name": "_assets/image_data/iconik-banner.json",
       "path": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/iconik-banner.jpg",
-      "alt": "iconik-banner",
+      "alt": "Publico",
       "caption": ""
     },
     {
@@ -125,13 +125,13 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/thumb_iconik-banner.jpg",
       "git_file_name": "_assets/image_data/iconik-banner.json",
       "path": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/iconik-banner.jpg",
-      "alt": "iconik-banner",
+      "alt": "Publico",
       "caption": ""
     }
   ],
-  "short_description": "<p>At Salte, our approach is simple; source the best ingredients possible and prepare them in an uncomplicated and modern way. Dine ocean side al fresco year round.</p>",
-  "description": "<h2>CUISINE IN THE HEART OF MIAMI</h2>\n<p>Salte offers Italian inspired cuisine in a stylishly elegant setting. Using the freshest and finest ingredients, Salte offers a distinctive take on Italian cuisine using contemporary techniques and features such as, house-made ricotta, wood-fired pizzas, and made-from-scratch pastas. At Salte, our approach is simple; source the best ingredients possible and prepare them in an uncomplicated and modern way. Dine Oceanside al fresco year round.</p>",
-  "url_friendly_name": "salte",
+  "short_description": "<p>At Publico, our approach is simple; source the best ingredients possible and prepare them in an uncomplicated and modern way. Dine ocean side al fresco year round.</p>",
+  "description": "<h2>CUISINE IN THE HEART OF MIAMI</h2>\n<p>Publico offers Italian inspired cuisine in a stylishly elegant setting. Using the freshest and finest ingredients, Salte offers a distinctive take on Italian cuisine using contemporary techniques and features such as, house-made ricotta, wood-fired pizzas, and made-from-scratch pastas. At Publico, our approach is simple; source the best ingredients possible and prepare them in an uncomplicated and modern way. Dine Oceanside al fresco year round.</p>",
+  "url_friendly_name": "publico",
   "reserve_link": "https://www.thecelinohotel.com/",
   "menu_items": [
     {
@@ -147,6 +147,6 @@
       "detail": "/"
     }
   ],
-  "seo_title": "Salte Italian Restaurant South Beach | Celino Hotel",
+  "seo_title": "Publico Italian Restaurant South Beach | Celino Hotel",
   "order": 1
 }
