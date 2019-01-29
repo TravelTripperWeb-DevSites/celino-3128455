@@ -64,7 +64,7 @@
       "caption": ""
     }
   ],
-  "title": "Dalia Lobby & Courtyard Bar",
+  "title": "Dalia Restaurant",
   "dine_image": {
     "name": "salte",
     "file_name": "salte.jpg",
@@ -82,7 +82,7 @@
     "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041643/xsmall_salte.jpg",
     "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041643/thumb_salte.jpg",
     "path": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041643/salte.jpg",
-    "alt": "Dalia Lobby & Courtyard Bar",
+    "alt": "Dalia Restaurant",
     "caption": ""
   },
   "image": [
@@ -104,13 +104,13 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/thumb_iconik-banner.jpg",
       "git_file_name": "_assets/image_data/iconik-banner.json",
       "path": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/iconik-banner.jpg",
-      "alt": "Dalia Lobby & Courtyard Bar",
+      "alt": "Dalia Restaurant",
       "caption": ""
     }
   ],
-  "short_description": "<p>Quirky, fern lined parlor room that transforms into a cocktail lounge every evening.</p>\n<p>Coming Soon</p>",
-  "description": "<h2>CUISINE IN THE HEART OF MIAMI</h2>\n<p>Quirky, fern lined lobby bar that transforms into a cocktail lounge every evening. The Dalia of the Celino is one of the most playful &ndash; and most green &ndash; places to be enveloped by art.&nbsp;&nbsp;</p>",
-  "url_friendly_name": "dalia",
+  "short_description": "<p>Lorem ipsum</p>",
+  "description": "<h2>CUISINE IN THE HEART OF MIAMI</h2>\n<p>Lorem ipsum.&nbsp;</p>",
+  "url_friendly_name": "dalia-restaurant",
   "reserve_link": "https://www.thecelinohotel.com/",
   "menu_items": [
     {
