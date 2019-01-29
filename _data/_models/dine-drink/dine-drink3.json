@@ -64,7 +64,7 @@
       "caption": ""
     }
   ],
-  "title": "Jewelbox",
+  "title": "Publico Bar",
   "dine_image": {
     "name": "salte",
     "file_name": "salte.jpg",
@@ -82,7 +82,7 @@
     "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041643/xsmall_salte.jpg",
     "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041643/thumb_salte.jpg",
     "path": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041643/salte.jpg",
-    "alt": "salte",
+    "alt": "Publico Bar",
     "caption": ""
   },
   "image": [
@@ -104,13 +104,13 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/thumb_iconik-banner.jpg",
       "git_file_name": "_assets/image_data/iconik-banner.json",
       "path": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/iconik-banner.jpg",
-      "alt": "iconik-banner",
+      "alt": "Publico Bar",
       "caption": ""
     }
   ],
-  "short_description": "<p>Here at our poolside jewelbox, dishes as simple as grilled wild-caught fish and as decadent as housemade pastas speak to us. So do crafted cocktails.</p>",
-  "description": "<h2>CUISINE IN THE HEART OF MIAMI</h2>\n<p>Here at our poolside Jewelbox, dishes as simple as grilled wild-caught fish and as decadent as housemade pastas speak to us. So do crafted cocktails. In this land of sunshine, Jewelbox revives the classic American and European cuisine we love with a lighter touch.</p>",
-  "url_friendly_name": "jewelbox",
+  "short_description": "<p>Lorem ipsum&nbsp;</p>",
+  "description": "<h2>CUISINE IN THE HEART OF MIAMI</h2>\n<p>Lorem ipsum.</p>",
+  "url_friendly_name": "publico-bar",
   "reserve_link": "https://www.thecelinohotel.com/",
   "menu_items": [
     {
@@ -126,6 +126,6 @@
       "detail": "/"
     }
   ],
-  "seo_title": "Salte Italian Restaurant South Beach | Celino Hotel",
+  "seo_title": "Publico Bar South Beach | Celino Hotel",
   "order": 2
 }
