@@ -28,6 +28,7 @@ meta_tags:
   </div>
 </section>
 
+
 <section class="inner-page-intro">
   <div class="inner-page-intro__wrap align-items-center">
     <div class="inner-page-intro__image wow fadeIn" data-wow-delay=".5s">
@@ -54,7 +55,77 @@ meta_tags:
   </div>
 </section>
 
-<section class="rooms-listing">
+
+<section class="sleep">
+  <div class="sleep__wrap">
+    <form class="sleep__filters">
+      <div class="sleep__filters__box">
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <h4>Refine Results</h4>
+          </div>
+          <div class="form-group col-md-2">
+            <select ng-model="filterObject.categoryGroup" id="inputBeds" class="form-control">
+              <option value="" selected="selected">Beds</option>
+              <option value="King">King</option>
+              <option value="Queen">Queen</option>
+              <option value="Suite">Suite</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <select ng-model="filterObject.view" id="inputView" class="form-control">
+              <option value="" selected>View</option>
+              <option value="Ocean View">Ocean View</option>
+              <option value="Partial Ocean View">Partial Ocean View</option>
+              <option value="Neighborhood or Courtyard View">Courtyard View</option>
+              <option value="Pool View">Pool View</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <select ng-model="filterObject.amenities" id="inputAmenities" class="form-control">
+              <option value="" selected>Amenities</option>
+              <option value="Balcony">Balcony</option>
+              <option value="Living Room">Living Room</option>
+              <option value="Sofa">Sofa</option>
+              <option value="Kitchen">Kitchen</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <div class="form-check">
+              <input ng-model="filterObject.name" ng-true-value='"ADA"'  ng-false-value='""' class="form-check-input" type="checkbox" id="gridCheck1">
+              <label class="form-check-label" for="gridCheck1">
+                Accessible
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="sleep__wrap">
+    <div class="sleep__card" ng-repeat="room in browser.roomsList | filter: filterObject">
+     <div class="sleep__card__outline">
+       <figure>
+          <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1">
+            <img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]">
+          </a>
+        </figure>
+        <article class="sleep__card__detail">
+          <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]">[[ room.name ]]</a></h2>
+          <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
+          <p>Retreat in comfort with ocean views. Thoughtful touches bring the beach inside your 700-square-foot king room.</p>
+          <div class="button-holder">
+            <a ng-href="/room/#[[ room.name | formatNameForLink ]]"  class="button button--gold" tabindex="-1">Explore</a>
+            <a ng-href="{{ site.reztripUrl}}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="button button--arrow">Book Now</a>
+          </div>
+        </article>
+     </div>
+    </div>
+  </div>
+</div>
+
+
+<!--section class="rooms-listing">
   <div class="rooms-listing__filter-wrap">
     <div class="rooms-listing__main-filter">
       <div class="rooms-listing__main-filter__filter-label" tabindex="0">
@@ -182,7 +253,7 @@ meta_tags:
       </div>
     </div>
   </div>
-</section>
+</section-->
 
 {% include cta-two-column.html %}
 {% include instagram.html %}

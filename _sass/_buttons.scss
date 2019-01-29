@@ -11,7 +11,7 @@
   text-align: center;
   text-transform: uppercase;
   letter-spacing: .05rem;
-  background-color: $purple-color;
+  background-color: $gold-color;
   transition: $global-transition;
   @include media-breakpoint-up(md) {
     min-width: 190px;
@@ -64,7 +64,7 @@
       bottom: 0;
       width: 39px;
       content: '';
-      background-color: $purple-color;
+      background-color: $gold-color;
       transition: $global-transition;
       @include media-breakpoint-up(md) {
         right: -54px;
@@ -93,7 +93,7 @@
     }
 
     &:hover {
-      background-color: $purple-color;
+      background-color: $gold-color;
 
       &:before {
         animation: bounceRight 1s linear .2s;
@@ -101,7 +101,24 @@
     }
 
     &--gold {
-      background-color: $gold-color;
+        background-color: $gold-color;
+        &:after {
+        position: absolute;
+        top: 0;
+        right: -39px;
+        bottom: 0;
+        width: 39px;
+        content: '';
+        background-color: $dark-blue-color;
+        transition: $global-transition;
+        @include media-breakpoint-up(md) {
+          right: -54px;
+          width: 54px;
+        }
+      }
+      &:hover {
+        background-color: $dark-blue-color;
+      }
     }
   }
 }

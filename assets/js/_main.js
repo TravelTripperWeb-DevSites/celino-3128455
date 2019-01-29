@@ -17,19 +17,20 @@ $(function() {
        $(this).tab('show');
    });
 
-    var header = $("#home-nav");
-    $(window).on("load resize scroll",function() {
-        var scroll = $(window).scrollTop();
+   var header = $("#home-nav");
+   $(window).on("load resize scroll",function() {
+       var scroll = $(window).scrollTop();
 
-        if (scroll >= 170) {
-          header.removeClass('top-nav--flower top-nav--gradient top-nav--gradient--flower').addClass("top-nav--gradient");
-          header.css({'top':'','bottom':''});
-        } else {
-          var scrollTopPx = $(window).scrollTop();
-          header.css({'top': '-'+scrollTopPx+'px'});
-          header.removeClass("top-nav--gradient").addClass('top-nav--flower');
-        }
-    });
+       if (scroll >= 170) {
+         header.removeClass('top-nav--flower').addClass("top-nav--gradient");
+         header.css({'top':'','bottom':''});
+       } else {
+         var scrollTopPx = $(window).scrollTop();
+         header.css({'top': '-'+scrollTopPx+'px'});
+         header.removeClass("top-nav--gradient").addClass('top-nav--flower');
+       }
+   });
+
 
     //show / hide menu items on hamburger click
     $("#toggle-menu").click(function(e){
