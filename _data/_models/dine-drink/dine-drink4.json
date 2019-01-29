@@ -64,7 +64,7 @@
       "caption": ""
     }
   ],
-  "title": "Florida Room",
+  "title": "Dalia Lobby & Courtyard Bar",
   "dine_image": {
     "name": "salte",
     "file_name": "salte.jpg",
@@ -82,7 +82,7 @@
     "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041643/xsmall_salte.jpg",
     "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041643/thumb_salte.jpg",
     "path": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041643/salte.jpg",
-    "alt": "salte",
+    "alt": "Dalia Lobby & Courtyard Bar",
     "caption": ""
   },
   "image": [
@@ -104,7 +104,7 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/thumb_iconik-banner.jpg",
       "git_file_name": "_assets/image_data/iconik-banner.json",
       "path": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/iconik-banner.jpg",
-      "alt": "iconik-banner",
+      "alt": "Dalia Lobby & Courtyard Bar",
       "caption": ""
     },
     {
@@ -125,13 +125,13 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/thumb_iconik-banner.jpg",
       "git_file_name": "_assets/image_data/iconik-banner.json",
       "path": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/iconik-banner.jpg",
-      "alt": "iconik-banner",
+      "alt": "Dalia Lobby & Courtyard Bar",
       "caption": ""
     }
   ],
-  "short_description": "<p>Cocktail mixers shake and conversation hums. Go ahead - drink in the vibe.</p>",
-  "description": "<h2>CUISINE IN THE HEART OF MIAMI</h2>\n<p>Cocktail mixers shake and conversation hums. Go ahead -- drink in the vibe.</p>\n<p>Retreat to the quirky surroundings of the historic Florida Room, a bar for handcrafted cocktails, Cuban bites and selections from the bar&rsquo;s coveted rum list. This timeless haven is ideal place to gather for libations accompanied by the sounds of music performed nightly. Dancing is a strong possibility, rumor has it that the conga line was invented here on New Year&rsquo;s Eve of 1940.</p>",
-  "url_friendly_name": "florida-room",
+  "short_description": "<p>Lorem ipsum.&nbsp;</p>",
+  "description": "<h2>CUISINE IN THE HEART OF MIAMI</h2>\n<p>Lorem ipsum</p>",
+  "url_friendly_name": "dalia-lobby",
   "reserve_link": "https://www.thecelinohotel.com/",
   "menu_items": [
     {
