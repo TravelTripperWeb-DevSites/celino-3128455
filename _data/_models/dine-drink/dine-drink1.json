@@ -131,7 +131,7 @@
   ],
   "short_description": "<p>At Celino&rsquo;s new Pubblico, authentic Italian cuisine meets quality, locally sourced ingredients. Rich flavors dominate the menu that will highlight handmade artisanal breads and pastas poised to impress diners on Miami&rsquo;s world-famous Ocean Drive strip. Tantalizing cocktails will balance a focused wine list to feature top-grade selections from highly-reputable wineries around the world. Complemented by a bright and contemporary interior that exudes modern sophistication with old world aesthetic, a harmonious balance of food, culture and design will captivate guests at every encounter.</p>",
   "description": "<h2>Authentic Italian cuisine meets quality, locally-sourced ingredients.&nbsp;</h2>\n<p>At Celino&rsquo;s new Pubblico, rich flavors dominate the menu that will highlight handmade artisanal breads and pastas poised to impress diners on Miami&rsquo;s world-famous Ocean Drive strip. Tantalizing cocktails will balance a focused wine list to feature top-grade selections from highly-reputable wineries around the world. Complemented by a bright and contemporary interior that exudes modern sophistication with old world aesthetic, a harmonious balance of food, culture and design will captivate guests at every encounter.</p>",
-  "url_friendly_name": "publico",
+  "url_friendly_name": "pubblico",
   "reservation_link": "#",
   "menu_items": [
     {
@@ -151,5 +151,5 @@
   "order": 1,
   "reservation_btn_text": "Reserve Now",
   "reservation_details": "<p>For reservations and information about Pubblico, call <a href=\"tel:7865744090\">305.685.2000</a> or email us to <a href=\"mailto:dine@celino.com\">dine@celino.com</a>.&nbsp;</p>",
-  "hotel_timings": "<p>Open Daily from 7:00am – 12:00am<br>Tues-Thurs until 11pm</p>"
+  "hotel_timings": "<p>Lunch 12pm-4pm Daily.</p>\n<p>Dinner 6pm-11pm Daily; 6pm-midnight&nbsp;Friday and Saturday.&nbsp;&nbsp;</p>\n<p>Located in the new Floridita Building.</p>"
 }
