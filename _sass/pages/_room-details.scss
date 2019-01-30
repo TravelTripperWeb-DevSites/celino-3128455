@@ -113,11 +113,15 @@
 }
 
 .room-images-gallery {
+  @include fixed-width-layout;
   .item {
     position: relative;
     float: left;
     width: 33.33%;
     height: 315px;
+    margin-bottom: 30px;
+    padding-right: 15px;
+    padding-left: 15px;
     cursor: pointer;
     .img-fluid {
       width: 100%;
@@ -131,7 +135,9 @@
       bottom: 0;
       left: 0;
       height: 100%;
-      background-color: rgba($purple-color, .88);
+      margin-right: 15px;
+      margin-left: 15px;
+      background-color: rgba($gold-color, .88);
       @include global-transition(.3s);
       opacity: 0;
       &:hover {
@@ -142,6 +148,8 @@
         position: absolute;
         right: 0;
         left: 0;
+        width: 55px;
+        height: 55px;
         margin: auto;
       }
     }

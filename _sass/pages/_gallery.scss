@@ -121,7 +121,7 @@
 }
 
 .gallery {
-  @include make-container;
+  @include fixed-width-layout;
   margin-top: 40px;
 
   &__row {
@@ -134,17 +134,18 @@
     cursor: pointer;
     @include media-breakpoint-up(md) {
       @include make-col(4);
-      margin-bottom: 0;
-      padding-right: 0;
-      padding-left: 0;
+      margin-bottom: 30px;
     }
 
     &:after {
       @include absolute-position(0,0,0,0,auto,auto);
-      background-color: rgba($purple-color, .88);
+      margin-right: 15px;
+      margin-left: 15px;
+      background-color: rgba($gold-color, .88);
       background-image: url('/assets/images/gallery/zoom.png');
       background-repeat: no-repeat;
       background-position: center center;
+      background-size: 55px 55px;
       opacity: 0;
       transition: $global-transition;
     }
