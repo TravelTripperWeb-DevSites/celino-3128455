@@ -41,6 +41,7 @@
   },
   "hotel_timings": {
     "label": "Hotel Timings",
+    "type": "richtext",
     "required": true
   },
   "url_friendly_name": {

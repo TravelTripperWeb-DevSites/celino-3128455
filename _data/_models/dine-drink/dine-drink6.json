@@ -47,7 +47,21 @@
   ],
   "short_description": "<p>Lorem ipsum.</p>",
   "description": "<p>Lorem ipsum.&nbsp;</p>",
-  "reserve_link": "#",
+  "reservation_link": "#",
+  "menu_items": [
+    {
+      "name": "Brunch MENU",
+      "link": "/"
+    },
+    {
+      "name": "Lunch MENU",
+      "link": "/"
+    },
+    {
+      "name": "DINNER MENU",
+      "link": "/"
+    }
+  ],
   "url_friendly_name": "pools",
   "gallery": [
     {
@@ -75,5 +89,5 @@
   "reservation_btn_text": "Reserve Now",
   "reservation_link": "#",
   "reservation_details": "<p>For reservations and information about ICONIK, call <a href=\"tel:7865744090\">(786) 574-4090</a> or email us to <a href=\"mailto:dine@celino.com\">dine@celino.com</a></p>",
-  "hotel_timings": "Open Daily from 7:00am – 12:00am Tues-Thurs until 11pm"
+  "hotel_timings": "<p>Open Daily from 7:00am – 12:00am<br>Tues-Thurs until 11pm</p>"
 }

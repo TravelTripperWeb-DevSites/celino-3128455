@@ -132,21 +132,25 @@
   "short_description": "<p>Lorem ipsum.&nbsp;</p>",
   "description": "<h2>CUISINE IN THE HEART OF MIAMI</h2>\n<p>Lorem ipsum</p>",
   "url_friendly_name": "dalia-lobby",
-  "reserve_link": "https://www.thecelinohotel.com/",
+  "reservation_link": "https://www.thecelinohotel.com/",
   "menu_items": [
     {
       "name": "Brunch MENU",
-      "detail": "/"
+      "link": "/"
     },
     {
       "name": "Lunch MENU",
-      "detail": "/"
+      "link": "/"
     },
     {
       "name": "DINNER MENU",
-      "detail": "/"
+      "link": "/"
     }
   ],
   "seo_title": "",
-  "order": 3
+  "order": 3,
+  "reservation_btn_text": "Reserve Now",
+  "reservation_link": "#",
+  "reservation_details": "<p>For reservations and information about ICONIK, call <a href=\"tel:7865744090\">(786) 574-4090</a> or email us to <a href=\"mailto:dine@celino.com\">dine@celino.com</a></p>",
+  "hotel_timings": "<p>Open Daily from 7:00am – 12:00am<br>Tues-Thurs until 11pm</p>"
 }
