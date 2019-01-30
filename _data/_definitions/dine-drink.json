@@ -14,10 +14,8 @@
     "required": true,
     "multiple": true
   },
-   "seo_title": {
-  },
-  "seo_description": {
-  },
+  "seo_title": {},
+  "seo_description": {},
   "short_description": {
     "label": "Short Description",
     "type": "richtext",
@@ -28,8 +26,21 @@
     "type": "richtext",
     "required": true
   },
-  "reserve_link": {
-    "label": "Reserve Link",
+  "reservation_btn_text": {
+    "label": "Reservation Button Text",
+    "required": true
+  },
+  "reservation_link": {
+    "label": "Reservation Link",
+    "required": true
+  },
+  "reservation_details": {
+    "label": "Reservation Details",
+    "type": "richtext",
+    "required": true
+  },
+  "hotel_timings": {
+    "label": "Hotel Timings",
     "required": true
   },
   "url_friendly_name": {
@@ -42,17 +53,17 @@
     "multiple": true,
     "hint": "Enter Menu Name. Click on 'Add New Menu Items' below to add more Menu Titles.",
     "fields": {
-       "name": {
-         "label": "Menu Title",
-         "type": "text",
-         "hint": "Please add Menu Title Ex: Brunch Menu"
-       },
-       "detail": {
+      "name": {
+        "label": "Menu Title",
+        "type": "text",
+        "hint": "Please add Menu Title Ex: Brunch Menu"
+      },
+      "detail": {
         "label": "Menu URL",
         "type": "text",
         "hint": "Please add URL"
-       }
-     }
+      }
+    }
   },
   "gallery": {
     "label": "Dine Gallery Image",

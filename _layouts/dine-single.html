@@ -79,29 +79,4 @@ layout: default
   </div>
 </section>
 
-<section class="offers-slider">
-  <div class="offers-slider__wrap">
-    <h3 tabindex="0">Dine & Offers</h3>
-    <div class="offers-slider__items" id="attraction-gallery">
-      {% assign offerslist = site.data._models.dine-offers %}
-      {% for offer in offerslist %}
-      <div class="wow fadeIn" data-wow-delay=".3s">
-        <a href="#" tabindex="-1">
-          <figure>
-            <img src="{{ offer.dine_image.url_medium }}" alt="{{ offer.dine_image.alt }}">
-          </figure>
-        </a>
-        <div class="offers-slider__detail">
-          <h4><a href="#">{{ offer.title }}</a></h4>
-          <div tabindex="0">
-            {{ offer.description }}
-          </div>
-          <a href="{{ offer.link }}" class="button">Learn More</a>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
 {% include instagram.html %}
