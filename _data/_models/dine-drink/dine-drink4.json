@@ -64,7 +64,7 @@
       "caption": ""
     }
   ],
-  "title": "Dalia Lobby & Courtyard Bar",
+  "title": "The Bar at Dalia",
   "dine_image": {
     "name": "salte",
     "file_name": "salte.jpg",
@@ -82,7 +82,7 @@
     "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041643/xsmall_salte.jpg",
     "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041643/thumb_salte.jpg",
     "path": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041643/salte.jpg",
-    "alt": "Dalia Lobby & Courtyard Bar",
+    "alt": "The Bar at Dalia",
     "caption": ""
   },
   "image": [
@@ -104,7 +104,7 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/thumb_iconik-banner.jpg",
       "git_file_name": "_assets/image_data/iconik-banner.json",
       "path": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/iconik-banner.jpg",
-      "alt": "Dalia Lobby & Courtyard Bar",
+      "alt": "The Bar at Dalia",
       "caption": ""
     },
     {
@@ -125,14 +125,14 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/thumb_iconik-banner.jpg",
       "git_file_name": "_assets/image_data/iconik-banner.json",
       "path": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/iconik-banner.jpg",
-      "alt": "Dalia Lobby & Courtyard Bar",
+      "alt": "The Bar at Dalia",
       "caption": ""
     }
   ],
-  "short_description": "<p>Lorem ipsum.&nbsp;</p>",
-  "description": "<h2>CUISINE IN THE HEART OF MIAMI</h2>\n<p>Lorem ipsum</p>",
+  "short_description": "<p>The luxury boutique hotel will also house a glamorous and sophisticated indoor/outdoor horseshoe cocktail bar, designed by Navigate to reflect Celino&rsquo;s interpretation of &ldquo;Floradita&rdquo; and Cuban-modernism. The ultra-chic outdoor bar space will open out onto the hotel&rsquo;s vibrant courtyard area, which will feature eclectic custom furniture, pop colors and lush greenery. This exciting new space will offer guests a welcoming new hangout spot, bringing weekly activations and live entertainment, majestically complemented by Miami&rsquo;s moonlit backdrop. The upscale indoor bar will seamlessly integrate with the lobby and flow into the new Mediterranean seafood-centric restaurant, Dalia. Guests will be able to grab anything from inventive seasonally-driven cocktails infused with exciting new spices and flavor combinations to hand-crafted variations on timeless classics integrating personalized blends for every palate.</p>",
+  "description": "<h2>MIAMI'S NEWEST ULTRA-CHIC HANGOUT</h2>\n<p>The luxury boutique hotel will also house a glamorous and sophisticated indoor/outdoor horseshoe cocktail bar, designed by Navigate to reflect Celino&rsquo;s interpretation of &ldquo;Floradita&rdquo; and Cuban-modernism. The ultra-chic outdoor bar space will open out onto the hotel&rsquo;s vibrant courtyard area, which will feature eclectic custom furniture, pop colors and lush greenery. This exciting new space will offer guests a welcoming new hangout spot, bringing weekly activations and live entertainment, majestically complemented by Miami&rsquo;s moonlit backdrop. The upscale indoor bar will seamlessly integrate with the lobby and flow into the new Mediterranean seafood-centric restaurant, Dalia. Guests will be able to grab anything from inventive seasonally-driven cocktails infused with exciting new spices and flavor combinations to hand-crafted variations on timeless classics integrating personalized blends for every palate.</p>",
   "url_friendly_name": "dalia-lobby",
-  "reservation_link": "https://www.thecelinohotel.com/",
+  "reservation_link": "#",
   "menu_items": [
     {
       "name": "Brunch MENU",
@@ -150,7 +150,6 @@
   "seo_title": "",
   "order": 3,
   "reservation_btn_text": "Reserve Now",
-  "reservation_link": "#",
-  "reservation_details": "<p>For reservations and information about ICONIK, call <a href=\"tel:7865744090\">(786) 574-4090</a> or email us to <a href=\"mailto:dine@celino.com\">dine@celino.com</a></p>",
+  "reservation_details": "<p>For reservations and information about&nbsp;The Bar at Dalia, call <a href=\"tel:7865744090\">305.685.2000</a> or email us to <a href=\"mailto:dine@celino.com\">dine@celino.com</a></p>",
   "hotel_timings": "<p>Open Daily from 7:00am – 12:00am<br>Tues-Thurs until 11pm</p>"
 }
