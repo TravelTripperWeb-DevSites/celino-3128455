@@ -3,12 +3,12 @@
 <div class="top-nav {% if page.url =='/' %}top-nav--flower" id="home-nav" {% else%}top-nav--gradient"{% endif%}>
   <a class="hotel-logo" href="/"><img src="/assets/images/celino-logo.png" alt="{{ site.name}} logo"></a>
   <a class="booking-toggle"   href="javascript:void(0);" show-booking-widget><span class="vertical-line"></span><strong>View Rates</strong></a>
-  <a class="menu-toggle" id="toggle-menu" href="/" title="Menu"><span>Menu</span> </a>
+  <a class="menu-toggle" aria-label="Hit enter key or click to open the menu" id="toggle-menu" href="/" title="Menu"><span>Menu</span> </a>
 </div>
 
 <div class="menu-items" id="menuItems">
   <nav class="menu-items__wrap">
-    <span class="menu-items__close" id="closeMenu"></span>
+    <span aria-label="Hit enter key or click on the cross icon to close the menu" tabindex="0" class="menu-items__close" id="closeMenu"></span>
     <ul>
     {% for link in links %}
       <li class="nav-item{% if page.url == link.url %} active{% endif%}">
