@@ -13,8 +13,11 @@ meta_tags:
           <li ng-repeat="photo in room.photos" data-target="#pageBanner" data-slide-to="[[ $index ]]" ng-class="{'active': $index == 0}"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
-          <div class="carousel-item" ng-repeat="photo in room.photos" ng-class="{'active': $index == 0}" role="option">
-            <img ng-src="[[ photo.yankee_large ]]" alt="[[ room.name ]]">
+          <div class="carousel-item" ng-if="room.photos.length > 0" ng-repeat="photo in room.photos" ng-class="{'active': $index == 0}" role="option">
+            <img ng-src="[[ photo.large ]]" alt="[[ room.name ]]">
+          </div>
+          <div class="carousel-item active" ng-if="room.photos.length <= 0">
+            <img src="/assets/images/dummy.jpg" alt="room image not found">
           </div>
         </div>
         <h1 tabindex="0" class="wow fadeIn" data-wow-delay="0.5s" ng-bind-html="room.name | renderHTMLCorrectly"></h1>
