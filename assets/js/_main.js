@@ -36,10 +36,17 @@ $(function() {
     $("#toggle-menu").click(function(e){
       e.preventDefault();
       $("#menuItems").css("display", "flex").hide().fadeIn();
+      $("#closeMenu").focus();
     });
-    $("#closeMenu").click(function(e){
+    $("#closeMenu").on("click", function(e){
       e.preventDefault();
       $("#menuItems").fadeOut();
+    });
+    $("#closeMenu").on("keypress", function(e){
+      e.preventDefault();
+      if (e.which == 13) {
+        $("#menuItems").fadeOut();
+      }
     });
 
     //offers slick slider
