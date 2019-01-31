@@ -64,7 +64,7 @@
       "caption": ""
     }
   ],
-  "title": "Publico",
+  "title": "Pubblico",
   "dine_image": {
     "name": "salte",
     "file_name": "salte.jpg",
@@ -82,7 +82,7 @@
     "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041643/xsmall_salte.jpg",
     "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041643/thumb_salte.jpg",
     "path": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-041643/salte.jpg",
-    "alt": "Publico",
+    "alt": "Pubblico",
     "caption": ""
   },
   "image": [
@@ -104,7 +104,7 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/thumb_iconik-banner.jpg",
       "git_file_name": "_assets/image_data/iconik-banner.json",
       "path": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/iconik-banner.jpg",
-      "alt": "Publico",
+      "alt": "Pubblico",
       "caption": ""
     },
     {
@@ -125,14 +125,14 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/thumb_iconik-banner.jpg",
       "git_file_name": "_assets/image_data/iconik-banner.json",
       "path": "//cdn.traveltripper.io/site-assets/192_424_22293/media/2018-12-27-024748/iconik-banner.jpg",
-      "alt": "Publico",
+      "alt": "Pubblico",
       "caption": ""
     }
   ],
-  "short_description": "<p>At Publico, our approach is simple; source the best ingredients possible and prepare them in an uncomplicated and modern way. Dine ocean side al fresco year round.</p>",
-  "description": "<h2>CUISINE IN THE HEART OF MIAMI</h2>\n<p>Publico offers Italian inspired cuisine in a stylishly elegant setting. Using the freshest and finest ingredients, Salte offers a distinctive take on Italian cuisine using contemporary techniques and features such as, house-made ricotta, wood-fired pizzas, and made-from-scratch pastas. At Publico, our approach is simple; source the best ingredients possible and prepare them in an uncomplicated and modern way. Dine Oceanside al fresco year round.</p>",
-  "url_friendly_name": "publico",
-  "reservation_link": "https://www.thecelinohotel.com/",
+  "short_description": "<p>At Celino&rsquo;s new Pubblico, authentic Italian cuisine meets quality, locally sourced ingredients. A harmonious balance of food, culture and design will captivate guests at every encounter.</p>",
+  "description": "<h2>Authentic Italian cuisine meets quality, locally-sourced ingredients.&nbsp;</h2>\n<p>At Celino&rsquo;s new Pubblico, rich flavors dominate the menu that will highlight handmade artisanal breads and pastas poised to impress diners on Miami&rsquo;s world-famous Ocean Drive strip. Tantalizing cocktails will balance a focused wine list to feature top-grade selections from highly-reputable wineries around the world. Complemented by a bright and contemporary interior that exudes modern sophistication with old world aesthetic, a harmonious balance of food, culture and design will captivate guests at every encounter.</p>",
+  "url_friendly_name": "pubblico",
+  "reservation_link": "#",
   "menu_items": [
     {
       "name": "Brunch MENU",
@@ -147,10 +147,9 @@
       "link": "/"
     }
   ],
-  "seo_title": "Publico Italian Restaurant South Beach | Celino Hotel",
+  "seo_title": "Publico Italian Restaurant & Bar South Beach | Celino Hotel",
   "order": 1,
   "reservation_btn_text": "Reserve Now",
-  "reservation_link": "#",
-  "reservation_details": "<p>For reservations and information about ICONIK, call <a href=\"tel:7865744090\">(786) 574-4090</a> or email us to <a href=\"mailto:dine@celino.com\">dine@celino.com</a></p>",
-  "hotel_timings": "<p>Open Daily from 7:00am – 12:00am<br>Tues-Thurs until 11pm</p>"
+  "reservation_details": "<p>For reservations and information about Pubblico, call <a href=\"tel:7865744090\">305.685.2000</a> or email us to <a href=\"mailto:dine@celino.com\">dine@celino.com</a>.&nbsp;</p>",
+  "hotel_timings": "<p><strong>Lunch:</strong> 12pm-4pm Daily <br /> <strong>Dinner:</strong> 6pm-11pm Sunday through Thursday; 6pm-midnight&nbsp;Friday and Saturday<br /> Located in the new Floridita Building</p>"
 }
