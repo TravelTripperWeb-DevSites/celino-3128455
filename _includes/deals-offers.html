@@ -3,7 +3,7 @@
     <h3><a href="/offers/">Deals & Offers</a></h3>
     <div class="offers-slider__items" id="deals-offers">
       <div ng-repeat="offer in offers.special_rates">
-        <a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]">
+        <a tabindex="-1" ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]">
           <figure>
             <img ng-src="[[ offer.images[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ offer.rate_plan_name ]]">
           </figure>
