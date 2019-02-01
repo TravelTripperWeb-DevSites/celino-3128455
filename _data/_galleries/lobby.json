@@ -40,6 +40,26 @@
       "git_file_name": "_assets/image_data/Celino-Bar.json",
       "path": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195043/Celino_Bar.jpg",
       "alt": "Celino Bar"
+    },
+    {
+      "name": "Celino Bar 2",
+      "file_name": "Celino Bar 2.jpg",
+      "url": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195042/Celino_Bar_2.jpg",
+      "tags": "",
+      "description": "",
+      "date_added": "2019-01-31-195042",
+      "file_type": "image/jpeg",
+      "width": 1500,
+      "height": 845,
+      "file_size": 342666,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195042/large_Celino_Bar_2.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195042/medium_Celino_Bar_2.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195042/small_Celino_Bar_2.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195042/xsmall_Celino_Bar_2.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195042/thumb_Celino_Bar_2.jpg",
+      "git_file_name": "_assets/image_data/Celino-Bar-2.json",
+      "path": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195042/Celino_Bar_2.jpg",
+      "alt": "Celino Bar 2"
     }
   ],
   "description": ""
