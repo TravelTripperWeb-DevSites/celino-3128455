@@ -50,61 +50,22 @@ meta_tags:
 
   <section class="other-rooms">
     <h4 class="text-center" tabindex="0">SIMILAR ROOMS & SUITES</h4>
-    <div class="rooms-listing__list-items active" ng-show="room.name.indexOf('King') != -1" ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
-      <div class="stay-block__rooms__wrap" ng-class-even="'stay-block__rooms__wrap--even'" ng-repeat="room in value" ng-if="room.categoryGroup =='King'">
+
+    <div class="rooms-listing__list-items active" ng-repeat="(key, value) in browser.roomsList | groupBy: 'category'">
+      <div class="stay-block__rooms__wrap" ng-class-even="'stay-block__rooms__wrap--even'" ng-repeat="otherroom in value" ng-if="otherroom.category == room.category && room.name != otherroom.name">
         <div class="stay-block__room-image">
-          <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
+          <a ng-href="/room/#[[ otherroom.name | formatNameForLink ]]" tabindex="-1"><img ng-src="[[ otherroom.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ otherroom.name ]]"></a>
         </div>
         <div class="stay-block__room-detail">
           <article>
-            <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]">[[ room.name ]]</a></h2>
-            <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
+            <h2><a ng-href="/room/#[[ otherroom.name | formatNameForLink ]]">[[ otherroom.name ]]</a></h2>
+            <h4><a ng-href="{{ site.reztripUrl }}[[ otherroom.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+otherroom.code : 'search?selected_room='+otherroom.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
             <div tabindex="0">
-              <p>[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
+              <p>[[ otherroom.description | limitTo: 221 ]][[ otherroom.description.length > 220 ? '...' : '' ]]</p>
             </div>
             <div class="button-holder">
-              <a ng-href="{{ site.reztripUrl}}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="button button--arrow">Book Now</a>
-              <a ng-href="/room/#[[ room.name | formatNameForLink ]]" class="button button--gold">Explore</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-    <div class="rooms-listing__list-items active" ng-show="room.name.indexOf('Queen') != -1" ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
-      <div class="stay-block__rooms__wrap" ng-class-even="'stay-block__rooms__wrap--even'" ng-repeat="room in value" ng-if="room.categoryGroup =='Queen'">
-        <div class="stay-block__room-image">
-          <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
-        </div>
-        <div class="stay-block__room-detail">
-          <article>
-            <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]">[[ room.name ]]</a></h2>
-            <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
-            <div tabindex="0">
-              <p>[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
-            </div>
-            <div class="button-holder">
-              <a ng-href="{{ site.reztripUrl}}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="button button--arrow">Book Now</a>
-              <a ng-href="/room/#[[ room.name | formatNameForLink ]]" class="button button--gold">Explore</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-    <div class="rooms-listing__list-items active" ng-show="room.name.indexOf('Suite') != -1" ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
-      <div class="stay-block__rooms__wrap" ng-class-even="'stay-block__rooms__wrap--even'" ng-repeat="room in value" ng-if="room.categoryGroup =='Suite'">
-        <div class="stay-block__room-image">
-          <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
-        </div>
-        <div class="stay-block__room-detail">
-          <article>
-            <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]">[[ room.name ]]</a></h2>
-            <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
-            <div tabindex="0">
-              <p>[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
-            </div>
-            <div class="button-holder">
-              <a ng-href="{{ site.reztripUrl}}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="button button--arrow">Book Now</a>
-              <a ng-href="/room/#[[ room.name | formatNameForLink ]]" class="button button--gold">Explore</a>
+              <a ng-href="{{ site.reztripUrl}}[[ otherroom.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+otherroom.code : 'search?selected_room='+otherroom.code ]]" class="button button--arrow">Book Now</a>
+              <a ng-href="/room/#[[ otherroom.name | formatNameForLink ]]" class="button button--gold">Explore</a>
             </div>
           </article>
         </div>
