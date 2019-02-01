@@ -1,48 +1,23 @@
 [
   {
     "content": {
-      "name": "Dine  and Drink",
-      "file_name": "Dine  and Drink.jpg",
-      "url": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-172558/Dine__and_Drink.jpg",
+      "name": "Dine",
+      "file_name": "Dine.jpg",
+      "url": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-172929/Dine.jpg",
       "tags": "",
       "description": "",
-      "date_added": "2019-02-01-172558",
+      "date_added": "2019-02-01-172929",
       "file_type": "image/jpeg",
-      "width": 3190,
-      "height": 2553,
-      "file_size": 1567088,
-      "url_large": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-172558/large_Dine__and_Drink.jpg",
-      "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-172558/medium_Dine__and_Drink.jpg",
-      "url_small": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-172558/small_Dine__and_Drink.jpg",
-      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-172558/xsmall_Dine__and_Drink.jpg",
-      "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-172558/thumb_Dine__and_Drink.jpg",
-      "path": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-172558/Dine__and_Drink.jpg",
-      "alt": "Dine  and Drink",
-      "crop": {
-        "origin": {
-          "x": 10,
-          "y": 230
-        },
-        "width": 3180,
-        "height": 2108
-      },
-      "croppedImage": {
-        "name": "Dine__and_Drink",
-        "file_name": "Dine__and_Drink.jpg",
-        "url": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-172718/Dine__and_Drink.jpg",
-        "tags": "",
-        "description": "",
-        "date_added": "2019-02-01-172718",
-        "file_type": "image/jpeg",
-        "width": 3180,
-        "height": 2108,
-        "file_size": 820846,
-        "url_large": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-172718/large_Dine__and_Drink.jpg",
-        "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-172718/medium_Dine__and_Drink.jpg",
-        "url_small": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-172718/small_Dine__and_Drink.jpg",
-        "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-172718/xsmall_Dine__and_Drink.jpg",
-        "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-172718/thumb_Dine__and_Drink.jpg"
-      }
+      "width": 1000,
+      "height": 560,
+      "file_size": 110296,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-172929/large_Dine.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-172929/medium_Dine.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-172929/small_Dine.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-172929/xsmall_Dine.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-172929/thumb_Dine.jpg",
+      "path": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-172929/Dine.jpg",
+      "alt": "Dine"
     },
     "_template": "image"
   }
