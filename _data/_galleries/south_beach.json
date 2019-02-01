@@ -2,26 +2,6 @@
   "name": "South Beach",
   "photos": [
     {
-      "name": "Boardwalk_South_Beach_Miami_Beach_Florida",
-      "file_name": "Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
-      "url": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-042117/Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
-      "tags": "",
-      "description": "",
-      "date_added": "2018-12-27-042117",
-      "file_type": "image/jpeg",
-      "width": 1000,
-      "height": 563,
-      "file_size": 170977,
-      "url_large": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-042117/large_Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
-      "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-042117/medium_Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
-      "url_small": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-042117/small_Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
-      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-042117/xsmall_Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
-      "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-042117/thumb_Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
-      "git_file_name": "_assets/image_data/Boardwalk-South-Beach-Miami-Beach-Florida.json",
-      "path": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-042117/Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
-      "alt": "Boardwalk_South_Beach_Miami_Beach_Florida"
-    },
-    {
       "name": "miami-arial",
       "file_name": "miami-arial.jpg",
       "url": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-024650/miami-arial.jpg",
@@ -40,6 +20,26 @@
       "git_file_name": "_assets/image_data/miami-arial.json",
       "path": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-024650/miami-arial.jpg",
       "alt": "miami-arial"
+    },
+    {
+      "name": "Boardwalk_South_Beach_Miami_Beach_Florida",
+      "file_name": "Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
+      "url": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-042117/Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
+      "tags": "",
+      "description": "",
+      "date_added": "2018-12-27-042117",
+      "file_type": "image/jpeg",
+      "width": 1000,
+      "height": 563,
+      "file_size": 170977,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-042117/large_Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-042117/medium_Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-042117/small_Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-042117/xsmall_Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-042117/thumb_Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
+      "git_file_name": "_assets/image_data/Boardwalk-South-Beach-Miami-Beach-Florida.json",
+      "path": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-042117/Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
+      "alt": "Boardwalk_South_Beach_Miami_Beach_Florida"
     },
     {
       "name": "muzammil-soorma",
@@ -100,6 +100,26 @@
       "git_file_name": "_assets/image_data/ocean-drive-miami.json",
       "path": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-030511/ocean-drive-miami.jpg",
       "alt": "ocean-drive-miami"
+    },
+    {
+      "name": "lummus-park-south-beach-cycling",
+      "file_name": "lummus-park-south-beach-cycling.jpg",
+      "url": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-030135/lummus-park-south-beach-cycling.jpg",
+      "tags": "",
+      "description": "",
+      "date_added": "2018-12-27-030135",
+      "file_type": "image/jpeg",
+      "width": 702,
+      "height": 516,
+      "file_size": 78739,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-030135/large_lummus-park-south-beach-cycling.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-030135/medium_lummus-park-south-beach-cycling.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-030135/small_lummus-park-south-beach-cycling.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-030135/xsmall_lummus-park-south-beach-cycling.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-030135/thumb_lummus-park-south-beach-cycling.jpg",
+      "git_file_name": "_assets/image_data/lummus-park-south-beach-cycling.json",
+      "path": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-030135/lummus-park-south-beach-cycling.jpg",
+      "alt": "lummus-park-south-beach-cycling"
     }
   ],
   "description": ""
