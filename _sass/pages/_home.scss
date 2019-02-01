@@ -250,6 +250,8 @@
     @include media-breakpoint-up(lg) {
       @include make-col(5);
     }
+
+    @include flex-center-col;
     order: 2;
 
     article {
@@ -293,6 +295,7 @@
     }
 
     h2 {
+      margin-bottom: 1.4rem;
       color: $dark-blue-color;
       @include media-breakpoint-up(md) {
         font-size: $type-size-4;
