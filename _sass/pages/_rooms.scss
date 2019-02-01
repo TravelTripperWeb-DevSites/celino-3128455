@@ -510,6 +510,7 @@
     }
 
     h2 {
+      margin-bottom: 1.4rem;
       color: $dark-blue-color;
       @include media-breakpoint-up(md) {
         font-size: $type-size-4;

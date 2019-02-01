@@ -71,7 +71,6 @@ meta_tags:
           <div class="home-stay__room-detail">
             <article>
               <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></h2>
-              <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
               <p tabindex="0">[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
 
               <div class="button-holder">
@@ -94,7 +93,6 @@ meta_tags:
           <div class="home-stay__room-detail">
             <article>
               <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></h2>
-              <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
               <p tabindex="0">[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
 
               <div class="button-holder">
@@ -116,7 +114,7 @@ meta_tags:
           <div class="home-stay__room-detail">
             <article>
               <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></h2>
-              <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
+
               <p tabindex="0">[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
 
               <div class="button-holder">
