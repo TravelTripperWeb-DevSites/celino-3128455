@@ -65,11 +65,10 @@ meta_tags:
             <h4>Refine Results</h4>
           </div>
           <div class="form-group col-md-2">
-            <select ng-model="filterObject.categoryGroup" id="inputBeds" class="form-control">
-              <option value="" selected="selected">Beds</option>
-              <option value="King">King</option>
-              <option value="Queen">Queen</option>
-              <option value="Suite">Suite</option>
+            <select ng-model="filter.category" id="inputBeds" class="form-control">
+              <option value="" hidden>Bed</option>
+              <option value="!" selected="selected">Bed</option>
+              <option ng-repeat="cat in browser.roomCategories" value="[[ cat ]]">[[ cat ]]</option>
             </select>
           </div>
           <div class="form-group col-md-2">
@@ -103,7 +102,7 @@ meta_tags:
     </form>
   </div>
   <div class="sleep__wrap">
-    <div class="sleep__card" ng-repeat="room in browser.roomsList | filter: filterObject">
+    <div class="sleep__card" ng-repeat="room in browser.roomsList | filter: filter:true | filter :filterObject">
      <div class="sleep__card__outline">
        <figure>
           <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1">

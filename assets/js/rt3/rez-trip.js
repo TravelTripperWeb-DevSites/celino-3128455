@@ -46,11 +46,9 @@
         $scope.updateCategory = function(cat){
             $scope.selectedCat = cat;
         }
-        $scope.filterObject = { categoryGroup : "", view : "", amenities : "", name : ""};
-        $scope.setTempItem = function(item) {
-            $scope.currentItem = item;
-           console.log(item);
-        }
+        $scope.filterObject = { view : "", amenities :"", name : ""};
+        $scope.filter = {category: "!"};
+
         setTimeout(function(){
             $(".roomType").show();
         },1600);
