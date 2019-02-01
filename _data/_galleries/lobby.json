@@ -1,5 +1,26 @@
 {
   "name": "Hotel",
-  "photos": null,
+  "photos": [
+    {
+      "name": "Celino Terrace",
+      "file_name": "Celino Terrace.jpg",
+      "url": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195048/Celino_Terrace.jpg",
+      "tags": "",
+      "description": "",
+      "date_added": "2019-01-31-195048",
+      "file_type": "image/jpeg",
+      "width": 2250,
+      "height": 1266,
+      "file_size": 817495,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195048/large_Celino_Terrace.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195048/medium_Celino_Terrace.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195048/small_Celino_Terrace.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195048/xsmall_Celino_Terrace.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195048/thumb_Celino_Terrace.jpg",
+      "git_file_name": "_assets/image_data/Celino-Terrace.json",
+      "path": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195048/Celino_Terrace.jpg",
+      "alt": "Celino Terrace"
+    }
+  ],
   "description": ""
 }
