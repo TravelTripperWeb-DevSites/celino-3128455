@@ -31,7 +31,6 @@
     "label": "Button Background Color"
   },
   "button-border-color": {
-    "required": true,
     "type": "color",
     "label": "Button Border Color"
   },
