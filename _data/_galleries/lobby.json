@@ -100,6 +100,51 @@
       "git_file_name": "_assets/image_data/Celino-Mezzanine.json",
       "path": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195039/Celino_Mezzanine.jpg",
       "alt": "Celino Mezzanine"
+    },
+    {
+      "name": "Celino Corridor 3",
+      "file_name": "Celino Corridor 3.jpg",
+      "url": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195029/Celino_Corridor_3.jpg",
+      "tags": "",
+      "description": "",
+      "date_added": "2019-01-31-195029",
+      "file_type": "image/jpeg",
+      "width": 2025,
+      "height": 2700,
+      "file_size": 1046362,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195029/large_Celino_Corridor_3.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195029/medium_Celino_Corridor_3.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195029/small_Celino_Corridor_3.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195029/xsmall_Celino_Corridor_3.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195029/thumb_Celino_Corridor_3.jpg",
+      "git_file_name": "_assets/image_data/Celino-Corridor-3.json",
+      "path": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195029/Celino_Corridor_3.jpg",
+      "alt": "Celino Corridor 3",
+      "crop": {
+        "origin": {
+          "x": 0,
+          "y": 377
+        },
+        "width": 2024,
+        "height": 2323
+      },
+      "croppedImage": {
+        "name": "Celino_Corridor_3",
+        "file_name": "Celino_Corridor_3.jpg",
+        "url": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-180304/Celino_Corridor_3.jpg",
+        "tags": "",
+        "description": "",
+        "date_added": "2019-02-01-180304",
+        "file_type": "image/jpeg",
+        "width": 2024,
+        "height": 2323,
+        "file_size": 888141,
+        "url_large": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-180304/large_Celino_Corridor_3.jpg",
+        "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-180304/medium_Celino_Corridor_3.jpg",
+        "url_small": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-180304/small_Celino_Corridor_3.jpg",
+        "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-180304/xsmall_Celino_Corridor_3.jpg",
+        "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-180304/thumb_Celino_Corridor_3.jpg"
+      }
     }
   ],
   "description": ""
