@@ -2,26 +2,6 @@
   "name": "Rooms & Suites",
   "photos": [
     {
-      "name": "room-1",
-      "file_name": "room-1.jpg",
-      "url": "//cdn.traveltripper.io/site-assets/192_424_22302/media/2018-12-26-045109/room-1.jpg",
-      "tags": "",
-      "description": "",
-      "date_added": "2018-12-26-045109",
-      "file_type": "image/jpeg",
-      "width": 484,
-      "height": 314,
-      "file_size": 115226,
-      "url_large": "//cdn.traveltripper.io/site-assets/192_424_22302/media/2018-12-26-045109/large_room-1.jpg",
-      "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22302/media/2018-12-26-045109/medium_room-1.jpg",
-      "url_small": "//cdn.traveltripper.io/site-assets/192_424_22302/media/2018-12-26-045109/small_room-1.jpg",
-      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22302/media/2018-12-26-045109/xsmall_room-1.jpg",
-      "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22302/media/2018-12-26-045109/thumb_room-1.jpg",
-      "git_file_name": "_assets/image_data/room-1.json",
-      "path": "//cdn.traveltripper.io/site-assets/192_424_22302/media/2018-12-26-045109/room-1.jpg",
-      "alt": "room-1"
-    },
-    {
       "name": "room-2",
       "file_name": "room-2.jpg",
       "url": "//cdn.traveltripper.io/site-assets/192_424_22302/media/2018-12-26-045109/room-2.jpg",
