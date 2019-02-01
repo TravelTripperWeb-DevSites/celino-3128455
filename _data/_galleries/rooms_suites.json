@@ -120,6 +120,26 @@
       "git_file_name": "_assets/image_data/Celino-King-2.json",
       "path": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195045/Celino_King_2.jpg",
       "alt": "Celino King 2"
+    },
+    {
+      "name": "Celino Bathroom",
+      "file_name": "Celino Bathroom.jpg",
+      "url": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195024/Celino_Bathroom.jpg",
+      "tags": "",
+      "description": "",
+      "date_added": "2019-01-31-195024",
+      "file_type": "image/jpeg",
+      "width": 2025,
+      "height": 2700,
+      "file_size": 467795,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195024/large_Celino_Bathroom.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195024/medium_Celino_Bathroom.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195024/small_Celino_Bathroom.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195024/xsmall_Celino_Bathroom.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195024/thumb_Celino_Bathroom.jpg",
+      "git_file_name": "_assets/image_data/Celino-Bathroom.json",
+      "path": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195024/Celino_Bathroom.jpg",
+      "alt": "Celino Bathroom"
     }
   ],
   "description": ""
