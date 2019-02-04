@@ -17,7 +17,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin: 2rem 0 .5rem;
   font-family: $text-font;
-  line-height: 1.2;
+  line-height: 1.2; 
 }
 
 h1 {
@@ -133,7 +133,7 @@ li ol {
   list-style: none;
 }
 
- 
+
 // Fix IE9 SVG bug
 
 svg:not(:root) {

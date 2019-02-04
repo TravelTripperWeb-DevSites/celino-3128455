@@ -14,6 +14,7 @@
   @include media-breakpoint-up(lg) {
     height: 140px;
   }
+
   &--flower {
     background: url("/assets/images/nav-flowers-sm.png") top center repeat-x;
     background-size: auto 80px;
@@ -32,12 +33,13 @@
     height: 110px;
     background: repeat-x top center, linear-gradient(to bottom, rgba($black,.65) 25%,rgba($black,.06) 93%,rgba($black,0) 100%);
     transition: $global-transition;
-
-
     @include media-breakpoint-up(lg) {
       .hotel-logo {
         img {
           max-width: 148px;
+        }
+        @include media-breakpoint-up(lg) {
+          padding-top: 18px;
         }
       }
 
@@ -46,7 +48,7 @@
         max-width: 205px;
         height: 57px;
         padding-left: 103px;
-        background: url('/assets/images/Leaf_BookNow.png') left 25px center no-repeat;
+        background: url("/assets/images/Leaf_BookNow.png") left 25px center no-repeat;
 
         .vertical-line {
           left: 86px;
@@ -72,7 +74,8 @@
     padding-top: 19px;
   }
   @include media-breakpoint-up(lg) {
-    width: 235px;
+    width: 218px;
+    padding-top: 28px;
   }
 
   img {
@@ -88,7 +91,7 @@
 .booking-toggle {
   position: absolute;
   top: 10;
-  right: 25px;
+  right: 15px;
   left: auto;
   max-width: 70px;
   height: 60px;
@@ -108,20 +111,20 @@
     padding-left: 104px;
     font-size: $type-size-11;
     line-height: 18px;
-    background: url('/assets/images/leaf.png') left center no-repeat;
-    background-size: auto 70px;
+    background: url("/assets/images/leaf.png") left center no-repeat;
+    background-size: 58px 58px;
   }
   @include media-breakpoint-up(lg) {
     top: 20px;
-    right: 55px;
+    right: 35px;
     left: auto;
     max-width: 245px;
     height: 83px;
-    padding-left: 155px;
+    padding-left: 130px;
     font-size: $type-size-9;
     line-height: 25px;
-    background: url('/assets/images/leaf.png') left center no-repeat;
-    background-size: unset;
+    background: url("/assets/images/leaf.png") left center no-repeat;
+    background-size: 58px 58px;
   }
 
   &:hover {
@@ -143,7 +146,7 @@
       display: inline-block;
     }
     @include media-breakpoint-up(lg) {
-      left: 117px;
+      left: 92px;
       display: inline-block;
     }
   }
@@ -218,7 +221,7 @@
       background-color: $white;
       @include media-breakpoint-up(md) {
         top: 35px;
-        height: 5px; 
+        height: 5px;
       }
     }
   }
@@ -238,6 +241,7 @@
   @include media-breakpoint-up(md) {
     width: 50%;
   }
+
   &__wrap {
     position: relative;
     width: 100%;
@@ -258,7 +262,6 @@
     height: 30px;
     cursor: pointer;
     outline: 0;
-
     @include media-breakpoint-up(md) {
       top: 50px;
       right: 30px;
@@ -310,9 +313,6 @@ nav {
 
     span {
       display: block;
-      @include media-breakpoint-up(md) {
-        display: inline-block;
-      }
     }
   }
 
@@ -329,7 +329,7 @@ nav {
     font-size: $type-size-11;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: .2rem;
+    letter-spacing: 0.2rem;
     list-style: none;
     @include media-breakpoint-up(md) {
       font-size: $type-size-7;

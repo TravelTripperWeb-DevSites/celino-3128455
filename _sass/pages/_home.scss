@@ -82,7 +82,9 @@
     @include flex-center-col;
     article {
       padding: 0;
+      overflow: hidden;
       text-align: center;
+      overflow-wrap:  break-word;
       @include media-breakpoint-up(lg) {
         padding: 0 35px;
         text-align: left;
