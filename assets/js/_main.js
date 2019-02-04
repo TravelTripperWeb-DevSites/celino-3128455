@@ -20,15 +20,27 @@ $(function() {
    var header = $("#home-nav");
    $(window).on("load resize scroll",function() {
        var scroll = $(window).scrollTop();
+       if(window.location.pathname == '/') {
+         if (scroll >= 170) {
+           header.removeClass('top-nav--flower').addClass("top-nav--no-gradient");
+           header.css({'top':'','bottom':''});
+         } else {
+           var scrollTopPx = $(window).scrollTop();
+           header.css({'top': '-'+scrollTopPx+'px'});
+           header.removeClass("top-nav--no-gradient").addClass('top-nav--flower');
+         }
 
-       if (scroll >= 170) {
-         header.removeClass('top-nav--flower').addClass("top-nav--gradient");
-         header.css({'top':'','bottom':''});
-       } else {
-         var scrollTopPx = $(window).scrollTop();
-         header.css({'top': '-'+scrollTopPx+'px'});
-         header.removeClass("top-nav--gradient").addClass('top-nav--flower');
+       }else {
+         if (scroll >= 170) {
+           header.removeClass('top-nav--flower').addClass("top-nav--gradient");
+           header.css({'top':'','bottom':''});
+         } else {
+           var scrollTopPx = $(window).scrollTop();
+           header.css({'top': '-'+scrollTopPx+'px'});
+           header.removeClass("top-nav--gradient").addClass('top-nav--flower');
+         }
        }
+
    });
 
 
@@ -295,7 +307,7 @@ setTimeout(function() {
    $(window).trigger('resize').trigger('scroll');
 }, 3000); // wait 500ms
 
-$(window).on('load', function() { 
+$(window).on('load', function() {
   //anchor scroll on loaded
   // *only* if we have anchor on the url
   if(window.location.hash) {
