@@ -289,7 +289,23 @@ $(document).ready(function() {
 
 });
 
+
 //parellex animation
 setTimeout(function() {
    $(window).trigger('resize').trigger('scroll');
 }, 3000); // wait 500ms
+
+$(window).on('load', function() { 
+  //anchor scroll on loaded
+  // *only* if we have anchor on the url
+  if(window.location.hash) {
+      var offset = -100;
+      var hashId = window.location.hash;
+      if((window.location.pathname.indexOf('room') || window.location.pathname.indexOf('offer')) == -1) {
+        // smooth scroll to the anchor id
+        $('html, body').animate({
+            scrollTop: ($(window.location.hash).offset().top + offset) + 'px'
+        }, 1000);
+      }
+  }
+});

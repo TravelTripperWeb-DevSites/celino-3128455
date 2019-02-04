@@ -55,7 +55,7 @@ meta_tags:
 
 {% include guest-services.html %}
 
-{% assign luxury-amenities = site.data._models.luxury-amenities %}
+{% assign luxury-amenities = site.data._models.luxury-amenities | sort: "order"%}
 <section class="luxuxy-amenities">
   {% regionblock luxury_amenities, type:header %}
   <h4>LUXURY AMENITIES AT CELINO SOUTH BEACH</h4>
