@@ -6,7 +6,7 @@
   "categories": "attractions",
   "url_friendly_name": "lummus-park",
   "title": "Lummus Park",
-  "short_detail": "Sandy spot with beach access, plus a playground for young children & fitness equipment.",
+  "short_detail": "Sandy spot with beach access, plus a playground and fitness equipment.",
   "detail": "<p>Sandy spot with beach access, plus a playground for young children &amp; fitness equipment.</p>",
   "image": {
     "name": "lummus-park-south-beach-cycling",
@@ -28,5 +28,6 @@
     "alt": "Cycling in Lummus Park, Miami Beach",
     "caption": ""
   },
-  "learn_more_link": "https://www.miamibeachfl.gov/city-hall/parks-and-recreation/parks-facilities-directory/lummus-park/"
+  "learn_more_link": "https://www.miamibeachfl.gov/city-hall/parks-and-recreation/parks-facilities-directory/lummus-park/",
+  "address": "1130 Ocean Dr, Miami Beach, FL 33139"
 }
