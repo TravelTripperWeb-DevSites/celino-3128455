@@ -99,6 +99,8 @@
       position: absolute;
       top: 26px;
       left: 60px;
+      display: flex;
+      align-items: center;
       width: 70%;
       min-height: 273px;
       @include media-breakpoint-down(sm) {
