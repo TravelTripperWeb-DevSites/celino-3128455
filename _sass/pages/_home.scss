@@ -332,9 +332,8 @@
   }
   &__title {
     @include make-col-ready();
-    @include make-col(6);
     @include media-breakpoint-up(lg) {
-      @include make-col(3);
+      padding-bottom: 15px;
       font-size: $type-size-1;
       letter-spacing: rem-calc(20);
     }

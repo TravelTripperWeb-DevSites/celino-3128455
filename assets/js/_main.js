@@ -276,10 +276,20 @@ $('#departure_date').val(ToDate);
   });
 
   //wow js _activate
-  new WOW().init({
-    resetAnimation: false
-  });
+  // new WOW().init({
+  //   resetAnimation: false   // removed wow js
+  // });
 
+});
+
+$(window).on('load', function () {
+  // if window is loaded will hide on load
+  if ($('.preloader')) {
+    $('.preloader').delay(450).fadeOut('slow', function () {
+      $(this).remove();
+      $('.fadeinbody').removeClass();
+    });
+  }
 });
 
 $(document).ready(function() {

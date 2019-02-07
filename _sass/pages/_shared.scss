@@ -200,14 +200,11 @@
 
   &__title {
     @include make-col-ready();
-    @include media-breakpoint-up(md) {
-      @include make-col(6);
-    }
     @include media-breakpoint-up(lg) {
-      @include make-col(3);
       font-size: $type-size-7;
     }
     margin-top: 18px;
+    padding-bottom: 15px;
     font-size: $type-size-12;
     font-weight: 900;
     color: $dark-blue-color;
