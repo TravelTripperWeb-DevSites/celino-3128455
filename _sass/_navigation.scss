@@ -86,8 +86,7 @@
   strong {
     display: inline-block;
     padding-top: 16px;
-    font-weight: 400;
-    text-shadow: -1px 3px 10px $black;
+    font-weight: 400; 
     letter-spacing: rem-calc(4.3);
     transition: $global-transition;
   }
