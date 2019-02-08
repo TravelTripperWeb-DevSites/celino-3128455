@@ -87,20 +87,25 @@
 }
 
 @keyframes bounceRight {
-  0%, 80%, 100% {
+  0%, 30%, 60%, 80%, 100% {
     right: -32px;
   }
   20% {
     right: -37px;
-  }
-  30% {
-    right: -32px;
-  }
+  } 
   40% {
     right: -28px;
   }
-  60% {
+}
+@keyframes bounceRightLarge {
+  0%, 30%, 60%, 80%, 100% {
+    right: -26px;
+  }
+  20% {
     right: -32px;
+  }
+  40% {
+    right: -20px;
   }
 }
 // opacity mixing

@@ -4,30 +4,52 @@
 .button {
   display: inline-block;
   min-width: 100px;
-  padding: 15px 18px;
+  padding: 16px 18px;
   font-size: $type-size-16;
   font-weight: 800;
+  line-height:  $type-size-16;
   color: $white;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: .05rem;
   vertical-align: middle;
-  background-color: $gold-color;
+  background-color: $dark-blue-color;
+  border: 1px solid $dark-blue-color;
   transition: $global-transition;
   @include media-breakpoint-up(md) {
     min-width: 120px;
-    padding: 16px 38px;
     font-size: $type-size-12;
+    line-height: 18px;
     letter-spacing: .25rem;
   }
   @include media-breakpoint-up(xl) {
     min-width: 190px;
   }
 
+  &--large {
+    @include media-breakpoint-up(xl) {
+      padding: 21px 35px 21px 25px;
+      &.button--arrow {
+        &:after {
+          width: 69px;
+        }
+        &:before {
+          top: 19px;
+          right: -26px;
+        }
+        &:hover {
+          &:before {
+            animation: bounceRightLarge 1s linear .2s;
+          }
+        }
+      }
+    }
+  }
   &:hover {
-    color: $white;
+    color: $dark-blue-color;
     text-decoration: none;
-    background-color: $dark-blue-color;
+    background-color: $white;
+    border: 1px solid $dark-blue-color;
   }
 
   &--booknow {
@@ -39,36 +61,37 @@
     background-repeat: no-repeat;
     background-position: bottom 30% center;
     border: 0;
-
-    &:hover {
-      text-shadow: 1px 2px 2px $dark-gray;
-    }
   }
 
   &--gold {
-    background-color: $gold-color;
+    color: $dark-blue-color;
+    background-color: $white;
+    &:hover {
+      color: $white;
+      background-color: $dark-blue-color;
+    }
   }
 
   &--arrow {
     position: relative;
     min-width: 120px;
     margin-right: 39px;
-    padding: 15px 19px;
     background-color: $dark-blue-color;
     @include media-breakpoint-up(md) {
       min-width: 160px;
       margin-right: 54px;
-      padding: 16px 19px;
     }
 
     &:after {
       position: absolute;
-      top: 0;
+      top: -1px;
       right: -39px;
-      bottom: 0;
+      bottom: -1px;
       width: 39px;
+      color: $dark-blue-color;
       content: '';
-      background-color: $gold-color;
+      background-color: $white;
+      border: 1px solid $dark-blue-color;
       transition: $global-transition;
       @include media-breakpoint-up(md) {
         right: -54px;
@@ -78,18 +101,19 @@
 
     &:before {
       position: absolute;
-      top: 16px;
+      top: 15px;
       right: -22px;
       bottom: 10px;
       z-index: 1;
       width: 12px;
       height: 12px;
       content: '';
-      border-top: 2px solid $white;
-      border-right: 2px solid $white;
+      border-top: 2px solid $dark-blue-color;
+      border-right: 2px solid $dark-blue-color;
       transform: rotate(45deg);
+      transition: $global-transition;
       @include media-breakpoint-up(md) {
-        top: 16px;
+        top: 15px;
         right: -32px;
         width: 22px;
         height: 22px;
@@ -97,32 +121,36 @@
     }
 
     &:hover {
-      background-color: $gold-color;
-
+      color: $white;
+      background-color: $dark-blue-color;
+      &:after {
+        background-color: $dark-blue-color;
+      }
       &:before {
+        border-color: $white;
         animation: bounceRight 1s linear .2s;
       }
     }
 
     &--gold {
-        background-color: $gold-color;
-        &:after {
-        position: absolute;
-        top: 0;
-        right: -39px;
-        bottom: 0;
-        width: 39px;
-        content: '';
-        background-color: $dark-blue-color;
-        transition: $global-transition;
-        @include media-breakpoint-up(md) {
-          right: -54px;
-          width: 54px;
-        }
-      }
-      &:hover {
-        background-color: $dark-blue-color;
-      }
+      //   background-color: $gold-color;
+      //   &:after {
+      //   position: absolute;
+      //   top: 0;
+      //   right: -39px;
+      //   bottom: 0;
+      //   width: 39px;
+      //   content: '';
+      //   background-color: $dark-blue-color;
+      //   transition: $global-transition;
+      //   @include media-breakpoint-up(md) {
+      //     right: -54px;
+      //     width: 54px;
+      //   }
+      // }
+      // &:hover {
+      //   background-color: $dark-blue-color;
+      // }
     }
   }
 }
