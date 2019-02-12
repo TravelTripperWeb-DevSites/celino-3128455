@@ -17,11 +17,24 @@
   @include flex-center-col;
   animation: opacityFade 1.5s ease-in;
 
+  &--home {
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      background-color: rgba($black,.2);
+    }
+  }
+
   &--inner {
     max-height: 600px;
   }
 
   &__detail {
+    z-index: 1;
     max-width: 240px;
     margin: 0 auto;
     @include media-breakpoint-up(md) {
@@ -336,7 +349,7 @@
   background-color: $gold-color;
 }
 .ttweb-booking-widget__body__date-selection__calendar .calendar-month table.calendar-month__grid .calendar-month__grid__date--in-selection {
-  background-color: $purple-color !important;
+  background-color: $dark-blue-color !important;
 }
 
 .ttweb-booking-widget button.ttweb-booking-widget__submit {

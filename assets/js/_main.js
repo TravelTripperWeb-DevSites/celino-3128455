@@ -18,17 +18,15 @@ $(function() {
    });
 
    var header = $("#home-nav");
-   // $(window).on("load resize scroll",function() {
-   //     var scroll = $(window).scrollTop();
-   //       if (scroll >= 170) {
-   //         header.addClass('top-nav--fixed');
-   //         header.css({'top':'','bottom':''});
-   //       } else {
-   //         var scrollTopPx = $(window).scrollTop();
-   //         header.css({'top': '-'+scrollTopPx+'px'});
-   //         header.removeClass("top-nav--fixed");
-   //       }
-   // });
+   $(window).on("load resize scroll",function() {
+       var scroll = $(window).scrollTop();
+         if (scroll >= 110) {
+           header.removeClass('top-nav--transparent');
+         } else {
+           var scrollTopPx = $(window).scrollTop();
+           header.addClass("top-nav--transparent");
+         }
+   });
 
 
     //show / hide menu items on hamburger click
