@@ -7,7 +7,7 @@ meta_tags:
   robots:
 ---
 <section ng-controller="roomDetail" rt3-room-details="room">
-  <section class="page-banner mb-55">
+  <section class="page-banner top-common-gap mb-55">
     <div id="pageBanner" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li ng-repeat="photo in room.photos" data-target="#pageBanner" data-slide-to="[[ $index ]]" ng-class="{'active': $index == 0}"></li>

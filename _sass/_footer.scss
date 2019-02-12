@@ -126,8 +126,12 @@ footer {
         margin-right: 5px;
         font-size: $type-size-10;
         color: $gold-color;
+        transition: $global-transition;
         @include media-breakpoint-up(md) {
           margin-right: 12px;
+        }
+        &:hover {
+          color: $light-gold;
         }
       }
 

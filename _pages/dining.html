@@ -7,7 +7,7 @@ meta_tags:
   robots:
 ---
 
-<section class="page-banner">
+<section class="page-banner top-common-gap">
   <div id="pageBanner" class="carousel slide" data-ride="carousel">
     {% assign banners = site.data._models.page-banners | where: 'page_name', 'Dine & Drink' %}
     {% for banner in banners | limit: 1 %}
@@ -42,7 +42,7 @@ meta_tags:
     </div>
     <div class="dine__image wow fadeIn" data-wow-delay="1s">
       <div class="dine__image__floral-bg">
-      <img src="/assets/images/dine/pattern.jpg" alt="Floral Background"> 
+      <img src="/assets/images/dine/pattern.jpg" alt="Floral Background">
       </div>
       <div class="dine__image__inner-image">
       {% regionblock intro-image, type:image %}

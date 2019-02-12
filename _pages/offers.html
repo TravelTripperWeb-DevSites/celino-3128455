@@ -7,7 +7,7 @@ meta_tags:
   robots:
 ---
 
-<section class="page-banner">
+<section class="page-banner top-common-gap">
   <div id="pageBanner" class="carousel slide" data-ride="carousel">
   {% assign banners = site.data._models.page-banners | where: 'page_name', 'Offers' %}
     {% for banner in banners | limit: 1 %}
@@ -27,7 +27,7 @@ meta_tags:
     {% endfor %}
   </div>
 </section>
-<!-- 
+<!--
 <section class="intro">
   <div class="intro__row">
     <div class="intro__content">

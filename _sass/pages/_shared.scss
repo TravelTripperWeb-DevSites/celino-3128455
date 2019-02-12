@@ -1,5 +1,11 @@
 // Shared Page Elements
 // ==========================================================================
+.top-common-gap {
+  margin-top: 55px;
+  @include media-breakpoint-up(md) {
+    margin-top: 118px;
+  }
+}
 
 .hero-banner {
   position: relative;
@@ -177,7 +183,6 @@
       display: inline-block;
       max-width: 192px;
       margin: 0 auto;
-      padding: 16px 22px;
     }
   }
   &.attractions-slider {
@@ -244,7 +249,7 @@
     }
     padding: 0;
     overflow: hidden;
-    background-color: $gold-color;
+    background-color: $light-gold;
 
     &__bg {
       position: absolute;
@@ -272,7 +277,7 @@
         bottom: 0;
         left: 0;
         content: '';
-        background-color: rgba($gold-color,0);
+        background-color: rgba($light-gold,0);
         transition: $global-transition;
       }
 
@@ -282,7 +287,7 @@
           opacity: 1;
         }
         &:before {
-          background-color: rgba($gold-color,1);
+          background-color: rgba($light-gold,1);
         }
       }
     }
