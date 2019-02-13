@@ -272,7 +272,6 @@ $(window).on('load', function () {
   if ($('.preloader')) {
     $('.preloader').delay(450).fadeOut('slow', function () {
       $(this).remove();
-      $('.fadeinbody').removeClass();
     });
   }
 });
