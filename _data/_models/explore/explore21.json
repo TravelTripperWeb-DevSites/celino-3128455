@@ -1,0 +1,30 @@
+{
+  "learn_more_link": "https://www.artdecotours.com/",
+  "name": "Art Deco Walking Tour",
+  "short_detail": "Take a stroll down South Beach and uncover its Art Deco past.",
+  "image": {
+    "name": "miami-south-beach-art",
+    "content_type": "image/jpeg",
+    "date_added": "2019-02-07-175823",
+    "url_thumb": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1549580303/z6pmjd84pzowsgdtuyr0.jpg",
+    "url_xsmall": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1549580303/z6pmjd84pzowsgdtuyr0.jpg",
+    "url_small": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1549580303/z6pmjd84pzowsgdtuyr0.jpg",
+    "url_medium": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1549580303/z6pmjd84pzowsgdtuyr0.jpg",
+    "url_large": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1549580303/z6pmjd84pzowsgdtuyr0.jpg",
+    "width": 550,
+    "height": 366,
+    "format": "jpg",
+    "url": "https://res.cloudinary.com/traveltripperweb/image/upload/v1549580303/z6pmjd84pzowsgdtuyr0.jpg",
+    "resource_type": "image",
+    "size": 72454,
+    "path": "https://res.cloudinary.com/traveltripperweb/image/upload/v1549580303/z6pmjd84pzowsgdtuyr0.jpg",
+    "file_size": null,
+    "alt": "miami-south-beach-art",
+    "caption": "",
+    "description": ""
+  },
+  "address": "610 Jefferson Ave #7, Miami Beach, FL 33139, USA",
+  "Lat": "25.7781673",
+  "Long": "-80.1427005",
+  "categories": "culture"
+}

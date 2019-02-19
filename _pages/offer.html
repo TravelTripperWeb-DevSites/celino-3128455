@@ -1,0 +1,87 @@
+---
+layout: default
+title: Offer Details
+meta_description:
+permalink: /offer/
+meta_tags:
+  robots:
+---
+
+<section class="page-banner top-common-gap">
+  <div id="pageBanner" class="carousel slide" data-ride="carousel">
+  {% assign banners = site.data._models.page-banners | where: 'page_name', 'Offers' %}
+    {% for banner in banners | limit: 1 %}
+      <ol class="carousel-indicators">
+        {% for bannerimage in banner.image %}
+          <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}"  {% if forloop.first %}class="active"{% endif %}></li>
+        {% endfor %}
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        {% for bannerimage in banner.image %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}" role="option">
+            <img src="{{ bannerimage.url_large }}" alt="{{ bannerimage.alt }}">
+          </div>
+        {% endfor %}
+      </div>
+      <h1 tabindex="0" class="wow fadeIn" data-wow-delay="0.5s">{{ banner.banner_title }}</h1>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="offer-detail" rt3-special-rates="offers" ng-controller="offerDetail">
+  <div class="offer-detail__row">
+    <div class="offer-detail__content">
+      <h5 tabindex="0" ng-bind-html="offers.sRdetail.rate_plan_name | renderHTMLCorrectly"></h5>
+      <div class="hline"></div>
+      <div class="offer-detail__description">
+        <div tabindex="0">
+          <p ng-bind-html="offers.sRdetail.long_description | renderHTMLCorrectly"></p>
+        </div>
+        <div class="d-block d-md-none">
+          <a ng-href="[[ offers.sRdetail.promo_url ]]" class="button button--arrow mt-1">Book Now</a>
+        </div>
+      </div>
+      <div class="offer-detail__terms d-none d-md-block">
+        <h6 tabindex="0">Terms & Conditions</h6>
+        <p>[[ offers.special_rate_page_text ]]</p>
+        <ul tabindex="0">
+          <li ng-repeat="policy in offers.sRdetail.policy_description">[[ policy ]]</li>
+        </ul>
+      </div>
+    </div>
+    <div class="offer-detail__image">
+      <div class="offer-detail__image__inner">
+        <figure>
+          <img ng-src="[[ offers.sRdetail.images[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ offer.rate_plan_name ]]">
+        </figure>
+        <div tabindex="0">
+          <p>Reserve online, contact your preferred travel<br>professional, or call <a href="tel:(786) 574-4090"><strong>(786) 574-4090</strong></a><br>and reference promotion code <strong>[[ offers.sRdetail.rate_plan_code ]]</strong></p>
+        </div>
+        <div class="d-none d-md-block">
+          <a ng-href="[[ offers.sRdetail.promo_url ]]" class="button button--arrow mt-2">Book Now</a>
+        </div>
+      </div>
+      <div class="offer-detail__terms d-block d-md-none">
+        <h6 tabindex="0">Terms & Conditions</h6>
+        <div tabindex="0">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu is nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <ul tabindex="0">
+          <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</li>
+          <li>fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in</li>
+          <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</li>
+          <li>fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include deals-offers.html %}
+
+<section class="cta-banner" data-parallax="scroll" data-position="top" data-bleed="10" data-image-src="/assets/images/offers/building-local.jpg">
+  <div class="cta-banner__content">
+    <h3 tabindex="0">Explore Miami <br>like a local</h3>
+    <a href="/explore/" class="button button button--arrow mt-2">LEARN MORE</a>
+  </div>
+</section>

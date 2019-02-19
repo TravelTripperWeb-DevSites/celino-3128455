@@ -1,25 +1,71 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-title: Celino South Beach Hotel
-email: info@celinosouthbeach.com
-description: 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://celinosouthbeach.com" # the base hostname & protocol for your site
+---
+title: Ocean Drive Lifestyle Hotel
+title_separator: "|"
+name: Celino Hotel South Beach
+description: Situated on the iconic Ocean Drive, The Celino will bring a new lifestyle
+  of indulgence to South Beach, a personality rich in fashion fused with Latin charisma
+  and tropical class.
+url: https://www.thecelinohotel.com
+repository: TravelTripperWeb/celino
 reztripUrl: https://thecelinohotel.reztrip.com/
-permalink: pretty
-# Build settings
-markdown: kramdown
-
-# Reading Files
+default_lang: en
+languages:
+- en
 include:
-  - _pages
-
-collections:
-  collection:
-    output: true
+- _pages
+exclude:
+- "*.sublime-project"
+- "*.sublime-workspace"
+- ".asset-cache"
+- ".bundle"
+- ".jekyll-assets-cache"
+- ".sass-cache"
+- Capfile
+- CHANGELOG
+- config
+- Gemfile
+- Gruntfile.js
+- gulpfile.js
+- LICENSE
+- log
+- Makefile
+- media.json
+- models.json
+- node_modules
+- old_media.json
+- package.json
+- package-lock.json
+- Rakefile
+- README
+- sitemap.json
+- tmp
+- vendor
+keep_files:
+- ".git"
+- assets
+rsync_copy:
+- _assets
+encoding: utf-8
+markdown_ext: markdown,mkdown,mkdn,mkd,md
+markdown: kramdown
+excerpt_separator: "\n\n"
+incremental: false
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+sass:
+  load_paths:
+  - _sass
+  style: compressed
+permalink: pretty
+timezone: 
+page_gen:
+- data: dine-drink
+  template: dine-single
+  dir: dine-drink

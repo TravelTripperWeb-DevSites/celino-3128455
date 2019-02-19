@@ -1,0 +1,19 @@
+{
+  "title": {
+    "label": "Luxury Amenity Title",
+    "required": true
+  },
+  "image": {
+    "label": "Luxury Amenity Image",
+    "type": "image",
+    "required": true
+  },
+  "description": {
+    "label": "Description",
+    "type": "richtext",
+    "required": true
+  },
+  "order": {
+    "type": "integer"
+  }
+}

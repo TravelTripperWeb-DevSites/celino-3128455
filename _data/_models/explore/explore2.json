@@ -1,0 +1,33 @@
+{
+  "meta_description": "Ocean Drive is a major thoroughfare in the South Beach neighborhood of Miami Beach",
+  "name": "Ocean Drive",
+  "title": "Ocean Drive",
+  "categories": "attractions",
+  "url_friendly_name": "ocean-drive",
+  "Lat": "25.7779516",
+  "Long": "-80.1333774",
+  "image": {
+    "name": "ocean-drive-miami",
+    "file_name": "ocean-drive-miami.jpg",
+    "url": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-030511/ocean-drive-miami.jpg",
+    "tags": "",
+    "description": "",
+    "date_added": "2018-12-27-030511",
+    "file_type": "image/jpeg",
+    "width": 702,
+    "height": 516,
+    "file_size": 85658,
+    "url_large": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-030511/large_ocean-drive-miami.jpg",
+    "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-030511/medium_ocean-drive-miami.jpg",
+    "url_small": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-030511/small_ocean-drive-miami.jpg",
+    "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-030511/xsmall_ocean-drive-miami.jpg",
+    "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-030511/thumb_ocean-drive-miami.jpg",
+    "path": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-030511/ocean-drive-miami.jpg",
+    "alt": "Ocean Drive Miami Beach",
+    "caption": ""
+  },
+  "short_detail": "Ocean Drive is a major thoroughfare in South Beach.",
+  "detail": "<p>Ocean Drive is a major thoroughfare in the South Beach&nbsp;neighborhood of Miami Beach</p>",
+  "learn_more_link": "https://www.southbeachmagazine.com/ocean-drive-miami-beach/",
+  "address": "Ocean Dr, Miami Beach, FL 33139"
+}

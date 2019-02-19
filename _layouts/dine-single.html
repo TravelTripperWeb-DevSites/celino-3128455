@@ -1,0 +1,82 @@
+---
+layout: default
+---
+
+<section class="page-banner top-common-gap">
+  <div id="pageBanner" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        {% for image in page.image %}
+        <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}"{% if forloop.first %} class="active"{% endif %}></li>
+        {% endfor %}
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        {% for image in page.image %}
+  			<div class="carousel-item{% if forloop.first %} active{% endif %}" role="option">
+  				<img src="{{ image.url_large }}" alt="{{image.alt}}">
+  			</div>
+      {% endfor %}
+      </div>
+      <h1 tabindex="0">{{ page.title }}</h1>
+  </div>
+</section>
+
+<section class="dine-details">
+  <div class="dine-details__inner">
+    <div class="dine-details__text">
+      <article tabindex="0">
+        {{page.description}}
+      </article>
+    </div>
+    <div class="dine-details__contact">
+      <a href="{{page.reservation_link}}" class="button button--arrow">{{page.reservation_btn_text}}</a>
+      <!-- <p tabindex="0">For reservations and information about ICONIK,<br> call  <a href="tel:786 574-4090" title="786 574-4090">(786) 574-4090</a> or email us <br>to <a href="mailto:dine@celino.com" title="dine@celino.com">dine@celino.com</a></p> -->
+      {{page.reservation_details}}
+      {{page.hotel_timings}}
+    </div>
+  </div>
+</section>
+
+<section class="cta d-flex align-items-center">
+  <img src="/assets/images/dine/cta-details.jpg" alt="GET IN TOUCH">
+  <div class="cta__content">
+    <h3 tabindex="0">Premium food<br>from day to night</h3>
+    {% comment %}
+    {% for menu in page.menu_items %}
+     <a href="{{menu.detail}}" class="button"> {{menu.name}} </a>
+    {% endfor %}
+    {% endcomment %}
+  </div>
+</section>
+
+<section class="gallery d-none d-md-block" tabindex="-1">
+  <h6 class="text-center text-uppercase mb-3">Gallery</h6>
+  <div class="gallery__row"  id="lightgallery">
+    {% for image in page.gallery %}
+    <div class="gallery__item item fancybox" data-src="{{ image.url_large }}" data-exthumbimage="{{ image.url_large }}">
+    	<img src="{{ image.url_large }}" alt="{{image.alt}}">
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="mobile-carousel d-md-none">
+  <div id="dine-gallery" class="carousel slide" data-ride="carousel">
+    <!-- The slideshow -->
+    <div class="carousel-inner" role="listbox">
+      {% for image in page.gallery %}
+      <div class="carousel-item{% if forloop.first %} active{% endif %}" role="option">
+        <img src="{{ image.url_large }}" alt="{{image.alt}}">
+      </div>
+      {% endfor %}
+    </div>
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#dine-gallery" data-slide="prev">
+      <img src="/assets/images/left-arrow.png" alt="Previous Item">
+    </a>
+    <a class="carousel-control-next" href="#dine-gallery" data-slide="next">
+      <img src="/assets/images/right-arrow.png" alt="Next Item">
+    </a>
+  </div>
+</section>
+
+{% include instagram.html %}

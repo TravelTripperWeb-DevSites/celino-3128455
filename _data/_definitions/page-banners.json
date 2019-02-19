@@ -1,0 +1,21 @@
+{
+  "title": {
+    "label": "Page Name",
+    "required": true
+  },
+  "page_name": {
+    "label": "Select Page",
+    "type": "select",
+    "options": ["Hotel", "Stay", "Room Details", "Offers", "Dine & Drink", "Explore", "Gallery", "Location", "Contact"],
+    "required": true
+  },
+  "image": {
+    "label": "Banner Image",
+    "type": "image",
+    "required": true,
+    "multiple": true
+  },
+  "banner_title": {
+    "label": "Banner Title"
+  }
+}

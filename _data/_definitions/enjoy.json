@@ -1,0 +1,23 @@
+{
+  "name": {
+    "label": "Title",
+    "required": true
+  },
+  "short_description": {
+    "required": true
+  },
+  "description": {
+    "type": "richtext",
+    "required": true
+  },
+  "image": {
+    "type": "image",
+    "required": true
+  },
+  "website_url": { 
+  },
+
+  "sort_order": {
+
+  }
+}

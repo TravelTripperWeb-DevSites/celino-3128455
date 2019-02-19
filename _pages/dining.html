@@ -1,0 +1,90 @@
+---
+layout: default
+title: Bars and Restaurants in South Beach | Celino Hotel
+meta_description: From stylish Italian inspired cuisine at Salte restaurant to Iconik bar, there's plenty of options for those looking to dine or drink in South Beach Miami at the Celino Hotel.
+permalink: /dine-drink/
+meta_tags:
+  robots:
+---
+
+<section class="page-banner top-common-gap">
+  <div id="pageBanner" class="carousel slide" data-ride="carousel">
+    {% assign banners = site.data._models.page-banners | where: 'page_name', 'Dine & Drink' %}
+    {% for banner in banners | limit: 1 %}
+    <ol class="carousel-indicators">
+      {% for bannerimage in banner.image %}
+      <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active" {% endif %}></li>
+      {% endfor %}
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      {% for bannerimage in banner.image %}
+      <div class="carousel-item {% if forloop.first %}active{% endif %}" role="option">
+        <img src="{{ bannerimage.url_large }}" alt="{{ bannerimage.alt }}">
+      </div>
+      {% endfor %}
+    </div>
+    <h1 tabindex="0" class="wow fadeIn" data-wow-delay="0.5s">{{ banner.banner_title }}</h1>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="dine">
+  <div class="dine__inner">
+    <div class="dine__text wow fadeIn" data-wow-delay=".5s">
+      {% regionblock dining_intro, type:header %}
+        <h2 tabindex="0">ALWAYS WITH A TWIST</h2>
+      {% endregionblock %}
+      <div tabindex="0">
+        {% regionblock dining_intro_description, type:text %}
+          <p>The Celino delivers a rich, layered, South Beach oceanfront experience inspired by Floridian and Cuban culture. Enjoy breakfast, lunch, dinner, or late night bites at Salte, grab cocktails at Jewelbox or dance the night away at the Florida Room.</p>
+        {% endregionblock %}
+      </div>
+    </div>
+    <div class="dine__image wow fadeIn" data-wow-delay="1s">
+      <div class="dine__image__floral-bg">
+      <img src="/assets/images/dine/pattern.jpg" alt="Floral Background">
+      </div>
+      <div class="dine__image__inner-image">
+      {% regionblock intro-image, type:image %}
+      <img src="/assets/images/dine/intro.jpg" alt="Man Sitting" >
+      {% endregionblock %}
+      {% comment %}
+        {% regionblock intro-link, type:text %}
+        <a href="/" class="button button--arrow">Reserve Now</a>
+        {% endregionblock %}
+      {% endcomment %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dine-intro--space">
+  {% assign dinelist = site.data._models.dine-drink | sort: 'order' %}
+  {% for dine in dinelist %}
+  {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+  <div class="dine-intro__wrap {% if thecycle == 'even' %}dine-intro__wrap--even{% endif %}">
+    <div class="dine-intro__image wow fadeIn" data-wow-delay=".3s">
+      <img src="{{ dine.dine_image.url_large }}" alt="{{ dine.image.alt}}">
+    </div>
+    <div class="dine-intro__detail align-self-center wow fadeIn" data-wow-delay=".5s">
+      <article>
+        <h5 tabindex="0">{{dine.title }}</h5>
+        <hr class="full">
+        <div tabindex="0">
+          {{dine.short_description}}
+        </div>
+        <a href="/dine-drink/{{ dine.url_friendly_name }}/" class="button button--arrow">Learn More</a>
+      </article>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="cta-banner  cta-banner--overlay" data-parallax="scroll" data-position="top" data-bleed="10" data-image-src="/assets/images/dine/cta.jpg">
+  <div class="cta-banner__content cta-banner__content--text-center">
+    <h3 tabindex="0">Host your events<br>at Celino</h3>
+    <a href="/contact/" class="button button--arrow button--arrow--gold">GET IN TOUCH</a>
+  </div>
+</section>
+
+{% include instagram.html %}

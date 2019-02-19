@@ -1,0 +1,21 @@
+<form action="https://submit.jotform.me/submit/{{ site.data.forms.jotform.contact-id }}/" method="post" name="form_{{ site.data.forms.jotform.contact-id }}"
+    id="{{ site.data.forms.jotform.contact-id }}" accept-charset="utf-8">
+    <input type="hidden" name="formID" value="{{ site.data.forms.jotform.contact-id }}">
+    <div class="form-holder">
+      <div class="form-group">
+        <input type="text" class="form-control" name="q3_name" placeholder="Name" aria-label="Enter Name" required>
+      </div>
+      <div class="form-group two">
+        <input type="email" class="form-control" name="q4_email4" placeholder="Email" aria-label="Enter Email" required>
+      </div>
+      <div class="form-group two">
+        <input type="text" class="form-control" name="q7_subject" placeholder="Subject" aria-label="Enter Subject">
+      </div>
+      <div class="form-group">
+        <textarea class="form-control" name="q5_comments" placeholder="Comments" aria-label="Enter Comments"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit</button>
+      </div>
+    </div>
+</form>

@@ -1,0 +1,143 @@
+// Footer Elements
+// ==========================================================================
+
+footer {
+  position: relative;
+  padding: rem-calc(20) 10px rem-calc(10);
+  background-image: url('/assets/images/floral-bg.jpg');
+  @include media-breakpoint-up(lg) {
+    padding: rem-calc(103) 0 rem-calc(90);
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    background-color: rgba($dark-blue-color,.8);
+  }
+
+  .footer {
+    position: relative;
+    @include fixed-width-layout;
+    color: $white;
+
+    h5 {
+      margin: 0;
+      font-size: $type-size-16;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: .01rem;
+      @include media-breakpoint-up(lg) {
+        font-size: $type-size-13;
+      }
+      span {
+        display: inline-block;
+        font-weight: 400;
+        text-transform: none;
+        @include media-breakpoint-up(lg) {
+          display: block;
+        }
+      }
+    }
+
+    p {
+      font-size: $type-size-16;
+      font-weight: 400;
+      line-height: 16px;
+      @include media-breakpoint-up(lg) {
+        max-width: 242px;
+        font-size: $type-size-13;
+        line-height: 24px;
+      }
+    }
+
+    a {
+      color: $white;
+    }
+
+    &__wrap {
+      @include make-row();
+    }
+
+    &__contact,
+    &__logo {
+      @include make-col-ready();
+      @include media-breakpoint-up(lg) {
+        @include make-col(3);
+        line-height: 24px;
+        text-align: left;
+      }
+      line-height: 16px;
+      text-align: center;
+    }
+
+
+    &__social,
+    &__inquiries {
+      @include make-col-ready();
+      @include make-col(6);
+      @include media-breakpoint-up(lg) {
+        @include make-col(3);
+        line-height: 24px;
+      }
+      line-height: 16px;
+    }
+
+    &__logo {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+
+      img {
+        width: 100px;
+        max-width: 100%;
+        @include media-breakpoint-up(md) {
+          width: 219px;
+        }
+      }
+    }
+
+    &__social {
+      display: flex;
+      flex-grow: 1;
+
+      &__col {
+        flex: 0 70%;
+        @include media-breakpoint-up(md) {
+          flex: 0 50%;
+        }
+        &--right {
+          flex: 0 30%;
+          text-align: right;
+          @include media-breakpoint-up(md) {
+            flex: 0 50%;
+          }
+          img {
+            width: 31px;
+            @include media-breakpoint-up(md) {
+              width: 75px;
+            }
+          }
+        }
+      }
+
+      .svg-inline--fa {
+        margin-right: 5px;
+        font-size: $type-size-10;
+        color: $gold-color;
+        transition: $global-transition;
+        @include media-breakpoint-up(md) {
+          margin-right: 12px;
+        }
+        &:hover {
+          color: $light-gold;
+        }
+      }
+
+      .social-icons {
+        padding-top: 1rem;
+      }
+    }
+  }
+}

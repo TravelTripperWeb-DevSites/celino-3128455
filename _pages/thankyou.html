@@ -1,0 +1,33 @@
+---
+layout: default
+title: Thank You
+meta_description:
+permalink: /thankyou/
+meta_tags:
+  robots: noindex, follow
+---
+
+<section class="page-banner top-common-gap">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      {% regionblock thankyou_main_image, type:image %}
+      <img src="/assets/images/home/beach-miami-celino-hotel.jpg" alt="Celino Hotel">
+      {% endregionblock %}
+    </div>
+  </div>
+  {% regionblock thankyou_main_heading, type:header %}
+  <h1 tabindex="0" class="wow fadeIn" data-wow-delay="0.5s">Thank You</h1>
+  {% endregionblock %}
+</section>
+
+<section class="static-content">
+  <div class="text-center">
+    <div tabindex="0">
+      {% regionblock thankyou_copy, type:text %}
+        <h4>We will get in touch with you shortly.</h4>
+      {% endregionblock %}
+    </div>
+  </div>
+</section>
+
+{% include instagram.html %}

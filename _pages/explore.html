@@ -1,0 +1,160 @@
+---
+layout: default
+title: Things to do in South Beach Miami | Celino Hotel
+meta_description: You wont struggle to find things to do during your stay with the Celino Hotel in South Beach - whether it's exploring Ocean Drive, or relaxing at Lummus or South Pointe Park.
+permalink: /explore/
+meta_tags:
+  robots:
+---
+
+<section class="page-banner top-common-gap">
+  <div id="pageBanner" class="carousel slide" data-ride="carousel">
+  {% assign banners = site.data._models.page-banners | where: 'page_name', 'Explore' %}
+    {% for banner in banners | limit: 1 %}
+      <ol class="carousel-indicators">
+        {% for bannerimage in banner.image %}
+          <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}"  {% if forloop.first %}class="active"{% endif %}></li>
+        {% endfor %}
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        {% for bannerimage in banner.image %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}" role="option">
+            <img src="{{ bannerimage.url_large }}" alt="{{ bannerimage.alt }}">
+          </div>
+        {% endfor %}
+      </div>
+      <h1 tabindex="0" class="wow fadeIn" data-wow-delay="0.5s">{{ banner.banner_title }}</h1>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="luxury-intro luxury-intro--order-mobile">
+  <div class="luxury-intro__wrap">
+    <div class="luxury-intro__photo wow fadeIn" data-wow-delay=".3s">
+      <figure>
+        {% regionblock luxury_photo, type:image %}
+        <img src="/assets/images/explore/couple-south-beach.jpg" alt="South Beaches in Miami for Couples">
+        {% endregionblock %}
+      </figure>
+    </div>
+    <div class="luxury-intro__detail wow fadeIn" data-wow-delay=".5s">
+      <article>
+        {% regionblock luxury_detail_heading, type:header %}
+        <h2 tabindex="0">LOCATION, LOCATION, LOCATION</h2>
+        {% endregionblock %}
+        <hr>
+        <div tabindex="0">
+          {% regionblock luxury_detail, type:text %}
+            <p>Anchored in the heart of Ocean Drive on 6th, the Celino Hotel is just steps to everywhere you want to be. Ocean Drive and warm sandy beaches, eclectic restaurants for alfresco dining, nightlife, boutique art galleries, fashionable shopping, indie retail and of course the boardwalk.</p>
+            <p>With direct access to downtown Miami and the Port of Miami via MacArthur Causeway. The Celino is less than seven miles from Miami’s top urban destinations including Wynwood, Brickell, Midtown and just blocks from South Pointe Park, Lincoln Road and Española Way.</p>
+          {% endregionblock %}
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="explore-map" tabindex="-1">
+  <div class="explore-map__wrap">
+    <ul class="nav nav-pills nav-fill">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" data-category="attractions" href="#">attractions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" data-category="shopping" href="#">shopping</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" data-category="culture" href="#">culture</a>
+      </li>
+    </ul>
+  </div>
+  <div class="explore-map__location" id="map" data-attractions="show"></div>
+</section>
+
+{% include attractions.html %}
+
+{% assign shoppingItems =  site.data._models.explore | where: 'categories','shopping' %}
+{% if shoppingItems.size > 0 %}
+<section class="offers-slider attractions-slider">
+  <div class="offers-slider__wrap">
+    <h3 tabindex="0">Shopping</h3>
+    <div class="offers-slider__items" id="shopping-gallery">
+      {% for attraction in shoppingItems %}
+      <div data-filter="{{attraction.categories}}">
+        <a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank" tabindex="-1">
+          <figure>
+            <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
+          </figure>
+        </a>
+        <div class="offers-slider__detail">
+          <h4><a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank">{{ attraction.name }}</a></h4>
+          <p tabindex="0">{{ attraction.short_detail }}</p>
+          <a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank" class="button">Learn More</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% assign cultureItems =  site.data._models.explore | where: 'categories','culture' %}
+{% if cultureItems.size > 0 %}
+<section class="offers-slider attractions-slider" >
+  <div class="offers-slider__wrap">
+    <h3 tabindex="0">Culture</h3>
+    <div class="offers-slider__items" id="culture-gallery">
+      {% for attraction in cultureItems %}
+      <div data-filter="{{attraction.categories}}">
+        <a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank" tabindex="-1">
+          <figure>
+            <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
+          </figure>
+        </a>
+        <div class="offers-slider__detail">
+          <h4><a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank">{{ attraction.name }}</a></h4>
+          <p tabindex="0">{{ attraction.short_detail }}</p>
+          <a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank" class="button">Learn More</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% comment %}
+<section class="enjoy">
+  <div class="enjoy__wrap">
+    <div class="enjoy__title" tabindex="0">
+      {% regionblock dine_title, type: header %}
+      Enjoy
+      {% endregionblock %}
+    </div>
+    <div class="enjoy__categories"></div>
+  </div>
+  {% assign enjoyitems = site.data._models.enjoy | sort: 'sort_order' %}
+  {% for enjoy in enjoyitems %}
+    {% assign mod = forloop.index | modulo: 2 %}
+    <div class="enjoy__wrap {% if mod == 0 %}enjoy__wrap--even{% endif %}">
+      <div class="enjoy__image">
+        <a href="{{ enjoy.website_url }}/" target="_blank" rel="nofollow">
+          <img src="{{ enjoy.image.url_large }}" alt="{{ enjoy.image.alt }}">
+        </a>
+      </div>
+      <div class="enjoy__detail">
+        <article>
+          <h5 tabindex="0">{{ enjoy.name }}</h5>
+          <hr>
+          <p tabindex="0">{{ enjoy.short_description }}</p>
+          {% if enjoy.website_url and enjoy.website_url!="" %}
+           <a href="/{{ enjoy.website_url }}/"  target="_blank" rel="nofollow" class="button button--arrow">Learn More</a>
+          {% endif %}
+        </article>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+{% endcomment %}
+
+{% include instagram.html %}

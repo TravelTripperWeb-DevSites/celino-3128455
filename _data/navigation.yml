@@ -1,0 +1,15 @@
+main:
+  - title: Hotel
+    url: /about/
+  - title: Stay
+    url: /rooms/
+  - title: Offers
+    url: /offers/
+  - title: Dine/Drink
+    url: /dine-drink/
+  - title: Explore
+    url: /explore/
+  - title: Gallery
+    url: /gallery/
+  - title: Contact
+    url: /contact/

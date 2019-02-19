@@ -1,0 +1,30 @@
+{
+  "name": {
+    "required": true
+  },
+  "short_detail": {
+    "label": "Detail",
+    "required": true
+  },
+  "image": {
+    "type": "image",
+    "required": true
+  },
+  "address": {
+    "required": true
+  },
+  "Lat": {
+    "required": true
+  },
+  "Long": {
+    "required": true
+  },
+  "categories": {
+    "type": "select",
+    "options": ["attractions","shopping","culture"]
+  },
+  "learn_more_link": {
+    "label": "Learn More URL",
+    "required": true
+  }
+}

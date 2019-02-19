@@ -1,0 +1,33 @@
+{
+  "meta_description": "Miami Beach Boardwalk",
+  "name": "Miami Beach Boardwalk",
+  "title": "Miami Beach Boardwalk",
+  "url_friendly_name": "miami-beach-boardwalk",
+  "categories": "attractions",
+  "Lat": "25.79957",
+  "Long": "-80.12559",
+  "detail": "<p>Miami Beach Boardwalk, South Beach and the surrounding Miami Beach area</p>",
+  "short_detail": "A scenic pathway that stretches forty blocks through South Beach. ",
+  "image": {
+    "name": "Boardwalk_South_Beach_Miami_Beach_Florida",
+    "file_name": "Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
+    "url": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-042117/Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
+    "tags": "",
+    "description": "",
+    "date_added": "2018-12-27-042117",
+    "file_type": "image/jpeg",
+    "width": 1000,
+    "height": 563,
+    "file_size": 170977,
+    "url_large": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-042117/large_Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
+    "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-042117/medium_Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
+    "url_small": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-042117/small_Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
+    "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-042117/xsmall_Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
+    "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-042117/thumb_Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
+    "path": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-042117/Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
+    "alt": "Boardwalk South Beach Miami  ",
+    "caption": ""
+  },
+  "learn_more_link": "http://www.miamibeachboardwalk.com/miami-beach-boardwalk-map",
+  "address": "Miami Beach, FL 33140"
+}

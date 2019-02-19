@@ -1,0 +1,30 @@
+{
+  "sort_order": "1",
+  "name": "Dining",
+  "short_description": "This city's culinary scene isn't on the rise—it's fully here.",
+  "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>",
+  "image": {
+    "name": "Dining-sea-view",
+    "file_name": "Dining-sea-view.jpg",
+    "url": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-044032/Dining-sea-view.jpg",
+    "tags": "",
+    "description": "",
+    "date_added": "2018-12-27-044032",
+    "file_type": "image/jpeg",
+    "width": 1438,
+    "height": 768,
+    "file_size": 178734,
+    "url_large": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-044032/large_Dining-sea-view.jpg",
+    "url_medium": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-044032/medium_Dining-sea-view.jpg",
+    "url_small": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-044032/small_Dining-sea-view.jpg",
+    "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-044032/xsmall_Dining-sea-view.jpg",
+    "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-044032/thumb_Dining-sea-view.jpg",
+    "path": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2018-12-27-044032/Dining-sea-view.jpg",
+    "alt": "Dining Beach View",
+    "caption": ""
+  },
+  "url_friendly_name": "dine-drink",
+  "title": "Dining",
+  "meta_description": "Dining",
+  "website_url": "/dine-drink/"
+}

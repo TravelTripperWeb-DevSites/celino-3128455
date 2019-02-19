@@ -1,0 +1,32 @@
+---
+layout: default
+title: Sitemap
+meta_description:
+permalink: /sitemap/
+meta_tags:
+  robots: noindex, follow
+---
+
+<section class="page-banner top-common-gap">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      {% regionblock sitemap_main_image, type:image %}
+      <img src="/assets/images/home/beach-miami-celino-hotel.jpg" alt="Celino Hotel">
+      {% endregionblock %}
+    </div>
+  </div>
+  {% regionblock sitemap_main_heading, type:header %}
+  <h1 tabindex="0" class="wow fadeIn" data-wow-delay="0.5s">Sitemap</h1>
+  {% endregionblock %}
+</section>
+
+<section class="static-content">
+  {% assign links = site.data.navigation.main %}
+  <ul class="sitemap">
+    {% for link in links %}
+    <li>
+      <a href="{{ link.url | absolute_url }}">{{ link.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

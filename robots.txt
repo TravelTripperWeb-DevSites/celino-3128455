@@ -1,8 +1,12 @@
+---
+layout: null
+---
+
 # Disallowed and allowed directories and files
 
 User-agent: *
-Disallow: 
+Disallow:
 
 # Define website sitemaps
 
-Sitemap: https://www.thecelinohotel.com/sitemap.xml
+Sitemap: {{ site.url }}/sitemap.xml

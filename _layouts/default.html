@@ -1,121 +1,35 @@
-{% assign name = obj %}{% assign obj = site.data.main %}<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    {% include analytics.html %}
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines  }}{% else %}{{ site.description }}{% endif %}">
+<!DOCTYPE html>
+<html lang="{{ site.active_lang | slice: 0,2 | default: "en" }}" class="no-js">
 
-    <link rel="canonical" href="https://www.thecelinohotel.com{{ page.url }}" />
+<head>
+  {% include head.html %}
+  {% include head/custom.html %}
+</head>
 
-  	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="https://plugins.traveltripper.io/v2/css/booking-widget.css" />
+<body ng-app="rezTrip" rt3-hotel-info="hotelInfo" rt3-portal-info="portalInfo" rt3-rooms-browser="browser" ng-cloak>
+  <div class="preloader"></div>
+  {% if site.data.tracking.analytics.provider and page.analytics != false %}
+    {% case site.data.tracking.analytics.provider %}
+    {% when "gtm" %}
+      {% include analytics/gtm-body.html %}
+    {% endcase %}
+  {% endif %}
 
-  	<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/images/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    {% if page.url contains '/' %}
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="">
-    {% endif %}
-    <script src="/js/angular.min.js"></script>
-    <script type='application/ld+json'>
-    {
-      "@context": "http://www.schema.org",
-      "@type": "Organization",
-      "name": "Celino Hotel South Beach",
-      "url": "https://www.thecelinohotel.com/",
-      "logo": "https://www.thecelinohotel.com/images/logo.png",
-      "description": "Situated on the iconic Ocean Drive, The Celino will bring a new lifestyle of indulgence to South Beach, a personality rich in fashion fused with Latin charisma and tropical class.",
-         "sameAs": [
-        "https://www.facebook.com/celinohotel/"
+  <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
 
-      ]
-      }
-    }
-    </script>
-    <script type='application/ld+json'>
-    {
-      "@context": "http://schema.org",
-      "@type": "Hotel",
-      "image": "https://www.thecelinohotel.com/images/gallery/celino-hotel-miami-exterior.jpg",
-      "starRating" : { "@type" : "Rating",
-                           "ratingValue" : "4"},
-      "priceRange" : "from $100",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "640 Ocean Drive",
-        "addressLocality": "Miami Beach",
-        "addressRegion": "Florida",
-        "postalCode": "FL 33139",
-        "addressCountry": "United States"
-     },
-      "description": "Situated on the iconic Ocean Drive, The Celino will bring a new lifestyle of indulgence to South Beach, a personality rich in fashion fused with Latin charisma and tropical class.",
-      "name": "The Celino Hotel",
-      "alternateName":"The Celino South Beach",
-      "telephone": "786.574.4090",
-      "email": "info@thecelinohotel.com",
-      "url": "https://www.thecelinohotel.com/",
-       "sameAs" : ["https://www.facebook.com/celinohotel/","https://www.tripadvisor.com/Hotel_Review-g34439-d14080007-Reviews-The_Celino_Hotel-Miami_Beach_Florida.html"]
-        },
-       "https://www.google.com/maps/place/The+Celino+Hotel/@25.7763824,-80.1340995,17z/data=!3m1!4b1!4m5!3m4!1s0x88d9b4ed54d489bb:0x18541a235602f52d!8m2!3d25.7763776!4d-80.1319108"
-     },
+  {% include nav-main.html %}
 
-      "potentialAction":{
-       "@type":"ReserveAction",
-       "target":{
-       "@type":"EntryPoint",
-       "urlTemplate":"https://thecelinohotel.reztrip.com/classic/en/searches/5c1228443ad7b42dbdd3e7fe/hotels/MIACEL/rooms/":[
-       "http://schema.org/DesktopWebPlatform",
-       "http://schema.org/IOSPlatform",
-        "http://schema.org/AndroidPlatform"
-    ]
-    },
-       "result":{
-       "@type":"LodgingReservation",
-       "name":"Book Now"
-      }
-     }
-    }
-    </script>
+  <div id="main">
+    {{ content }}
+  </div>
 
-   </head>
-  <body ng-app="rezTrip" ng-controller="mainController" rt3-hotel-info="hotelInfo" rt3-portal-info="portalInfo" rt3-rooms-browser="browser" ng-cloak>
-    {% if site.data.tracking.analytics.provider and page.analytics != false %}
-      {% case site.data.tracking.analytics.provider %}
-        {% when "gtm" %}
-          {% include analytics/gtm-body.html %}
-      {% endcase %}
-    {% endif %}
-    <div class="left-bg {{page.bg}}">
-      <div class="bg-white">
-        {% include header.html %}
-        <div>
-        {{ content }}
-        </div>
-     </div>
-    </div>
+  <footer>
+    {% include footer/custom.html %}
     {% include footer.html %}
-   {% include script.html %}
-  </body>
+  </footer>
+
+  {% include scripts.html %}
+
+</body>
+
 </html>

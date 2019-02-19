@@ -1,34 +1,12 @@
-@font-face {
-    font-family: gotham-light;
-    src: url("/fonts/Gotham-Light.otf") format("opentype");
-}
+// Fonts
+// ==========================================================================
 
-@font-face {
-    font-family: gotham-medium;
-    src: url("/fonts/Gotham-Medium.otf") format("opentype");
-}
+@import url("//hello.myfonts.net/count/3224c0");
 
-@font-face {
-    font-family: gotham-ultra;
-    src: url("/fonts/Gotham-Ultra.otf") format("opentype");
-}
+@font-face {font-family: 'AmericanaStd-Bold';src: url('/assets/webfonts/3224C0_0_0.eot');src: url('/assets/webfonts/3224C0_0_0.eot?#iefix') format('embedded-opentype'),url('/assets/webfonts/3224C0_0_0.woff2') format('woff2'),url('/assets/webfonts/3224C0_0_0.woff') format('woff'),url('/assets/webfonts/3224C0_0_0.ttf') format('truetype'),url('/assets/webfonts/3224C0_0_0.svg#wf') format('svg');}
 
-@font-face {
-    font-family: gotham-bold;
-    src: url("/fonts/Gotham-Bold.otf") format("opentype");
-}
+@font-face {font-family: 'AmericanaStd';src: url('/assets/webfonts/3224C0_1_0.eot');src: url('/assets/webfonts/3224C0_1_0.eot?#iefix') format('embedded-opentype'),url('/assets/webfonts/3224C0_1_0.woff2') format('woff2'),url('/assets/webfonts/3224C0_1_0.woff') format('woff'),url('/assets/webfonts/3224C0_1_0.ttf') format('truetype'),url('/assets/webfonts/3224C0_1_0.svg#wf') format('svg');}
 
-@font-face {
-    font-family: gotham-bolditalic;
-    src: url("/fonts/Gotham-BoldItalic.otf") format("opentype");
-}
+@font-face {font-family: 'AmericanaStd-Italic';src: url('/assets/webfonts/3224C0_2_0.eot');src: url('/assets/webfonts/3224C0_2_0.eot?#iefix') format('embedded-opentype'),url('/assets/webfonts/3224C0_2_0.woff2') format('woff2'),url('/assets/webfonts/3224C0_2_0.woff') format('woff'),url('/assets/webfonts/3224C0_2_0.ttf') format('truetype'),url('/assets/webfonts/3224C0_2_0.svg#wf') format('svg');}
 
-@font-face {
-    font-family: Americana-Bold;
-    src: url("/fonts/AmericanaStd-Bold.otf") format("opentype");
-}
-
-@font-face {
-    font-family: Americana-ExtraBold;
-    src: url("/fonts/AmericanaStd-ExtraBold.otf") format("opentype");
-}
+@font-face {font-family: 'AmericanaStd-ExtraBold';src: url('/assets/webfonts/3224C0_3_0.eot');src: url('/assets/webfonts/3224C0_3_0.eot?#iefix') format('embedded-opentype'),url('/assets/webfonts/3224C0_3_0.woff2') format('woff2'),url('/assets/webfonts/3224C0_3_0.woff') format('woff'),url('/assets/webfonts/3224C0_3_0.ttf') format('truetype'),url('/assets/webfonts/3224C0_3_0.svg#wf') format('svg');}

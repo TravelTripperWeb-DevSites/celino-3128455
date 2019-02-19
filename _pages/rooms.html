@@ -1,0 +1,257 @@
+---
+layout: default
+title: Luxurious Hotel on South Beach | Rooms at Celino Hotel
+meta_description: With some rooms including endless views of the Atlantic Ocean, luxurious in-room amenities like free WiFi, 50" flatscreen TV and bluetooth speakers - view our rooms today!
+permalink: /rooms/
+meta_tags:
+  robots:
+---
+
+<section class="page-banner top-common-gap mb-55">
+  <div id="pageBanner" class="carousel slide" data-ride="carousel" >
+  {% assign banners = site.data._models.page-banners | where: 'page_name', 'Stay' %}
+    {% for banner in banners | limit: 1 %}
+      <ol class="carousel-indicators">
+        {% for bannerimage in banner.image %}
+          <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}"  {% if forloop.first %}class="active"{% endif %}></li>
+        {% endfor %}
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        {% for bannerimage in banner.image %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}" role="option">
+            <img src="{{ bannerimage.url_large }}" alt="{{ bannerimage.alt }}">
+          </div>
+        {% endfor %}
+      </div>
+      <h1 tabindex="0" class="wow fadeIn" data-wow-delay="0.5s">{{ banner.banner_title }}</h1>
+    {% endfor %}
+  </div>
+</section>
+
+
+<section class="inner-page-intro">
+  <div class="inner-page-intro__wrap align-items-center">
+    <div class="inner-page-intro__image wow fadeIn" data-wow-delay=".5s">
+        <img src="/assets/images/rooms/floral-bg.jpg" class="inner-page-intro__image__floral-bg" alt="Floral Background">
+      {% regionblock intro-image, type:image %}
+        <img src="https://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1549988336/gzom9pf6k66lfmkinohp.jpg" alt="Man Sitting" class="inner-page-intro__image__inner-image">
+      {% endregionblock %}
+    </div>
+    <div class="inner-page-intro__text wow fadeIn" data-wow-delay="1s">
+      {% regionblock intro_title, type:header %}
+        <h2 tabindex="0">Lorem Ipsum</h2>
+      {% endregionblock %}
+      <div tabindex="0">
+        {% regionblock intro_text, type:text %}
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc venenatis, leo sed tempus viverra, diam nibh maximus nisi, ut viverra nunc nunc ut sapien. Ut finibus sapien quam, sit amet pellentesque elit consectetur sit amet. Suspendisse semper mattis tristique. Donec semper purus quis felis bibendum varius.</p>
+        {% endregionblock %}
+      </div>
+      {% regionblock intro_cta, type:text %}
+        <a href="#" class="button button--arrow button--arrow--gold  d-inline-block d-md-none">Learn More</a>
+      {% endregionblock %}
+    </div>
+  </div>
+</section>
+
+
+<section class="sleep">
+  <div class="sleep__wrap">
+    <form class="sleep__filters">
+      <div class="sleep__filters__box">
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <h4>Refine Results</h4>
+          </div>
+          <div class="form-group col-md-2">
+            <select ng-model="filter.category" id="inputBeds" class="form-control">
+              <option value="" hidden>Bed</option>
+              <option value="!" selected="selected">Bed</option>
+              <option ng-repeat="cat in browser.roomCategories" value="[[ cat ]]">[[ cat ]]</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <select ng-model="filterObject.view" id="inputView" class="form-control">
+              <option value="" selected>View</option>
+              <option value="Ocean View">Ocean View</option>
+              <option value="Partial Ocean View">Partial Ocean View</option>
+              <option value="Neighborhood or Courtyard View">Courtyard View</option>
+              <option value="Pool View">Pool View</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <select ng-model="filterObject.amenities" id="inputAmenities" class="form-control">
+              <option value="" selected>Amenities</option>
+              <option value="Balcony">Balcony</option>
+              <option value="Living Room">Living Room</option>
+              <option value="Sofa">Sofa</option>
+              <option value="Kitchen">Kitchen</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <div class="form-check">
+              <input ng-model="filterObject.name" ng-true-value='"ADA"'  ng-false-value='""' class="form-check-input" type="checkbox" id="gridCheck1">
+              <label class="form-check-label" for="gridCheck1">
+                Accessible
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="sleep__wrap">
+    <div class="sleep__card" ng-repeat="room in browser.roomsList | filter: filter:true | filter :filterObject">
+     <div class="sleep__card__outline">
+       <figure>
+          <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1">
+            <img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]">
+          </a>
+        </figure>
+        <article class="sleep__card__detail">
+          <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]">[[ room.name ]]</a></h2>
+           <p>Retreat in comfort with ocean views. Thoughtful touches bring the beach inside your 700-square-foot king room.</p>
+          <div class="button-holder">
+            <a ng-href="/room/#[[ room.name | formatNameForLink ]]"  class="button button--gold" tabindex="-1">Explore</a>
+            <a ng-href="{{ site.reztripUrl}}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="button button--arrow">Book Now</a>
+          </div>
+        </article>
+     </div>
+    </div>
+  </div>
+</div>
+
+{% comment %}
+<section class="rooms-listing">
+  <div class="rooms-listing__filter-wrap">
+    <div class="rooms-listing__main-filter">
+      <div class="rooms-listing__main-filter__filter-label" tabindex="0">
+        Select Building
+      </div>
+      <ul class="nav nav-tabs rooms-listing__main-filter__filter-items">
+        <li class="nav-item active">
+          <a class="nav-link active" data-toggle="tab" href="#park-central">PARK CENTRAL</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#imperial">Imperial</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#heathcote">Heathcote</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#floridita">Floridita</a>
+        </li>
+      </ul>
+      <img class="drop-down-arrow" src="/assets/images/down-arrow.png" alt="Down">
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <div class="tab-content">
+    <div class="tab-pane active" id="park-central">
+      <div class="rooms-listing__subfilter-wrap">
+        <div class="rooms-listing__subfilter-bg">
+          <ul class="nav nav-tabs rooms-listing__subfilter-bg__subfilter">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#park-central-king">King</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#park-central-queen">Queen</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#park-central-suites">Suites</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-content ">
+          <div class="rooms-listing__list-items tab-pane fade show active" id="park-central-king">
+           <section ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
+            <div class="stay-block__rooms__wrap" ng-repeat="room in value" ng-if="room.categoryGroup =='King'"  ng-class-even="'stay-block__rooms__wrap--even'">
+              <div class="stay-block__room-image">
+                <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img  ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
+              </div>
+              <div class="stay-block__room-detail">
+                <article>
+                  <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]">[[ room.name ]]</a></h2>
+                  <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
+                  <div tabindex="0">
+                    <p>[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
+                  </div>
+                  <div class="button-holder">
+                    <a href="#" class="button button--arrow">Book Now</a>
+                    <a ng-href="/room/#[[ room.name | formatNameForLink ]]" class="button button--gold">Explore</a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+          </div>
+          <div class="rooms-listing__list-items tab-pane" id="park-central-queen">
+           <section ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
+            <div class="stay-block__rooms__wrap" ng-repeat="room in value" ng-if="room.categoryGroup =='Queen'"  ng-class-even="'stay-block__rooms__wrap--even'">
+              <div class="stay-block__room-image">
+                <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img  ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
+              </div>
+              <div class="stay-block__room-detail">
+                <article>
+                  <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]">[[ room.name ]]</a></h2>
+                  <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
+                  <div tabindex="0">
+                    <p>[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
+                  </div>
+                  <div class="button-holder">
+                    <a href="#" class="button button--arrow">Book Now</a>
+                    <a ng-href="/room/#[[ room.name | formatNameForLink ]]" class="button button--gold">Explore</a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="rooms-listing__list-items tab-pane" id="park-central-suites">
+         <section ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
+          <div class="stay-block__rooms__wrap" ng-repeat="room in value" ng-if="room.categoryGroup =='Suite'" ng-class-even="'stay-block__rooms__wrap--even'">
+            <div class="stay-block__room-image">
+              <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
+            </div>
+            <div class="stay-block__room-detail">
+              <article>
+                <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]">[[ room.name ]]</a></h2>
+                <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
+                <div tabindex="0">
+                  <p>[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
+                </div>
+                <div class="button-holder">
+                  <a ng-href="{{ site.reztripUrl}}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="button button--arrow">Book Now</a>
+                  <a ng-href="/room/#[[ room.name | formatNameForLink ]]" class="button button--gold">Explore</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+      </div>
+    </div>
+    <div class="tab-pane" id="imperial">
+      <div class="rooms-listing__subfilter-wrap">
+        <div class="rooms-listing__subfilter-bg">
+          <ul class="nav nav-tabs rooms-listing__subfilter-bg__subfilter">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#imperial-king">King</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#imperial-queen">Queen</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#imperial-suites">Suites</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endcomment %}
+{% include cta-two-column.html %}
+{% include instagram.html %}
+
+<div class="full-map m-0 d-none d-md-block" id="map"></div>

@@ -1,0 +1,66 @@
+{% assign links = site.data.navigation.main %} 
+<div class="top-nav"{% if page.url =='/'%} id="home-nav"{% endif %}>
+  <a class="hotel-logo" href="/"><img src="/assets/images/logo.png" alt="{{ site.name}} logo"></a>
+  <a class="booking-toggle"   href="javascript:void(0);" show-booking-widget><span class="vertical-line"></span><strong>View Rates</strong></a>
+  <a class="menu-toggle" aria-label="Hit enter key or click to open the menu" id="toggle-menu" href="/" title="Menu"><span>Menu</span> </a>
+</div>
+
+<div class="menu-items" id="menuItems">
+  <nav class="menu-items__wrap">
+    <span aria-label="Hit enter key or click on the cross icon to close the menu" tabindex="0" class="menu-items__close" id="closeMenu"></span>
+    <ul>
+    {% for link in links %}
+      <li class="nav-item{% if page.url == link.url %} active{% endif%}">
+        <a class="nav-link" href="{{ link.url | absolute_url }}">{{ link.title }}{% if page.url == link.url %}<span class="sr-only">(current)</span>{% endif%}</a>
+      </li>
+    {% endfor %}
+    </ul>
+    <address>
+      <span><a href="https://goo.gl/maps/d26PK4joDck" target="_blank" rel="nofollow">640 Ocean Drive <br>Miami Beach, Florida 33139</a></span> <br>
+      (e): <a href="mailto:info@thecelinohotel.com">info@thecelinohotel.com</a> <br>
+      (p): <a href="tel:305.685.2000">305.685.2000</a> <br>
+    </address>
+  </nav>
+</div>
+
+{% comment %}
+<div class="booking-widget" id="bookingWidget">
+  <div class="booking-widget__wrap">
+    <form action="{{ site.reztripUrl }}search?" method="get">
+      <div class="booking-widget__form-inputs">
+        <div class="booking-widget__form-inputs__input">
+          <label for="arrival_date">Arrival</label>
+          <input type="text" name="arrival_holder" id="arrival_holder" required>
+          <input autocomplete="off" type="text" name="arrival_date" id="arrival_date" required>
+        </div>
+        <div class="booking-widget__form-inputs__input">
+          <label for="departure_date">Departure</label>
+          <input type="text" name="departure_holder" id="departure_holder">
+          <input autocomplete="off" type="text" name="departure_date" id="departure_date">
+        </div>
+        <div class="booking-widget__form-inputs__select">
+          <label for="rooms">Rooms</label>
+          <select id="rooms" name="rooms">
+            <option selected>1</option>
+            <option>2</option>
+          </select>
+        </div>
+        <div class="booking-widget__form-inputs__select">
+          <label for="adults">Guests</label>
+          <select id="adults" name="adults">
+            <option>1</option>
+            <option selected>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+        </div>
+      </div>
+      <div class="booking-widget__form-button">
+        <button type="submit" class="button button--booknow">Book Now</button>
+      </div>
+      <div class="booking-widget__close" id="closeBooking">X</div>
+    </form>
+
+  </div>
+</div>
+{% endcomment %}

@@ -1,0 +1,77 @@
+---
+layout: default
+title: Room Details
+meta_description:
+permalink: /room/
+meta_tags:
+  robots:
+---
+<section ng-controller="roomDetail" rt3-room-details="room">
+  <section class="page-banner top-common-gap mb-55">
+    <div id="pageBanner" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li ng-repeat="photo in room.photos" data-target="#pageBanner" data-slide-to="[[ $index ]]" ng-class="{'active': $index == 0}"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item" ng-if="room.photos.length > 0" ng-repeat="photo in room.photos" ng-class="{'active': $index == 0}" role="option">
+            <img ng-src="[[ photo.large ]]" alt="[[ room.name ]]">
+          </div>
+          <div class="carousel-item active" ng-if="room.photos.length <= 0">
+            <img src="/assets/images/dummy.jpg" alt="room image not found">
+          </div>
+        </div>
+        <h1 tabindex="0" class="wow fadeIn" data-wow-delay="0.5s" ng-bind-html="room.name | renderHTMLCorrectly"></h1>
+    </div>
+  </section>
+
+  <section class="room-details-intro">
+    <div class="room-details-intro__wrap">
+      <div class="room-details-intro__intro-text">
+        <h2 tabindex="0" ng-bind-html="room.name | renderHTMLCorrectly"></h2>
+        <div tabindex="0">
+          <p ng-bind-html="room.description | renderHTMLCorrectly"></p>
+        </div>
+      </div>
+      <div class="room-details-intro__highlights">
+        <h6 tabindex="0">SUITE HIGHLIGHTS</h6>
+        <ul tabindex="0">
+          <li> Room Size: [[ room.room_size ]] sqft </li>
+          <li> Sleeps: [[ room.max_number_of_guests ]] Guest(s) </li>
+          <li> Bed Types: [[ room.bed_types[0].name ]] </li>
+          <li ng-repeat="amenities in room.amenities"> [[ amenities ]] </li>
+        </ul>
+        <a ng-href="{{ site.reztripUrl}}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="button button--arrow">Reserve This Room</a>
+      </div>
+    </div>
+  </section>
+
+  {% include room-detail-gallery.html %}
+  {% include guest-services.html %}
+
+  <section class="other-rooms">
+    <h4 class="text-center" tabindex="0">SIMILAR ROOMS & SUITES</h4>
+    <input type="radio" ng-model="sameRoomfilter" value="[[ room.name ]]">
+    <div class="rooms-listing__list-items active" ng-repeat="value in browser.roomsList | groupBy: 'category'">
+      <div class="stay-block__rooms__wrap" ng-class-even="'stay-block__rooms__wrap--even'" ng-repeat="otherroom in value" ng-if="otherroom.category == room.category">
+        <div class="stay-block__room-image">
+          <a ng-href="/room/#[[ otherroom.name | formatNameForLink ]]" tabindex="-1"><img ng-src="[[ otherroom.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ otherroom.name ]]"></a>
+        </div>
+        <div class="stay-block__room-detail">
+          <article>
+            <h2><a ng-href="/room/#[[ otherroom.name | formatNameForLink ]]">[[ otherroom.name ]]</a></h2>
+            <div tabindex="0">
+              <p>[[ otherroom.description | limitTo: 221 ]][[ otherroom.description.length > 220 ? '...' : '' ]]</p>
+            </div>
+            <div class="button-holder">
+              <a ng-href="{{ site.reztripUrl}}[[ otherroom.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+otherroom.code : 'search?selected_room='+otherroom.code ]]" class="button button--arrow">Book Now</a>
+              <a ng-href="/room/#[[ otherroom.name | formatNameForLink ]]" class="button button--gold">Explore</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+{% include deals-offers.html %}
+
+<div class="full-map m-0" id="map"></div>

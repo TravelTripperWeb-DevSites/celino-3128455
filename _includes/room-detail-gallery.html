@@ -1,0 +1,31 @@
+{% assign roomgallery = site.data._galleries['rooms_suites'] %}
+  <section class="room-images-gallery clearfix d-none d-md-block">
+    {% for gallery in roomgallery.photos %}
+    <div class="item fancybox" data-src="{{ gallery.url_large }}" data-exthumbimage="{{ gallery.url_small }}">
+      <img src="{{ gallery.url_medium }}" class="img-fluid" alt="{{ gallery.alt }}">
+      <div class="overlay">
+        <img src="/assets/images/gallery/zoom.png" alt="Zoom">
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section class="mobile-carousel d-md-none">
+    <div id="roomImages" class="carousel slide" data-ride="carousel">
+      <!-- The slideshow -->
+      <div class="carousel-inner" role="listbox">
+        {% for gallery in roomgallery.photos %}
+        <div class="carousel-item {% if forloop.first %}active{% endif %}" role="option">
+          <img src="{{ gallery.url_medium }}" alt="{{ gallery.alt }}">
+        </div>
+        {% endfor %}
+      </div>
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#roomImages" data-slide="prev">
+        <img src="/assets/images/left-arrow.png" alt="Previous Item">
+      </a>
+      <a class="carousel-control-next" href="#roomImages" data-slide="next">
+        <img src="/assets/images/right-arrow.png" alt="Next Item">
+      </a>
+    </div>
+  </section>

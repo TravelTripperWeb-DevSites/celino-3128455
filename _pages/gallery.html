@@ -1,0 +1,65 @@
+---
+layout: default
+title: Luxury Hotel Photos | Gallery of Celino Hotel South Beach
+meta_description: Take a look around the stylish new Celino Hotel in South Beach Miami. From the rooftop glass bottom pool to stunning ocean views, take a look at our Photo Gallery here.
+permalink: /gallery/
+meta_tags:
+  robots:
+---
+<section class="page-banner top-common-gap">
+  <div id="pageBanner" class="carousel slide" data-ride="carousel">
+    {% assign banners = site.data._models.page-banners | where: 'page_name', 'Gallery' %}
+    {% for banner in banners | limit: 1 %}
+    <ol class="carousel-indicators">
+      {% for bannerimage in banner.image %}
+      <li data-target="#pageBanner" data-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active" {% endif %}></li>
+      {% endfor %}
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      {% for bannerimage in banner.image %}
+      <div class="carousel-item {% if forloop.first %}active{% endif %}" role="option">
+        <img src="{{ bannerimage.url_large }}" alt="{{ bannerimage.alt }}">
+      </div>
+      {% endfor %}
+    </div>
+    <h1 tabindex="0" class="wow fadeIn" data-wow-delay="0.5s">{{ banner.banner_title }}</h1>
+    {% endfor %}
+  </div>
+</section>
+
+{% assign categories = site.data._galleries | sort: sort_order %}
+
+<div class="mobile-filter d-block d-md-none">
+  <p>Filter by category</p>
+  <select class="custom-control filter-select" aria-label="Filter by category">
+    <option value="all" class="filter">All</option>
+    {% for category in categories %}
+    {% assign catname = category[0] %}
+    <option value="{{ catname }}" class="filter">{{ site.data._galleries[catname].name }}</option>
+    {% endfor %}
+  </select>
+</div>
+
+<section class="filter-nav bg-cover d-none d-md-block" tabindex="-1">
+  <ul>
+    <li><a href="javascript:void(0);" class="filter active" data-filter="all">All</a></li>
+    {% for category in categories %}
+    {% assign catname = category[0] %}
+    <li><a href="javascript:void(0);" class="filter" data-filter="{{ catname }}">{{ site.data._galleries[catname].name }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="gallery">
+  {% assign categories = site.data._galleries %}
+  <div class="gallery__row" id="lightgallery">
+    {% for category in categories %}
+    {% assign catname = category[0] %}
+    {% for photo in site.data._galleries[catname].photos %}
+    <div class="gallery__item item fancybox" data-filter="{{ catname }}" data-src="{% if photo.url_large %}{{ photo.url_large }}{% else %}{{ photo.url }}{% endif %}" data-exthumbimage="{% if photo.url_medium %}{{ photo.url_medium }}{% else %}{{ photo.url }}{% endif %}">
+      <img src="{{ photo.url_medium }}" alt="{{ photo.alt }}">
+    </div>
+    {% endfor %}
+    {% endfor %}
+  </div>
+</section>

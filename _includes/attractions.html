@@ -1,0 +1,24 @@
+{% assign attractionsItems =  site.data._models.explore | where: 'categories','attractions' %}
+{% if attractionsItems.size > 0 %}
+<section class="offers-slider attractions-slider active">
+  <div class="offers-slider__wrap">
+    <h3 tabindex="0">Attractions</h3>
+    <div class="offers-slider__items" id="attractions-gallery">
+      {% for attraction in attractionsItems %}
+      <div data-filter="{{attraction.categories}}">
+        <a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank" tabindex="-1">
+          <figure>
+            <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
+          </figure>
+        </a>
+        <div class="offers-slider__detail">
+          <h4><a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank">{{ attraction.name }}</a></h4>
+          <p tabindex="0">{{ attraction.short_detail }}</p>
+          <a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank" class="button">Learn More</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
