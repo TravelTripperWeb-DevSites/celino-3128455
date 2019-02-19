@@ -82,7 +82,9 @@
     @include flex-center-col;
     article {
       padding: 0;
+      overflow: hidden;
       text-align: center;
+      overflow-wrap:  break-word;
       @include media-breakpoint-up(lg) {
         padding: 0 35px;
         text-align: left;
@@ -330,9 +332,8 @@
   }
   &__title {
     @include make-col-ready();
-    @include make-col(6);
     @include media-breakpoint-up(lg) {
-      @include make-col(3);
+      padding-bottom: 15px;
       font-size: $type-size-1;
       letter-spacing: rem-calc(20);
     }

@@ -193,9 +193,12 @@
             left: 50%;
             width: 60%;
             transform: translate(-50%, -50%);
-
             @include media-breakpoint-up(md) {
               width: auto;
+            }
+            &.x2-image {
+              max-width: 71px;
+              max-height: 41px;
             }
           }
         }

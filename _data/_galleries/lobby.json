@@ -2,6 +2,44 @@
   "name": "Hotel",
   "photos": [
     {
+      "name": "Celino Entrance Gallery",
+      "content_type": "image/jpeg",
+      "date_added": "2019-02-15-172438",
+      "url_thumb": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1550269478/hznfxhs24juosbtu8xps.jpg",
+      "url_xsmall": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1550269478/hznfxhs24juosbtu8xps.jpg",
+      "url_small": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1550269478/hznfxhs24juosbtu8xps.jpg",
+      "url_medium": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1550269478/hznfxhs24juosbtu8xps.jpg",
+      "url_large": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1550269478/hznfxhs24juosbtu8xps.jpg",
+      "width": 3000,
+      "height": 1688,
+      "format": "jpg",
+      "url": "https://res.cloudinary.com/traveltripperweb/image/upload/v1550269478/hznfxhs24juosbtu8xps.jpg",
+      "resource_type": "image",
+      "size": 3886811,
+      "path": "https://res.cloudinary.com/traveltripperweb/image/upload/v1550269478/hznfxhs24juosbtu8xps.jpg",
+      "file_size": null,
+      "alt": "Celino Entrance Gallery"
+    },
+    {
+      "name": "Lobby Gallery",
+      "content_type": "image/jpeg",
+      "date_added": "2019-02-15-172119",
+      "url_thumb": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1550269279/cluqdtodqaelprgfh1uc.jpg",
+      "url_xsmall": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1550269279/cluqdtodqaelprgfh1uc.jpg",
+      "url_small": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1550269279/cluqdtodqaelprgfh1uc.jpg",
+      "url_medium": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1550269279/cluqdtodqaelprgfh1uc.jpg",
+      "url_large": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1550269279/cluqdtodqaelprgfh1uc.jpg",
+      "width": 1691,
+      "height": 1688,
+      "format": "jpg",
+      "url": "https://res.cloudinary.com/traveltripperweb/image/upload/v1550269279/cluqdtodqaelprgfh1uc.jpg",
+      "resource_type": "image",
+      "size": 925788,
+      "path": "https://res.cloudinary.com/traveltripperweb/image/upload/v1550269279/cluqdtodqaelprgfh1uc.jpg",
+      "file_size": null,
+      "alt": "Lobby Gallery"
+    },
+    {
       "name": "Celino Mezzanine",
       "file_name": "Celino Mezzanine.jpg",
       "url": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195039/Celino_Mezzanine.jpg",
@@ -60,6 +98,32 @@
       "git_file_name": "_assets/image_data/Celino-Bar-2.json",
       "path": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-01-31-195042/Celino_Bar_2.jpg",
       "alt": "Celino Bar 2"
+    },
+    {
+      "name": "Renderings Rooftop pool",
+      "content_type": "image/jpeg",
+      "date_added": "2019-02-14-170603",
+      "url_thumb": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1550181963/l61fryjmnxeexqrx8rx0.jpg",
+      "url_xsmall": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1550181963/l61fryjmnxeexqrx8rx0.jpg",
+      "url_small": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1550181963/l61fryjmnxeexqrx8rx0.jpg",
+      "url_medium": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1550181963/l61fryjmnxeexqrx8rx0.jpg",
+      "url_large": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1550181963/l61fryjmnxeexqrx8rx0.jpg",
+      "width": 1920,
+      "height": 1080,
+      "format": "jpg",
+      "url": "https://res.cloudinary.com/traveltripperweb/image/upload/v1550181963/l61fryjmnxeexqrx8rx0.jpg",
+      "resource_type": "image",
+      "size": 1666065,
+      "s3_url": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-14-170604/l61fryjmnxeexqrx8rx0.jpg",
+      "s3_url_large": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-14-170604/large_l61fryjmnxeexqrx8rx0.jpg",
+      "s3_url_medium": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-14-170604/medium_l61fryjmnxeexqrx8rx0.jpg",
+      "s3_url_small": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-14-170604/small_l61fryjmnxeexqrx8rx0.jpg",
+      "s3_url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-14-170604/xsmall_l61fryjmnxeexqrx8rx0.jpg",
+      "s3_url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-14-170604/thumb_l61fryjmnxeexqrx8rx0.jpg",
+      "git_file_name": "_assets/image_data/Renderings-Rooftop-pool.jpg.json",
+      "path": "https://res.cloudinary.com/traveltripperweb/image/upload/v1550181963/l61fryjmnxeexqrx8rx0.jpg",
+      "file_size": null,
+      "alt": "Renderings Rooftop pool"
     },
     {
       "name": "Celino Pool",
@@ -192,5 +256,6 @@
       }
     }
   ],
-  "description": ""
+  "description": "",
+  "id": "lobby"
 }

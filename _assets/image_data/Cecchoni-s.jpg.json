@@ -1,0 +1,22 @@
+{
+  "name": "Cecchoni's",
+  "content_type": "image/jpeg",
+  "date_added": "2019-02-07-180132",
+  "url_thumb": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1549580492/o9ampykyk8slqlubfi9z.jpg",
+  "url_xsmall": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1549580492/o9ampykyk8slqlubfi9z.jpg",
+  "url_small": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1549580492/o9ampykyk8slqlubfi9z.jpg",
+  "url_medium": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1549580492/o9ampykyk8slqlubfi9z.jpg",
+  "url_large": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1549580492/o9ampykyk8slqlubfi9z.jpg",
+  "width": 720,
+  "height": 480,
+  "format": "jpg",
+  "url": "https://res.cloudinary.com/traveltripperweb/image/upload/v1549580492/o9ampykyk8slqlubfi9z.jpg",
+  "resource_type": "image",
+  "size": 97303,
+  "s3_url": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-07-180213/o9ampykyk8slqlubfi9z.jpg",
+  "s3_url_large": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-07-180213/large_o9ampykyk8slqlubfi9z.jpg",
+  "s3_url_medium": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-07-180213/medium_o9ampykyk8slqlubfi9z.jpg",
+  "s3_url_small": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-07-180213/small_o9ampykyk8slqlubfi9z.jpg",
+  "s3_url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-07-180213/xsmall_o9ampykyk8slqlubfi9z.jpg",
+  "s3_url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-07-180213/thumb_o9ampykyk8slqlubfi9z.jpg"
+}

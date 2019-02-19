@@ -1,59 +1,55 @@
-# Site Settings
-title: "Ocean Drive Lifestyle Hotel"
+---
+title: Ocean Drive Lifestyle Hotel
 title_separator: "|"
-name: "Celino Hotel South Beach"
-description: "Situated on the iconic Ocean Drive, The Celino will bring a new lifestyle of indulgence to South Beach, a personality rich in fashion fused with Latin charisma and tropical class."
-url: "https://www.thecelinohotel.com"
-repository: "TravelTripperWeb/celino"
-reztripUrl: "https://thecelinohotel.reztrip.com/"
-# Language Settings
-default_lang: 'en'
-languages: ['en']
-
-# Reading Files
+name: Celino Hotel South Beach
+description: Situated on the iconic Ocean Drive, The Celino will bring a new lifestyle
+  of indulgence to South Beach, a personality rich in fashion fused with Latin charisma
+  and tropical class.
+url: https://www.thecelinohotel.com
+repository: TravelTripperWeb/celino
+reztripUrl: https://thecelinohotel.reztrip.com/
+default_lang: en
+languages:
+- en
 include:
-  - _pages
+- _pages
 exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - Capfile
-  - CHANGELOG
-  - config
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - log
-  - Makefile
-  - media.json
-  - models.json
-  - node_modules
-  - old_media.json
-  - package.json
-  - package-lock.json
-  - Rakefile
-  - README
-  - sitemap.json
-  - tmp
-  - vendor
+- "*.sublime-project"
+- "*.sublime-workspace"
+- ".asset-cache"
+- ".bundle"
+- ".jekyll-assets-cache"
+- ".sass-cache"
+- Capfile
+- CHANGELOG
+- config
+- Gemfile
+- Gruntfile.js
+- gulpfile.js
+- LICENSE
+- log
+- Makefile
+- media.json
+- models.json
+- node_modules
+- old_media.json
+- package.json
+- package-lock.json
+- Rakefile
+- README
+- sitemap.json
+- tmp
+- vendor
 keep_files:
-  - .git
-  - assets
+- ".git"
+- assets
 rsync_copy:
-  - _assets
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
-# Conversion
+- _assets
+encoding: utf-8
+markdown_ext: markdown,mkdown,mkdn,mkd,md
 markdown: kramdown
 excerpt_separator: "\n\n"
 incremental: false
-
-# Markdown Processing
 kramdown:
   input: GFM
   hard_wrap: false
@@ -63,42 +59,13 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-
-# Sass/SCSS
 sass:
   load_paths:
-    - _sass
+  - _sass
   style: compressed
-
-# Outputting
 permalink: pretty
-timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
-# data_paginate:
-#   per_page: 5
-#   data: 'blog'
-#   path: 'blog/page:num'
-#   pagination_template: 'blog/index.html'
-#   sort_field: 'date'
-#   sort_reverse: true
-
-page_gen: #
-
-  - data: 'dine-drink'
-    template: 'dine-single'
-    dir: 'dine-drink'
-  # - data: 'blog'
-  #   template: 'post-single'
-  #   dir: 'blog'
-  # - data: 'events'
-  #   template: 'event-single'
-  #   dir: 'events'
-  # - data: 'offers'
-  #   template: 'offer-single'
-  #   dir: 'offers'
-  # - data: 'rooms'
-  #   template: 'room-single'
-  #   dir: 'rooms'
-  # - data: 'specials'
-  #   template: 'special-single'
-  #   dir: 'specials'
+timezone: 
+page_gen:
+- data: dine-drink
+  template: dine-single
+  dir: dine-drink

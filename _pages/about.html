@@ -7,7 +7,7 @@ meta_tags:
   robots:
 ---
 
-<section class="page-banner">
+<section class="page-banner top-common-gap">
   <div id="pageBanner" class="carousel slide" data-ride="carousel">
   {% assign banners = site.data._models.page-banners | where: 'page_name', 'Hotel' %}
     {% for banner in banners | limit: 1 %}
@@ -55,7 +55,7 @@ meta_tags:
 
 {% include guest-services.html %}
 
-{% assign luxury-amenities = site.data._models.luxury-amenities %}
+{% assign luxury-amenities = site.data._models.luxury-amenities | sort: "order"%}
 <section class="luxuxy-amenities">
   {% regionblock luxury_amenities, type:header %}
   <h4>LUXURY AMENITIES AT CELINO SOUTH BEACH</h4>

@@ -1,6 +1,6 @@
 {
-  "description": "<p>No matter how many years&ndash;or days&ndash;you&rsquo;ve been practicing, join our resident yogis for complimentary weekend yoga and maybe a meditation classes.</p>",
-  "title": "Yoga & Wellness",
+  "description": "<p>Review the calendar for a weekly selection of complimentary onsite fitness and wellness classes. Monitor our activations for fun on site entertainment, there's something for everyone.</p>",
+  "title": "Monthly Programming Calendar",
   "image": {
     "name": "Yoga and Wellness",
     "file_name": "Yoga and Wellness.jpg",
@@ -18,7 +18,8 @@
     "url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-171429/xsmall_Yoga_and_Wellness.jpg",
     "url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-171429/thumb_Yoga_and_Wellness.jpg",
     "path": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-01-171429/Yoga_and_Wellness.jpg",
-    "alt": "Yoga and Wellness",
+    "alt": "Monthly Programming Calendar",
     "caption": ""
-  }
+  },
+  "order": 4
 }

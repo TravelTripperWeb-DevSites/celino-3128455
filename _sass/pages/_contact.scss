@@ -109,7 +109,7 @@
           @include media-breakpoint-up(xl) {
             top: 0;
             left: 0;
-            width: auto;
+            width: 90%;
           }
         }
 
@@ -121,7 +121,7 @@
           @include media-breakpoint-up(xl) {
             top: 26px;
             left: 40px;
-            width: auto;
+            width: 90%;
           }
         }
       }
