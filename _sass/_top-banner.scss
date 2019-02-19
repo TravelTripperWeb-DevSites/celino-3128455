@@ -1,0 +1,38 @@
+// Top Banner
+
+.top-banner {
+  position: absolute;
+  top: 140px;
+  z-index: 9;
+  width: 100%;
+  max-width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #000000;
+  @media (max-width: 844px) {
+    top: 70px;
+  }
+  a,
+  p {
+    display: inline-block;
+    margin: 0 15px;
+    vertical-align: middle;
+  }
+
+  p {
+    margin: 10px 0;
+    color: #ffffff;
+    @media (max-width: 992px) {
+      font-size: 15px;
+    }
+  }
+
+  a {
+    font-size: 16px;
+    border: 1px solid #000000;
+    @media (max-width: 768px) {
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+  }
+}
