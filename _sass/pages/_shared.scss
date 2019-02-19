@@ -18,15 +18,15 @@
   animation: opacityFade 1.5s ease-in;
 
   &--home {
-    &:after {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      content: '';
-      background-color: rgba($black,.2);
-    }
+    // &:after {
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   left: 0;
+    //   content: '';
+    //   background-color: rgba($black,.2);
+    // }
   }
 
   &--inner {
