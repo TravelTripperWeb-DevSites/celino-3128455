@@ -57,10 +57,12 @@ meta_tags:
 
 {% assign luxury-amenities = site.data._models.luxury-amenities | sort: "order"%}
 <section class="luxuxy-amenities">
-  {% regionblock luxury_amenities, type:header %}
-  <h4>LUXURY AMENITIES AT CELINO SOUTH BEACH</h4>
-  {% endregionblock %}
-  {% for la in luxury-amenities %}
+  <div>
+    {% regionblock luxury_amenities, type:header %}
+    <h4>LUXURY AMENITIES AT CELINO SOUTH BEACH</h4>
+    {% endregionblock %}
+  </div>
+   {% for la in luxury-amenities %}
   <div class="luxuxy-amenities__block">
     <div class="luxuxy-amenities__block__content p-0">
       <div class="luxuxy-amenities__block__content__holder wow fadeIn" data-wow-delay=".5s">
