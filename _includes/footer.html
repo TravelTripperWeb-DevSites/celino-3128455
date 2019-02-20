@@ -9,8 +9,6 @@
        <p tabindex="0"><a href="https://goo.gl/maps/d26PK4joDck" target="_blank" rel="nofollow">640 Ocean Drive<br>Miami Beach, Florida 33139</a> <br>
          (p): <a href="tel:305.685.2000">305.685.2000</a>
        </p>
-     </div>
-     <div class="footer__inquiries">
        <h5 tabindex="0">Inquiries</h5>
        <p tabindex="0">General: <a href="mailto:info@thecelinohotel.com">info@thecelinohotel.com</a> <br>
           Sales: <a href="mailto:sales@thecelinohotel.com">sales@thecelinohotel.com</a> <br>
@@ -18,23 +16,32 @@
           Press Inquiries: <a href="mailto:kia@linkswg.com">kia@linkswg.com</a>
        </p>
      </div>
-     <div class="footer__social">
-
-       <div class="footer__social__col">
-         <h5 tabindex="0">Follow Us <span>@CelinoHotel</span></h5>
-         <p class="social-icons">
-          {% if site.data.social.instagram.username %}
-          <a href="https://instagram.com/{{ site.data.social.instagram.username }}" target="_blank" title="Celino Hotel on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-          {% endif %}
-          {% if site.data.social.facebook.username %}
-          <a href="https://facebook.com/{{ site.data.social.facebook.username }}" target="_blank" title="Celino Hotel on Facebook"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
-          {% endif %}
-          {% if site.data.social.twitter.username %}
-          <a href="https://twitter.com/{{ site.data.social.twitter.username }}" target="_blank" title="Celino Hotel on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-          {% endif %}
-        </p>
+     <div class="footer__inquiries">
+       <h5 tabindex="0">Follow Us</h5>
+       <p class="social-icons mb-2"> <span>@CelinoHotel</span></p>
+       <p>
+        {% if site.data.social.instagram.username %}
+        <a href="https://instagram.com/{{ site.data.social.instagram.username }}" target="_blank" title="Celino Hotel on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        {% endif %}
+        {% if site.data.social.facebook.username %}
+        <a href="https://facebook.com/{{ site.data.social.facebook.username }}" target="_blank" title="Celino Hotel on Facebook"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
+        {% endif %}
+        {% if site.data.social.twitter.username %}
+        <a href="https://twitter.com/{{ site.data.social.twitter.username }}" target="_blank" title="Celino Hotel on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        {% endif %}
+      </p>
+      <h5 tabindex="0">SIGN UP FOR OUR NEWSLETTER</h5>
+      {% include forms/jotform/newsletter.html %}
+     </div>
+     <div class="footer__links">
+       <div class="footer__links__col">
+         <h5 tabindex="0">Links</h5>
+         <ul>
+           <li><a href="/accessibility/">Accessibility</a></li>
+           <li><a href="/privacy-policy/">Privacy Policy</a></li>
+         </ul>
        </div>
-       <div class="footer__social__col footer__social__col--right">
+       <div class="footer__links__col footer__links__col--right">
          <a href="https://highgate.com/" rel="nofollow" target="_blank">
            <img src="/assets/images/highgate_logo.png" alt="highgate">
          </a>
