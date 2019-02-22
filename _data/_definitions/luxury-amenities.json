@@ -12,5 +12,8 @@
     "label": "Description",
     "type": "richtext",
     "required": true
+  },
+  "order": {
+    "type": "integer"
   }
 }

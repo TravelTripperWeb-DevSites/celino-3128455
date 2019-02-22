@@ -193,9 +193,12 @@
             left: 50%;
             width: 60%;
             transform: translate(-50%, -50%);
-
             @include media-breakpoint-up(md) {
               width: auto;
+            }
+            &.x2-image {
+              max-width: 71px;
+              max-height: 41px;
             }
           }
         }
@@ -212,6 +215,8 @@
 }
 
 .luxuxy-amenities {
+  @include make-container;
+  padding: 0;
   h4 {
     margin: 0 0 20px;
     font-size: $type-size-10;
@@ -262,6 +267,7 @@
         order: 1;
       }
       &__holder {
+        width: 100%;
         padding: 0 30px;
         text-align: center;
 
@@ -276,7 +282,8 @@
         h2 {
           margin: 0 0 10px;
           color: $dark-blue-color;
-
+          word-wrap: break-word;
+          overflow-wrap: break-word;
           @include media-breakpoint-up(md) {
             max-width: 490px;
             margin: 0 0 40px;

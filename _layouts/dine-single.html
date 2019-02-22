@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<section class="page-banner">
+<section class="page-banner top-common-gap">
   <div id="pageBanner" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         {% for image in page.image %}
@@ -40,17 +40,16 @@ layout: default
   <img src="/assets/images/dine/cta-details.jpg" alt="GET IN TOUCH">
   <div class="cta__content">
     <h3 tabindex="0">Premium food<br>from day to night</h3>
+    {% comment %}
     {% for menu in page.menu_items %}
      <a href="{{menu.detail}}" class="button"> {{menu.name}} </a>
     {% endfor %}
-    <!-- <a href="/contact/" class="button">Brunch MENU</a>
-    <a href="/contact/" class="button">Lunch  MENU</a>
-    <a href="/contact/" class="button">Dinner MENU</a> -->
+    {% endcomment %}
   </div>
 </section>
 
 <section class="gallery d-none d-md-block" tabindex="-1">
-  <h4 class="text-center">Gallery</h4>
+  <h6 class="text-center text-uppercase mb-3">Gallery</h6>
   <div class="gallery__row"  id="lightgallery">
     {% for image in page.gallery %}
     <div class="gallery__item item fancybox" data-src="{{ image.url_large }}" data-exthumbimage="{{ image.url_large }}">

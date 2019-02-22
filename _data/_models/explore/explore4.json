@@ -7,7 +7,7 @@
   "Lat": "25.79957",
   "Long": "-80.12559",
   "detail": "<p>Miami Beach Boardwalk, South Beach and the surrounding Miami Beach area</p>",
-  "short_detail": "Miami Beach Boardwalk, South Beach and the surrounding Miami Beach area",
+  "short_detail": "A scenic pathway that stretches forty blocks through South Beach. ",
   "image": {
     "name": "Boardwalk_South_Beach_Miami_Beach_Florida",
     "file_name": "Boardwalk_South_Beach_Miami_Beach_Florida.jpg",
@@ -28,5 +28,6 @@
     "alt": "Boardwalk South Beach Miami  ",
     "caption": ""
   },
-  "learn_more_link": "http://www.miamibeachboardwalk.com/miami-beach-boardwalk-map"
+  "learn_more_link": "http://www.miamibeachboardwalk.com/miami-beach-boardwalk-map",
+  "address": "Miami Beach, FL 33140"
 }

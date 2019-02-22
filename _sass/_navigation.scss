@@ -6,73 +6,26 @@
   top: 0;
   z-index: 999;
   width: 100%;
-  height: 100px;
+  height: 55px;
   text-align: center;
+  background-color: $dark-blue-color;
+  transition: $global-transition;
   @include media-breakpoint-up(md) {
-    height: 130px;
+    height: 118px;
   }
-  @include media-breakpoint-up(lg) {
-    height: 140px;
-  }
-  &--flower {
-    background: url("/assets/images/nav-flowers-sm.png") top center repeat-x;
-    background-size: auto 80px;
-    @include media-breakpoint-up(md) {
-      background-size: auto 100px;
-    }
-    @include media-breakpoint-up(lg) {
-      animation: flower 0.3s linear;
-      background-size: unset;
-    }
-  }
-
-  &--gradient {
-    position: fixed;
-    top: 0;
-    height: 110px;
-    background: repeat-x top center, linear-gradient(to bottom, rgba($black,.65) 25%,rgba($black,.06) 93%,rgba($black,0) 100%);
-    transition: $global-transition;
-
-
-    @include media-breakpoint-up(lg) {
-      .hotel-logo {
-        img {
-          max-width: 148px;
-        }
-      }
-
-      .booking-toggle {
-        top: 26px;
-        max-width: 205px;
-        height: 57px;
-        padding-left: 103px;
-        background: url('/assets/images/Leaf_BookNow.png') left 25px center no-repeat;
-
-        .vertical-line {
-          left: 86px;
-          width: 4px;
-        }
-
-        strong {
-          padding-top: 3px;
-          font-size: $type-size-11;
-        }
-      }
-    }
+  &--transparent {
+    background-color: transparent;
   }
 }
 
 .hotel-logo {
   display: inline-block;
   width: 93px;
-  padding-top: 15px;
+  padding-top: 12px;
   transition: $global-transition;
   @include media-breakpoint-up(md) {
-    width: 170px;
-    padding-top: 19px;
-  }
-  @include media-breakpoint-up(lg) {
-    width: 235px;
+    width: 163px;
+    padding-top: 29px;
   }
 
   img {
@@ -87,8 +40,8 @@
 
 .booking-toggle {
   position: absolute;
-  top: 10;
-  right: 25px;
+  top: 19;
+  right: 15px;
   left: auto;
   max-width: 70px;
   height: 60px;
@@ -101,28 +54,17 @@
   vertical-align: middle;
   transition: $global-transition;
   @include media-breakpoint-up(md) {
-    top: 20px;
+    top: 25px;
     right: 20px;
     left: auto;
-    max-width: 200px;
-    padding-left: 104px;
+    max-width: 190px;
+    padding-left: 94px;
     font-size: $type-size-11;
-    line-height: 18px;
-    background: url('/assets/images/leaf.png') left center no-repeat;
-    background-size: auto 70px;
+    line-height: 17.24px;
+    background: url("/assets/images/leaf.png") left center no-repeat;
+    background-size: 58px 58px;
   }
-  @include media-breakpoint-up(lg) {
-    top: 20px;
-    right: 55px;
-    left: auto;
-    max-width: 245px;
-    height: 83px;
-    padding-left: 155px;
-    font-size: $type-size-9;
-    line-height: 25px;
-    background: url('/assets/images/leaf.png') left center no-repeat;
-    background-size: unset;
-  }
+
 
   &:hover {
     color: $white;
@@ -133,57 +75,39 @@
     position: absolute;
     left: 117px;
     display: none;
-    width: 5px;
+    width: 4px;
     height: 100%;
     vertical-align: middle;
     background-color: $white;
     transition: $global-transition;
     @include media-breakpoint-up(md) {
-      left: 80px;
-      display: inline-block;
-    }
-    @include media-breakpoint-up(lg) {
-      left: 117px;
+      left: 72px;
       display: inline-block;
     }
   }
 
   strong {
     display: inline-block;
-    padding-top: 15px;
+    padding-top: 16px;
     font-weight: 400;
-    text-shadow: -1px 3px 10px $black;
     letter-spacing: rem-calc(4.3);
     transition: $global-transition;
-    @include media-breakpoint-up(lg) {
-      padding-top: 16px;
-      text-shadow: -1px 1px 20px $black;
-    }
-    @include media-breakpoint-up(lg) {
-      padding-top: 16px;
-    }
   }
 }
 
 .menu-toggle {
   position: absolute;
-  top: 14px;
+  top: 16px;
   right: auto;
-  left: 25px;
+  left: 20px;
   display: block;
-  width: 25px;
-  height: 22px;
+  width: 26px;
+  height: 24px;
   font-size: 0;
   cursor: pointer;
   @include media-breakpoint-up(md) {
-    top: 24px;
-    right: auto;
-    left: 25px;
-    width: 44px;
-    height: 40px;
-  }
-  @include media-breakpoint-up(lg) {
-    top: 24px;
+    top: 46px;
+    left: 30px;
   }
 
   span {
@@ -192,26 +116,15 @@
     width: 100%;
     height: 3px;
     background-color: $white;
-    box-shadow: -1px 3px 10px $black;
-    @include media-breakpoint-up(md) {
-      height: 5px;
-      box-shadow: -1px 3px 20px $black;
-    }
 
     &:after {
       position: absolute;
-      top: 9.4px;
+      top: 9.49px;
       left: 0;
       width: 100%;
       height: 3px;
       content: '';
       background-color: $white;
-      box-shadow: -1px 3px 10px $black;
-      @include media-breakpoint-up(md) {
-        top: 17.5px;
-        height: 5px;
-        box-shadow: -1px 3px 20px $black;
-      }
     }
 
     &:before {
@@ -222,12 +135,6 @@
       height: 3px;
       content: '';
       background-color: $white;
-      box-shadow: -1px 3px 10px $black;
-      @include media-breakpoint-up(md) {
-        top: 35px;
-        height: 5px;
-        box-shadow: -1px 3px 20px $black;
-      }
     }
   }
 }
@@ -246,6 +153,7 @@
   @include media-breakpoint-up(md) {
     width: 50%;
   }
+
   &__wrap {
     position: relative;
     width: 100%;
@@ -266,7 +174,6 @@
     height: 30px;
     cursor: pointer;
     outline: 0;
-    
     @include media-breakpoint-up(md) {
       top: 50px;
       right: 30px;
@@ -283,6 +190,7 @@
       height: 3px;
       content: '';
       background-color: $gold-color;
+      transition: $global-transition;
       transform: rotate(45deg);
       @include media-breakpoint-up(md) {
         width: 60px;
@@ -299,10 +207,18 @@
       height: 3px;
       content: '';
       background-color: $gold-color;
+      transition: $global-transition;
       transform: rotate(-45deg);
       @include media-breakpoint-up(md) {
         width: 60px;
         height: 4px;
+      }
+    }
+
+    &:hover {
+      &:after,
+      &:before {
+        background-color: $light-gold;
       }
     }
   }
@@ -318,9 +234,6 @@ nav {
 
     span {
       display: block;
-      @include media-breakpoint-up(md) {
-        display: inline-block;
-      }
     }
   }
 
@@ -337,7 +250,7 @@ nav {
     font-size: $type-size-11;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: .2rem;
+    letter-spacing: 0.2rem;
     list-style: none;
     @include media-breakpoint-up(md) {
       font-size: $type-size-7;
@@ -350,7 +263,7 @@ nav {
     transition: $global-transition;
 
     &:hover {
-      color: $gold-color;
+      color: $light-gold;
     }
   }
   // Override white-space for nested lists

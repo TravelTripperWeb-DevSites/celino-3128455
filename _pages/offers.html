@@ -7,7 +7,7 @@ meta_tags:
   robots:
 ---
 
-<section class="page-banner">
+<section class="page-banner top-common-gap">
   <div id="pageBanner" class="carousel slide" data-ride="carousel">
   {% assign banners = site.data._models.page-banners | where: 'page_name', 'Offers' %}
     {% for banner in banners | limit: 1 %}
@@ -27,7 +27,7 @@ meta_tags:
     {% endfor %}
   </div>
 </section>
-<!-- 
+<!--
 <section class="intro">
   <div class="intro__row">
     <div class="intro__content">
@@ -74,7 +74,7 @@ meta_tags:
           </a>
           <div class="offers__item__content">
             <h4 tabindex="0">
-              <a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]" aria-label="[[ offer.rate_plan_name ]]">Dine & Drink at Celino</a>
+              <a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]" aria-label="[[ offer.rate_plan_name ]]" ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></a>
             </h4>
             <p tabindex="0" ng-bind-html="offer.short_description | renderHTMLCorrectly"></p>
             <a ng-href="[[offer.promo_url]]" class="button button--arrow" aria-label="[[ offer.rate_plan_name ]]">Book Now</a>

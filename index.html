@@ -7,11 +7,11 @@ meta_tags:
   robots:
 ---
 
-<section class="hero-banner" style="background-image: url('/assets/images/home/beach-miami-celino-hotel.jpg');">
+<section class="hero-banner hero-banner--home" style="background-image: url('/assets/images/home/beach-miami-celino-hotel.jpg');">
   <div class="hero-banner__detail wow fadeIn" data-wow-delay="0.5s">
     {% regionblock page_title, type:header %}
     <h1 tabindex="0">Miami Beach <br>AS YOU IMAGINED IT</h1>
-    <a href="/about/" class="button button--arrow">Learn More</a>
+    <a href="/about/" class="button button--large button--arrow">Learn More</a>
     {% endregionblock %}
   </div>
 </section>
@@ -34,7 +34,7 @@ meta_tags:
           <p>Gorgeously manicured but not overly fussy. Party, naturally. That’s our new-fashioned oceanfront hideaway tucked into the scene of Ocean Drive. At the iconic Celino South Beach hotel, the eclectic range of 123 art deco inspired modern bedrooms, including floor to ceiling ocean view suites and a new building follow in storied footsteps with deep residential comforts and a few pools to do your thing. Flit away the afternoon on the rooftop sun deck, dip in the glass-bottom pool, dine al fresco, or by the courtyard fire pit. It’s magical at all hours. All you have to do is stay.</p>
         </div>
 
-        <a href="#" class="button button--arrow button--arrow--gold">Amenities</a>
+        <a href="/about/#hotel-amenities" class="button button--arrow button--arrow--gold">Amenities</a>
         {% endregionblock %}
       </article>
     </div>
@@ -71,7 +71,6 @@ meta_tags:
           <div class="home-stay__room-detail">
             <article>
               <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></h2>
-              <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
               <p tabindex="0">[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
 
               <div class="button-holder">
@@ -94,7 +93,6 @@ meta_tags:
           <div class="home-stay__room-detail">
             <article>
               <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></h2>
-              <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
               <p tabindex="0">[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
 
               <div class="button-holder">
@@ -116,7 +114,7 @@ meta_tags:
           <div class="home-stay__room-detail">
             <article>
               <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></h2>
-              <h4><a ng-href="{{ site.reztripUrl }}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]"><span>Tonight’s Rate</span> <strong ng-show="room.todayRate != 'CHECK AVAILABILITY'">[[ portalInfo.default_currency_symbol ]] [[ room.todayRate ]] /  night</strong> <em ng-show="room.todayRate == 'CHECK AVAILABILITY'">[[ room.todayRate ]]</em></a></h4>
+
               <p tabindex="0">[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
 
               <div class="button-holder">
@@ -141,7 +139,6 @@ meta_tags:
       Dine
       {% endregionblock %}
     </div>
-    <div class="dine-intro__categories"></div>
   </div>
   {% assign dinelist = site.data._models.dine-drink | sort: "order" %}
   {% for dine in dinelist %}

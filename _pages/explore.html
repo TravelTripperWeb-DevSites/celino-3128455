@@ -7,7 +7,7 @@ meta_tags:
   robots:
 ---
 
-<section class="page-banner">
+<section class="page-banner top-common-gap">
   <div id="pageBanner" class="carousel slide" data-ride="carousel">
   {% assign banners = site.data._models.page-banners | where: 'page_name', 'Explore' %}
     {% for banner in banners | limit: 1 %}
@@ -64,12 +64,6 @@ meta_tags:
         <a class="nav-link" data-toggle="tab" data-category="shopping" href="#">shopping</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" data-category="dining" href="#">dining</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" data-category="nightlife" href="#">nightlife</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" data-toggle="tab" data-category="culture" href="#">culture</a>
       </li>
     </ul>
@@ -79,7 +73,58 @@ meta_tags:
 
 {% include attractions.html %}
 
-<!-- <section class="enjoy">
+{% assign shoppingItems =  site.data._models.explore | where: 'categories','shopping' %}
+{% if shoppingItems.size > 0 %}
+<section class="offers-slider attractions-slider">
+  <div class="offers-slider__wrap">
+    <h3 tabindex="0">Shopping</h3>
+    <div class="offers-slider__items" id="shopping-gallery">
+      {% for attraction in shoppingItems %}
+      <div data-filter="{{attraction.categories}}">
+        <a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank" tabindex="-1">
+          <figure>
+            <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
+          </figure>
+        </a>
+        <div class="offers-slider__detail">
+          <h4><a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank">{{ attraction.name }}</a></h4>
+          <p tabindex="0">{{ attraction.short_detail }}</p>
+          <a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank" class="button">Learn More</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% assign cultureItems =  site.data._models.explore | where: 'categories','culture' %}
+{% if cultureItems.size > 0 %}
+<section class="offers-slider attractions-slider" >
+  <div class="offers-slider__wrap">
+    <h3 tabindex="0">Culture</h3>
+    <div class="offers-slider__items" id="culture-gallery">
+      {% for attraction in cultureItems %}
+      <div data-filter="{{attraction.categories}}">
+        <a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank" tabindex="-1">
+          <figure>
+            <img src="{{ attraction.image.url_medium }}" alt="{{ attraction.image.alt }}">
+          </figure>
+        </a>
+        <div class="offers-slider__detail">
+          <h4><a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank">{{ attraction.name }}</a></h4>
+          <p tabindex="0">{{ attraction.short_detail }}</p>
+          <a href="{{ attraction.learn_more_link }}" rel="nofollow" target="_blank" class="button">Learn More</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% comment %}
+<section class="enjoy">
   <div class="enjoy__wrap">
     <div class="enjoy__title" tabindex="0">
       {% regionblock dine_title, type: header %}
@@ -109,6 +154,7 @@ meta_tags:
       </div>
     </div>
   {% endfor %}
-</section> -->
+</section>
+{% endcomment %}
 
 {% include instagram.html %}

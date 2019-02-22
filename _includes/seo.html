@@ -20,7 +20,12 @@
 
 <title>{{ seo_title }}</title>
 
+{% if page.seo_description %}
+{% assign seo_description = page.seo_description | default: site.description %}
+{% elsif page.meta_description %}
 {% assign seo_description = page.meta_description | default: site.description %}
+{% endif %}
+
 {% if seo_description %}
   {% assign seo_description = seo_description | markdownify | strip_html | strip_newlines | normalize_whitespace | escape_once %}
 {% endif %}

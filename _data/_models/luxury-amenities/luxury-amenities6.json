@@ -1,0 +1,33 @@
+{
+  "order": 2,
+  "title": "Peekaboo Glass-Bottom Pool",
+  "image": {
+    "name": "Renderings Rooftop pool",
+    "content_type": "image/jpeg",
+    "date_added": "2019-02-14-170603",
+    "url_thumb": "//res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1550181963/l61fryjmnxeexqrx8rx0.jpg",
+    "url_xsmall": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1550181963/l61fryjmnxeexqrx8rx0.jpg",
+    "url_small": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1550181963/l61fryjmnxeexqrx8rx0.jpg",
+    "url_medium": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1550181963/l61fryjmnxeexqrx8rx0.jpg",
+    "url_large": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1550181963/l61fryjmnxeexqrx8rx0.jpg",
+    "width": 1920,
+    "height": 1080,
+    "format": "jpg",
+    "url": "https://res.cloudinary.com/traveltripperweb/image/upload/v1550181963/l61fryjmnxeexqrx8rx0.jpg",
+    "resource_type": "image",
+    "size": 1666065,
+    "s3_url": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-14-170604/l61fryjmnxeexqrx8rx0.jpg",
+    "s3_url_large": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-14-170604/large_l61fryjmnxeexqrx8rx0.jpg",
+    "s3_url_medium": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-14-170604/medium_l61fryjmnxeexqrx8rx0.jpg",
+    "s3_url_small": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-14-170604/small_l61fryjmnxeexqrx8rx0.jpg",
+    "s3_url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-14-170604/xsmall_l61fryjmnxeexqrx8rx0.jpg",
+    "s3_url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-14-170604/thumb_l61fryjmnxeexqrx8rx0.jpg",
+    "git_file_name": "_assets/image_data/Renderings-Rooftop-pool.jpg.json",
+    "path": "https://res.cloudinary.com/traveltripperweb/image/upload/v1550181963/l61fryjmnxeexqrx8rx0.jpg",
+    "file_size": null,
+    "alt": "Renderings Rooftop pool",
+    "caption": "",
+    "description": ""
+  },
+  "description": "<p>Exclusive and intimate rooftop pool with sprawling views of the beach and Ocean Drive with a magical touch &ndash; a peekaboo glass bottom that is visible from the Atrium below. Reserve a balcony or terrace suite for guaranteed access and release your inner mermaid or merman.</p>\n<p>- 20-foot glass-bottom rooftop pool</p>\n<p>- Sun care products</p>\n<p>- Full waiter service</p>\n<p>&nbsp;</p>"
+}

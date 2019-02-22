@@ -1,0 +1,22 @@
+{
+  "name": "Wynwood Walls",
+  "content_type": "image/jpeg",
+  "date_added": "2019-02-07-182201",
+  "url_thumb": "//res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1549581721/l9xluaekzuj1mczsmbnr.jpg",
+  "url_xsmall": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1549581721/l9xluaekzuj1mczsmbnr.jpg",
+  "url_small": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1549581721/l9xluaekzuj1mczsmbnr.jpg",
+  "url_medium": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1549581721/l9xluaekzuj1mczsmbnr.jpg",
+  "url_large": "//res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1549581721/l9xluaekzuj1mczsmbnr.jpg",
+  "width": 604,
+  "height": 470,
+  "format": "jpg",
+  "url": "https://res.cloudinary.com/traveltripperweb/image/upload/v1549581721/l9xluaekzuj1mczsmbnr.jpg",
+  "resource_type": "image",
+  "size": 242880,
+  "s3_url": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-07-182212/l9xluaekzuj1mczsmbnr.jpg",
+  "s3_url_large": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-07-182212/large_l9xluaekzuj1mczsmbnr.jpg",
+  "s3_url_medium": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-07-182212/medium_l9xluaekzuj1mczsmbnr.jpg",
+  "s3_url_small": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-07-182212/small_l9xluaekzuj1mczsmbnr.jpg",
+  "s3_url_xsmall": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-07-182212/xsmall_l9xluaekzuj1mczsmbnr.jpg",
+  "s3_url_thumb": "//cdn.traveltripper.io/site-assets/192_424_22078/media/2019-02-07-182212/thumb_l9xluaekzuj1mczsmbnr.jpg"
+}

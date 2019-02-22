@@ -21,7 +21,7 @@
   },
   "categories": {
     "type": "select",
-    "options": ["attractions","shopping","dining","nightlife","culture"]
+    "options": ["attractions","shopping","culture"]
   },
   "learn_more_link": {
     "label": "Learn More URL",

@@ -5,7 +5,7 @@
 $(function() {
 
   $('.explore-map .nav-link').click(function(){
-    var $filter = $(this).attr("data-category");;
+    var $filter = $(this).attr("data-category");
     $(".attractions-slider").removeClass("active", function(){
       $("#"+$filter+"-gallery").closest(".attractions-slider").addClass("active");
     });
@@ -20,15 +20,12 @@ $(function() {
    var header = $("#home-nav");
    $(window).on("load resize scroll",function() {
        var scroll = $(window).scrollTop();
-
-       if (scroll >= 170) {
-         header.removeClass('top-nav--flower').addClass("top-nav--gradient");
-         header.css({'top':'','bottom':''});
-       } else {
-         var scrollTopPx = $(window).scrollTop();
-         header.css({'top': '-'+scrollTopPx+'px'});
-         header.removeClass("top-nav--gradient").addClass('top-nav--flower');
-       }
+         if (scroll >= 110) {
+           header.removeClass('top-nav--transparent');
+         } else {
+           var scrollTopPx = $(window).scrollTop();
+           header.addClass("top-nav--transparent");
+         }
    });
 
 
@@ -264,10 +261,19 @@ $('#departure_date').val(ToDate);
   });
 
   //wow js _activate
-  new WOW().init({
-    resetAnimation: false
-  });
+  // new WOW().init({
+  //   resetAnimation: false   // removed wow js
+  // });
 
+});
+
+$(window).on('load', function () {
+  // if window is loaded will hide on load
+  if ($('.preloader')) {
+    $('.preloader').delay(450).fadeOut('slow', function () {
+      $(this).remove();
+    });
+  }
 });
 
 $(document).ready(function() {
@@ -287,9 +293,38 @@ $(document).ready(function() {
     });
   }
 
+  $('#signup .alert').css('display','none');
+   function getParameterByName(name, url) {
+           if (!url) url = window.location.href;
+           name = name.replace(/[\[\]]/g, "\\$&");
+           var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+               results = regex.exec(url);
+           if (!results) return null;
+           if (!results[2]) return '';
+           return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+  if(getParameterByName('submit')=='success'){
+       $('#signup .alert').css('display','block');
+  }
 });
+
 
 //parellex animation
 setTimeout(function() {
    $(window).trigger('resize').trigger('scroll');
 }, 3000); // wait 500ms
+
+$(window).on('load', function() {
+  //anchor scroll on loaded
+  // *only* if we have anchor on the url
+  if(window.location.hash) {
+      var offset = -100;
+      var hashId = window.location.hash;
+      if((window.location.pathname.indexOf('room') || window.location.pathname.indexOf('offer')) == -1) {
+        // smooth scroll to the anchor id
+        $('html, body').animate({
+            scrollTop: ($(window.location.hash).offset().top + offset) + 'px'
+        }, 1000);
+      }
+  }
+});

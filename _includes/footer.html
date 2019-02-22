@@ -1,4 +1,5 @@
  <div class="footer">
+ <div class="footer">
    <div class="footer__wrap">
      <div class="footer__logo">
        <a href="/"><img src="/assets/images/celino-logo.png" alt="{{ site.name }}"></a>
@@ -8,19 +9,27 @@
        <p tabindex="0"><a href="https://goo.gl/maps/d26PK4joDck" target="_blank" rel="nofollow">640 Ocean Drive<br>Miami Beach, Florida 33139</a> <br>
          (p): <a href="tel:305.685.2000">305.685.2000</a>
        </p>
-     </div>
-     <div class="footer__inquiries">
        <h5 tabindex="0">Inquiries</h5>
        <p tabindex="0">General: <a href="mailto:info@thecelinohotel.com">info@thecelinohotel.com</a> <br>
           Sales: <a href="mailto:sales@thecelinohotel.com">sales@thecelinohotel.com</a> <br>
-          PR: <a href="mailto:theCelino@Quinn.PR">theCelino@Quinn.PR</a>
+          PR: <a href="mailto:theCelino@Quinn.PR">theCelino@Quinn.PR</a><br>
+          Press Inquiries: <a href="mailto:kia@linkswg.com">kia@linkswg.com</a>
        </p>
      </div>
-     <div class="footer__social">
-
-       <div class="footer__social__col">
-         <h5 tabindex="0">Follow Us <span>@CelinoHotel</span></h5>
-         <p class="social-icons">
+     <div class="footer__inquiries">
+      <h5 tabindex="0">SIGN UP FOR OUR NEWSLETTER</h5>
+      {% include forms/jotform/newsletter.html %}
+     </div>
+     <div class="footer__links">
+       <div class="footer__links__col">
+         <h5 tabindex="0">Links</h5>
+         <ul>
+           <li><a href="/accessibility/">Accessibility</a></li>
+           <li><a href="/privacy-policy/">Privacy Policy</a></li>
+         </ul>
+         <h5 class="pt-4" tabindex="0">Follow Us</h5>
+         <p class="social-icons mb-2"> <span>@CelinoHotel</span></p>
+         <p>
           {% if site.data.social.instagram.username %}
           <a href="https://instagram.com/{{ site.data.social.instagram.username }}" target="_blank" title="Celino Hotel on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
           {% endif %}
@@ -32,7 +41,7 @@
           {% endif %}
         </p>
        </div>
-       <div class="footer__social__col footer__social__col--right">
+       <div class="footer__links__col footer__links__col--right">
          <a href="https://highgate.com/" rel="nofollow" target="_blank">
            <img src="/assets/images/highgate_logo.png" alt="highgate">
          </a>
