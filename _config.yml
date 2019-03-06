@@ -64,8 +64,23 @@ sass:
   - _sass
   style: compressed
 permalink: pretty
-timezone: 
+timezone:
+data_paginate:
+  per_page: 4
+  data: 'blog'
+  path: 'blog/page:num/'
+  pagination_template: '/blog/index.html'
+  sort_field: 'date'
+  sort_reverse: true
+
+paginate_path: "page:num"
 page_gen:
 - data: dine-drink
   template: dine-single
   dir: dine-drink
+- data: 'blog'
+  template: 'blog-single'
+  dir: '/blog/'
+- data: 'category'
+  template: 'blog-category'
+  dir: '/blog/category/'

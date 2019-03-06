@@ -1,0 +1,60 @@
+---
+layout: default
+title: Blog | Aston Waikiki Beach Hotel
+meta_description: With so many Waikiki hotels to choose from, Aston Waikiki Beach Hotel goes the extra mile to ensure our guests have the best experiences. Come see why our modern accommodations and phenomenal location on Kalakaua Avenue across from Kuhio Beach Park captures the heart of every guest!
+meta_tags:
+  robots:
+---
+
+<section class="hero-banner hero-banner--inner top-common-gap" style="background-image: url('/assets/images/blog/hero.jpg');">
+  <div class="hero-banner__detail wow fadeIn" data-wow-delay="0.5s">
+    <h1 tabindex="0">South Beach Blog</h1>
+  </div>
+</section>
+
+<section class="blog">
+  <div class="blog__wrap">
+    <div class="blog__categories">
+      {% include blog-categories.html %}
+    </div>
+    <div class="blog__list">
+      {% for post in data_paginator.posts %}
+      <div class="blog__item">
+        <figure class="blog__image">
+          <a href="/blog/{{ post.url_friendly_name }}/">
+            <img src="{{ post.blogimage.url_medium }}" alt="{{ post.title }}">
+          </a>
+        </figure>
+        <div class="blog__heading"><a href="/blog/{{ post.url_friendly_name }}/">{{ post.title }}</a></div>
+        <div class="blog__info">
+          <span class="blog__date">
+            <time>{% assign d = post.date | date: "%-d" %}
+                        {{ post.date | date: "%B" }}
+                        {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
+                        {{ post.date | date: "%Y" }}</time> </span>
+                          | <a href="/blog/category/{{post.category.url_friendly_name}}/" class="blog__category">{{ post.category.title }}</a>
+        </div>
+        {% if post.short_description != "" %}
+          {{ post.short_description }}
+        {% endif %}
+        <div class="btn-holder">
+          <a href="/blog/{{ post.url_friendly_name }}/" class="button button--gold">Read More</a>
+        </div>
+      </div>
+      {% endfor %}
+
+{% if data_paginator.total_pages > 1 %}
+            <div class="page-number">Page: {{ data_paginator.page }} of {{ data_paginator.total_pages }}</div>
+              <ul class="pagination justify-content-center">
+                <li class="page-item {% if data_paginator.previous_page %}{% else %}disabled{% endif %}">
+                  <a class="page-link button button--arrow button--arrow--paginate button--arrow--paginate--left" href="{% if data_paginator.previous_page %}{{ data_paginator.previous_page_path }}{% else %}#{% endif %}">Prev</a>
+                </li>
+                <li class="page-item {% if data_paginator.next_page %}{% else %}disabled{% endif %}">
+                  <a class="page-link button button--arrow button--arrow--paginate" href="{% if data_paginator.next_page %}{{ data_paginator.next_page_path }}{% else %}#{% endif %}">Next</a>
+                </li>
+              </ul>
+            {% endif %}
+    </div>
+
+  </div>
+</section>
