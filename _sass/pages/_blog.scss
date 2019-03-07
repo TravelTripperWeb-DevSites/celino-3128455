@@ -166,16 +166,13 @@
       &:focus {
         outline: none;
       }
-      input {
-        &::-webkit-input-placeholder { // Chrome/Opera/Safari
-          font-family: $text-font;
-          font-size: $type-size-12;
-          font-style: italic;
-          line-height: $font-size-base;
-          color: $dark-gray;
-          letter-spacing: .5px;
-        }
-
+      &::-webkit-input-placeholder { // Chrome/Opera/Safari
+        font-family: $text-font;
+        font-size: $type-size-12;
+        font-style: italic;
+        line-height: $font-size-base;
+        color: $dark-gray;
+        letter-spacing: .5px;
       }
     }
     &__btn {
@@ -298,6 +295,37 @@
   &__full-description {
     margin-bottom: 20px;
     border-bottom: 1px solid $dark-gray;
+  }
+  &__offers-signup {
+    display: none;
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+    input[type='email'] {
+      width: 100%;
+      padding: 12px 0 12px 20px;
+      border: 1px solid $dark-gray;
+      border-radius: 0;
+      &:focus {
+        outline: none;
+      }
+      &::-webkit-input-placeholder { // Chrome/Opera/Safari
+        font-family: $text-font;
+        font-size: $type-size-12;
+        font-style: italic;
+        line-height: $font-size-base;
+        color: $dark-gray;
+        letter-spacing: .5px;
+      }
+    }
+    label {
+      a {
+        text-decoration: underline;
+      }
+    }
+    button {
+      cursor: pointer;
+    }
   }
   &__share {
     margin-bottom: 70px;

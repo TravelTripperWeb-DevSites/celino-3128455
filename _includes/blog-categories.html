@@ -53,3 +53,21 @@
   </li>
   {% endfor %}
 </ul>
+<div class="blog__offers-signup">
+  <div class="blog__sub-heading">subscribe to the blog and receive exclusive discounts </div>
+  <div class="heading-seperator"></div>
+  <form action="https://submit.jotform.me/submit/{{ site.data.forms.jotform.offers-signup-id }}/" method="post" name="form_{{ site.data.forms.jotform.offers-signup-id }}" id="{{ site.data.forms.jotform.offers-signup-id }}">
+    <input type="hidden" name="formID" value="{{ site.data.forms.jotform.offers-signup-id }}" />
+    <div class="form-group">
+      <input type="email" name="q3_emailAddress" placeholder="Email Address" aria-label="Enter Your Email Address" required>
+    </div>
+    <div class="form-group">
+      <label for="agreeToTerms">
+        <input id="agreeToTerms" type="checkbox" name="q4_agreeTo[]" value="" aria-label="Press Spacebar to agree to terms of Service and Privacy Policy" required> I agree to the <a href="/terms/" target="_blank">Terms of Service</a> and <a href="/privacy-policy/" target="_blank">Privacy Policy</a>
+      </label>
+    </div>
+    <div class="form-group">
+      <button type="submit" name="button" class="button">Subscribe</button>
+    </div>
+  </form>
+</div>
