@@ -5,31 +5,26 @@ meta_description: With so many Waikiki hotels to choose from, Aston Waikiki Beac
 meta_tags:
   robots:
 ---
-
-<div data-resize class="hero-banner background-cover" style="background-image: url('/assets/images/home/home-hero.jpg')">
-  
-  <div class="banner-detail align-self-center">
-    <h1>Aston Waikiki Beach Hotel Blog</h1>
-    <p>Your guide to Honolulu culture, local cuisine, nightlife, outdoor activities, and shopping.</p>
+<section class="hero-banner hero-banner--inner top-common-gap" style="background-image: url('/assets/images/blog/hero.jpg');">
+  <div class="hero-banner__detail wow fadeIn" data-wow-delay="0.5s">
+    <h1 tabindex="0">South Beach Blog</h1>
   </div>
-</div>
+</section>
 
 <section class="blog">
-  <div class="blog__row">
+  <div class="blog__wrap">
     <div class="blog__categories">
       {% include blog-categories.html %}
     </div>
     <div class="blog__list">
-      <div class="blog__item">
-
-          <h3>Search Results:</h3>
-          <ul id="search-results" class="blog-results"></ul>
-
-      </div>
+      <h3 class="blog__search-heading">Search Results:</h3>
+      <ul id="search-results" class="blog__search-results"></ul>
     </div>
-
   </div>
 </section>
+
+{% include cta-two-column.html %}
+{% include instagram.html %}
 
 <script>
   window.store = {

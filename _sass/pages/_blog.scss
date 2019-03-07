@@ -4,6 +4,16 @@
   &__category-intro {
     text-align: center;
   }
+  &__search-heading {
+    margin-top: 0;
+    font-family: $text-font;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: $dark-blue-color;
+  }
+  &__search-results {
+    padding: 0;
+  }
   &__category-heading {
     position: relative;
     margin-bottom: 32px;
