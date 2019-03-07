@@ -194,9 +194,11 @@
     margin-top: 20px;
     margin-bottom: 50px;
     &__item {
-      display: none;
-      @include media-breakpoint-up(md) {
-        display: block;
+      &.sidebar-item {        
+        display: none;
+        @include media-breakpoint-up(md) {
+          display: block;
+        }
       }
       margin-bottom: 15px;
       a {

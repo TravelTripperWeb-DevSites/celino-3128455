@@ -16,7 +16,7 @@
   <div class="heading-seperator"></div>
   {% for recentpost in site.data._models.blog | limit: 5 %}
   {% if recentpost.url_friendly_name != page.url_friendly_name %}
-  <div class="blog__others__item">
+  <div class="blog__others__item sidebar-item">
     <a href="/blog/{{recentpost.url_friendly_name }}/">
       <figure style="background-image:url('{{recentpost.blogimage.url_xsmall}}');" class="bg-cover"></figure>
       <div class="blog__others__item__right">

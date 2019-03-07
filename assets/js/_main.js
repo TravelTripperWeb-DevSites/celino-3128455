@@ -17,7 +17,7 @@ $(function() {
   // Blog categories
   $(".blog__others .toggle-arrow").click(function(){
     $(this).toggleClass('rotate');
-    $(".blog__others__item").stop().slideToggle();
+    $(".blog__others__item.sidebar-item").stop().slideToggle();
   });
   // Blog categories
   $(".categories-list-heading .toggle-arrow").click(function(){
