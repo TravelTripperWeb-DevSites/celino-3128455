@@ -13,7 +13,7 @@
 <div class="blog__others">
 
   <div class="blog__sub-heading">Recent Posts</div>
-
+  <div class="heading-seperator"></div>
   {% for recentpost in site.data._models.blog | limit: 5 %}
   {% if recentpost.url_friendly_name != page.url_friendly_name %}
   <div class="blog__others__item">
@@ -35,6 +35,7 @@
 </div>
 
 <div class="blog__sub-heading">Categories <span class="toggle-arrow"><i class="fa fa-angle-down"></i></span></div>
+<div class="heading-seperator"></div>
 
 <ul class="categories-list">
   {% assign categories = site.data._models.category | sort:'order' %}
