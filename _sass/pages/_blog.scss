@@ -329,8 +329,10 @@
       z-index: 9;
       padding: 10px 20px;
       font-size: $type-size-11;
+      color: $white;
       cursor: pointer;
       background-color: $light-gold;
+      border-radius: 10px 0 0 10px;
       opacity: .8;
       @include media-breakpoint-up(md) {
         display: none;
