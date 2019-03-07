@@ -5,7 +5,6 @@
   &__wrap {
     @include make-row;
   }
-
   &__list {
     @include make-col-ready;
     order: 2;
@@ -53,9 +52,13 @@
     }
   }
   &__date {
+    margin-right: 8px;
     time {
       color: $dark-gray;
     }
+  }
+  &__category {
+    margin-left: 8px;
   }
   &__categories {
     @include make-col-ready;
@@ -63,6 +66,124 @@
     @include media-breakpoint-up(md) {
       @include make-col(4);
       order: 2;
+    }
+  }
+  &__sub-heading {
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  &__search {
+    position: relative;
+    margin-bottom: 30px;
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+    &__box {
+      width: 100%;
+      padding: 15px 0 15px 15px;
+      border: 1px solid $input-border;
+      border-radius: 0;
+      &:focus {
+        outline: none;
+      }
+    }
+    &__btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 14px;
+      font-size: 20px;
+      color: $input-border;
+      cursor: pointer;
+      background-color: transparent;
+      border: 0;
+      &:focus {
+        outline: line;
+      }
+    }
+  }
+  &__others {
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+    &__item {
+      margin-bottom: 15px;
+      a {
+        display: block;
+        overflow: hidden;
+        h6 {
+          margin: 0 0 15px;
+          font-size: $font-size-base;
+          line-height: normal;
+          color: $dark-blue-color;
+          letter-spacing: .5px;
+        }
+        .blog__date {
+          font-size: $type-size-12;
+          color: $dark-gray;
+        }
+      }
+      figure {
+        display: block;
+        float: left;
+        width: 30%;
+        height: 80px;
+        margin: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+      }
+      &__right {
+        float: left;
+        width: 65%;
+        margin-left: 5%;
+      }
+    }
+  }
+  .toggle-arrow {
+    position: absolute;
+    right: 10px;
+    display: inline-block;
+    padding: 3px 15px;
+    cursor: pointer;
+    transition: $global-transition;
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+    &.rotate {
+      transform: rotate(180deg);
+    }
+  }
+  .categories-list {
+    display: none;
+    margin: 0 0 40px;
+    padding: 0;
+    @include media-breakpoint-up(md) {
+      display: block !important;
+    }
+    li {
+      position: relative;
+      a {
+        position: relative;
+        display: block;
+        padding: 10px 0;
+        font-family: $global-font-family;
+        font-size: $font-size-base;
+        color: $dark-blue-color;
+        border-bottom: 1px solid $lighter-gray;
+        transition: $global-transition;
+        &:hover {
+          color: $primary-color;
+        }
+        span {
+          color: $primary-color;
+        }
+      }
     }
   }
 }
