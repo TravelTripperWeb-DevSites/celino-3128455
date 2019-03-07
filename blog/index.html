@@ -5,7 +5,6 @@ meta_description: With so many Waikiki hotels to choose from, Aston Waikiki Beac
 meta_tags:
   robots:
 ---
-
 <section class="hero-banner hero-banner--inner top-common-gap" style="background-image: url('/assets/images/blog/hero.jpg');">
   <div class="hero-banner__detail wow fadeIn" data-wow-delay="0.5s">
     <h1 tabindex="0">South Beach Blog</h1>
@@ -29,13 +28,13 @@ meta_tags:
         <div class="blog__info">
           <span class="blog__date">
             <time>{% assign d = post.date | date: "%-d" %}
-                        {{ post.date | date: "%B" }}
-                        {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
-                        {{ post.date | date: "%Y" }}</time> </span>
-                          | <a href="/blog/category/{{post.category.url_friendly_name}}/" class="blog__category">{{ post.category.title }}</a>
+              {{ post.date | date: "%B" }}
+              {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
+              {{ post.date | date: "%Y" }}</time> </span>
+          | <a href="/blog/category/{{post.category.url_friendly_name}}/" class="blog__category">{{ post.category.title }}</a>
         </div>
         {% if post.short_description != "" %}
-          {{ post.short_description }}
+        {{ post.short_description }}
         {% endif %}
         <div class="btn-holder">
           <a href="/blog/{{ post.url_friendly_name }}/" class="button button--gold">Read More</a>
@@ -43,17 +42,17 @@ meta_tags:
       </div>
       {% endfor %}
 
-{% if data_paginator.total_pages > 1 %}
-            <div class="page-number">Page: {{ data_paginator.page }} of {{ data_paginator.total_pages }}</div>
-              <ul class="pagination justify-content-center">
-                <li class="page-item {% if data_paginator.previous_page %}{% else %}disabled{% endif %}">
-                  <a class="page-link button button--arrow button--arrow--paginate button--arrow--paginate--left" href="{% if data_paginator.previous_page %}{{ data_paginator.previous_page_path }}{% else %}#{% endif %}">Prev</a>
-                </li>
-                <li class="page-item {% if data_paginator.next_page %}{% else %}disabled{% endif %}">
-                  <a class="page-link button button--arrow button--arrow--paginate" href="{% if data_paginator.next_page %}{{ data_paginator.next_page_path }}{% else %}#{% endif %}">Next</a>
-                </li>
-              </ul>
-            {% endif %}
+      {% if data_paginator.total_pages > 1 %}
+      <div class="page-number">Page: {{ data_paginator.page }} of {{ data_paginator.total_pages }}</div>
+      <ul class="pagination justify-content-center">
+        <li class="page-item {% if data_paginator.previous_page %}{% else %}disabled{% endif %}">
+          <a class="page-link button button--arrow button--arrow--paginate button--arrow--paginate--left" href="{% if data_paginator.previous_page %}{{ data_paginator.previous_page_path }}{% else %}#{% endif %}">Prev</a>
+        </li>
+        <li class="page-item {% if data_paginator.next_page %}{% else %}disabled{% endif %}">
+          <a class="page-link button button--arrow button--arrow--paginate" href="{% if data_paginator.next_page %}{{ data_paginator.next_page_path }}{% else %}#{% endif %}">Next</a>
+        </li>
+      </ul>
+      {% endif %}
     </div>
 
   </div>

@@ -1,6 +1,17 @@
 /*
    Settings and other scripts
    ========================================================================== */
+  // Pinterest Share
+
+  function pinterestShare(img, desc) {
+    window.open("//www.pinterest.com/pin/create/button/" +
+    "?url=" + window.location.href +
+    "&media=" + img +
+    "&description=" + desc, "pinIt", "toolbar=no, scrollbars=no, resizable=no, top=0, right=0");
+    return false;
+  }
+
+
 //scroll change header style
 $(function() {
   // Blog categories
@@ -8,7 +19,8 @@ $(function() {
     $(this).toggleClass('rotate');
     $(".categories-list").stop().slideToggle();
   });
-  
+
+
   $('.explore-map .nav-link').click(function(){
     var $filter = $(this).attr("data-category");
     $(".attractions-slider").removeClass("active", function(){
