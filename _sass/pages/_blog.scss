@@ -194,7 +194,7 @@
     margin-top: 20px;
     margin-bottom: 50px;
     &__item {
-      &.sidebar-item {        
+      &.sidebar-item {
         display: none;
         @include media-breakpoint-up(md) {
           display: block;
@@ -355,15 +355,17 @@
     position: relative;
     .back-to-blog {
       position: fixed;
-      right: 0;
+      top: 100px;
+      right: auto;
+      left: 0;
       z-index: 9;
-      padding: 10px 20px;
-      font-size: $type-size-11;
-      color: $white !important;
+      padding: 6px 15px;
+      font-size: 1.125rem;
+      color: #fff !important;
       cursor: pointer;
       background-color: $light-gold;
-      border-radius: 10px 0 0 10px;
-      opacity: .8;
+      border-radius: 0 10px 10px 0;
+      opacity: 1;
       @include media-breakpoint-up(md) {
         display: none;
       }
