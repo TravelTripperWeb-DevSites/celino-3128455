@@ -30,6 +30,9 @@ layout: default
 </section>
 
 <section class="blog blog--single">
+  <a class="back-to-blog" onclick="location.href = document.referrer; return false;">
+    <i class="fas fa-long-arrow-alt-left"></i>
+  </a>
   <div class="blog__wrap">
     <div class="blog__categories">
       {% include blog-categories.html %}
