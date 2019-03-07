@@ -1,7 +1,35 @@
 .blog {
   @include fixed-width-layout;
   margin-top: 72px;
-  margin-bottom: 72px;
+  &__category-intro {
+    text-align: center;
+  }
+  &__category-heading {
+    position: relative;
+    margin-bottom: 32px;
+    padding-bottom: 22px;
+    font-family: $heading-font;
+    font-size: $type-size-6;
+    line-height: 40px;
+    color: $text-color;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 3px;
+      margin: auto;
+      content: '';
+      background-color: $light-gold;
+    }
+  }
+  &__category-description {
+    max-width: 820px;
+    margin: 0 auto 65px;
+  }
   &__wrap {
     @include make-row;
   }
@@ -264,7 +292,6 @@
     }
   }
   &--single {
-    margin-bottom: 0;
     .pagination {
       margin: 0;
     }
