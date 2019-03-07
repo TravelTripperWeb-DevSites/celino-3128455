@@ -15,7 +15,12 @@
 //scroll change header style
 $(function() {
   // Blog categories
-  $(".toggle-arrow").click(function(){
+  $(".blog__others .toggle-arrow").click(function(){
+    $(this).toggleClass('rotate');
+    $(".blog__others__item").stop().slideToggle();
+  });
+  // Blog categories
+  $(".categories-list-heading .toggle-arrow").click(function(){
     $(this).toggleClass('rotate');
     $(".categories-list").stop().slideToggle();
   });

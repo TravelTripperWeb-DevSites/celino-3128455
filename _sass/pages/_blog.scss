@@ -194,13 +194,13 @@
     }
   }
   &__others {
-    display: none;
     margin-top: 20px;
     margin-bottom: 50px;
-    @include media-breakpoint-up(md) {
-      display: block;
-    }
     &__item {
+      display: none;
+      @include media-breakpoint-up(md) {
+        display: block;
+      }
       margin-bottom: 15px;
       a {
         display: block;
