@@ -355,16 +355,15 @@
     position: relative;
     .back-to-blog {
       position: fixed;
-      top: 100px;
+      top: 55px;
       right: auto;
       left: 0;
       z-index: 9;
-      padding: 6px 15px;
+      padding: 6px 24px;
       font-size: 1.125rem;
-      color: #fff !important;
+      color: $white !important;
       cursor: pointer;
-      background-color: $light-gold;
-      border-radius: 0 10px 10px 0;
+      background-color: $dark-blue-color;
       opacity: 1;
       @include media-breakpoint-up(md) {
         display: none;
