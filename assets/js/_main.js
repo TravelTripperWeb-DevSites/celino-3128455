@@ -3,7 +3,12 @@
    ========================================================================== */
 //scroll change header style
 $(function() {
-
+  // Blog categories
+  $(".toggle-arrow").click(function(){
+    $(this).toggleClass('rotate');
+    $(".categories-list").stop().slideToggle();
+  });
+  
   $('.explore-map .nav-link').click(function(){
     var $filter = $(this).attr("data-category");
     $(".attractions-slider").removeClass("active", function(){
