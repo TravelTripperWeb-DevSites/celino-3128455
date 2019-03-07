@@ -1,6 +1,20 @@
+.hero-banner{
+  &--blog-banner {
+    @include media-breakpoint-down(sm) {
+      height: 240px;
+    }
+  }
+}
 .blog {
   @include fixed-width-layout;
-  margin-top: 72px;
+  margin-top: 40px;
+  @include media-breakpoint-up(md) {
+    margin-top: 72px;
+  }
+  p {
+    font-size: $type-size-12;
+    line-height: $type-size-9-1;
+  }
   &__category-intro {
     text-align: center;
   }
@@ -135,7 +149,10 @@
   }
   &__search {
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 50px;
+    }
     &:hover {
       &:after {
         width: 100%;
@@ -317,15 +334,24 @@
     h3 {
       margin: 0 0 15px;
       font-family: $heading-font;
-      font-size: $type-size-9;
+      font-size: $font-size-base;
       font-weight: 700;
-      line-height: $type-size-7;
+      line-height: $font-size-base;
       color: $text-color;
       text-transform: uppercase;
+      @include media-breakpoint-up(md) {
+        font-size: $type-size-9;
+        line-height: $type-size-7;
+      }
     }
     p {
       margin-bottom: 30px;
       line-height: $type-size-9-1;
+    }
+  }
+  .btn-holder {
+    @include media-breakpoint-down(sm) {
+      text-align: center;
     }
   }
 }
@@ -337,11 +363,18 @@
 }
 
 .pagination {
+  @include media-breakpoint-down(sm) {
+    display: block;
+    text-align: center;
+    .page-item {
+      display: inline-block;
+      margin-right: -4px;
+    }
+  }
   margin-top: 20px;
   .page-link {
     color: $white;
     background-color: $dark-blue-color;
-
   }
   .disabled {
     a {
