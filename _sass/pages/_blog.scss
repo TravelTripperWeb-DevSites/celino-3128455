@@ -169,7 +169,6 @@
       &::-webkit-input-placeholder { // Chrome/Opera/Safari
         font-family: $text-font;
         font-size: $type-size-12;
-        font-style: italic;
         line-height: $font-size-base;
         color: $dark-gray;
         letter-spacing: .5px;
@@ -314,13 +313,13 @@
       &::-webkit-input-placeholder { // Chrome/Opera/Safari
         font-family: $text-font;
         font-size: $type-size-12;
-        font-style: italic;
         line-height: $font-size-base;
         color: $dark-gray;
         letter-spacing: .5px;
       }
     }
     label {
+      font-size: $type-size-16;
       a {
         text-decoration: underline;
       }
@@ -359,6 +358,8 @@
       right: auto;
       left: 0;
       z-index: 9;
+      width: 40px;
+      height: 40px;
       padding: 6px 24px;
       font-size: 1.125rem;
       color: $white !important;
@@ -368,6 +369,23 @@
       @include media-breakpoint-up(md) {
         display: none;
       }
+
+      .arrow {
+        position: absolute;
+        top: 10px;
+        right: auto;
+        bottom: 10px;
+        left: 17px;
+        z-index: 1;
+        width: 16px;
+        height: 16px;
+        content: '';
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transition: all .3s ease-in-out;
+        transform: rotate(-135deg) !important;
+      }
+
     }
     .pagination {
       margin: 0;

@@ -30,8 +30,8 @@ layout: default
 </section>
 
 <section class="blog blog--single">
-  <a class="back-to-blog" onclick="location.href = document.referrer; return false;">
-    <i class="fas fa-long-arrow-alt-left"></i>
+  <a class="back-to-blog" title="Back to Blog" onclick="location.href = document.referrer; return false;">
+    <span class="arrow"></span>
   </a>
   <div class="blog__wrap">
     <div class="blog__categories">
@@ -60,7 +60,7 @@ layout: default
           {% include social-share.html %}
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
           <ul class="pagination col-md-6">
             <li class="page-item {% if prevPostUrl %} {% else %} disabled {% endif %}">
               <a class="page-link button button--arrow button--arrow--paginate button--arrow--paginate--left" href="/blog/{{prevPostUrl}}">Prev</a>
@@ -72,7 +72,7 @@ layout: default
           <div class="btn-holder col-md-6">
             <a href="/blog/" class="button button--gold">See all blog posts</a>
           </div>
-        </div>
+        </div> -->
 
         <div class="blog__related-posts">
           <div class="blog__sub-heading">
@@ -106,8 +106,5 @@ layout: default
     </div>
   </div>
 </section>
-<div class="mb-5">  
-  {% include deals-offers.html %}
-</div>
-{% include cta-two-column.html %}
+{% include deals-offers.html %}
 {% include instagram.html %}
