@@ -201,7 +201,7 @@
       }
       margin-bottom: 15px;
       a {
-        display: block;
+        display: table;
         overflow: hidden;
         h6 {
           margin: 0 0 8px;
@@ -220,9 +220,8 @@
         }
       }
       figure {
-        display: block;
-        float: left;
-        width: 30%;
+        display: table-cell;
+        width: 140px;
         height: 80px;
         margin: 0;
         background-repeat: no-repeat;
@@ -230,7 +229,7 @@
         background-size: cover;
       }
       &__right {
-        float: left;
+        display: table-cell;
         width: 65%;
         padding: 14px 0 0 5%;
         transition: $global-transition;
