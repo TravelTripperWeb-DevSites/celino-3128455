@@ -153,11 +153,21 @@ footer {
           @include media-breakpoint-up(md) {
             flex: 0 50%;
           }
+          a {
+            display: block;
+            text-align: center;
+          }
           img {
             width: 31px;
             @include media-breakpoint-up(md) {
               width: 75px;
             }
+          }
+          .highgate-logo {
+            margin-bottom: 20px;
+          }
+          .small-luxury-logo {
+            width: 100px;
           }
         }
       }
