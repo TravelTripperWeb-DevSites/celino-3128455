@@ -351,6 +351,18 @@
     }
   }
   &--single {
+
+    .blog__categories {
+      @include media-breakpoint-down(sm) {
+        order: 2;
+      }
+    }
+    .blog__list {
+      @include media-breakpoint-down(sm) {
+        order: 1;
+      }
+    }
+
     position: relative;
     .back-to-blog {
       position: fixed;
