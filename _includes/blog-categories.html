@@ -1,0 +1,73 @@
+<div class="blog__search-wrap">
+  <div class="blog__sub-heading">Search</div>
+  <div class="blog__search">
+    <form class="search-form" action="/blog/search/" method="get">
+      <input type="text" class="blog__search__box" name="query" id="search-box" placeholder="Type here..." aria-label="Search blogs">
+      <button type="submit" class="blog__search__btn" aria-label="Click to search">
+        <i class="fa fa-search"></i>
+      </button>
+  </form>
+  </div>
+</div>
+
+<div class="blog__others">
+
+  <div class="blog__sub-heading">Recent Posts <span class="toggle-arrow"><i class="fa fa-angle-down"></i></span> </div>
+  <div class="heading-seperator"></div>
+  {% for recentpost in site.data._models.blog | limit: 5 %}
+  {% if recentpost.url_friendly_name != page.url_friendly_name %}
+  <div class="blog__others__item sidebar-item">
+    <a href="/blog/{{recentpost.url_friendly_name }}/">
+      <figure style="background-image:url('{{recentpost.blogimage.url_xsmall}}');" class="bg-cover"></figure>
+      <div class="blog__others__item__right">
+        <h6>{{recentpost.title  | truncate: 25 }}</h6>
+        <div class="blog__info">
+          <span class="blog__date">{% assign d = recentpost.date | date: "%-d" %}
+                  {{ recentpost.date | date: "%B" }}
+                  {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
+                  {{ recentpost.date | date: "%Y" }}</span>
+        </div>
+      </div>
+    </a>
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>
+
+<div class="blog__sub-heading categories-list-heading">Categories <span class="toggle-arrow"><i class="fa fa-angle-down"></i></span></div>
+<div class="heading-seperator"></div>
+
+<ul class="categories-list">
+  {% assign categories = site.data._models.category | sort:'order' %}
+  {% for categorylist in categories %}
+  <li>
+    <a href="/blog/category/{{categorylist.url_friendly_name}}/">{{categorylist.title}}
+      {% assign count = 0 %}
+          {% for postcount in site.data._models.blog %}
+          {% if postcount.category.title == categorylist.title%}
+          {% capture count  %}{{ count  | plus: '1' }}{% endcapture %}
+          {%endif%}
+          {%endfor%}
+          <span>({{count}})</span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+<div class="blog__offers-signup">
+  <div class="blog__sub-heading">subscribe to the blog and receive exclusive discounts </div>
+  <div class="heading-seperator"></div>
+  <form action="https://submit.jotform.me/submit/{{ site.data.forms.jotform.offers-signup-id }}/" method="post" name="form_{{ site.data.forms.jotform.offers-signup-id }}" id="{{ site.data.forms.jotform.offers-signup-id }}">
+    <input type="hidden" name="formID" value="{{ site.data.forms.jotform.offers-signup-id }}" />
+    <div class="form-group">
+      <input type="email" name="q3_emailAddress" placeholder="Email Address" aria-label="Enter Your Email Address" required>
+    </div>
+    <div class="form-group">
+      <label for="agreeToTerms">
+        <input id="agreeToTerms" type="checkbox" name="q4_agreeTo[]" value="" aria-label="Press Spacebar to agree to terms of Service and Privacy Policy" required> I agree to the <a href="/terms/" target="_blank">Terms of Service</a> and <a href="/privacy-policy/" target="_blank">Privacy Policy</a>
+      </label>
+    </div>
+    <div class="form-group">
+      <button type="submit" name="button" class="button">Subscribe</button>
+    </div>
+  </form>
+</div>

@@ -75,13 +75,45 @@
   &--arrow {
     position: relative;
     min-width: 120px;
+    text-align: center;
     margin-right: 39px;
     background-color: $dark-blue-color;
     @include media-breakpoint-up(md) {
       min-width: 160px;
       margin-right: 54px;
     }
-
+    &--paginate {
+      position: relative;
+      min-width: 96px;
+      border-radius: 0 !important;
+      &--left  {
+        margin-right: 0;
+        margin-left: 39px !important;
+        @include media-breakpoint-up(md) {
+          margin-left: 54px !important;
+        }
+        &:after {
+          right: auto;
+          left: -39px;
+          @include media-breakpoint-up(md) {
+            left: -55px;
+          }
+        }
+        &:before {
+          right: auto;
+          left: -22px;
+          transform: rotate(-135deg) !important;
+          @include media-breakpoint-up(md) {
+            left: -32px;
+          }
+        }
+        &:hover {
+          &:before {
+            animation: bounceLeft 1s linear .2s !important;
+          }
+        }
+      }
+    }
     &:after {
       position: absolute;
       top: -1px;
