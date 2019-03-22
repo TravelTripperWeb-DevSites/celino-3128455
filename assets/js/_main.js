@@ -1,8 +1,30 @@
 /*
    Settings and other scripts
    ========================================================================== */
+  // Pinterest Share
+
+  function pinterestShare(img, desc) {
+    window.open("//www.pinterest.com/pin/create/button/" +
+    "?url=" + window.location.href +
+    "&media=" + img +
+    "&description=" + desc, "pinIt", "toolbar=no, scrollbars=no, resizable=no, top=0, right=0");
+    return false;
+  }
+
+
 //scroll change header style
 $(function() {
+  // Blog categories
+  $(".blog__others .toggle-arrow").click(function(){
+    $(this).toggleClass('rotate');
+    $(".blog__others__item.sidebar-item").stop().slideToggle();
+  });
+  // Blog categories
+  $(".categories-list-heading .toggle-arrow").click(function(){
+    $(this).toggleClass('rotate');
+    $(".categories-list").stop().slideToggle();
+  });
+
 
   $('.explore-map .nav-link').click(function(){
     var $filter = $(this).attr("data-category");

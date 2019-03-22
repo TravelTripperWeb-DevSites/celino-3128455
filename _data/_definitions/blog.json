@@ -1,0 +1,31 @@
+{
+  "category":
+    {
+    "label": "Choose Category",
+    "type":"model",
+    "display_field": "title",
+    "model_name":"category"
+    },
+    "title":
+      {"required":true},
+    "blogimage":
+      {"type":"image","required":true},
+    "seo_title":
+      {"type":"text"},
+    "seo_description":
+      {"type":"text"},
+    "url_friendly_name":
+      {"type":"url_slug"},
+    "date":
+      {"type":"date","required":true},
+    "Posted_by":
+      {"type":"text"},
+    "Image_caption":
+      {"type":"richtext"},
+    "short_description":
+      {"type":"richtext"},
+    "more_content":
+      {"type":"richtext"},
+    "sort_order":
+      {"type": "integer"}
+}
