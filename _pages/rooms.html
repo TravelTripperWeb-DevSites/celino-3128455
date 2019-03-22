@@ -109,7 +109,7 @@ meta_tags:
         </figure>
         <article class="sleep__card__detail">
           <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]">[[ room.name ]]</a></h2>
-           <p>Retreat in comfort with ocean views. Thoughtful touches bring the beach inside your 700-square-foot king room.</p>
+           <p ng-bind-html="room.short_description | renderHTMLCorrectly"></p>
           <div class="button-holder">
             <a ng-href="/room/#[[ room.name | formatNameForLink ]]"  class="button button--gold" tabindex="-1">Explore</a>
             <a ng-href="{{ site.reztripUrl}}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="button button--arrow">Book Now</a>
