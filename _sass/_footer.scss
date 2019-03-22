@@ -76,6 +76,16 @@ footer {
       }
       line-height: 16px;
       text-align: center;
+      a {
+        display: block;
+      }
+      .small-luxury-logo {
+        margin-top: 20px;
+        @include media-breakpoint-up(lg) {
+          width: 150px;
+          margin-left: 30px;
+        }
+      }
     }
 
     &__inquiries {
@@ -153,11 +163,18 @@ footer {
           @include media-breakpoint-up(md) {
             flex: 0 50%;
           }
+          a {
+            display: block;
+            text-align: right;
+          }
           img {
             width: 31px;
             @include media-breakpoint-up(md) {
               width: 75px;
             }
+          }
+          .highgate-logo {
+            margin-bottom: 20px;
           }
         }
       }

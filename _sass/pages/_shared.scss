@@ -17,7 +17,8 @@
   @include flex-center-col;
   animation: opacityFade 1.5s ease-in;
 
-  &--home {
+  &--inner {
+    max-height: 600px;
     // &:after {
     //   position: absolute;
     //   top: 0;
