@@ -92,9 +92,20 @@
   }
   20% {
     right: -37px;
-  } 
+  }
   40% {
     right: -28px;
+  }
+}
+@keyframes bounceLeft {
+  0%, 30%, 60%, 80%, 100% {
+    left: -32px;
+  }
+  20% {
+    left: -37px;
+  }
+  40% {
+    left: -28px;
   }
 }
 @keyframes bounceRightLarge {

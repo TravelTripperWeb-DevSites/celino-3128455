@@ -11,5 +11,7 @@ main:
     url: /explore/
   - title: Gallery
     url: /gallery/
+  - title: Blog
+    url: /blog/    
   - title: Contact
     url: /contact/
