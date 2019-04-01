@@ -78,9 +78,7 @@ page_gen:
 - data: dine-drink
   template: dine-single
   dir: dine-drink
-- data: blog
-  template: blog-single
-  dir: blog
+
 - data: category
   template: blog-category
   dir: blog/category
