@@ -10,8 +10,6 @@ main:
   - title: Explore
     url: /explore/
   - title: Gallery
-    url: /gallery/
-  - title: Blog
-    url: /blog/    
+    url: /gallery/    
   - title: Contact
     url: /contact/
