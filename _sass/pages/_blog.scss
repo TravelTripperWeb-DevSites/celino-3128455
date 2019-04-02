@@ -5,6 +5,15 @@
     }
   }
 }
+.blog-intro{
+  max-width: 800px;
+  margin: 53px auto 0 auto ;
+  padding: 0 15px;
+  p{
+    text-align: center;
+  }
+
+}
 .blog {
   @include fixed-width-layout;
   margin-top: 40px;
