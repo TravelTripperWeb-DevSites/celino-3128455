@@ -21,7 +21,9 @@ published: true
     <div class="blog__categories">
       {% include blog-categories.html %}
     </div>
+
     <div class="blog__list">
+      <div class="blog__list__wrap">
       {% for post in data_paginator.posts %}
       <div class="blog__item">
         <figure class="blog__image">
@@ -48,6 +50,8 @@ published: true
       {% endfor %}
 
 
+
+      {% comment %}
       {% if data_paginator.total_pages > 1 %}
       <div class="page-number">Page: {{ data_paginator.page }} of {{ data_paginator.total_pages }}</div>
       <ul class="pagination justify-content-center">
@@ -59,8 +63,17 @@ published: true
         </li>
       </ul>
       {% endif %}
+      {% endcomment %}
+      </div>
+      <div class="pagination justify-content-center">
+      <div class="loading-btn">
+        <a class="button" href="#" id="more-post">Load More Posts</a>
+      </div>
+      <div class="infinite-spinner">
+        <img src="/assets/images/loading.gif" alt="loading..">
+      </div>
     </div>
-
+    </div>
   </div>
 </section>
 

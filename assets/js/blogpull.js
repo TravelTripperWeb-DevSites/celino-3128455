@@ -4,7 +4,7 @@ $(function() {
       isFetchingPosts = false,
       shouldFetchPosts = true,
       postsToLoad = 1,
-      loadNewPostsThreshold = $('.blog__item').height();
+      loadNewPostsThreshold = $('.blog__list__wrap').height();
 
   // Load the JSON file containing all URLs
   $.getJSON('/assets/js/data/all_blog.json', function(data) {
@@ -19,10 +19,10 @@ $(function() {
       }, {});
     };
 
-    if($('.all-posts').attr('data-category-posts')) {
+    if($('.blog__list__wrap').attr('data-category-posts')) {
         var filteredArray = [];
         filteredArray = data["posts"].groupBy('group');
-        var catfilter = $('.all-posts').attr('data-category-posts');
+        var catfilter = $('.blog__list__wrap').attr('data-category-posts');
 
         postURLs = filteredArray[catfilter];
     }else{
@@ -83,7 +83,7 @@ $(function() {
     // Load as many posts as there were present on the page when it loaded
     // After successfully loading a post, load the next one
     var loadedPosts = 0,
-        postCount = $(".blog-post").length,
+        postCount = $(".blog__item").length,
         callback = function() {
           loadedPosts++;
           var postIndex = postCount + loadedPosts;
@@ -114,19 +114,15 @@ $(function() {
             "August","September","October","November","December"];
       var postdate = new Date(postURL.date);
       //var cleantext =  $(postURL.post_content).text();
-      var post = '<div class="blog-post wow fadeIn">'+
-      '<a href="/blog/'+ postURL.url +'/" title="'+ postURL.title +'"><figure><img src="'+ postURL.image.url_medium +'" alt="'+ postURL.image.alt +'"></figure></a>'+
-      '<h2><a href="/blog/'+ postURL.url +'/">'+ postURL.title +'</a></h2>'+
-      '<h4 class="date"><a href="/blog/category/'+ postURL.category.url_friendly_name +'/"> '+postURL.category.title+'</a> <span></span> '+ month[postdate.getMonth()]+' '+postdate.getDate()+', '+postdate.getFullYear()+'</h4>'+
+      var post = '<div class="blog__item">'+
+      '<a href="/blog/'+ postURL.url +'/" title="'+ postURL.title +'"><figure class="blog__image"><img src="'+ postURL.image.url_medium +'" alt="'+ postURL.image.alt +'"></figure></a>'+
+      '  <div class="blog__heading"><a href="/blog/'+ postURL.url +'/">'+ postURL.title +'</a></div>'+
+      '  <div class="blog__info"><span class="blog__date">  <time> '+ month[postdate.getMonth()]+' '+postdate.getDate()+', '+postdate.getFullYear()+' </time> </span> | <a class="blog__category" href="/blog/category/'+ postURL.category.url_friendly_name +'/"> '+postURL.category.title+'</a> </div>'+
     //  '<p>'+ shorten(cleantext, 250, "...", false) +'</p>'+
       '<p>' + postURL.post_content +'</p>'+
-      '<div class="cta-block"><div class="social-links">'+
-      '<a href="https://twitter.com/intent/tweet?text='+ postURL.title +'&url=https://www.sagamoresouthbeach.com/blog/'+ postURL.url +'/&via=sagamorehotel&related=sagamorehotel" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a>'+
-      '<a href="https://facebook.com/sharer.php?u=https://www.sagamoresouthbeach.com/blog/'+ postURL.url +'/" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-f"></i></a>'+
-       '</div>'+
-      '<div class="button"><a class="btn btn-lg btn-primary button-home" href="/blog/'+ postURL.url +'/">Read More</a></div>'+
+      '<div class="btn-holder"><a class="button button--gold" href="/blog/'+ postURL.url +'/">Read More</a></div>'+
       '</div></div>';
-     $(post).appendTo(".all-posts");
+     $(post).appendTo(".blog__list__wrap");
      $(".infinite-spinner").fadeOut();
      if ((postURLs.length -1) == index) {
        $('#more-post').hide();
