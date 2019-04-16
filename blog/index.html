@@ -1,23 +1,29 @@
 ---
 layout: default
-title: Blog | Aston Waikiki Beach Hotel
+title: Blog | Celino South Beach
 meta_description: With so many Waikiki hotels to choose from, Aston Waikiki Beach Hotel goes the extra mile to ensure our guests have the best experiences. Come see why our modern accommodations and phenomenal location on Kalakaua Avenue across from Kuhio Beach Park captures the heart of every guest!
 meta_tags:
   robots:
-published: false
+published: true
 ---
 <section class="hero-banner hero-banner--inner top-common-gap hero-banner--blog-banner" style="background-image: url('/assets/images/blog/hero.jpg');">
   <div class="hero-banner__detail wow fadeIn" data-wow-delay="0.5s">
     <h1 tabindex="0">South Beach Blog</h1>
   </div>
 </section>
+<div class="blog-intro">
+  <p>Stay up-to-date with everything that’s happening on the shores of South Beach with the Celino Blog. Whether you’re seeking a glamorous beach getaway, a lively night on the town, or a day exploring local art and culture, South Beach is where it’s at.
+</p>
+</div>
 
 <section class="blog">
   <div class="blog__wrap">
     <div class="blog__categories">
       {% include blog-categories.html %}
     </div>
+
     <div class="blog__list">
+      <div class="blog__list__wrap">
       {% for post in data_paginator.posts %}
       <div class="blog__item">
         <figure class="blog__image">
@@ -43,6 +49,9 @@ published: false
       </div>
       {% endfor %}
 
+
+
+      {% comment %}
       {% if data_paginator.total_pages > 1 %}
       <div class="page-number">Page: {{ data_paginator.page }} of {{ data_paginator.total_pages }}</div>
       <ul class="pagination justify-content-center">
@@ -54,8 +63,17 @@ published: false
         </li>
       </ul>
       {% endif %}
+      {% endcomment %}
+      </div>
+      <div class="pagination justify-content-center">
+      <div class="loading-btn">
+        <a class="button" href="#" id="more-post">Load More Posts</a>
+      </div>
+      <div class="infinite-spinner">
+        <img src="/assets/images/loading.gif" alt="loading..">
+      </div>
     </div>
-
+    </div>
   </div>
 </section>
 
