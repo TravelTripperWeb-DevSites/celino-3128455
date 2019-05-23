@@ -20,7 +20,7 @@
 <![endif]-->
 
 <!-- Setup conditional statement here for pages on which a map should load. -->
-{% if page.url contains 'explore' or page.url contains 'about' or page.url contains 'contact' or page.url contains 'room' %}
+{% if page.url contains 'explore' %}
   <!-- Leaflet -->
   {% assign mapitems = site.data._models.explore | sort: 'id' %}
   <script type="text/javascript">
