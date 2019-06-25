@@ -222,6 +222,14 @@ footer {
         color: $white;
       }
     }
+    &__powered {
+      text-align: center;
+      @include media-breakpoint-down(sm) {
+        img {
+          width: 150px;
+        }
+      }
+    }
   }
 
 }
