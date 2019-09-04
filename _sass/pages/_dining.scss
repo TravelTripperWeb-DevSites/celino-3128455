@@ -32,7 +32,7 @@
       padding-right: 162px;
     }
 
-    h2 {
+    h2, .h2 {
       position: relative;
       margin: 0 0 20px;
       padding-bottom: 10px;
@@ -155,7 +155,7 @@
     }
     article {
       max-width: 582px;
-      h2 {
+      h2, .h2 {
         position: relative;
         margin: 0 0 20px;
         padding-bottom: 10px;
@@ -241,7 +241,7 @@
     margin: 0 auto;
     text-align: center;
 
-    h3 {
+    h3, .h3 {
       margin: 0 0 60px;
       color: $white;
     }
