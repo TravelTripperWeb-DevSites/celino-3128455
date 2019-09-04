@@ -50,7 +50,7 @@ meta_tags:
 
   <section class="other-rooms">
     <h4 class="text-center" tabindex="0">SIMILAR ROOMS & SUITES</h4>
-    <input type="radio" ng-model="sameRoomfilter" value="[[ room.name ]]">
+    <input type="radio" ng-model="sameRoomfilter" value="[[ room.name ]]" aria-label="Similar Rooms & Suites">
     <div class="rooms-listing__list-items active" ng-repeat="value in browser.roomsList | groupBy: 'category'">
       <div class="stay-block__rooms__wrap" ng-class-even="'stay-block__rooms__wrap--even'" ng-repeat="otherroom in value" ng-if="otherroom.category == room.category">
         <div class="stay-block__room-image">

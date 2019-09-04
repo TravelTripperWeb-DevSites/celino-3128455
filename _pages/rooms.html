@@ -63,14 +63,14 @@ meta_tags:
             <h4>Refine Results</h4>
           </div>
           <div class="form-group col-md-2">
-            <select ng-model="filter.category" id="inputBeds" class="form-control">
+            <select ng-model="filter.category" id="inputBeds" class="form-control" aria-label="Bed type">
               <option value="" hidden>Bed</option>
               <option value="!" selected="selected">Bed</option>
               <option ng-repeat="cat in browser.roomCategories" value="[[ cat ]]">[[ cat ]]</option>
             </select>
           </div>
           <div class="form-group col-md-2">
-            <select ng-model="filterObject.view" id="inputView" class="form-control">
+            <select ng-model="filterObject.view" id="inputView" class="form-control" aria-label="View">
               <option value="" selected>View</option>
               <option value="Ocean View">Ocean View</option>
               <option value="Partial Ocean View">Partial Ocean View</option>
@@ -79,7 +79,7 @@ meta_tags:
             </select>
           </div>
           <div class="form-group col-md-2">
-            <select ng-model="filterObject.amenities" id="inputAmenities" class="form-control">
+            <select ng-model="filterObject.amenities" id="inputAmenities" class="form-control" aria-label="Amenities">
               <option value="" selected>Amenities</option>
               <option value="Balcony">Balcony</option>
               <option value="Living Room">Living Room</option>
