@@ -1,16 +1,15 @@
-/*
-   Settings and other scripts
-   ========================================================================== */
-  // Pinterest Share
+// /*
+//    Settings and other scripts
+//    ========================================================================== */
+//   // Pinterest Share
 
-  function pinterestShare(img, desc) {
-    window.open("//www.pinterest.com/pin/create/button/" +
-    "?url=" + window.location.href +
-    "&media=" + img +
-    "&description=" + desc, "pinIt", "toolbar=no, scrollbars=no, resizable=no, top=0, right=0");
-    return false;
-  }
-
+function pinterestShare(img, desc) {
+  window.open("//www.pinterest.com/pin/create/button/" +
+  "?url=" + window.location.href +
+  "&media=" + img +
+  "&description=" + desc, "pinIt", "toolbar=no, scrollbars=no, resizable=no, top=0, right=0");
+  return false;
+}
 
 //scroll change header style
 $(function() {
@@ -267,6 +266,16 @@ $('#departure_date').val(ToDate);
   //   resetAnimation: false   // removed wow js
   // });
 
+});
+
+function goToByScroll(id){
+  $('html,body').animate({scrollTop: $(id).offset().top},'fast');
+  $(id).attr('tabindex', 0);
+  $(id).focus();
+}
+$(".skip-main").on("click", function(e) {
+  e.preventDefault();
+  goToByScroll($(this).attr('href'));
 });
 
 $(window).on('load', function () {
