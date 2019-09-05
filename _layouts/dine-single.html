@@ -16,7 +16,7 @@ layout: default
   			</div>
       {% endfor %}
       </div>
-      <h1 tabindex="0">{{ page.title }}</h1>
+      <h1 class="h1" tabindex="0">{{ page.title }}</h1>
   </div>
 </section>
 
@@ -30,8 +30,10 @@ layout: default
     <div class="dine-details__contact">
       <a href="{{page.reservation_link}}" class="button button--arrow">{{page.reservation_btn_text}}</a>
       <!-- <p tabindex="0">For reservations and information about ICONIK,<br> call  <a href="tel:786 574-4090" title="786 574-4090">(786) 574-4090</a> or email us <br>to <a href="mailto:dine@celino.com" title="dine@celino.com">dine@celino.com</a></p> -->
-      {{page.reservation_details}}
-      {{page.hotel_timings}}
+      <div tabindex="0">
+        {{page.reservation_details}}
+        {{page.hotel_timings}}
+      </div>
     </div>
   </div>
 </section>
@@ -39,7 +41,7 @@ layout: default
 <section class="cta d-flex align-items-center">
   <img src="/assets/images/dine/cta-details.jpg" alt="GET IN TOUCH">
   <div class="cta__content">
-    <h3 tabindex="0">Premium food<br>from day to night</h3>
+    <h2 class="h3" tabindex="0">Premium food<br>from day to night</h2>
     {% comment %}
     {% for menu in page.menu_items %}
      <a href="{{menu.detail}}" class="button"> {{menu.name}} </a>
@@ -49,7 +51,7 @@ layout: default
 </section>
 
 <section class="gallery d-none d-md-block" tabindex="-1">
-  <h6 class="text-center text-uppercase mb-3">Gallery</h6>
+  <h3 class="h6" class="text-center text-uppercase mb-3">Gallery</h3>
   <div class="gallery__row"  id="lightgallery">
     {% for image in page.gallery %}
     <div class="gallery__item item fancybox" data-src="{{ image.url_large }}" data-exthumbimage="{{ image.url_large }}">
@@ -70,10 +72,10 @@ layout: default
       {% endfor %}
     </div>
     <!-- Left and right controls -->
-    <a class="carousel-control-prev" href="#dine-gallery" data-slide="prev">
+    <a class="carousel-control-prev" href="#dine-gallery" data-slide="prev" tabindex="-1">
       <img src="/assets/images/left-arrow.png" alt="Previous Item">
     </a>
-    <a class="carousel-control-next" href="#dine-gallery" data-slide="next">
+    <a class="carousel-control-next" href="#dine-gallery" data-slide="next" tabindex="-1">
       <img src="/assets/images/right-arrow.png" alt="Next Item">
     </a>
   </div>

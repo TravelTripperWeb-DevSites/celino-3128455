@@ -69,6 +69,8 @@ $(function() {
 
     $("#attractions-gallery, #shopping-gallery, #dining-gallery, #nightlife-gallery, #culture-gallery").slick({
      slidesToShow: 3,
+     infinite: false,
+     accessibility: false,
      responsive: [{
        breakpoint: 1024,
          settings: {
