@@ -63,7 +63,7 @@ meta_tags:
   <div class="tab-content" id="nav-tabContent">
     <div class="home-stay__rooms tab-pane fade show active" id="nav-king" role="tabpanel" aria-labelledby="nav-king-tab">
       <section ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
-        <div class="home-stay__rooms__wrap wow fadeIn" data-wow-delay=".5s" ng-class-even="'home-stay__rooms__wrap--even'" ng-repeat="room in value" ng-if="room.categoryGroup == 'King' && (room.code == 'CKU' || room.code == 'DKV')" >
+        <div class="home-stay__rooms__wrap wow fadeIn" data-wow-delay=".5s" ng-class-even="'home-stay__rooms__wrap--even'" ng-repeat="room in value | limitTo: 3" ng-if="room.categoryGroup == 'King'" >
 
           <div class="home-stay__room-image">
             <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
@@ -85,7 +85,7 @@ meta_tags:
 
     <div class="home-stay__rooms tab-pane fade" id="nav-queen" role="tabpanel" aria-labelledby="nav-queen-tab">
       <section ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
-        <div class="home-stay__rooms__wrap wow fadeIn" data-wow-delay=".5s" ng-class-even="'home-stay__rooms__wrap--even'" ng-repeat="room in value" ng-if="room.categoryGroup == 'Queen' && (room.code == 'CQU')">
+        <div class="home-stay__rooms__wrap wow fadeIn" data-wow-delay=".5s" ng-class-even="'home-stay__rooms__wrap--even'" ng-repeat="room in value | limitTo: 3" ng-if="room.categoryGroup == 'Queen'">
 
           <div class="home-stay__room-image">
             <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
@@ -106,7 +106,7 @@ meta_tags:
     </div>
     <div class="home-stay__rooms tab-pane fade" id="nav-suites" role="tabpanel" aria-labelledby="nav-suites-tab">
      <section ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
-        <div class="home-stay__rooms__wrap wow fadeIn" data-wow-delay=".5s" ng-class-even="'home-stay__rooms__wrap--even'" ng-repeat="room in value" ng-if="room.categoryGroup =='Suite' && (room.code == 'XKO')">
+        <div class="home-stay__rooms__wrap wow fadeIn" data-wow-delay=".5s" ng-class-even="'home-stay__rooms__wrap--even'" ng-repeat="room in value | limitTo: 3" ng-if="room.categoryGroup =='Suite'">
 
           <div class="home-stay__room-image">
             <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
