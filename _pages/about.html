@@ -23,7 +23,7 @@ meta_tags:
           </div>
         {% endfor %}
       </div>
-      <h1 tabindex="0" class="wow fadeIn" data-wow-delay="0.5s">{{ banner.banner_title }}</h1>
+      <h1 tabindex="0" class="h1 wow fadeIn" data-wow-delay="0.5s">{{ banner.banner_title }}</h1>
     {% endfor %}
   </div>
 </section>
@@ -32,13 +32,15 @@ meta_tags:
   <div class="hotel-intro__inner">
     <div class="hotel-intro__text">
       {% regionblock intro_heading, type:header %}
-      <h2>MEET CELINO</h2>
+      <h2 class="h2" tabindex="0">MEET CELINO</h2>
       {% endregionblock %}
-      {% regionblock intro_content, type:text %}
-      <p>The Celino Hotel pays homage to Ocean Drive circa 1940s, transporting guests to a new take on a bygone era of glitz and glamour. Its personality is rich in fashion and fused with Latin charisma and tropical class, offering a new lifestyle of indulgence to South Beach.</p>
-      <p>The Celino Hotel embodies the charm of a fashion Maison, its name will be a symbol of a new signature style – Floridita, Miami Beach glamour paired with undertones of simple, classic Floridian accents. This unique style will bring back memories of awe-inspiring guests in sequined birds of paradise dresses, neck ties, sheer blouses and vintage prints all with a 2017 slant. Always full of excitement balanced with unspoken elegance and cultural influences,
-      The Celino Hotel will lead an Ocean Drive revival. </p>
-      {% endregionblock %}
+      <div tabindex="0">
+        {% regionblock intro_content, type:text %}
+        <p>The Celino Hotel pays homage to Ocean Drive circa 1940s, transporting guests to a new take on a bygone era of glitz and glamour. Its personality is rich in fashion and fused with Latin charisma and tropical class, offering a new lifestyle of indulgence to South Beach.</p>
+        <p>The Celino Hotel embodies the charm of a fashion Maison, its name will be a symbol of a new signature style – Floridita, Miami Beach glamour paired with undertones of simple, classic Floridian accents. This unique style will bring back memories of awe-inspiring guests in sequined birds of paradise dresses, neck ties, sheer blouses and vintage prints all with a 2017 slant. Always full of excitement balanced with unspoken elegance and cultural influences,
+        The Celino Hotel will lead an Ocean Drive revival. </p>
+        {% endregionblock %}
+      </div>
       {% regionblock intro_btn, type:text %}
       <a href="/rooms/" class="button button--arrow button--arrow--gold">view our rooms</a>
       {% endregionblock %}
@@ -59,15 +61,15 @@ meta_tags:
 <section class="luxuxy-amenities">
   <div>
     {% regionblock luxury_amenities, type:header %}
-    <h4>LUXURY AMENITIES AT CELINO SOUTH BEACH</h4>
+    <h4 class="h4" tabindex="0">LUXURY AMENITIES AT CELINO SOUTH BEACH</h4>
     {% endregionblock %}
   </div>
    {% for la in luxury-amenities %}
   <div class="luxuxy-amenities__block">
     <div class="luxuxy-amenities__block__content p-0">
       <div class="luxuxy-amenities__block__content__holder wow fadeIn" data-wow-delay=".5s">
-        <h2>{{ la.title }}</h2>
-        <p>{{ la.description }}</p>
+        <p class="h2" tabindex="0">{{ la.title }}</p>
+        <div tabindex="0">{{ la.description }}</div>
       </div>
     </div>
     <div class="luxuxy-amenities__block__image p-0 wow fadeIn" data-wow-delay="1s">
@@ -81,7 +83,7 @@ meta_tags:
   <img src="/assets/images/hotel/virtual-tour.jpg" alt="Take a virtual tour">
   <div class="virtual-tour__content">
     {% regionblock virtual_tour_heading, type:header %}
-    <h3>Take a virtual tour</h3>
+    <h5 class="h3" tabindex="0">Take a virtual tour</h5>
     {% endregionblock %}
     {% regionblock virtual_tour_btn, type:text %}
     <a href="/gallery/" class="button button--arrow button--arrow--gold">VIEW GALLERY</a>
@@ -94,16 +96,17 @@ meta_tags:
     <div class="hotel-location__content p-0">
       <div class="hotel-location__content__holder wow fadeIn" data-wow-delay=".5s">
         {% regionblock location_heading, type:header %}
-        <h3>LOCATION</h3>
+        <h6 class="h3" tabindex="0">LOCATION</h6>
         {% endregionblock %}
-        {% regionblock location_text, type:text %}
-        <p>Located beachfront in the heart of South Beach on the southern end of iconic Ocean Drive next to the SoFi neighborhood, steps from the Atlantic Ocean and with direct access to downtown Miami and the Port of Miami via MacArthur Causeway. The Celino is less than seven miles from Miami’s top urban destinations including Wynwood, Brickell, Midtown and just blocks from South Pointe Park, Lincoln Road and Española Way. </p>
-        {% endregionblock %}
+        <div tabindex="0">
+          {% regionblock location_text, type:text %}
+          <p>Located beachfront in the heart of South Beach on the southern end of iconic Ocean Drive next to the SoFi neighborhood, steps from the Atlantic Ocean and with direct access to downtown Miami and the Port of Miami via MacArthur Causeway. The Celino is less than seven miles from Miami’s top urban destinations including Wynwood, Brickell, Midtown and just blocks from South Pointe Park, Lincoln Road and Española Way. </p>
+          {% endregionblock %}
+        </div>
       </div>
     </div>
     <div class="hotel-location__map p-0" id="map">
-
-      <a href="https://goo.gl/maps/P2b9aXyUxGdbUku99" target="_blank" title="Map"><img src="//res.cloudinary.com/traveltripperweb/image/upload/c_limit,h_1920,w_1920/v1558600835/f9sebx3ici4alnfq7fv4.jpg" alt="Map"></a>
+      <a href="https://goo.gl/maps/P2b9aXyUxGdbUku99" target="_blank" aria-label="Get Directions to Hotel"><img src="//res.cloudinary.com/traveltripperweb/image/upload/c_limit,h_1920,w_1920/v1558600835/f9sebx3ici4alnfq7fv4.jpg" alt="Map"></a>
     </div>
   </div>
 </section>
