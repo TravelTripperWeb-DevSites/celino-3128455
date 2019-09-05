@@ -319,6 +319,11 @@
   @include make-container();
   &__wrap {
     @include make-row();
+
+    div {
+      width: 100%;
+    }
+
     &--even {
       @include media-breakpoint-up(md) {
         .dine-intro__image {

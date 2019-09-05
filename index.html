@@ -45,9 +45,9 @@ meta_tags:
 
 <section class="home-stay">
   <div class="home-stay__wrap">
-    <div class="home-stay__title wow fadeIn" data-wow-delay="0.5s" tabindex="0">
+    <div class="wow fadeIn" data-wow-delay="0.5s">
       {% regionblock stay_title, type: header %}
-        Stay
+        <h4 class="h2 home-stay__title" tabindex="0">Stay</h4>
       {% endregionblock %}
     </div>
     <div class="home-stay__categories wow fadeIn" data-wow-delay="0.5s">
@@ -70,7 +70,7 @@ meta_tags:
           </div>
           <div class="home-stay__room-detail">
             <article>
-              <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></h2>
+              <p class="h2"><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></p>
               <p tabindex="0">[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
 
               <div class="button-holder">
@@ -92,7 +92,7 @@ meta_tags:
           </div>
           <div class="home-stay__room-detail">
             <article>
-              <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></h2>
+              <p class="h2"><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></p>
               <p tabindex="0">[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
 
               <div class="button-holder">
@@ -113,7 +113,7 @@ meta_tags:
           </div>
           <div class="home-stay__room-detail">
             <article>
-              <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></h2>
+              <p class="h2"><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></p>
 
               <p tabindex="0">[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
 
@@ -126,7 +126,6 @@ meta_tags:
       </div>
      </section>
     </div>
-
     </div>
 </section>
 
@@ -134,11 +133,9 @@ meta_tags:
 
 <section class="dine-intro">
   <div class="dine-intro__wrap">
-    <div class="dine-intro__title" tabindex="0">
-      {% regionblock dine_title, type: header %}
-      Dine
-      {% endregionblock %}
-    </div>
+    {% regionblock dine_title, type: header %}
+    <h6 class="h2 dine-intro__title" tabindex="0">Dine</h6>
+    {% endregionblock %}
   </div>
   {% assign dinelist = site.data._models.dine-drink | sort: "order" %}
   {% for dine in dinelist %}
@@ -149,7 +146,7 @@ meta_tags:
     </div>
     <div class="dine-intro__detail wow fadeIn" data-wow-delay="1s">
       <article>
-        <h5 tabindex="0">{{dine.title }}</h5>
+        <p class="h5" tabindex="0">{{dine.title }}</p>
         <hr>
         <div tabindex="0">
           {{ dine.short_description }}
@@ -160,6 +157,3 @@ meta_tags:
   </div>
   {% endfor %}
 </section>
-
-
-{% include instagram.html %}

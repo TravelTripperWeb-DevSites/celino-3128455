@@ -1,6 +1,6 @@
 <section class="offers-slider included-offer wow fadeIn" data-wow-delay="1s"  rt3-special-rates="offers" ng-show="offers.special_rates.length > 0">
   <div class="offers-slider__wrap">
-    <h3><a href="/offers/">Deals & Offers</a></h3>
+    <h3 class="h3"><a href="/offers/">Deals & Offers</a></h3>
     <div class="offers-slider__items" id="deals-offers">
       <div ng-repeat="offer in offers.special_rates">
         <a tabindex="-1" ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]">
@@ -9,8 +9,8 @@
           </figure>
         </a>
         <div class="offers-slider__detail">
-          <h4><a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]" ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></a></h4>
-          <p>[[ offer.short_description | limitTo: 101 ]][[ offer.short_description.length > 100 ? '...' : '' ]]</p>
+          <p class="h4"><a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]" ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></a></p>
+          <p tabindex="0">[[ offer.short_description | limitTo: 101 ]][[ offer.short_description.length > 100 ? '...' : '' ]]</p>
           <a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]" class="button" aria-label="[[ offer.rate_plan_name ]]">Learn More</a>
         </div>
       </div>
