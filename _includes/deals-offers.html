@@ -2,16 +2,14 @@
   <div class="offers-slider__wrap">
     <h3 class="h3"><a href="/offers/">Deals & Offers</a></h3>
     <div class="offers-slider__items" id="deals-offers">
-      <div ng-repeat="offer in offers.special_rates">
-        <a tabindex="-1" ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]">
-          <figure>
-            <img ng-src="[[ offer.images[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ offer.rate_plan_name ]]">
-          </figure>
-        </a>
+      <div class="item" ng-repeat="offer in offers.special_rates">
+        <figure>
+          <img ng-src="[[ offer.images[0].large || '/assets/images/dummy.jpg' ]]" alt="Special offer" tabindex="-1">
+        </figure>
         <div class="offers-slider__detail">
-          <p class="h4"><a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]" ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></a></p>
+          <p class="h4"><a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]" ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly" class="link"></a></p>
           <p tabindex="0">[[ offer.short_description | limitTo: 101 ]][[ offer.short_description.length > 100 ? '...' : '' ]]</p>
-          <a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]" class="button" aria-label="[[ offer.rate_plan_name ]]">Learn More</a>
+          <a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]" class="button">Learn More</a>
         </div>
       </div>
     </div>

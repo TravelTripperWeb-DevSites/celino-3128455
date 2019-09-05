@@ -68,26 +68,6 @@ $(function() {
       }
     });
 
-    //offers slick slider
-    setTimeout(function(){
-      $(".offers-slider.included-offer").show();
-       $("#deals-offers").slick({
-        slidesToShow: 3,
-        responsive: [{
-          breakpoint: 1024,
-            settings: {
-              slidesToShow: 2
-            }
-          },
-          {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1
-          }
-        }]
-      });
-    },2500);
-
     $("#attractions-gallery, #shopping-gallery, #dining-gallery, #nightlife-gallery, #culture-gallery").slick({
      slidesToShow: 3,
      responsive: [{
@@ -300,6 +280,34 @@ $(window).on('load', function () {
 
 $(document).ready(function() {
 
+  //offers slick slider
+  setTimeout(function(){
+    $(".offers-slider.included-offer").show();
+
+    $("#deals-offers").slick({
+      slidesToShow: 3,
+      infinite: false,
+      accessibility: false,
+      responsive: [{
+        breakpoint: 1024,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1
+        }
+      }]
+    });
+
+    $('.offers-slider__items .link').focus(function(){
+    	$(this).closest('.slick-slide').attr('aria-hidden', false);
+    });
+
+  },2500);
+
   $(".room-images-gallery").lightGallery({
     selector: ".item",
     thumbnail:true
@@ -329,7 +337,6 @@ $(document).ready(function() {
        $('#signup .alert').css('display','block');
   }
 });
-
 
 //parellex animation
 setTimeout(function() {
