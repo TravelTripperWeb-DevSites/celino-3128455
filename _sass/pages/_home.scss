@@ -101,7 +101,7 @@
         }
       }
 
-      h2 {
+      h2, .h2 {
         margin-top: 0;
       }
 
@@ -267,7 +267,7 @@
       }
     }
 
-    h4 {
+    h4, .h4 {
       margin-bottom: 1.4rem;
       font-size: $type-size-14;
       letter-spacing: rem-calc(1.8);
@@ -296,7 +296,7 @@
       }
     }
 
-    h2 {
+    h2, .h2 {
       margin-bottom: 1.4rem;
       color: $dark-blue-color;
       @include media-breakpoint-up(md) {
@@ -319,6 +319,11 @@
   @include make-container();
   &__wrap {
     @include make-row();
+
+    div {
+      width: 100%;
+    }
+
     &--even {
       @include media-breakpoint-up(md) {
         .dine-intro__image {
@@ -389,7 +394,7 @@
       margin: 0 auto;
       padding-bottom: 2rem;
 
-      h5 {
+      h5, .h5 {
         font-family: $heading-font;
         font-size: $type-size-10;
         @include media-breakpoint-up(md) {

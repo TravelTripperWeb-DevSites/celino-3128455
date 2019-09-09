@@ -21,7 +21,7 @@
     }
   }
 
-  h1 {
+  h1, .h1 {
     @include vertical-center;
     right: 0;
     left: 0;
@@ -107,7 +107,7 @@
       }
     }
 
-    h2 {
+    h2, .h2 {
       margin: 0;
       color: $dark-blue-color;
     }
@@ -137,7 +137,7 @@
       }
     }
 
-    h6 {
+    h6, .h6 {
       margin: 0 0 20px;
       text-align: center;
     }
@@ -210,7 +210,7 @@
       }
     }
 
-    h4 {
+    h4, .h4 {
       margin: 0 0 15px;
 
       a {
@@ -263,7 +263,7 @@
       text-align: left;
     }
 
-    h5 {
+    h5, .h5 {
       margin: 0;
       font-weight: 700;
       letter-spacing: 2.5px;
@@ -276,7 +276,7 @@
     }
   }
 
-  h6 {
+  h6, .h6 {
     color: $dark-gray;
     text-align: center;
     @include media-breakpoint-up(md) {

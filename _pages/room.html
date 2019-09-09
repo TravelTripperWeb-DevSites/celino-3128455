@@ -20,20 +20,20 @@ meta_tags:
             <img src="/assets/images/dummy.jpg" alt="room image not found">
           </div>
         </div>
-        <h1 tabindex="0" class="wow fadeIn" data-wow-delay="0.5s" ng-bind-html="room.name | renderHTMLCorrectly"></h1>
+        <h1 tabindex="0" class="h1 wow fadeIn" data-wow-delay="0.5s" ng-bind-html="room.name | renderHTMLCorrectly"></h1>
     </div>
   </section>
 
   <section class="room-details-intro">
     <div class="room-details-intro__wrap">
       <div class="room-details-intro__intro-text">
-        <h2 tabindex="0" ng-bind-html="room.name | renderHTMLCorrectly"></h2>
+        <h2 class="h2" tabindex="0" ng-bind-html="room.name | renderHTMLCorrectly"></h2>
         <div tabindex="0">
           <p ng-bind-html="room.description | renderHTMLCorrectly"></p>
         </div>
       </div>
       <div class="room-details-intro__highlights">
-        <h6 tabindex="0">SUITE HIGHLIGHTS</h6>
+        <h3 class="h6" tabindex="0">SUITE HIGHLIGHTS</h3>
         <ul tabindex="0">
           <li> Room Size: [[ room.room_size ]] sqft </li>
           <li> Sleeps: [[ room.max_number_of_guests ]] Guest(s) </li>
@@ -49,8 +49,8 @@ meta_tags:
   {% include guest-services.html %}
 
   <section class="other-rooms">
-    <h4 class="text-center" tabindex="0">SIMILAR ROOMS & SUITES</h4>
-    <input type="radio" ng-model="sameRoomfilter" value="[[ room.name ]]">
+    <h4 class="h4 text-center mb-4" tabindex="0">SIMILAR ROOMS & SUITES</h4>
+    <input type="hidden" ng-model="sameRoomfilter" value="[[ room.name ]]" aria-label="Similar Rooms & Suites">
     <div class="rooms-listing__list-items active" ng-repeat="value in browser.roomsList | groupBy: 'category'">
       <div class="stay-block__rooms__wrap" ng-class-even="'stay-block__rooms__wrap--even'" ng-repeat="otherroom in value" ng-if="otherroom.category == room.category">
         <div class="stay-block__room-image">
@@ -58,7 +58,7 @@ meta_tags:
         </div>
         <div class="stay-block__room-detail">
           <article>
-            <h2><a ng-href="/room/#[[ otherroom.name | formatNameForLink ]]">[[ otherroom.name ]]</a></h2>
+            <h5 class="h2"><a ng-href="/room/#[[ otherroom.name | formatNameForLink ]]">[[ otherroom.name ]]</a></h5>
             <div tabindex="0">
               <p>[[ otherroom.description | limitTo: 221 ]][[ otherroom.description.length > 220 ? '...' : '' ]]</p>
             </div>
@@ -72,6 +72,23 @@ meta_tags:
     </div>
   </section>
 </section>
-{% include deals-offers.html %}
 
-<div class="full-map m-0" id="map"></div>
+<section class="offers-slider included-offer wow fadeIn" data-wow-delay="1s"  rt3-special-rates="offers" ng-show="offers.special_rates.length > 0">
+  <div class="offers-slider__wrap">
+    <h6 class="h3"><a href="/offers/">Deals & Offers</a></h6>
+    <div class="offers-slider__items" id="deals-offers">
+      <div class="item" ng-repeat="offer in offers.special_rates">
+        <figure>
+          <img ng-src="[[ offer.images[0].large || '/assets/images/dummy.jpg' ]]" alt="Special offer" tabindex="-1">
+        </figure>
+        <div class="offers-slider__detail">
+          <p class="h4"><a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]" ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly" class="link"></a></p>
+          <p tabindex="0">[[ offer.short_description | limitTo: 101 ]][[ offer.short_description.length > 100 ? '...' : '' ]]</p>
+          <a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]" class="button">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <div class="full-map m-0" id="map"></div> -->

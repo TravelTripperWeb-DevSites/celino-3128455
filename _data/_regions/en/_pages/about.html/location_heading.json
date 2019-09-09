@@ -1,6 +1,6 @@
 [
   {
-    "content": "<h3>HAVE A LOOK AROUND</h3>",
+    "content": "<h3 class=\"h3\" tabindex=\"0\">HAVE A LOOK AROUND</h3>",
     "_template": "header"
   }
 ]

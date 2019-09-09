@@ -1,5 +1,5 @@
 <div class="blog__search-wrap">
-  <div class="blog__sub-heading">Search</div>
+  <div class="blog__sub-heading" tabindex="0">Search</div>
   <div class="blog__search">
     <form class="search-form" action="/blog/search/" method="get">
       <input type="text" class="blog__search__box" name="query" id="search-box" placeholder="Type here..." aria-label="Search blogs">
@@ -12,7 +12,7 @@
 
 <div class="blog__others">
 
-  <div class="blog__sub-heading">Recent Posts <span class="toggle-arrow"><i class="fa fa-angle-down"></i></span> </div>
+  <div class="blog__sub-heading" tabindex="0">Recent Posts <span class="toggle-arrow"><i class="fa fa-angle-down"></i></span> </div>
   <div class="heading-seperator"></div>
   {% for recentpost in site.data._models.blog | limit: 5 %}
   {% if recentpost.url_friendly_name != page.url_friendly_name %}
@@ -20,9 +20,9 @@
     <a href="/blog/{{recentpost.url_friendly_name }}/">
       <figure style="background-image:url('{{recentpost.blogimage.url_xsmall}}');" class="bg-cover"></figure>
       <div class="blog__others__item__right">
-        <h6>{{recentpost.title  | truncate: 25 }}</h6>
+        <p class="h6" tabindex="0">{{recentpost.title  | truncate: 25 }}</p>
         <div class="blog__info">
-          <span class="blog__date">{% assign d = recentpost.date | date: "%-d" %}
+          <span class="blog__date" tabindex="0">{% assign d = recentpost.date | date: "%-d" %}
                   {{ recentpost.date | date: "%B" }}
                   {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
                   {{ recentpost.date | date: "%Y" }}</span>
@@ -34,7 +34,7 @@
   {% endfor %}
 </div>
 
-<div class="blog__sub-heading categories-list-heading">Categories <span class="toggle-arrow"><i class="fa fa-angle-down"></i></span></div>
+<div class="blog__sub-heading categories-list-heading" tabindex="0">Categories <span class="toggle-arrow"><i class="fa fa-angle-down"></i></span></div>
 <div class="heading-seperator"></div>
 
 <ul class="categories-list">
@@ -54,7 +54,7 @@
   {% endfor %}
 </ul>
 <div class="blog__offers-signup">
-  <div class="blog__sub-heading">subscribe to the blog and receive exclusive discounts </div>
+  <div class="blog__sub-heading" tabindex="0">subscribe to the blog and receive exclusive discounts </div>
   <div class="heading-seperator"></div>
   <form action="https://submit.jotform.me/submit/{{ site.data.forms.jotform.offers-signup-id }}/" method="post" name="form_{{ site.data.forms.jotform.offers-signup-id }}" id="{{ site.data.forms.jotform.offers-signup-id }}">
     <input type="hidden" name="formID" value="{{ site.data.forms.jotform.offers-signup-id }}" />

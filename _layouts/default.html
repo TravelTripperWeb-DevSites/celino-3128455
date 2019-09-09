@@ -15,7 +15,7 @@
     {% endcase %}
   {% endif %}
 
-  <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
+  <a class="skip-main" href="#main">Skip to main content</a>
 
   {% include nav-main.html %}
   {% include top-banner.html %}
@@ -23,6 +23,8 @@
   <div id="main">
     {{ content }}
   </div>
+
+  {% include instagram.html %}
 
   <footer>
     {% include footer/custom.html %}

@@ -4,7 +4,7 @@ layout: default
 
 <section class="hero-banner hero-banner--inner top-common-gap hero-banner--blog-banner" style="background-image: url('/assets/images/blog/hero.jpg');">
   <div class="hero-banner__detail wow fadeIn" data-wow-delay="0.5s">
-    <h1 tabindex="0">South Beach Blog</h1>
+    <h1 class="h1" tabindex="0">South Beach Blog</h1>
   </div>
 </section>
 
@@ -18,9 +18,6 @@ layout: default
   </div>
 
   <div class="blog__wrap">
-    <div class="blog__categories">
-      {% include blog-categories.html %}
-    </div>
     <div class="blog__list" >
       <div class="blog__list__wrap" data-category-posts="{{ page.url_friendly_name }}">
         {% assign cnt = 0 %}
@@ -73,9 +70,11 @@ layout: default
         </div>
       </div>
     </div>
+    <div class="blog__categories">
+      {% include blog-categories.html %}
+    </div>
   </div>
 </section>
 
 
 {% include cta-two-column.html %}
-{% include instagram.html %}

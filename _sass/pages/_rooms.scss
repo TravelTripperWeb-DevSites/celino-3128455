@@ -73,7 +73,7 @@
       text-align: left;
     }
 
-    h2 {
+    h2, .h2 {
       position: relative;
       margin: 20px 0 18px;
       padding-bottom: 18px;
@@ -130,7 +130,7 @@
       border-top: 2px solid $border-color;
       border-bottom: 2px solid $border-color;
     }
-    h4 {
+    h4, .h4 {
       margin: 0;
       line-height: 40px;
     }
@@ -213,7 +213,7 @@
         }
       }
 
-      h4 {
+      h4, .h4 {
         margin-top: 1rem;
         margin-bottom: 1rem;
         font-size: $type-size-14;
@@ -243,7 +243,7 @@
         }
       }
 
-      h2 {
+      h2, .h2 {
         margin: 0;
         padding-bottom: 15px;
         color: $dark-blue-color;
@@ -484,7 +484,7 @@
       font-size: $type-size-15;
       font-style: normal;
     }
-    h4 {
+    h4, .h4 {
       margin-bottom: 1.4rem;
       font-size: $type-size-14;
       letter-spacing: rem-calc(1.8);
@@ -509,7 +509,7 @@
       }
     }
 
-    h2 {
+    h2, .h2 {
       margin-bottom: 1.4rem;
       color: $dark-blue-color;
       @include media-breakpoint-up(md) {
@@ -551,7 +551,7 @@
     @include media-breakpoint-up(md) {
       max-width: 330px;
     }
-    h5 {
+    h5, .h5 {
       margin: 0 0 22px;
 
       @include media-breakpoint-up(md) {
@@ -565,7 +565,7 @@
       @include make-col(6);
     }
     padding: 0;
-    h5 {
+    h5, .h5 {
       color: $dark-blue-color;
     }
   }
@@ -575,7 +575,7 @@
       @include make-col(6);
     }
     padding: 0;
-    h5 {
+    h5, .h5 {
       color: $white;
     }
   }

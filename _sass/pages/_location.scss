@@ -124,7 +124,7 @@
         max-width: 100%;
         margin-left: -1px;
       }
-      h4 {
+      h4, .h4 {
         margin: 0;
         padding: 18px 15px 0;
         font-size: $type-size-10;
@@ -231,7 +231,7 @@
       margin: 0 auto;
       padding-bottom: 2rem;
 
-      h5 {
+      h5, .h5 {
         font-family: $heading-font;
         font-size: $type-size-10;
         @include media-breakpoint-up(md) {

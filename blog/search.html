@@ -7,24 +7,23 @@ meta_tags:
 ---
 <section class="hero-banner hero-banner--inner top-common-gap hero-banner--blog-banner" style="background-image: url('/assets/images/blog/hero.jpg');">
   <div class="hero-banner__detail wow fadeIn" data-wow-delay="0.5s">
-    <h1 tabindex="0">South Beach Blog</h1>
+    <h1 class="h1" tabindex="0">South Beach Blog</h1>
   </div>
 </section>
 
 <section class="blog">
   <div class="blog__wrap">
+    <div class="blog__list">
+      <h2 class="h3 blog__search-heading" tabindex="0">Search Results:</h2>
+      <ul id="search-results" class="blog__search-results"></ul>
+    </div>
     <div class="blog__categories">
       {% include blog-categories.html %}
-    </div>
-    <div class="blog__list">
-      <h3 class="blog__search-heading">Search Results:</h3>
-      <ul id="search-results" class="blog__search-results"></ul>
     </div>
   </div>
 </section>
 
 {% include cta-two-column.html %}
-{% include instagram.html %}
 
 <script>
   window.store = {
