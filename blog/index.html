@@ -8,20 +8,16 @@ published: true
 ---
 <section class="hero-banner hero-banner--inner top-common-gap hero-banner--blog-banner" style="background-image: url('/assets/images/blog/hero.jpg');">
   <div class="hero-banner__detail wow fadeIn" data-wow-delay="0.5s">
-    <h1 tabindex="0">South Beach Blog</h1>
+    <h1 class="h1" tabindex="0">South Beach Blog</h1>
   </div>
 </section>
-<div class="blog-intro">
+<div class="blog-intro" tabindex="0">
   <p>Stay up-to-date with everything that’s happening on the shores of South Beach with the Celino Blog. Whether you’re seeking a glamorous beach getaway, a lively night on the town, or a day exploring local art and culture, South Beach is where it’s at.
 </p>
 </div>
 
 <section class="blog">
   <div class="blog__wrap">
-    <div class="blog__categories">
-      {% include blog-categories.html %}
-    </div>
-
     <div class="blog__list">
       <div class="blog__list__wrap">
       {% for post in data_paginator.posts %}
@@ -41,7 +37,9 @@ published: true
           | <a href="/blog/category/{{post.category.url_friendly_name}}/" class="blog__category">{{ post.category.title }}</a>
         </div>
         {% if post.short_description != "" %}
-        {{ post.short_description }}
+        <div tabindex="0">
+          {{ post.short_description }}
+        </div>
         {% endif %}
         <div class="btn-holder">
           <a href="/blog/{{ post.url_friendly_name }}/" class="button button--gold">Read More</a>
@@ -73,6 +71,9 @@ published: true
         <img src="/assets/images/loading.gif" alt="loading..">
       </div>
     </div>
+    </div>
+    <div class="blog__categories">
+      {% include blog-categories.html %}
     </div>
   </div>
 </section>
