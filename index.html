@@ -10,7 +10,7 @@ meta_tags:
 <section class="hero-banner hero-banner--home" style="background-image: url('/assets/images/home/beach-miami-celino-hotel.jpg');">
   <div class="hero-banner__detail wow fadeIn" data-wow-delay="0.5s">
     {% regionblock page_title, type:header %}
-    <h1 tabindex="0">Miami Beach <br>AS YOU IMAGINED IT</h1>
+    <h1 class="h1" tabindex="0">Miami Beach <br>AS YOU IMAGINED IT</h1>
     <a href="/about/" class="button button--large button--arrow">Learn More</a>
     {% endregionblock %}
   </div>
@@ -28,7 +28,7 @@ meta_tags:
     <div class="luxury-intro__detail">
       <article>
         {% regionblock luxury_detail, type:text %}
-        <h2 tabindex="0">YOUR SOUTH BEACH HEADQUARTERS</h2>
+        <h2 class="h2" tabindex="0">YOUR SOUTH BEACH HEADQUARTERS</h2>
         <hr>
         <div tabindex="0">
           <p>Gorgeously manicured but not overly fussy. Party, naturally. That’s our new-fashioned oceanfront hideaway tucked into the scene of Ocean Drive. At the iconic Celino South Beach hotel, the eclectic range of 123 art deco inspired modern bedrooms, including floor to ceiling ocean view suites and a new building follow in storied footsteps with deep residential comforts and a few pools to do your thing. Flit away the afternoon on the rooftop sun deck, dip in the glass-bottom pool, dine al fresco, or by the courtyard fire pit. It’s magical at all hours. All you have to do is stay.</p>
@@ -45,9 +45,9 @@ meta_tags:
 
 <section class="home-stay">
   <div class="home-stay__wrap">
-    <div class="home-stay__title wow fadeIn" data-wow-delay="0.5s" tabindex="0">
+    <div class="wow fadeIn" data-wow-delay="0.5s">
       {% regionblock stay_title, type: header %}
-        Stay
+        <h4 class="h2 home-stay__title" tabindex="0">Stay</h4>
       {% endregionblock %}
     </div>
     <div class="home-stay__categories wow fadeIn" data-wow-delay="0.5s">
@@ -63,14 +63,14 @@ meta_tags:
   <div class="tab-content" id="nav-tabContent">
     <div class="home-stay__rooms tab-pane fade show active" id="nav-king" role="tabpanel" aria-labelledby="nav-king-tab">
       <section ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
-        <div class="home-stay__rooms__wrap wow fadeIn" data-wow-delay=".5s" ng-class-even="'home-stay__rooms__wrap--even'" ng-repeat="room in value" ng-if="room.categoryGroup == 'King' && (room.code == 'CKU' || room.code == 'DKV')" >
+        <div class="home-stay__rooms__wrap wow fadeIn" data-wow-delay=".5s" ng-class-even="'home-stay__rooms__wrap--even'" ng-repeat="room in value | limitTo: 3" ng-if="room.categoryGroup == 'King'" >
 
           <div class="home-stay__room-image">
             <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
           </div>
           <div class="home-stay__room-detail">
             <article>
-              <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></h2>
+              <p class="h2"><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></p>
               <p tabindex="0">[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
 
               <div class="button-holder">
@@ -85,14 +85,14 @@ meta_tags:
 
     <div class="home-stay__rooms tab-pane fade" id="nav-queen" role="tabpanel" aria-labelledby="nav-queen-tab">
       <section ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
-        <div class="home-stay__rooms__wrap wow fadeIn" data-wow-delay=".5s" ng-class-even="'home-stay__rooms__wrap--even'" ng-repeat="room in value" ng-if="room.categoryGroup == 'Queen' && (room.code == 'CQU')">
+        <div class="home-stay__rooms__wrap wow fadeIn" data-wow-delay=".5s" ng-class-even="'home-stay__rooms__wrap--even'" ng-repeat="room in value | limitTo: 3" ng-if="room.categoryGroup == 'Queen'">
 
           <div class="home-stay__room-image">
             <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
           </div>
           <div class="home-stay__room-detail">
             <article>
-              <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></h2>
+              <p class="h2"><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></p>
               <p tabindex="0">[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
 
               <div class="button-holder">
@@ -106,14 +106,14 @@ meta_tags:
     </div>
     <div class="home-stay__rooms tab-pane fade" id="nav-suites" role="tabpanel" aria-labelledby="nav-suites-tab">
      <section ng-repeat="(key, value) in browser.roomsList | groupBy: 'categoryGroup'">
-        <div class="home-stay__rooms__wrap wow fadeIn" data-wow-delay=".5s" ng-class-even="'home-stay__rooms__wrap--even'" ng-repeat="room in value" ng-if="room.categoryGroup =='Suite' && (room.code == 'XKO')">
+        <div class="home-stay__rooms__wrap wow fadeIn" data-wow-delay=".5s" ng-class-even="'home-stay__rooms__wrap--even'" ng-repeat="room in value | limitTo: 3" ng-if="room.categoryGroup =='Suite'">
 
           <div class="home-stay__room-image">
             <a ng-href="/room/#[[ room.name | formatNameForLink ]]" tabindex="-1"><img ng-src="[[ room.photos[0].large || '/assets/images/dummy.jpg' ]]" alt="[[ room.name ]]"></a>
           </div>
           <div class="home-stay__room-detail">
             <article>
-              <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></h2>
+              <p class="h2"><a ng-href="/room/#[[ room.name | formatNameForLink ]]" ng-bind-html="room.name | renderHTMLCorrectly"></a></p>
 
               <p tabindex="0">[[ room.description | limitTo: 221 ]][[ room.description.length > 220 ? '...' : '' ]]</p>
 
@@ -126,7 +126,6 @@ meta_tags:
       </div>
      </section>
     </div>
-
     </div>
 </section>
 
@@ -134,11 +133,9 @@ meta_tags:
 
 <section class="dine-intro">
   <div class="dine-intro__wrap">
-    <div class="dine-intro__title" tabindex="0">
-      {% regionblock dine_title, type: header %}
-      Dine
-      {% endregionblock %}
-    </div>
+    {% regionblock dine_title, type: header %}
+    <h5 class="h2 dine-intro__title" tabindex="0">Dine</h5>
+    {% endregionblock %}
   </div>
   {% assign dinelist = site.data._models.dine-drink | sort: "order" %}
   {% for dine in dinelist %}
@@ -149,7 +146,7 @@ meta_tags:
     </div>
     <div class="dine-intro__detail wow fadeIn" data-wow-delay="1s">
       <article>
-        <h5 tabindex="0">{{dine.title }}</h5>
+        <p class="h5" tabindex="0">{{dine.title }}</p>
         <hr>
         <div tabindex="0">
           {{ dine.short_description }}
@@ -160,6 +157,3 @@ meta_tags:
   </div>
   {% endfor %}
 </section>
-
-
-{% include instagram.html %}

@@ -23,7 +23,7 @@ meta_tags:
           </div>
         {% endfor %}
       </div>
-      <h1 tabindex="0" class="wow fadeIn" data-wow-delay="0.5s">{{ banner.banner_title }}</h1>
+      <h1 tabindex="0" class="h1 wow fadeIn" data-wow-delay="0.5s">{{ banner.banner_title }}</h1>
     {% endfor %}
   </div>
 </section>
@@ -31,7 +31,7 @@ meta_tags:
 <section class="offer-detail" rt3-special-rates="offers" ng-controller="offerDetail">
   <div class="offer-detail__row">
     <div class="offer-detail__content">
-      <h5 tabindex="0" ng-bind-html="offers.sRdetail.rate_plan_name | renderHTMLCorrectly"></h5>
+      <h2 class="h5" tabindex="0" ng-bind-html="offers.sRdetail.rate_plan_name | renderHTMLCorrectly"></h2>
       <div class="hline"></div>
       <div class="offer-detail__description">
         <div tabindex="0">
@@ -42,8 +42,8 @@ meta_tags:
         </div>
       </div>
       <div class="offer-detail__terms d-none d-md-block">
-        <h6 tabindex="0">Terms & Conditions</h6>
-        <p>[[ offers.special_rate_page_text ]]</p>
+        <h3 class="h6" tabindex="0">Terms & Conditions</h3>
+        <div tabindex="0">[[ offers.special_rate_page_text ]]</div>
         <ul tabindex="0">
           <li ng-repeat="policy in offers.sRdetail.policy_description">[[ policy ]]</li>
         </ul>
@@ -62,7 +62,7 @@ meta_tags:
         </div>
       </div>
       <div class="offer-detail__terms d-block d-md-none">
-        <h6 tabindex="0">Terms & Conditions</h6>
+        <h4 class="h6" tabindex="0">Terms & Conditions</h4>
         <div tabindex="0">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu is nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>

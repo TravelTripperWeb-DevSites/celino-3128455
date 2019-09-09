@@ -23,7 +23,7 @@ meta_tags:
           </div>
         {% endfor %}
       </div>
-      <h1 tabindex="0" class="wow fadeIn" data-wow-delay="0.5s">{{ banner.banner_title }}</h1>
+      <h1 class="h1" tabindex="0" class="wow fadeIn" data-wow-delay="0.5s">{{ banner.banner_title }}</h1>
     {% endfor %}
   </div>
 </section>
@@ -60,17 +60,17 @@ meta_tags:
       <div class="sleep__filters__box">
         <div class="form-row">
           <div class="form-group col-md-4">
-            <h4>Refine Results</h4>
+            <h3 class="h4" tabindex="0">Refine Results</h3>
           </div>
           <div class="form-group col-md-2">
-            <select ng-model="filter.category" id="inputBeds" class="form-control">
+            <select ng-model="filter.category" id="inputBeds" class="form-control" aria-label="Bed type">
               <option value="" hidden>Bed</option>
               <option value="!" selected="selected">Bed</option>
               <option ng-repeat="cat in browser.roomCategories" value="[[ cat ]]">[[ cat ]]</option>
             </select>
           </div>
           <div class="form-group col-md-2">
-            <select ng-model="filterObject.view" id="inputView" class="form-control">
+            <select ng-model="filterObject.view" id="inputView" class="form-control" aria-label="View">
               <option value="" selected>View</option>
               <option value="Ocean View">Ocean View</option>
               <option value="Partial Ocean View">Partial Ocean View</option>
@@ -79,7 +79,7 @@ meta_tags:
             </select>
           </div>
           <div class="form-group col-md-2">
-            <select ng-model="filterObject.amenities" id="inputAmenities" class="form-control">
+            <select ng-model="filterObject.amenities" id="inputAmenities" class="form-control" aria-label="Amenities">
               <option value="" selected>Amenities</option>
               <option value="Balcony">Balcony</option>
               <option value="Living Room">Living Room</option>
@@ -108,17 +108,17 @@ meta_tags:
           </a>
         </figure>
         <article class="sleep__card__detail">
-          <h2><a ng-href="/room/#[[ room.name | formatNameForLink ]]">[[ room.name ]]</a></h2>
-           <p ng-bind-html="room.short_description | renderHTMLCorrectly"></p>
+          <h4 class="h2"><a ng-href="/room/#[[ room.name | formatNameForLink ]]">[[ room.name ]]</a></h4>
+           <p ng-bind-html="room.short_description | renderHTMLCorrectly" tabindex="0"></p>
           <div class="button-holder">
-            <a ng-href="/room/#[[ room.name | formatNameForLink ]]"  class="button button--gold" tabindex="-1">Explore</a>
+            <a ng-href="/room/#[[ room.name | formatNameForLink ]]"  class="button button--gold">Explore</a>
             <a ng-href="{{ site.reztripUrl}}[[ room.todayRate == 'CHECK AVAILABILITY' ? '?selected_room='+room.code : 'search?selected_room='+room.code ]]" class="button button--arrow">Book Now</a>
           </div>
         </article>
      </div>
     </div>
   </div>
-</div>
+</section>
 
 {% comment %}
 <section class="rooms-listing">
@@ -251,10 +251,9 @@ meta_tags:
   </div>
 </section>
 {% endcomment %}
+
 {% include cta-two-column.html %}
-{% include instagram.html %}
 
 <div class="full-map m-0 d-none d-md-block" id="map">
-  <a href="https://goo.gl/maps/P2b9aXyUxGdbUku99" target="_blank" title="Map"><img src="//res.cloudinary.com/traveltripperweb/image/upload/c_limit,h_1920,w_1920/v1558596595/fu6mxvvxmsk4prjotfad.jpg" alt="Map"></a>
-
+  <a href="https://goo.gl/maps/P2b9aXyUxGdbUku99" target="_blank" title="Get directions to hotel"><img src="//res.cloudinary.com/traveltripperweb/image/upload/c_limit,h_1920,w_1920/v1558596595/fu6mxvvxmsk4prjotfad.jpg" alt="Map"></a>
 </div>

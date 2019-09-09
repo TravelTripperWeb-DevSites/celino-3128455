@@ -23,7 +23,7 @@ meta_tags:
           </div>
         {% endfor %}
       </div>
-      <h1 tabindex="0" class="wow fadeIn" data-wow-delay="0.5s">{{ banner.banner_title }}</h1>
+      <h1 tabindex="0" class="h1 wow fadeIn" data-wow-delay="0.5s">{{ banner.banner_title }}</h1>
     {% endfor %}
   </div>
 </section>
@@ -40,7 +40,7 @@ meta_tags:
     <div class="luxury-intro__detail wow fadeIn" data-wow-delay=".5s">
       <article>
         {% regionblock luxury_detail_heading, type:header %}
-        <h2 tabindex="0">LOCATION, LOCATION, LOCATION</h2>
+        <h2 class="h2" tabindex="0">LOCATION, LOCATION, LOCATION</h2>
         {% endregionblock %}
         <hr>
         <div tabindex="0">
@@ -53,6 +53,8 @@ meta_tags:
     </div>
   </div>
 </section>
+
+<a class="skip-main" href="#skip-map">Skip Interactive Map</a>
 
 <section class="explore-map" tabindex="-1">
   <div class="explore-map__wrap">
@@ -71,7 +73,9 @@ meta_tags:
   <div class="explore-map__location" id="map" data-attractions="show"></div>
 </section>
 
-{% include attractions.html %}
+<div id="skip-map">
+  {% include attractions.html %}
+</div>
 
 {% assign shoppingItems =  site.data._models.explore | where: 'categories','shopping' %}
 {% if shoppingItems.size > 0 %}
@@ -156,5 +160,3 @@ meta_tags:
   {% endfor %}
 </section>
 {% endcomment %}
-
-{% include instagram.html %}
