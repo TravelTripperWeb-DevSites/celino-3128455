@@ -99,8 +99,8 @@ $(function() {
 
 					if (i > 5) return false;
           $('#instagram-photos').append('<div class="instagram-gallery__photo">'+
-            '<a href="'+ urlIG +'" target="_blank" rel="nofollow">'+
-              '<div class="instagram-gallery__photo__bg" style="background-image: url(\''+ imageIG + '\');"><i class="fab fa-instagram" aria-hidden="true"></i></div><img src="/assets/images/image-holder.png" alt="placeholder image">'+
+            '<a href="'+ urlIG +'" target="_blank" rel="nofollow" tabindex="-1">'+
+              '<div class="instagram-gallery__photo__bg" style="background-image: url(\''+ imageIG + '\');"><i class="fab fa-instagram" aria-hidden="true"></i></div><img src="/assets/images/image-holder.png" alt="Image from Instagram feed">'+
             '</a>'+
           '</div>');
 				});
@@ -318,6 +318,7 @@ $(document).ready(function() {
     });
 
   },2500);
+
 
   $(".room-images-gallery").lightGallery({
     selector: ".item",
