@@ -223,6 +223,7 @@ footer {
       }
     }
     &__powered {
+      position: relative;
       text-align: center;
       @include media-breakpoint-down(sm) {
         img {

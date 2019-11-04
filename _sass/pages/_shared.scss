@@ -96,7 +96,8 @@
     }
 
     .slick-slide {
-      margin: 0 12px 50px;
+      position: relative;
+      margin: 0 12px;
       background-color: $white;
 
       figure {
@@ -175,7 +176,6 @@
   }
 
   &__detail {
-    position: relative;
     padding: 0 10px 30px;
     text-align: center;
     @include media-breakpoint-up(md) {
@@ -207,6 +207,14 @@
       height: auto;
       padding-bottom: 60px;
     }
+  }
+
+  .slick-track, .slick-list {
+    display: flex;
+  }
+
+  .slick-track {
+    padding-bottom: 26px;
   }
 }
 
