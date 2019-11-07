@@ -223,11 +223,10 @@ footer {
       }
     }
     &__powered {
+      position: relative;
       text-align: center;
-      @include media-breakpoint-down(sm) {
-        img {
-          width: 150px;
-        }
+      img {
+        width: 75px;
       }
     }
   }
