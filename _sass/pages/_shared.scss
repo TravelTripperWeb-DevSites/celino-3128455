@@ -96,8 +96,8 @@
     }
 
     .slick-slide {
-      position: relative;
-      margin: 0 12px;
+      // position: relative;
+      margin: 0 12px 50px;
       background-color: $white;
 
       figure {
@@ -176,6 +176,7 @@
   }
 
   &__detail {
+    position: relative;
     padding: 0 10px 30px;
     text-align: center;
     @include media-breakpoint-up(md) {
@@ -183,6 +184,7 @@
     }
 
     h4, .h4 {
+      min-height: 45px;
       @include media-breakpoint-up(md) {
         margin-top: 18px;
         font-size: $type-size-10;
@@ -198,6 +200,10 @@
       max-width: 192px;
       margin: 0 auto;
     }
+
+    .content {
+      min-height: 80px;
+    }
   }
   &.attractions-slider {
     height: 0;
@@ -209,13 +215,13 @@
     }
   }
 
-  .slick-track, .slick-list {
-    display: flex;
-  }
-
-  .slick-track {
-    padding-bottom: 26px;
-  }
+  // .slick-track, .slick-list {
+  //   display: flex;
+  // }
+  //
+  // .slick-track {
+  //   padding-bottom: 26px;
+  // }
 }
 
 .instagram-gallery {
