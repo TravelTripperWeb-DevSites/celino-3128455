@@ -8,7 +8,7 @@
         </figure>
         <div class="offers-slider__detail">
           <p class="h4"><a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]" ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly" class="link"></a></p>
-          <p tabindex="0">[[ offer.short_description | limitTo: 101 ]][[ offer.short_description.length > 100 ? '...' : '' ]]</p>
+          <p tabindex="0" class="content">[[ offer.short_description | limitTo: 88 ]][[ offer.short_description.length > 100 ? '...' : '' ]]</p>
           <a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]" class="button">Learn More</a>
         </div>
       </div>
